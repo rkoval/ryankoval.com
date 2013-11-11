@@ -8,7 +8,9 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+var mongoose = require('mongoose');
 
+var config = require('./config');
 var app = express();
 
 // all environments
@@ -25,6 +27,8 @@ app.use(require('less-middleware')({ src: path.join(__dirname, 'public') }));
 app.use(express.compress());
 app.use(express.static(path.join(__dirname, 'public')));
 
+mongoose.connect('mongodb://' + config.db.host + ':' + config.db.port + '/' + config.db.name);
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -32,7 +36,9 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+app.get('/about', routes.about);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
+  console.log('Mongoose listening to ' + mongoose.connection.host + ':' + mongoose.connection.port + ' using db "' + mongoose.connection.name + '"');
 });
