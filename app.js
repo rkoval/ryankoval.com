@@ -26,6 +26,7 @@ app.use(app.router);
 app.use(require('less-middleware')({ src: path.join(__dirname, 'public') }));
 app.use(express.compress());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'bower_components')));
 
 mongoose.connect('mongodb://' + config.db.host + ':' + config.db.port + '/' + config.db.name);
 
