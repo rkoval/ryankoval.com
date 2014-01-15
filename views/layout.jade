@@ -7,5 +7,16 @@ html
     script(src='/jquery/jquery.js')
     script(src='/bootstrap/dist/js/bootstrap.js')
     block head
-  body.container
-    block content
+  body
+    #wrap
+      header
+        .container header
+
+      .container
+        block content
+
+      footer.footer
+        .container
+          ul.nav
+            li
+              a(href='http://ryankoval.com').subtle-header ryankoval.com

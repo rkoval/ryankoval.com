@@ -58,11 +58,53 @@ h4, h5, h6 {
   }
 }
 
+@footer-height: 80px;
+@footer-top-padding: 20px;
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  height: 100%;
+}
 
+#wrap {
+  min-height: 100%;
+  position: relative;
+  > .container {
+    padding-bottom: (@footer-top-padding * 2 + @footer-height);
+  }
+}
+
+header {
+  background: @gray-dark;
+  color: white;
+}
+
+.footer {
+  position:absolute;
+  bottom:0;
+  width: 100%;
+  text-align: center;
+  padding: @footer-top-padding 0;
+  color: white;
+  background: @gray-dark;
+
+  .nav > li {
+    > a, > a:hover {
+      background-color: transparent;
+    }
+    > a {
+      color: #DDDDDD;
+    }
+    > a:hover {
+      color: #FFFFFF;
+    }
+  }
+}
 
 // subtle header (like for ryankoval.com)
-/*
 .subtle-header {
   font-family: 'Josefin Sans', sans-serif;
   font-style: normal;
@@ -74,6 +116,7 @@ h4, h5, h6 {
   word-spacing: -0.02em;
   line-height: 1.24;
 }
+/*
 
 // serif body
 .serif-body {
