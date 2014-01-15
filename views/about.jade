@@ -1,0 +1,64 @@
+extends layout
+
+block head
+  script(src='/js/showmore.js')
+
+block content
+  h1
+    a(href='https://www.dropbox.com/s/66bactld5mlshw2/Ryan%20Koval%20Resume.pdf') Formal Resume
+  section
+    .name.page-header
+      h1 Ryan Alexander Koval
+        small &nbsp;
+          a(href='mailto:kovalrya@gmail.com') koval<span style="display: none;">screwyoubots</span>rya@gmail.com
+
+  ul.nav.nav-pills.nav-justified
+    li.active
+      a(href='#experience', data-toggle='tab') Experience
+    li
+      a(href='#skills', data-toggle='tab') Skills
+
+  .tab-content
+    #experience.tab-pane.active.fade.in
+      //-experience tab
+      section
+        h1 Currently employed&nbsp;
+          small at
+        .experience.current-experience.jumbotron
+          div(style='text-align: center;')
+            a(href=experience.current.image.href).thumbnail
+              img(src=experience.current.image.src, title=experience.current.name, style='max-height: 400px; vertical-align: 50%;').img-responsive
+          h1 #{experience.current.name}
+          p.justify #{experience.current.description}
+
+      section
+        .experience.previous-experience
+          h1 Previously worked&nbsp;
+            small with
+          .row
+            each exp, index in experience.previous
+              .col-lg-4
+                .thumbnail-bottom
+                  a(href=exp.image.href).center
+                    img(src=exp.image.src, title=exp.name).img-responsive
+                .caption
+                  h3 #{exp.name}
+                  h4
+                    small #{exp.start} to&nbsp;
+                      if !exp.end
+                        | present
+                      else
+                        | #{exp.end}
+                  .description
+                    p #{exp.description}
+                    if exp.details
+                      ul(id='details' + index)
+                        each detail in exp.details
+                          li #{detail}
+                    .show-more
+                      a(href='javascript: void(0);') read more
+
+    #skills.tab-pane.fade
+      //- skill set tab
+      section
+        div sup

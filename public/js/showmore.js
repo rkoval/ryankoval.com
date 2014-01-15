@@ -1,0 +1,32 @@
+
+$(function() {
+  var $el, $p, $ps, $up, totalHeight;
+  $('.show-more > a').click(function() {
+    totalHeight = 0;
+
+    $el = $(this);
+    $p  = $el.parent();
+    $up = $p.parent();
+    $ps = $up.find(".description");
+
+    // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+    $up.children().not('.show-more').each(function() {
+      totalHeight += $(this).outerHeight();
+    });
+
+    $up.css({
+      // Set height to prevent instant jumpdown when max height is removed
+      "height": $up.height(),
+      "max-height": 9999
+    }).animate({
+      "height": totalHeight + 40
+    });
+
+    // fade out read-more
+    $p.fadeOut();
+
+    // prevent jump-down
+    return false;
+
+  });
+});
