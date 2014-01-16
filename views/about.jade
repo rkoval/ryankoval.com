@@ -12,14 +12,12 @@ block content
         small &nbsp;
           a(href='mailto:kovalrya@gmail.com') koval<span style="display: none;">screwyoubots</span>rya@gmail.com
 
-  ul.nav.nav-pills.nav-justified
-    li.active
-      a(href='#experience', data-toggle='tab') Experience
-    li
-      a(href='#skills', data-toggle='tab') Skills
+    #skills
+      //- skill set tab
+      section
+        h1 Skills
 
-  .tab-content
-    #experience.tab-pane.active.fade.in
+    #experience
       //-experience tab
       section
         h1 Currently employed&nbsp;
@@ -35,30 +33,32 @@ block content
         .experience.previous-experience
           h1 Previously worked&nbsp;
             small with
-          .row
-            each exp, index in experience.previous
-              .col-lg-4
-                .thumbnail-bottom
-                  a(href=exp.image.href).center
-                    img(src=exp.image.src, title=exp.name).img-responsive
-                .caption
-                  h3 #{exp.name}
-                  h4
-                    small #{exp.start} to&nbsp;
-                      if !exp.end
-                        | present
-                      else
-                        | #{exp.end}
-                  .description
-                    p #{exp.description}
-                    if exp.details
-                      ul(id='details' + index)
-                        each detail in exp.details
-                          li #{detail}
-                    .show-more
-                      a(href='javascript: void(0);') read more
 
-    #skills.tab-pane.fade
-      //- skill set tab
-      section
-        div sup
+          mixin thumbnail(exp)
+            .col-lg-6
+              .thumbnail-bottom
+                a(href=exp.image.href).center
+                  img(src=exp.image.src, title=exp.name).img-responsive
+              .caption
+                h3=exp.name
+                h4
+                  small #{exp.start} to&nbsp;
+                    if !exp.end
+                      | present
+                    else
+                      | #{exp.end}
+                .description
+                  if exp.details
+                    ul(id='details' + index)
+                      each detail in exp.details
+                        li #{detail}
+                  p #{exp.description}
+                  .show-more
+                    a(href='javascript: void(0);').btn.btn-default read more
+
+          - var columns = 2, expLength = experience.previous.length
+          - for (var i = 0; i < expLength; i=i+columns)
+            .row
+              - for (var j = 0; j < columns && i+j < expLength; j++)
+                +thumbnail(experience.previous[i+j])
+
