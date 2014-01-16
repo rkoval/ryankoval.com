@@ -14,6 +14,7 @@ var config = require('./config');
 var app = express();
 
 // all environments
+var isDev = 'development' == app.get('env');
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -23,15 +24,22 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
-app.use(require('less-middleware')({ src: path.join(__dirname, 'public') }));
 app.use(express.compress());
+app.use(require('less-middleware')({
+  force: isDev,
+//  compress: isDev,
+  debug: true,
+  src: path.join(__dirname, 'src/less'),
+  dest: path.join(__dirname, 'public/css'),
+  prefix: '/css'
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
 
 mongoose.connect('mongodb://' + config.db.host + ':' + config.db.port + '/' + config.db.name);
 
 // development only
-if ('development' == app.get('env')) {
+if (isDev) {
   app.use(express.errorHandler());
 }
 
