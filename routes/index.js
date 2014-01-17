@@ -23,7 +23,6 @@ exports.about = function (req, res) {
         collection.findOne({type: "education"}, function(err, doc) {
           if (err) throw err;
           education = doc;
-          debugger
 
           res.render('about', {
             experience: {
