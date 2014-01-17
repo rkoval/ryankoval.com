@@ -3,15 +3,12 @@
  * Module dependencies.
  */
 
-var express = require('express');
-var routes = require('./routes');
-var user = require('./routes/user');
-var http = require('http');
-var path = require('path');
-var mongoose = require('mongoose');
-
-var config = require('./config');
-var app = express();
+var express = require('express'),
+  http = require('http'),
+  path = require('path'),
+  config = require('./config'),
+  mongodb = require('mongodb'),
+  app = express();
 
 // all environments
 var isDev = 'development' == app.get('env');
@@ -27,8 +24,7 @@ app.use(app.router);
 app.use(express.compress());
 app.use(require('less-middleware')({
   force: isDev,
-//  compress: isDev,
-  debug: true,
+  compress: true,
   src: path.join(__dirname, 'src/less'),
   dest: path.join(__dirname, 'public/css'),
   prefix: '/css'
@@ -36,18 +32,36 @@ app.use(require('less-middleware')({
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
 
-mongoose.connect('mongodb://' + config.db.host + ':' + config.db.port + '/' + config.db.name);
-
 // development only
 if (isDev) {
   app.use(express.errorHandler());
 }
 
+http.createServer(app).listen(app.get('port'), function(){
+  console.log('Express server listening on port ' + app.get('port'));
+});
+
+// Set up the connection to the local db
+var mongoclient = new mongodb.MongoClient(new mongodb.Server(config.db.host, config.db.port), {native_parser: true});
+mongoclient.open(function(err, mongoclient) {
+  if (err) {
+    throw err;
+  }
+  var db = mongoclient.db(config.db.name);
+  exports.db = function() {
+    return db;
+  };
+  console.log('Mongo driver listening on ' + config.db.host + ':' + config.db.port + ', connected to db "' + db.databaseName + '"');
+});
+
+exports.mongoclient = function() {
+  return mongoclient;
+};
+
+var routes = require('./routes/index'),
+  user = require('./routes/user');
+
 app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/about', routes.about);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
-  console.log('Mongoose listening to ' + mongoose.connection.host + ':' + mongoose.connection.port + ' using db "' + mongoose.connection.name + '"');
-});
