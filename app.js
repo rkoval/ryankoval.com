@@ -31,6 +31,7 @@ app.use(require('less-middleware')({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
+app.use(express.static(path.join(__dirname, 'bower_components/font-awesome')));
 
 // expose libraries to jade templates
 app.locals.moment = require('moment');

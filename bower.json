@@ -4,6 +4,7 @@
   "dependencies": {
     "jquery": "~2.0.3",
     "bootstrap": "~3.0.3",
-    "Hover": "git@github.com:IanLunn/Hover.git"
+    "Hover": "git@github.com:IanLunn/Hover.git",
+    "font-awesome": "~4.0.3"
   }
 }
