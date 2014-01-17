@@ -61,10 +61,8 @@ exports.mongoclient = function() {
   return mongoclient;
 };
 
-var routes = require('./routes/index'),
-  user = require('./routes/user');
+var routes = require('./routes/index');
 
 app.get('/', routes.index);
-app.get('/users', user.list);
 app.get('/about', routes.about);
 
