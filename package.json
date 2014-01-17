@@ -1,6 +1,7 @@
 {
   "name": "ryankoval.com",
   "version": "0.0.1",
+  "author": "Ryan Koval <ryan@ryankoval.com>",
   "private": true,
   "scripts": {
     "start": "node app.js"
