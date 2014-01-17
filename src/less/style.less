@@ -10,9 +10,13 @@ body {
 #wrap {
   min-height: 100%;
   position: relative;
-  > .container {
-    padding-bottom: (40 + @footer-top-padding * 2 + @footer-height);
-  }
+}
+#wrap:last-child {
+  padding-bottom: (40 + @footer-top-padding * 2 + @footer-height);
+}
+
+header, .footer {
+  font-family: 'Josefin Sans', sans-serif !important;
 }
 
 header {
@@ -29,18 +33,39 @@ header {
   color: white;
   background: @gray-dark;
 
+  a {
+    color: #DDDDDD;
+    &:hover {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+  }
   .nav > li {
     > a, > a:hover {
       background-color: transparent;
     }
     > a {
       color: #DDDDDD;
-    }
-    > a:hover {
-      color: #FFFFFF;
+      &:hover {
+        color: #FFFFFF;
+      }
     }
   }
 }
+h1 {
+  text-transform: capitalize;
+  font-variant: small-caps;
+  text-align: center;
+
+  &:after {
+    font-family: FontAwesome;
+    content: '\A\f192';
+    white-space: pre;
+    color: #ccc;
+    font-size: @font-size-h4;
+  }
+}
+
 
 h3 {
   margin-bottom: 0px;
@@ -52,9 +77,14 @@ h4, h5, h6 {
 
 ul, ol {
   margin-left:0;
+  margin-right: -1.5em;
   padding-left:1.5em;
   position:relative;
   left:-1.5em;
+}
+
+hr {
+  max-width: 400px;
 }
 
 .btn,
@@ -84,6 +114,22 @@ ul, ol {
 @footer-height: 80px;
 @footer-top-padding: 20px;
 
+@slalom-blue: #003a63;
+.slalom {
+  color: white;
+  font-size: @font-size-large;
+  background-color: @slalom-blue;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @slalom-shadow-blur: 5px;
+  @slalom-shadow-spread: -8px;
+//  box-shadow: inset 0px 17px @slalom-shadow-blur @slalom-shadow-spread #fff,
+//    inset 0px -17px @slalom-shadow-blur @slalom-shadow-spread #fff;
+  .logo {
+    padding: 50px 130px;
+  }
+}
 
 // subtle header (like for ryankoval.com)
 .subtle-header {
@@ -102,42 +148,52 @@ ul, ol {
   position: relative;
   height: 300px;
   img {
-    position: absolute;
     bottom: 0px;
     max-height: 100%;
+    margin: auto;
+    padding: 25px 15px 0px 15px;
   }
 }
 
 // about page
-.previous-experience .col-lg-4 > .thumbnail-bottom {
+.experience .col-lg-4 > .thumbnail-bottom {
   height: 250px;
 }
 
+.narrow-container {
+  max-width: 980px;
+}
 
-.experience .description {
-  max-height: 260px;
-  position: relative;
-  overflow: hidden;
-
-  > p:before {
-    content: '\201C';
-  }
-  > p:after {
-    content: '\201D';
+.experience {
+  .row {
+    padding-bottom: 15px;
   }
 
-  .show-more {
-    width: 100%;
-    height: 150px;
-    z-index: 99;
-    position: absolute;
-    bottom: 0px;
-    background: url("/images/bottom-fade.png") bottom center no-repeat;
-    a {
+  .description {
+    max-height: 260px;
+    position: relative;
+    overflow: hidden;
+
+    > p:before {
+      content: '\201C';
+    }
+    > p:after {
+      content: '\201D';
+    }
+
+    .show-more {
+      width: 100%;
+      height: 150px;
+      z-index: 99;
       position: absolute;
       bottom: 0px;
-      width: 100%;
-      text-align: center;
+      background: url("/images/bottom-fade.png") bottom center no-repeat;
+      a {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        text-align: center;
+      }
     }
   }
 }
