@@ -32,6 +32,9 @@ app.use(require('less-middleware')({
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
 
+// expose libraries to jade templates
+app.locals.moment = require('moment');
+
 // development only
 if (isDev) {
   app.use(express.errorHandler());

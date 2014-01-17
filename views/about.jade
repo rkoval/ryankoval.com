@@ -42,11 +42,12 @@ block content
               .caption
                 h3=exp.name
                 h4
-                  small #{exp.start} to&nbsp;
+                  - var format = 'MMMM YYYY'
+                  small #{moment.unix(exp.start).format(format)} to&nbsp;
                     if !exp.end
                       | present
                     else
-                      | #{exp.end}
+                      | #{moment.unix(exp.end).format(format)}
                 .description
                   if exp.details
                     ul(id='details' + index)
