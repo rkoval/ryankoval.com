@@ -16,7 +16,7 @@ body {
 }
 
 header, .footer {
-  font-family: 'Josefin Sans', sans-serif !important;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 header {
@@ -39,17 +39,16 @@ header {
       color: #FFFFFF;
       text-decoration: none;
     }
+    font-size: 36px;
+    &.social {
+      font-size: 30px;
+    }
   }
-  .nav > li {
-    > a, > a:hover {
-      background-color: transparent;
-    }
-    > a {
-      color: #DDDDDD;
-      &:hover {
-        color: #FFFFFF;
-      }
-    }
+  ul, li {
+    display: inline;
+  }
+  li {
+    margin: 0 10px;
   }
 }
 h1 {
