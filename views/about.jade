@@ -27,18 +27,41 @@ block content
       h1 Skills
     hr
 
+  mixin description(description)
+    if _.isArray(description)
+      each desc in description
+        p.justify #{desc}
+    else
+      p.justify #{description}
+
+  mixin dates(date)
+    - var format = 'MMMM YYYY'
+    small #{moment.unix(date.start).format(format)} to&nbsp;
+      if !date.end
+        | present
+      else
+        | #{moment.unix(date.end).format(format)}
+
+  mixin mainExpImage(exp)
+    section.container.narrow-container
+      a(href=exp.image.href)
+        img(src=exp.image.src, title=exp.name).img-responsive.logo
+
+  mixin mainExpInfo(exp)
+    .container.narrow-container
+      h2 #{exp.name}
+      each date in exp.dates
+        h3
+          +dates(date)
+      +description(exp.description)
+
   section
     .container
       h1 Current employment
     .slalom
-      section.container.narrow-container
-        a(href=experience.current.image.href)
-          img(src=experience.current.image.src, title=experience.current.name).img-responsive.logo
-      .transition
+      +mainExpImage(experience.current)
+    +mainExpInfo(experience.current)
 
-    .container.narrow-container
-      h2 #{experience.current.name}
-      p.justify #{experience.current.description}
 
     hr
 
@@ -58,19 +81,14 @@ block content
           .caption
             h3=exp.name
             .description
-              - var format = 'MMMM YYYY'
               each date in exp.dates
                 h4
-                  small #{moment.unix(date.start).format(format)} to&nbsp;
-                    if !date.end
-                      | present
-                    else
-                      | #{moment.unix(date.end).format(format)}
+                  +dates(date)
               if exp.details
                 ul
                   each detail in exp.details
                     li.justify #{detail}
-              p.justify #{exp.description}
+              +description(exp.description)
               .show-more
                 a(href='javascript: void(0);').btn.btn-default read more
 
@@ -79,4 +97,11 @@ block content
         .row
           - for (var j = 0; j < columns && i+j < expLength; j++)
             +thumbnail(experience.previous[i+j])
+    hr
 
+  section
+    .container
+      h1 Education
+    .container.narrow-container
+      +mainExpImage(experience.education)
+    +mainExpInfo(experience.education)
