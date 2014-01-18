@@ -28,11 +28,12 @@ block content
     hr
 
   mixin description(description)
-    if _.isArray(description)
-      each desc in description
-        p.justify #{desc}
-    else
-      p.justify #{description}
+    .description
+      if _.isArray(description)
+        each desc in description
+          p.justify #{desc}
+      else
+        p.justify #{description}
 
   mixin dates(date)
     - var format = 'MMMM YYYY'
@@ -41,6 +42,12 @@ block content
         | present
       else
         | #{moment.unix(date.end).format(format)}
+
+  mixin details(details)
+    if details
+      ul
+        each detail in details
+          li.justify #{detail}
 
   mixin mainExpImage(exp)
     section.container.narrow-container
@@ -53,6 +60,7 @@ block content
       each date in exp.dates
         h3
           +dates(date)
+      +details(exp.details)
       +description(exp.description)
 
   section
@@ -80,14 +88,11 @@ block content
                 img(src=exp.image.src, title=exp.name).img-responsive.img_greyscale
           .caption
             h3=exp.name
-            .description
+            .info
               each date in exp.dates
                 h4
                   +dates(date)
-              if exp.details
-                ul
-                  each detail in exp.details
-                    li.justify #{detail}
+              +details(exp.details)
               +description(exp.description)
               .show-more
                 a(href='javascript: void(0);').btn.btn-default read more

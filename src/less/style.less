@@ -157,6 +157,25 @@ hr {
   max-width: 980px;
 }
 
+.description {
+  position: relative;
+
+  &:before, &:after {
+    position: absolute;
+    font-size: 48px;
+  }
+  &:before {
+    content: '\201C';
+    left: -22px;
+    top: -16px;
+  }
+  &:after {
+    content: '\201D';
+    right: -22px;
+    bottom: -28px;
+  }
+}
+
 .experience {
   .col-lg-4 > .thumbnail-bottom {
     height: 250px;
@@ -172,17 +191,10 @@ hr {
     }
   }
 
-  .description {
+  .info {
     max-height: 290px;
     position: relative;
     overflow: hidden;
-
-    > p:before {
-      content: '\201C';
-    }
-    > p:after {
-      content: '\201D';
-    }
 
     .show-more {
       width: 100%;
