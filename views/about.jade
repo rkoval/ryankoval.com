@@ -57,14 +57,15 @@ block content
                 img(src=exp.image.src, title=exp.name).img-responsive.img_greyscale
           .caption
             h3=exp.name
-            h4
-              - var format = 'MMMM YYYY'
-              small #{moment.unix(exp.start).format(format)} to&nbsp;
-                if !exp.end
-                  | present
-                else
-                  | #{moment.unix(exp.end).format(format)}
             .description
+              - var format = 'MMMM YYYY'
+              each date in exp.dates
+                h4
+                  small #{moment.unix(date.start).format(format)} to&nbsp;
+                    if !date.end
+                      | present
+                    else
+                      | #{moment.unix(date.end).format(format)}
               if exp.details
                 ul
                   each detail in exp.details

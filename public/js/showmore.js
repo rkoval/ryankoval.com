@@ -1,13 +1,12 @@
 
 $(function() {
-  var $el, $p, $ps, $up, totalHeight;
-  $('.show-more > a').click(function() {
+  var $el, $p, $up, totalHeight;
+  $('.show-more').children('a').click(function() {
     totalHeight = 0;
 
     $el = $(this);
     $p  = $el.parent();
     $up = $p.parent();
-    $ps = $up.find(".description");
 
     // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
     $up.children().not('.show-more').each(function() {

@@ -16,7 +16,8 @@ exports.about = function (req, res) {
       if (err) throw err;
       current = doc;
 
-      collection.find({type: "previous"}).toArray(function(err, docs) {
+      collection.find({type: "previous"})
+                .sort({'dates.0.end': -1}).toArray(function(err, docs) {
         if (err) throw err;
         previous = docs;
 
