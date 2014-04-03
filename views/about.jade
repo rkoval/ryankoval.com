@@ -87,11 +87,12 @@ block content
               else
                 img(src=exp.image.src, title=exp.name).img-responsive.img_greyscale
           .caption
-            h3=exp.name
-            .info
+            h3.gutter=exp.name
               each date in exp.dates
                 h4
                   +dates(date)
+            .info
+              .gutter
               +details(exp.details)
               +description(exp.description)
               .show-more
