@@ -55,10 +55,9 @@ block content
         img(src=exp.image.src, title=exp.image.href).img-responsive.logo
 
   mixin mainExpInfo(exp)
-    .container.narrow-container
+    .container.experience.narrow-container
       h2 #{exp.name}
-      each date in exp.dates
-        h3
+        each date in exp.dates
           +dates(date)
       +details(exp.details)
       +description(exp.description)
@@ -89,12 +88,11 @@ block content
           .caption
             h3.gutter=exp.name
               each date in exp.dates
-                h4
-                  +dates(date)
+                +dates(date)
             .info
               .gutter
-              +details(exp.details)
-              +description(exp.description)
+                +details(exp.details)
+                +description(exp.description)
               .show-more
                 a(href='javascript: void(0);').btn.btn-default read more
 
