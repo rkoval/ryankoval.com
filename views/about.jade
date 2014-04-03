@@ -52,7 +52,7 @@ block content
   mixin mainExpImage(exp)
     section.container.narrow-container
       a(href=exp.image.href)
-        img(src=exp.image.src, title=exp.name).img-responsive.logo
+        img(src=exp.image.src, title=exp.image.href).img-responsive.logo
 
   mixin mainExpInfo(exp)
     .container.narrow-container
@@ -83,9 +83,9 @@ block content
           .thumbnail-bottom
             a(href=exp.image.href).center
               if exp.image.absolute
-                img(src=exp.image.src, title=exp.name, style='position: absolute').img-responsive.img_greyscale
+                img(src=exp.image.src, title=exp.image.href, style='position: absolute').img-responsive.img_greyscale
               else
-                img(src=exp.image.src, title=exp.name).img-responsive.img_greyscale
+                img(src=exp.image.src, title=exp.image.href).img-responsive.img_greyscale
           .caption
             h3.gutter=exp.name
               each date in exp.dates
