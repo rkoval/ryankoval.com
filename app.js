@@ -8,6 +8,12 @@ var express = require('express'),
   path = require('path'),
   config = require('./config'),
   mongodb = require('mongodb'),
+  favicon = require('static-favicon'),
+  logger = require('morgan'),
+  bodyParser = require('body-parser'),
+  methodOverride = require('method-override'),
+  compress = require('compression'),
+  errorHandler = require('errorhandler'),
   app = express();
 
 // all environments
@@ -15,13 +21,12 @@ var isDev = 'development' == app.get('env');
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(express.methodOverride());
-app.use(app.router);
-app.use(express.compress());
+app.use(favicon());
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
+//app.use(methodOverride);
+//app.use(compress);
 app.use(require('less-middleware')({
   force: isDev,
   compress: true,
@@ -35,11 +40,11 @@ app.use(express.static(path.join(__dirname, 'bower_components/font-awesome')));
 
 // expose libraries to jade templates
 app.locals.moment = require('moment');
-app.locals._ = require('underscore');
+app.locals._ = require('lodash');
 
 // development only
 if (isDev) {
-  app.use(express.errorHandler());
+  app.use(errorHandler());
 }
 
 http.createServer(app).listen(app.get('port'), function(){
