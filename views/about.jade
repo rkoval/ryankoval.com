@@ -52,7 +52,7 @@ block content
   mixin mainExpImage(exp)
     section.container.narrow-container
       a(href=exp.image.href)
-        img(src=exp.image.src, title=exp.image.href).img-responsive.logo
+        img(src=exp.image.src, title=exp.image.href, data-wow-duration="0.5s").img-responsive.logo.wow.fadeInLeft
 
   mixin mainExpInfo(exp)
     .container.experience.narrow-container
