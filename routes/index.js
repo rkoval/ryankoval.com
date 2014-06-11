@@ -1,38 +1,32 @@
 var app = require('../app'),
-  mongoclient = app.mongoclient(),
-  db = mongoclient.db('ryankoval');
+  db = app.mongoclient();
+  Promise = app.Promise
 
 exports.index = function (req, res) {
   res.render('index', { title: 'Express' });
 };
 
 exports.about = function (req, res) {
-  var collection = db.collection('experience'),
-    current,
-    previous,
-    education;
+  var expCol = db.collection('experience'),
+    skilCol = db.collection('skills');
 
-    collection.findOne({type: "current"}, function(err, doc) {
-      if (err) throw err;
-      current = doc;
+  var currentPromise = expCol.then(function(col) {
+    return col.findOne({type: "current"});
+  });
+  var previousPromise = expCol.then(function(col) {
+    return col.find({type: "previous"}).sort({'dates.0.end': -1}).toArray();
+  });
+  var educationPromise = expCol.then(function(col) {
+    return col.findOne({type: "education"});
+  });
 
-      collection.find({type: "previous"})
-                .sort({'dates.0.end': -1}).toArray(function(err, docs) {
-        if (err) throw err;
-        previous = docs;
-
-        collection.findOne({type: "education"}, function(err, doc) {
-          if (err) throw err;
-          education = doc;
-
-          res.render('about', {
-            experience: {
-              current: current,
-              previous: previous,
-              education: education
-            }
-          });
-        });
-      });
+  Promise.all([currentPromise, previousPromise, educationPromise]).spread(function(current, previous, education) {
+    res.render('about', {
+      experience: {
+        current: current,
+        previous: previous,
+        education: education
+      }
     });
+  }).done();
 };

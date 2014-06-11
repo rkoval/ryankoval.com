@@ -7,7 +7,7 @@ var express = require('express'),
   http = require('http'),
   path = require('path'),
   config = require('./config'),
-  mongodb = require('mongodb'),
+  mongodb = require('poseidon-mongo'),
   favicon = require('static-favicon'),
   logger = require('morgan'),
   bodyParser = require('body-parser'),
@@ -58,18 +58,17 @@ http.createServer(app).listen(app.get('port'), function(){
 });
 
 // Set up the connection to the local db
-var mongoclient = new mongodb.MongoClient(new mongodb.Server(config.db.host, config.db.port), {native_parser: true});
-mongoclient.open(function(err, mongoclient) {
-  if (err) {
-    throw err;
-  }
-  var db = mongoclient.db(config.db.name);
-  exports.db = function() {
-    return db;
-  };
-  console.log('Mongo driver listening on ' + config.db.host + ':' + config.db.port + ', connected to db "' + db.databaseName + '"');
+var Mongo = mongodb,
+Driver = Mongo.Driver,
+Database = Mongo.Database;
+Driver.configure('ryankoval', {
+  hosts: [config.db.host + ":" + config.db.port],
+  database: config.db.name,
+  options: { w: 1 }
 });
+var mongoclient = new Database('ryankoval');
 
+exports.Promise = mongodb.Promise
 exports.mongoclient = function() {
   return mongoclient;
 };
