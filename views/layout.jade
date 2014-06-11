@@ -10,20 +10,11 @@ html
     script.
       new WOW().init();
     script(src='/jquery/jquery.min.js')
-    script(src='/bootstrap/dist/js/bootstrap.js')
+    script(src='/bootstrap/dist/js/bootstrap.min.js')
     block head
-  body
-    #wrap
-      header
-        .container header
 
-      .container
-        block content
 
-      footer.footer
-        .container
-              a(href='http://ryankoval.com').subtle-header ryankoval.com
-        .container
+  mixin socialMedia()
           ul
             li
               a(href='https://github.com/rkoval', target='_blank').social
@@ -38,3 +29,28 @@ html
               - var mailto = '&#109;&#65;&#73;&#76;&#84;&#111;&#58;&#114;&#121;&#97;&#110;&#64;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#37;&#50;&#48;&#73;&#110;&#113;&#117;&#105;&#114;&#121;'
               a(href!=mailto, target='_blank').social
                 span.fa.fa-envelope-o
+
+  body
+    #wrap
+      header.header
+        .container
+          ul.pull-left
+            li
+              a(href='/') ryankoval.com
+            li
+              a(href="/about") about
+            li
+              a(href="https://github.com/rkoval/dotfiles") dotfiles
+            li
+              a(href="/") lorem
+          .pull-right
+            +socialMedia()
+
+      block content
+
+      footer.footer
+        div
+          a(href='http://ryankoval.com').subtle-header ryankoval.com
+        div
+          +socialMedia()
+
