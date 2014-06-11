@@ -3,7 +3,7 @@ var app = require('../app'),
   Promise = app.Promise
 
 exports.index = function (req, res) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
 };
 
 exports.about = function (req, res) {
