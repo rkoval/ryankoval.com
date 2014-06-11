@@ -14,6 +14,7 @@ var express = require('express'),
   methodOverride = require('method-override'),
   compress = require('compression'),
   errorHandler = require('errorhandler'),
+  lessMiddleware = require('less-middleware'),
   app = express();
 
 // all environments
@@ -27,12 +28,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 //app.use(methodOverride);
 //app.use(compress);
-app.use(require('less-middleware')({
+app.use(lessMiddleware(path.join(__dirname, 'src/less'), {
   force: isDev,
-  compress: true,
-  src: path.join(__dirname, 'src/less'),
-  dest: path.join(__dirname, 'public/css'),
-  prefix: '/css'
+  debug: true,
+  compiler: {
+    compress: true
+  },
+  dest: path.join(__dirname, 'public'),
+  preprocess: {
+    path: function(pathname, req) {
+      return pathname.replace(/\/css\//, '/');
+    }
+  }
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
