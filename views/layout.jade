@@ -9,26 +9,26 @@ html
     script(src='/WOW/dist/wow.min.js')
     script.
       new WOW().init();
-    script(src='/jquery/jquery.min.js')
+    script(src='/jquery/dist/jquery.min.js')
     script(src='/bootstrap/dist/js/bootstrap.min.js')
     block head
 
 
   mixin socialMedia()
-          ul
-            li
-              a(href='https://github.com/rkoval', target='_blank').social
-                span.fa.fa-github
-            li
-              a(href='https://twitter.com/whoaitskoval', target='_blank').social
-                span.fa.fa-twitter
-            li
-              a(href='https://www.linkedin.com/pub/ryan-koval/34/44a/459', target='_blank').social
-                span.fa.fa-linkedin-square
-            li
-              - var mailto = '&#109;&#65;&#73;&#76;&#84;&#111;&#58;&#114;&#121;&#97;&#110;&#64;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#37;&#50;&#48;&#73;&#110;&#113;&#117;&#105;&#114;&#121;'
-              a(href!=mailto, target='_blank').social
-                span.fa.fa-envelope-o
+    ul
+      li
+        a(href='https://github.com/rkoval', target='_blank').social
+          span.fa.fa-github
+      li
+        a(href='https://twitter.com/whoaitskoval', target='_blank').social
+          span.fa.fa-twitter
+      li
+        a(href='https://www.linkedin.com/pub/ryan-koval/34/44a/459', target='_blank').social
+          span.fa.fa-linkedin-square
+      li
+        - var mailto = '&#109;&#65;&#73;&#76;&#84;&#111;&#58;&#114;&#121;&#97;&#110;&#64;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#37;&#50;&#48;&#73;&#110;&#113;&#117;&#105;&#114;&#121;'
+        a(href!=mailto, target='_blank').social
+          span.fa.fa-envelope-o
 
   body
     #wrap

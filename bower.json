@@ -2,11 +2,11 @@
   "name": "ryankoval.com",
   "version": "0.1",
   "dependencies": {
-    "jquery": "~2.0.3",
-    "bootstrap": "~3.0.3",
+    "jquery": "~2.1.0",
+    "bootstrap": "~3.1.0",
     "Hover": "git@github.com:IanLunn/Hover.git",
-    "font-awesome": "~4.0.3",
+    "font-awesome": "~4.1.0",
     "animate.css": "~3.1.0",
-    "WOW": "~0.1.6"
+    "WOW": "~0.1.9"
   }
 }
