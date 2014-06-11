@@ -13,7 +13,6 @@ var express = require('express'),
   bodyParser = require('body-parser'),
   methodOverride = require('method-override'),
   compress = require('compression'),
-  errorHandler = require('errorhandler'),
   lessMiddleware = require('less-middleware'),
   app = express();
 
@@ -51,7 +50,7 @@ app.locals._ = require('lodash');
 
 // development only
 if (isDev) {
-  app.use(errorHandler());
+
 }
 
 http.createServer(app).listen(app.get('port'), function(){
