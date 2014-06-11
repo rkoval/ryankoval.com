@@ -68,16 +68,11 @@ Driver.configure('ryankoval', {
 });
 var mongoclient = new Database('ryankoval');
 
+exports.app = app;
 exports.Promise = mongodb.Promise
 exports.mongoclient = function() {
   return mongoclient;
 };
 
-var routes = require('./routes/index');
-
-app.get('/', routes.index);
-app.get('/about', routes.about);
-app.get('/dotfiles', function(req, res) {
-  res.redirect('https://raw.github.com/rkoval/dotfiles/master/bin/dotfiles')
-});
-
+// load routes
+require('./routes');

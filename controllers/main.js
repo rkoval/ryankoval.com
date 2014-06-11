@@ -30,3 +30,7 @@ exports.about = function (req, res) {
     });
   }).done();
 };
+
+exports.dotfiles = function (req, res) {
+  res.redirect('https://raw.github.com/rkoval/dotfiles/master/bin/dotfiles')
+};
