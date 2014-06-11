@@ -78,6 +78,6 @@ var routes = require('./routes/index');
 app.get('/', routes.index);
 app.get('/about', routes.about);
 app.get('/dotfiles', function(req, res) {
-  res.redirect('https://raw.github.com/rkoval/.dotfiles/master/bin/dotfiles')
+  res.redirect('https://raw.github.com/rkoval/dotfiles/master/bin/dotfiles')
 });
 
