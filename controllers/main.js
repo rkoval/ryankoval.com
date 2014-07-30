@@ -1,6 +1,6 @@
 var app = require('../app'),
   db = app.mongoclient();
-  Promise = app.Promise
+  Promise = app.Promise;
 
 exports.index = function (req, res) {
   res.render('index');

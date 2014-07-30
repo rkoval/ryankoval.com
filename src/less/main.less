@@ -28,7 +28,8 @@
 @import "variables";
 @import "mixins";
 
-@bootstrap-dir: "../../bower_components/bootstrap/less";
+@bower-dir: "../../bower_components";
+@bootstrap-dir: "@{bower-dir}/bootstrap/less";
 
 // Reset
 @import "@{bootstrap-dir}/normalize.less";
@@ -76,7 +77,7 @@
 @import "@{bootstrap-dir}/utilities.less";
 @import "@{bootstrap-dir}/responsive-utilities.less";
 
-@import "../../bower_components/font-awesome/less/font-awesome.less";
+@import "@{bower-dir}/font-awesome/less/font-awesome.less";
 
 // custom styles
 @import "style";
