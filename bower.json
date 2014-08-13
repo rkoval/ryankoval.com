@@ -4,7 +4,7 @@
   "dependencies": {
     "jquery": "~2.1.0",
     "bootstrap": "~3.1.0",
-    "Hover": "git@github.com:IanLunn/Hover.git",
+    "Hover": "*",
     "font-awesome": "~4.1.0",
     "animate.css": "~3.1.0",
     "WOW": "~0.1.9"

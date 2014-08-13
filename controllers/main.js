@@ -19,14 +19,22 @@ exports.about = function (req, res) {
   var educationPromise = expCol.then(function(col) {
     return col.findOne({type: "education"});
   });
+  var skillsPromise = skilCol.then(function(col) {
+    return col.find().sort({'name': 1}).toArray();
+  });
 
-  Promise.all([currentPromise, previousPromise, educationPromise]).spread(function(current, previous, education) {
+  var promises = [currentPromise, previousPromise, educationPromise, skillsPromise];
+
+  Promise.all(promises).spread(function(current, previous, education, skills) {
+    console.log(skills)
+    console.log(current)
     res.render('about', {
       experience: {
         current: current,
         previous: previous,
         education: education
-      }
+      },
+      skills: skills
     });
   }).done();
 };
