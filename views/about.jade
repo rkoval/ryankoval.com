@@ -45,9 +45,10 @@ block content
           li.justify #{detail}
 
   mixin mainExpImage(exp)
-    section.container.narrow-container
+    .container.narrow-container
       a(href=exp.image.href)
-        img(src=exp.image.src, title=exp.image.href, data-wow-duration="0.5s").img-responsive.logo.wow.fadeInLeft
+        -var style = "background-image: url(" + exp.image.src + ");"
+        div(style=style, title=exp.image.href, data-wow-duration="0.5s", data-wow-offset="500").img-responsive.logo.wow.fadeInLeft &nbsp;
 
   mixin mainExpInfo(exp)
     .container.experience.narrow-container

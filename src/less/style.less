@@ -126,8 +126,26 @@ hr {
 //    inset 0px -17px @slalom-shadow-blur @slalom-shadow-spread #fff;
 }
 
-.logo {
-  padding: 50px 130px;
+a {
+  &:hover {
+    text-decoration: none;
+  }
+  .logo {
+    background: no-repeat center;
+    background-size: contain;
+    height: 300px;
+    padding: 1em;
+  }
+}
+
+a.dark-contrast {
+  text-decoration: none;
+  color: #dddddd;
+
+  &:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
 }
 
 // subtle header (like for ryankoval.com)
