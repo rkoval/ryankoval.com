@@ -58,19 +58,17 @@ block content
       +description(exp.description)
 
   section
-    .container
-      h1 Current employment
     .slalom
       +mainExpImage(experience.current)
     +mainExpInfo(experience.current)
 
 
-    hr
 
+
+
+  hr
   section
-    .container
-      h1 Previous work
-    .container.experience.narrow-container
+    .container.experience
 
       mixin thumbnail(exp)
         .col-lg-6
@@ -96,11 +94,9 @@ block content
         .row
           - for (var j = 0; j < columns && i+j < expLength; j++)
             +thumbnail(experience.previous[i+j])
+
     hr
 
   section
-    .container
-      h1 Education
-    .container.narrow-container
       +mainExpImage(experience.education)
     +mainExpInfo(experience.education)
