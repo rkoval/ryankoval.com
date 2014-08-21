@@ -6,7 +6,7 @@
     "bootstrap": "~3.1.0",
     "Hover": "*",
     "font-awesome": "~4.1.0",
-    "animate.css": "~3.1.0",
-    "WOW": "~0.1.9"
+    "WOW": "~0.1.9",
+    "animate-css": "~3.2.0"
   }
 }
