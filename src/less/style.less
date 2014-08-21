@@ -242,6 +242,38 @@ hr {
   }
 }
 
+.jumbotron {
+  color: #FFFFFF;
+  background: #141414; /* Old browsers */
+  background: -moz-linear-gradient(top,  #141414 0%, #45484d 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#141414), color-stop(100%,#45484d)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #141414 0%,#45484d 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #141414 0%,#45484d 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #141414 0%,#45484d 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #141414 0%,#45484d 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#141414', endColorstr='#45484d',GradientType=0 ); /* IE6-9 */
+
+  .headerFont() {
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  h1 {
+    .headerFont();
+    text-shadow: 2px 3px #3F3F3F;
+    font-size: 5em;
+    letter-spacing: -.025em;
+  }
+  h3 {
+    .headerFont();
+    font-size: 3em;
+    color: #eee;
+    margin-top: 0px;
+    margin-bottom:20px;
+    text-align: center;
+    .scale(20, 1);
+  }
+}
+
 a.icon {
   &:hover {
     text-decoration: none;
