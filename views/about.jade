@@ -2,24 +2,16 @@ extends layout
 
 block headcss
   link(href="/Hover/css/hover-min.css" rel="stylesheet")
+  link(href='http://fonts.googleapis.com/css?family=Permanent+Marker', rel='stylesheet', type='text/css')
 block headjs
   script(src='/js/showmore.js')
 
 block content
   section
+    .jumbotron.masthead
     .container
-      .name.page-header
-        h1 Ryan Alexander Koval
-        h4.center
-          - var mailto = '&#109;&#65;&#73;&#76;&#84;&#111;&#58;&#114;&#121;&#97;&#110;&#64;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#37;&#50;&#48;&#73;&#110;&#113;&#117;&#105;&#114;&#121;';
-          a(href!=mailto, target='_blank')
-            | ry<span style="display: none;">screwyoubots</span>an@rya<span style="display: none;">antibot</span>nkoval.com
-        h4.center
-          a(href='https://www.dropbox.com/s/66bactld5mlshw2/Ryan%20Koval%20Resume.pdf') Formal Resume
-
-  section
-    .container
-      h1 About
+        h1.wow.flipInX(data-wow-delay='0.5s') Ryan Alexander Koval
+        h3 -
       .container.narrow-container
         p.justify Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit.
 
