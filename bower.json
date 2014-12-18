@@ -7,6 +7,7 @@
     "Hover": "*",
     "font-awesome": "~4.1.0",
     "WOW": "~0.1.9",
-    "animate-css": "~3.2.0"
+    "animate-css": "~3.2.0",
+    "lodash": "~2.4.1"
   }
 }
