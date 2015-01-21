@@ -20,9 +20,9 @@ header {
 }
 
 footer, header {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Dosis', sans-serif;
   color: white;
-  background: @gray-dark;
+  background: #141414;
 
   a {
     color: #DDDDDD;
@@ -152,7 +152,7 @@ a.dark-contrast {
 
 // subtle header (like for ryankoval.com)
 .subtle-header {
-  font-family: 'Josefin Sans', sans-serif !important;
+  font-family: 'Dosis', sans-serif !important;
   font-style: normal;
   font-weight: 300;
   font-size: 2.3em;
@@ -175,7 +175,7 @@ a.dark-contrast {
 }
 
 .narrow-container {
-  max-width: 980px;
+  max-width: 900px;
 }
 
 .description {
@@ -183,11 +183,11 @@ a.dark-contrast {
 
   &:before, &:after {
     position: absolute;
-    font-size: 48px;
+    font-size: 2.5em;
   }
   &:before {
     content: '\201C';
-    left: -22px;
+    left: -0.45em;
     top: -16px;
   }
   &:after {
@@ -201,7 +201,7 @@ a.dark-contrast {
   h1, h2, h3, h4, h5 {
     small {
       &+small {
-        padding-top: 0.3em;
+        padding-top: 0.15em;
       }
       display: block;
     }
@@ -235,7 +235,8 @@ a.dark-contrast {
     li:before {
       font-family: 'FontAwesome';
       content: '\f101';
-      margin:0 5px 0 -15px;
+      margin:0 7px 0 -15px;
+      font-size: 0.8em;
     }
   }
 
@@ -290,7 +291,6 @@ a.dark-contrast {
     margin-top: 0px;
     margin-bottom:20px;
     text-align: center;
-    .scale(20, 1);
   }
 }
 
