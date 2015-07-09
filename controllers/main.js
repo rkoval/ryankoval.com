@@ -3,10 +3,6 @@ var app = require('../app'),
   Promise = app.Promise;
 
 exports.index = function (req, res) {
-  res.render('index');
-};
-
-exports.about = function (req, res) {
   var expCol = db.collection('experience'),
     skilCol = db.collection('skills');
 
