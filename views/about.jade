@@ -10,7 +10,7 @@ block headjs
 block content
   section
     .jumbotron.masthead
-    .container
+      .container
         h1.wow.flipInX(data-wow-delay='0.5s') Ryan Alexander Koval
         h3 -
         p.justify Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit.
@@ -48,7 +48,7 @@ block content
     .container.narrow-container
       a(href=exp.image.href)
         -var style = "background-image: url(" + exp.image.src + ");"
-        div(style=style, title=exp.image.href, data-wow-duration="0.5s", data-wow-offset="500").img-responsive.logo.wow.fadeInLeft &nbsp;
+        div(style=style, title=exp.image.href, data-wow-offset="500").img-responsive.logo.wow.flipInX &nbsp;
 
   mixin mainExpInfo(exp)
     .container.experience.narrow-container
@@ -93,10 +93,10 @@ block content
           - for (var j = 0; j < columns && i+j < expLength; j++)
             +thumbnail(experience.previous[i+j])
 
-    hr
+  hr
 
   section
-      +mainExpImage(experience.education)
+    +mainExpImage(experience.education)
     +mainExpInfo(experience.education)
 
   hr
