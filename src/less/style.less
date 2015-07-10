@@ -15,10 +15,6 @@ body {
   padding-bottom: (40 + @footer-top-padding * 2 + @footer-height);
 }
 
-header {
-  padding-top: 5px;
-}
-
 footer, header {
   font-family: 'Dosis', sans-serif;
   color: white;
@@ -30,7 +26,7 @@ footer, header {
       color: #FFFFFF;
       text-decoration: none;
     }
-    font-size: 2.25em;
+    
     &.social {
       font-size: 1.85em;
     }
@@ -42,10 +38,33 @@ footer, header {
   li {
     margin: 0 0.55em;
   }
+
+  .social > .title {
+    padding-left: 0.3em;
+    font-size: 0.9em;
+    display: none;
+  }
 }
 
-header a {
-  font-size: 1.75em;
+header {
+  .icon-bar {
+    background-color: #DDD;
+    &:hover {
+      background-color: #FFF;
+    }
+  }
+
+  .navbar-right > li {
+    margin: 0;
+  }
+
+  @media (max-width: @screen-sm-min) {
+    .social > .title {
+      display: inline;
+    }
+    .navbar-right > li {
+      border-bottom: 1px #333 solid;
+    }
 }
 
 footer {
@@ -83,7 +102,14 @@ hr {
 .btn,
 .nav > li > a,
 .nav-pills > li > a {
-  font-family: @font-family-sans-serif;
+  &:hover {
+    background-color: transparent;
+  }
+  font-family: 'Dosis', sans-serif;
+}
+
+.nav > li > a {
+  padding: 7px 10px;
 }
 
 .center {

@@ -4,35 +4,42 @@ html
     include head
 
   mixin socialMedia()
-    ul
-      li
-        a(title='Github Profile' href='https://github.com/rkoval', target='_blank').social
-          span.fa.fa-github
-      li
-        a(title='@whoaitskoval' href='https://twitter.com/whoaitskoval', target='_blank').social
-          span.fa.fa-twitter
-      li
-        a(title='LinkedIn Profile' href='https://www.linkedin.com/pub/ryan-koval/34/44a/459', target='_blank').social
-          span.fa.fa-linkedin-square
-      li
-        - var mailto = '&#109;&#65;&#73;&#76;&#84;&#111;&#58;&#114;&#121;&#97;&#110;&#64;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#37;&#50;&#48;&#73;&#110;&#113;&#117;&#105;&#114;&#121;'
-        a(title='Email me!' href!=mailto, target='_blank').social
-          span.fa.fa-envelope-o
-      li
-        a(title='Formal Resume' href='https://www.dropbox.com/s/66bactld5mlshw2/Ryan%20Koval%20Resume.pdf', target='_blank').social
-          span.fa.fa-file-pdf-o
+    li
+      a(title='Github Profile' href='https://github.com/rkoval', target='_blank').social
+        span.fa.fa-fw.fa-github
+        span.title Github
+    li
+      a(title='@whoaitskoval' href='https://twitter.com/whoaitskoval', target='_blank').social
+        span.fa.fa-fw.fa-twitter
+        span.title Twitter
+    li
+      a(title='LinkedIn Profile' href='https://www.linkedin.com/pub/ryan-koval/34/44a/459', target='_blank').social
+        span.fa.fa-fw.fa-linkedin-square
+        span.title LinkedIn
+    li
+      - var mailto = '&#109;&#65;&#73;&#76;&#84;&#111;&#58;&#114;&#121;&#97;&#110;&#64;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#37;&#50;&#48;&#73;&#110;&#113;&#117;&#105;&#114;&#121;'
+      a(title='Email me!' href!=mailto, target='_blank').social
+        span.fa.fa-fw.fa-envelope-o
+        span.title Email
+    li
+      a(title='Formal Resume' href='https://www.dropbox.com/s/66bactld5mlshw2/Ryan%20Koval%20Resume.pdf', target='_blank').social
+        span.fa.fa-fw.fa-file-pdf-o
+        span.title Formal Resume
 
   body
     #wrap
-      header.header
+      header.header.navbar-static-top.bs-docs-nav
         .container
-          ul.pull-left
-            li
-              a(href='/') ryankoval.com
-            li
-              a(href="https://github.com/rkoval/dotfiles") dotfiles
-          .pull-right
-            +socialMedia()
+          .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-navbar', aria-controls='bs-navbar', aria-expanded='false')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='/') ryankoval.com
+          nav#bs-navbar.collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right
+              +socialMedia()
 
       block content
 
@@ -40,5 +47,6 @@ html
         div
           a(href='http://ryankoval.com').subtle-header ryankoval.com
         div
-          +socialMedia()
+          ul
+            +socialMedia()
 
