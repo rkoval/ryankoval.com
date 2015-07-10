@@ -11,7 +11,6 @@ var express = require('express'),
   favicon = require('static-favicon'),
   logger = require('morgan'),
   bodyParser = require('body-parser'),
-  methodOverride = require('method-override'),
   compression = require('compression'),
   lessMiddleware = require('less-middleware'),
   app = express();
@@ -25,7 +24,6 @@ app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
-//app.use(methodOverride);
 app.use(compression());
 app.use(lessMiddleware(path.join(__dirname, 'src/less'), {
   force: isDev,
