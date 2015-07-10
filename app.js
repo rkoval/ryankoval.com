@@ -45,6 +45,7 @@ app.use(express.static(path.join(__dirname, 'bower_components/font-awesome')));
 // expose libraries to jade templates
 app.locals.moment = require('moment');
 app.locals._ = require('lodash');
+app.locals.isDev = isDev;
 
 // development only
 if (isDev) {
