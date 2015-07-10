@@ -19,7 +19,7 @@ block content
       each skill in skills
         a.icon.col-lg-2.col-sm-2.col-xs-3(href=skill.href)
           - var style = "background-image: url(" + skill.image.href + ");"
-          div.img.wow.fadeInUp(style=style, title=skill.name data-wow-offset="300" data-wow-delay="0.5") &nbsp;
+          div.img.wow.fadeInUp(style=style, title=skill.name data-wow-offset="50" data-wow-delay="0.5") &nbsp;
 
   mixin description(description)
     .description
@@ -47,7 +47,7 @@ block content
     .container.narrow-container
       a(href=exp.image.href)
         -var style = "background-image: url(" + exp.image.src + ");"
-        div(style=style, title=exp.image.href, data-wow-offset="500").img-responsive.logo.wow.flipInX &nbsp;
+        div(style=style, title=exp.image.href, data-wow-offset="200").img-responsive.logo.wow.flipInX &nbsp;
 
   mixin mainExpInfo(exp)
     .container.experience.narrow-container
