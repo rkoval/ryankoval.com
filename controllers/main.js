@@ -22,8 +22,6 @@ exports.index = function (req, res) {
   var promises = [currentPromise, previousPromise, educationPromise, skillsPromise];
 
   Promise.all(promises).spread(function(current, previous, education, skills) {
-    console.log(skills)
-    console.log(current)
     res.render('about', {
       experience: {
         current: current,
