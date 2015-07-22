@@ -36,3 +36,7 @@ exports.index = function (req, res) {
 exports.dotfiles = function (req, res) {
   res.redirect('https://raw.github.com/rkoval/dotfiles/master/bin/dotfiles')
 };
+
+exports.resume = function (req, res) {
+  res.redirect('https://db.tt/TJzaTvA8')
+};
