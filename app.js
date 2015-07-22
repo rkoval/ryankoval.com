@@ -41,7 +41,7 @@ app.use(lessMiddleware(path.join(__dirname, 'src/less'), {
 
 (function configureStatics() {
   var oneHour = 3600000;
-  app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneHour }));
+  app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneHour * 24}));
   app.use(express.static(path.join(__dirname, 'bower_components'), { maxAge: oneHour * 24 }));
   app.use(express.static(path.join(__dirname, 'bower_components/font-awesome'), { maxAge: oneHour * 24 }));
 }());
