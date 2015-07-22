@@ -3,4 +3,5 @@ var app = require('./app').app,
 
 app.get('/', mainController.index);
 app.get('/dotfiles', mainController.dotfiles);
+app.get('/resume', mainController.resume);
 
