@@ -38,9 +38,13 @@ app.use(lessMiddleware(path.join(__dirname, 'src/less'), {
     }
   }
 }));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'bower_components')));
-app.use(express.static(path.join(__dirname, 'bower_components/font-awesome')));
+
+(function configureStatics() {
+  var oneHour = 3600000;
+  app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneHour }));
+  app.use(express.static(path.join(__dirname, 'bower_components'), { maxAge: oneHour * 24 }));
+  app.use(express.static(path.join(__dirname, 'bower_components/font-awesome'), { maxAge: oneHour * 24 }));
+}());
 
 // expose libraries to jade templates
 app.locals.moment = require('moment');
