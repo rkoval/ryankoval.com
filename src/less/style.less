@@ -293,7 +293,7 @@ a.dark-contrast {
 
 .jumbotron {
   color: #FFFFFF;
-  background: linear-gradient(rgba(40, 40, 40, 0.3), rgba(40, 40, 40, 0.3)), url("/images/jumbo.jpg") no-repeat;
+  background: linear-gradient(rgba(40, 40, 40, 0.6), rgba(40, 40, 40, 0.6)), url("/images/jumbo.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
   min-height: 650px;
@@ -333,6 +333,27 @@ a.dark-contrast {
     margin-top: 0px;
     margin-bottom:20px;
     text-align: center;
+  }
+
+  a {
+    display: inline-block;
+    position: relative;
+    color: inherit;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      height: 1em;
+      width: 100%;
+      border-bottom: 1px solid;
+      margin-top: 6px;
+    }
+
+    &:hover {
+      color: inherit;
+    }
   }
 }
 
