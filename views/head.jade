@@ -22,7 +22,7 @@ script(src='/bootstrap/dist/js/bootstrap.min.js')
 
   script.
     var trackOutboundLink = function(url) {
-      ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { document.location = url; } });
+      ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { window.open(url, "_blank"); } });
     };
     // dynamically append function to links with href
     $(document).ready(function() {
