@@ -11,24 +11,7 @@ script(src='/js/load-wow.js')
 script(src='/bootstrap/dist/js/bootstrap.min.js')
 
 - if(!isDev)
-  script.
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q || []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-64912146-1', 'auto');
-    ga('send', 'pageview');
-
-  script.
-    var trackOutboundLink = function(url) {
-      ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { document.location = url; } });
-    };
-    // dynamically append function to links with href
-    $(document).ready(function() {
-      var hrefLinks = $('a.tracked');
-      hrefLinks.each(function() {
-        $(this).attr('onclick', 'trackOutboundLink("' + this.href + '"); return false;');
-      });
-    });
+  script(src='/js/ga/ga.js')
+  script(src='/js/ga/track-outbound-clicks.js')
 
 block headjs
