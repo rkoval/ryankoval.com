@@ -1,4 +1,4 @@
-var app = require('./app').app,
-   mainController = require('./controllers/main');
+const app = require('./app');
+const mainController = require('./controllers/main');
 
 app.get('/', mainController.index);
