@@ -56,7 +56,6 @@ block content
     - var backgroundColor = exp.picture.backgroundColor || 'transparent';
     div(style=exp.picture.style)
       .container.narrow-container
-        - console.log(exp)
         a(href=exp.website)
           - var style = "background-image: url(" + exp.picture.src + ");"
           div(style=style, title=exp.website, data-wow-offset="200").img-responsive.logo.wow.flipInX &nbsp;
@@ -70,7 +69,6 @@ block content
       +description(exp.summary)
 
   section
-    - console.log(work)
     +mainExpImage(work[0])
     +mainExpInfo(work[0])
 
@@ -106,7 +104,6 @@ block content
 
   section
     each e in education
-      - console.log(e)
       +mainExpImage(e)
       +mainExpInfo(e)
 
