@@ -22,11 +22,24 @@
     }]
   },
   "work": [{
+    "company": "Bottle Rocket Studios",
+    "position": "Lead Engineer",
+    "website": "https://www.bottlerocketstudios.com",
+    "picture": {
+      "src": "/images/logo/bottlerocket.svg"
+    },
+    "startDate": "2015-11-02",
+    "endDate": "2016-02-05",
+    "summary": "Since our launch, Bottle Rocket has been at the forefront of the app revolution. We propelled forward-thinking brands through mobile strategy, design, and development. We push the limits of design, information architecture, and the capabilities of mobile platforms – and it shows by the way we connect users with information, brands, and entertainment. By day, we sweat the details and build awesome mobile experiences – and our passion doesn’t end there. After hours, we’re those people standing in line for the latest games and technology. We are a value-driven team of mature, self-motivated professionals that do what it takes to get the job done, but never stop improving ourselves and the services the we provide our clients.",
+    "highlights": [
+      "Assigned as a junior developer to utilize Scala experience to help speed along development of a complex eCommerce ordering solution"
+    ]
+  }, {
     "company": "Slalom Consulting",
     "position": "Consultant",
     "website": "https://www.slalom.com",
     "picture": {
-      "src": "/images/logo/slalom-white.svg"
+      "src": "/images/logo/slalom.svg"
     },
     "startDate": "2013-11-11",
     "endDate": "2015-10-23",
