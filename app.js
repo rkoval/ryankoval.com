@@ -6,7 +6,6 @@
 const express = require('express');
 const http = require('http');
 const path = require('path')
-const mongo = require('./mongo');
 const config = require('config');
 const favicon = require('static-favicon');
 const logger = require('morgan');
@@ -54,12 +53,6 @@ app.locals.isDev = isDev;
 
 http.createServer(app).listen(app.get('port'), () => {
   console.log('Express server listening on port ' + app.get('port'));
-
-  // test DB connection
-  mongo.getDb()
-    .then((db) => {
-      console.log('connected to db');
-    });
 });
 
 module.exports = app;

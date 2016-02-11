@@ -26,8 +26,8 @@ block content
   section
     .container.icon-grid
       each skill in skills
-        a.icon.col-lg-2.col-sm-3.col-xs-4(href=skill.href)
-          - var style = "background-image: url(" + skill.image.href + ");"
+        a.icon.col-lg-2.col-sm-3.col-xs-4(href=skill.website)
+          - var style = 'background-image: url(' + skill.picture.src + ');'
           div.img.wow.fadeInUp(style=style, title=skill.name data-wow-offset="50" data-wow-delay="0.5") &nbsp;
 
   mixin description(description)
@@ -38,38 +38,40 @@ block content
       else
         p.justify #{description}
 
-  mixin dates(date)
+  mixin dates(startDate, endDate)
     - var format = 'MMMM YYYY'
-    small #{moment.unix(date.start).format(format)} to&nbsp;
-      if !date.end
+    small #{moment(startDate).format(format)} to&nbsp;
+      if !endDate
         | present
       else
-        | #{moment.unix(date.end).format(format)}
+        | #{moment(endDate).format(format)}
 
-  mixin details(details)
-    if details
+  mixin highlights(highlights)
+    if highlights
       ul
-        each detail in details
-          li.justify #{detail}
+        each highlight in highlights
+          li.justify #{highlight}
 
   mixin mainExpImage(exp)
-    .container.narrow-container
-      a(href=exp.image.href)
-        -var style = "background-image: url(" + exp.image.src + ");"
-        div(style=style, title=exp.image.href, data-wow-offset="200").img-responsive.logo.wow.flipInX &nbsp;
+    - var backgroundColor = exp.picture.backgroundColor || 'transparent';
+    div(style=exp.picture.style)
+      .container.narrow-container
+        - console.log(exp)
+        a(href=exp.website)
+          - var style = "background-image: url(" + exp.picture.src + ");"
+          div(style=style, title=exp.website, data-wow-offset="200").img-responsive.logo.wow.flipInX &nbsp;
 
   mixin mainExpInfo(exp)
     .container.experience.narrow-container
-      h2 #{exp.name}
-        each date in exp.dates
-          +dates(date)
-      +details(exp.details)
-      +description(exp.description)
+      h2 #{exp.company || exp.institution}
+        +dates(exp.startDate, exp.endDate)
+      +highlights(exp.highlights)
+      +description(exp.summary)
 
   section
-    .slalom
-      +mainExpImage(experience.current)
-    +mainExpInfo(experience.current)
+    - console.log(work)
+    +mainExpImage(work[0])
+    +mainExpInfo(work[0])
 
   hr
 
@@ -79,33 +81,31 @@ block content
       mixin thumbnail(exp)
         .col-lg-6
           .thumbnail-bottom
-            a(href=exp.image.href).center
-              if exp.image.absolute
-                img(src=exp.image.src, title=exp.image.href, style='position: absolute').img-responsive
-              else
-                img(src=exp.image.src, title=exp.image.href).img-responsive
+            a(href=exp.website).center
+              img(src=exp.picture.src, title=exp.website).img-responsive
           .caption
-            h3.gutter=exp.name
-              each date in exp.dates
-                +dates(date)
+            h3.gutter=exp.company
+              +dates(exp.startDate, exp.endDate)
             .info
               .gutter
-                +details(exp.details)
+                +highlights(exp.highlights)
                 hr
-                +description(exp.description)
+                +description(exp.summary)
               .show-more
                 a(href='javascript: void(0);').btn.btn-default read more
 
-      - var columns = 2, expLength = experience.previous.length
-      - for (var i = 0; i < expLength; i=i+columns)
+      - var rows = _.chunk(work.slice(1), 2);
+      each row in rows
         .row
-          - for (var j = 0; j < columns && i+j < expLength; j++)
-            +thumbnail(experience.previous[i+j])
+          each column in row
+            +thumbnail(column)
 
   hr
 
   section
-    +mainExpImage(experience.education)
-    +mainExpInfo(experience.education)
+    each e in education
+      - console.log(e)
+      +mainExpImage(e)
+      +mainExpInfo(e)
 
   hr
