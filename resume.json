@@ -14,10 +14,12 @@
     "profiles": [{
       "network": "GitHub",
       "username": "rkoval",
+      "icon": "fa-github",
       "url": "//github.ryankoval.com"
     }, {
       "network": "LinkedIn",
       "username": "ryankoval",
+      "icon": "fa-linkedin-square",
       "url": "//linkedin.ryankoval.com"
     }]
   },
