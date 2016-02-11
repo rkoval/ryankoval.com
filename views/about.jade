@@ -64,6 +64,7 @@ block content
   mixin mainExpInfo(exp)
     .container.experience.narrow-container
       h2 #{exp.company || exp.institution}
+        small #{exp.position}
         +dates(exp.startDate, exp.endDate)
       +highlights(exp.highlights)
       +description(exp.summary)
@@ -85,6 +86,7 @@ block content
               img(src=exp.picture.src, title=exp.website).img-responsive
           .caption
             h3.gutter=exp.company
+              small #{exp.position}
               +dates(exp.startDate, exp.endDate)
             .info
               .gutter
