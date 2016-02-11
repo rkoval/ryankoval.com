@@ -203,8 +203,10 @@ a.dark-contrast {
   }
 }
 
+
+@narrow-max-width: 900px;
 .narrow-container {
-  max-width: 900px;
+  max-width: @narrow-max-width;
   padding: 0 1.6em;
 }
 
@@ -315,6 +317,7 @@ a.dark-contrast {
   }
   .container {
     text-shadow: 2px 2px 8px #000000;
+    max-width: @narrow-max-width;
   }
 
   .headerFont() {
