@@ -186,12 +186,20 @@ a.dark-contrast {
 
 .thumbnail-bottom {
   position: relative;
-  height: 300px;
+  padding: 25px 25px 0px 25px;
+
+  height: 200px;
+  @media (min-width: @screen-xs-min) {
+    height: 270px;
+  }
+  @media (min-width: @screen-md-min) {
+    height: 300px;
+  }
+
   img {
     bottom: 0px;
     max-height: 100%;
     margin: auto;
-    padding: 25px 15px 0px 15px;
   }
 }
 
