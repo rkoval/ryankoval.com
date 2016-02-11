@@ -22,6 +22,19 @@
     }]
   },
   "work": [{
+    "company": "rewardStyle",
+    "position": "Senior Software Engineer",
+    "website": "https://www.rewardstyle.com",
+    "picture": {
+      "src": "/images/logo/rewardStyle.svg",
+      "style": "background-color: #141414;"
+    },
+    "startDate": "2016-02-22",
+    "summary": "In the last four years, rewardStyle has fueled the arrival of a new influence on the retail industry: professional content creators. By providing the technical tools and education necessary to empower a global army of 9,000 premium content creators, rewardStyle is now making a tangible impact on global e-commerce sales. In 2015, rewardStyle publishers are expected to drive approximately $500 million in retail sales.\\n\\nrewardStyle has redirected the style publishing industry and contributed to the professionalization and financial independence of thousands of publishers worldwide, enabling them to earn meaningful revenue on their digital content, ultimately empowering them to create and grow small businesses into international brands. Today, rewardStyle is a multi-national business. More than 150 team members work from rewardStyle offices in Dallas, San Francisco, Shanghai and London.",
+    "highlights": [
+      "Started work at rewardStyle"
+    ]
+  }, {
     "company": "Bottle Rocket Studios",
     "position": "Lead Engineer",
     "website": "https://www.bottlerocketstudios.com",
