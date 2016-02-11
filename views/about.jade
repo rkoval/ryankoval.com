@@ -38,6 +38,9 @@ block content
       else
         p.justify #{description}
 
+  mixin position(exp)
+    small #{exp.position || _.compact([exp.studyType, exp.area]).join(', ')}
+
   mixin dates(startDate, endDate)
     - var format = 'MMMM YYYY'
     small #{moment(startDate).format(format)} to&nbsp;
@@ -63,7 +66,7 @@ block content
   mixin mainExpInfo(exp)
     .container.experience.narrow-container
       h2 #{exp.company || exp.institution}
-        small #{exp.position}
+        +position(exp)
         +dates(exp.startDate, exp.endDate)
       +highlights(exp.highlights)
       +description(exp.summary)
@@ -84,7 +87,7 @@ block content
               img(src=exp.picture.src, title=exp.website).img-responsive
           .caption
             h3.gutter=exp.company
-              small #{exp.position}
+              +position(exp)
               +dates(exp.startDate, exp.endDate)
             .info
               .gutter
