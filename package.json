@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "author": "Ryan Koval <ryan@ryankoval.com>",
   "engines": {
-    "npm": "3.7.1",
-    "node": "5.6.0"
+    "npm": "4.1.2",
+    "node": "7.7.3"
   },
   "private": true,
   "scripts": {
     "dev": "nodemon npm start",
     "postinstall": "bower install",
-    "start": "node --harmony app.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "body-parser": "~1.0.2",
@@ -27,6 +27,6 @@
   },
   "licence": "MIT",
   "devDependencies": {
-    "nodemon": "^1.8.1"
+    "nodemon": "1.11.0"
   }
 }
