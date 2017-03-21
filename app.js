@@ -7,7 +7,7 @@ const express = require('express');
 const http = require('http');
 const path = require('path')
 const config = require('config');
-const favicon = require('static-favicon');
+const favicon = require('serve-favicon');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const compression = require('compression');
@@ -16,8 +16,8 @@ const lessMiddleware = require('less-middleware');
 const app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.use(favicon());
 app.set('view engine', 'pug');
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());

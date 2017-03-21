@@ -23,7 +23,7 @@
     "lodash": "^4.3.0",
     "moment": "~2.5.0",
     "morgan": "~1.0.1",
-    "static-favicon": "~1.0.2"
+    "serve-favicon": "2.4.1"
   },
   "licence": "MIT",
   "devDependencies": {
