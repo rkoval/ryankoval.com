@@ -7,19 +7,19 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>http://www.ryankoval.com/</loc>
+  <loc>https://www.ryankoval.com/</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://github.ryankoval.com</loc>
+  <loc>https://github.ryankoval.com</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://linkedin.ryankoval.com</loc>
+  <loc>https://linkedin.ryankoval.com</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://resume.ryankoval.com</loc>
+  <loc>https://resume.ryankoval.com</loc>
   <changefreq>weekly</changefreq>
 </url>
 </urlset>
