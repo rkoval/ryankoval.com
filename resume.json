@@ -136,14 +136,59 @@
       "picture": { "src": "/images/skills/angular.svg" }
     },
     {
+      "name": "Alpine Linux",
+      "website": "https://alpinelinux.org/",
+      "picture": { "src": "/images/skills/alpine.svg" }
+    },
+    {
+      "name": "Ansible",
+      "website": "https://www.ansible.com/",
+      "picture": { "src": "/images/skills/ansible.svg" }
+    },
+    {
+      "name": "AWS Elastic Beanstalk",
+      "website": "https://aws.amazon.com/elasticbeanstalk/",
+      "picture": { "src": "/images/skills/aws/beanstalk.svg" }
+    },
+    {
+      "name": "AWS Lambda",
+      "website": "https://aws.amazon.com/lambda/",
+      "picture": { "src": "/images/skills/aws/lambda.svg" }
+    },
+    {
+      "name": "AWS CloudFormation",
+      "website": "https://aws.amazon.com/cloudformation/",
+      "picture": { "src": "/images/skills/aws/cloudformation.svg" }
+    },
+    {
+      "name": "Amazon Simple Storage Service (S3)",
+      "website": "https://aws.amazon.com/s3/",
+      "picture": { "src": "/images/skills/aws/s3.svg" }
+    },
+    {
+      "name": "Amazon Simple Queue Service (SQS)",
+      "website": "https://aws.amazon.com/sqs/",
+      "picture": { "src": "/images/skills/aws/sqs.svg" }
+    },
+    {
+      "name": "Amazon Elastic Compute Cloud",
+      "website": "https://aws.amazon.com/ec2/",
+      "picture": { "src": "/images/skills/aws/ec2.svg" }
+    },
+    {
       "name": "Bootstrap",
-      "website": "http://getbootstrap.com/",
+      "website": "https://getbootstrap.com/",
       "picture": { "src": "/images/skills/bootstrap.svg" }
+    },
+    {
+      "name": "CircleCI",
+      "website": "https://circleci.com/",
+      "picture": { "src": "/images/skills/circleci.svg" }
     },
     { "name": "Bower", "website": "http://bower.io", "picture": { "src": "/images/skills/bower.svg" } },
     {
       "name": "Broadleaf Commerce",
-      "website": "http://www.broadleafcommerce.com/",
+      "website": "https://www.broadleafcommerce.com/",
       "picture": { "src": "/images/skills/blc.svg" }
     },
     { "name": "CSS", "website": "http://www.css3.info/", "picture": { "src": "/images/skills/css3.svg" } },
@@ -178,23 +223,23 @@
       "picture": { "src": "/images/skills/extjs.svg" }
     },
     {
-      "name": "Google Maps API",
-      "website": "https://developers.google.com/maps/",
-      "picture": { "src": "/images/skills/gmaps.svg" }
+      "name": "Golang",
+      "website": "https://golang.org/",
+      "picture": { "src": "/images/skills/golang.svg" }
     },
     {
       "name": "Grunt",
-      "website": "http://www.gruntjs.com",
+      "website": "https://gruntjs.com",
       "picture": { "src": "/images/skills/grunt.svg" }
     },
     {
       "name": "HTML5",
-      "website": "http://www.html5rocks.com",
+      "website": "https://www.html5rocks.com",
       "picture": { "src": "/images/skills/html5.svg" }
     },
     {
       "name": "Hazelcast",
-      "website": "http://hazelcast.com/",
+      "website": "https://hazelcast.com/",
       "picture": { "src": "/images/skills/hazelcast.png" }
     },
     {
@@ -211,6 +256,11 @@
       "name": "PugJS",
       "website": "https://pugjs.org",
       "picture": { "src": "/images/skills/pug.svg" }
+    },
+    {
+      "name": "Python",
+      "website": "https://www.python.org/",
+      "picture": { "src": "/images/skills/python.svg" }
     },
     {
       "name": "Java",
@@ -249,11 +299,6 @@
       "picture": { "src": "/images/skills/markdown.svg" }
     },
     {
-      "name": "Maven",
-      "website": "https://maven.apache.org/",
-      "picture": { "src": "/images/skills/maven.svg" }
-    },
-    {
       "name": "MongoDB",
       "website": "https://www.mongodb.org/",
       "picture": { "src": "/images/skills/mongo.svg" }
@@ -277,6 +322,16 @@
       "name": "Play Framework",
       "website": "https://www.playframework.com/",
       "picture": { "src": "/images/skills/play.svg" }
+    },
+    {
+      "name": "ReactJS",
+      "website": "https://facebook.github.io/react/",
+      "picture": { "src": "/images/skills/reactjs.svg" }
+    },
+    {
+      "name": "Redux",
+      "website": "http://redux.js.org/",
+      "picture": { "src": "/images/skills/redux.svg" }
     },
     {
       "name": "Sass",
@@ -315,13 +370,8 @@
     },
     {
       "name": "Ubuntu",
-      "website": "http://www.ubuntu.com/",
+      "website": "https://www.ubuntu.com/",
       "picture": { "src": "/images/skills/ubuntu.svg" }
-    },
-    {
-      "name": "VBA",
-      "website": "https://en.wikipedia.org/wiki/Visual_Basic_for_Applications",
-      "picture": { "src": "/images/skills/vba.svg" }
     },
     {
       "name": "Vagrant",

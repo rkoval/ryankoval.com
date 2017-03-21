@@ -26,7 +26,7 @@ block content
   section
     .container.icon-grid
       each skill in skills
-        a.icon.col-lg-2.col-sm-3.col-xs-4(href=skill.website)
+        a.icon.col-lg-2.col-sm-3.col-xs-4(href=skill.website, target='blank' rel='noopener noreferrer')
           - var style = 'background-image: url(' + skill.picture.src + ');'
           div.img.wow.fadeInUp(style=style, title=skill.name data-wow-offset="50" data-wow-delay="0.5") &nbsp;
 
