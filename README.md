@@ -4,6 +4,5 @@ This is the repository for my personal technical experience site located [http:/
 Below is the primary list of technologies I used to build it:
 
 - [node.js](https://nodejs.org/)
-- [MongoDB](https://www.mongodb.org/)
 - [LESS](http://lesscss.org/)
-- [Jade](http://jade-lang.com/)
+- [Pug](https://pugjs.org)

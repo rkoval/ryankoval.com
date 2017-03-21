@@ -208,9 +208,9 @@
       "picture": { "src": "/images/skills/intellij.svg" }
     },
     {
-      "name": "Jade",
-      "website": "http://jade-lang.com",
-      "picture": { "src": "/images/skills/jade.svg" }
+      "name": "PugJS",
+      "website": "https://pugjs.org",
+      "picture": { "src": "/images/skills/pug.svg" }
     },
     {
       "name": "Java",

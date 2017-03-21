@@ -16,12 +16,15 @@ const lessMiddleware = require('less-middleware');
 const app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
 app.use(favicon());
+app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(compression());
+
+const isDev = 'development' == app.get('env');
+app.locals.isDev = isDev;
 app.use(lessMiddleware(path.join(__dirname, 'src/less'), {
   force: isDev,
   debug: true,
@@ -44,12 +47,9 @@ setupStaticDirectory('public');
 setupStaticDirectory('bower_components');
 setupStaticDirectory('bower_components/font-awesome');
 
-// expose libraries to jade templates
+// expose libraries to pug templates
 app.locals.moment = require('moment');
 app.locals._ = require('lodash');
-
-const isDev = 'development' == app.get('env');
-app.locals.isDev = isDev;
 
 http.createServer(app).listen(app.get('port'), () => {
   console.log('Express server listening on port ' + app.get('port'));
