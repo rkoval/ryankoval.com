@@ -181,6 +181,11 @@
       "picture": { "src": "/images/skills/bootstrap.svg" }
     },
     {
+      "name": "Cassandra",
+      "website": "https://cassandra.apache.org/",
+      "picture": { "src": "/images/skills/cassandra.svg" }
+    },
+    {
       "name": "CircleCI",
       "website": "https://circleci.com/",
       "picture": { "src": "/images/skills/circleci.svg" }
@@ -206,11 +211,6 @@
       "name": "Docker",
       "website": "https://www.docker.com/",
       "picture": { "src": "/images/skills/docker.svg" }
-    },
-    {
-      "name": "Eclipse",
-      "website": "https://www.eclipse.org/",
-      "picture": { "src": "/images/skills/eclipse.svg" }
     },
     {
       "name": "Elasticsearch",
