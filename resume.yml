@@ -1,0 +1,471 @@
+---
+basics:
+  name: Ryan Koval
+  label: A pragmatic, full-stack senior developer and leader
+  picture: https://www.dropbox.com/s/zxularl375so1aw/personal-photo.jpg?dl=1
+  email: ryan@ryankoval.com
+  website: http://ryankoval.com
+  summary: A summary of John Doe...
+  location:
+    city: Dallas
+    countryCode: US
+    region: Texas
+  profiles:
+  - network: GitHub
+    username: rkoval
+    icon: fa-github
+    url: "//github.ryankoval.com"
+  - network: LinkedIn
+    username: ryankoval
+    icon: fa-linkedin-square
+    url: "//linkedin.ryankoval.com"
+work:
+- company: rewardStyle
+  position: Senior Software Engineer
+  website: https://www.rewardstyle.com
+  picture:
+    src: "/images/logo/rewardstyle.svg"
+    style: 'background-color: #141414;'
+  startDate: '2016-02-22'
+  summary: 'In the last four years, rewardStyle has fueled the arrival of a new influence
+    on the retail industry: professional content creators. By providing the technical
+    tools and education necessary to empower a global army of 9,000 premium content
+    creators, rewardStyle is now making a tangible impact on global e-commerce sales.
+    In 2015, rewardStyle publishers are expected to drive approximately $500 million
+    in retail sales. rewardStyle has redirected the style publishing industry and
+    contributed to the professionalization and financial independence of thousands
+    of publishers worldwide, enabling them to earn meaningful revenue on their digital
+    content, ultimately empowering them to create and grow small businesses into international
+    brands. Today, rewardStyle is a multi-national business. More than 150 team members
+    work from rewardStyle offices in Dallas, San Francisco, Shanghai and London.'
+  highlights:
+  - Started work at rewardStyle
+- company: Bottle Rocket Studios
+  position: Lead Engineer
+  website: https://www.bottlerocketstudios.com
+  picture:
+    src: "/images/logo/bottlerocket.svg"
+  startDate: '2015-11-02'
+  endDate: '2016-02-05'
+  summary: Since our launch, Bottle Rocket has been at the forefront of the app revolution.
+    We propelled forward-thinking brands through mobile strategy, design, and development.
+    We push the limits of design, information architecture, and the capabilities of
+    mobile platforms – and it shows by the way we connect users with information,
+    brands, and entertainment. By day, we sweat the details and build awesome mobile
+    experiences – and our passion doesn’t end there. After hours, we’re those people
+    standing in line for the latest games and technology. We are a value-driven team
+    of mature, self-motivated professionals that do what it takes to get the job done,
+    but never stop improving ourselves and the services the we provide our clients.
+  highlights:
+  - Assigned as a junior developer to utilize Scala experience to help speed along
+    development of a complex eCommerce ordering solution
+- company: Slalom Consulting
+  position: Consultant
+  website: https://www.slalom.com
+  picture:
+    src: "/images/logo/slalom.svg"
+  startDate: '2013-11-11'
+  endDate: '2015-10-23'
+  summary: Headquartered in Seattle, Washington, Slalom Consulting has rapidly grown
+    to more than 2,200 consultants and helps companies from the Fortune 500 to emerging
+    businesses. We deliver award-winning solutions and innovation through a national
+    network of local offices across 14 North American cities. Slalom can take on a
+    full end-to-end project or only the key portion where we will add the most value.
+    We can bring our own proven methods, work within a client’s framework, or work
+    with a client to create a new delivery method. We want results for our clients,
+    and we typically structure projects with smaller teams that deliver those results
+    faster. Slalom has earned numerous national, regional, and local awards from our
+    clients, partners, the media, and community organizations. Our executives are
+    also frequently recognized on an individual basis for their leadership and business
+    acumen.
+  highlights:
+  - Developed components for nearly all aspects of a Scala / AngularJS / MongoDB /
+    Hazelcast multi-million dollar system prison telecommunication investigative tool.
+  - Assigned as a senior lead to drive Scala development of a huge AWS data processing
+    pipeline for an agricultural business giant
+- company: Credera
+  position: Consultant
+  website: https://www.credera.com
+  picture:
+    src: "/images/logo/credera.svg"
+  startDate: '2011-08-22'
+  endDate: '2013-10-30'
+  summary: Headquartered in Seattle, Washington, Slalom Consulting has rapidly grown
+    to more than 2,200 consultants and helps companies from the Fortune 500 to emerging
+    businesses. We deliver award-winning solutions and innovation through a national
+    network of local offices across 14 North American cities. Slalom can take on a
+    full end-to-end project or only the key portion where we will add the most value.
+    We can bring our own proven methods, work within a client’s framework, or work
+    with a client to create a new delivery method. We want results for our clients,
+    and we typically structure projects with smaller teams that deliver those results
+    faster. Slalom has earned numerous national, regional, and local awards from our
+    clients, partners, the media, and community organizations. Our executives are
+    also frequently recognized on an individual basis for their leadership and business
+    acumen.
+  highlights:
+  - Interacted with and developed for nearly all aspects of a multi-million dollar
+    automotive eCommerce website, which contained over 50 technology integrations
+    and spanned over both desktop & mobile platforms.
+  - Led front-end integration team of a classic Spring MVC implementation for a marketing
+    tool used by an international marketing giant.
+- company: Dallas Pedicabs
+  position: Freelance Developer
+  website: http://www.dallaspedicabs.com
+  picture:
+    src: "/images/logo/pedicabs.png"
+  startDate: '2013-02-15'
+  endDate: '2013-07-15'
+  summary: Since our inception in early 2011 we have been trying to make sustainable
+    transportation in Dallas a reality, while providing an enjoyable experience to
+    all of our patrons. Whether it is a ride to dinner, a bar, friend’s apartment
+    or just to grab a bite to eat, a ride with Dallas Pedicabs is the right decision.
+    We also cater to groups, weddings, sporting events, parking lots and awesome historic
+    tours of certain areas of Dallas. As a company, our mission is to provide fun
+    transportation for the residents of Dallas around Uptown, deter drunk driving,
+    and bring a new sustainable business to the area.
+  highlights:
+  - Overhauled unmanageable consumer-facing website for this small startup in favor
+    of a custom WordPress solution.
+- company: Tampa Bay Radiation Oncology
+  position: Administrative Assistant
+  website: https://www.slalom.com
+  picture:
+    src: "/images/logo/tbro.svg"
+  startDate: '2010-05-01'
+  endDate: '2010-07-03'
+  summary: Tampa Bay Radiation Oncology (TBRO) formed in 2003, is a locally owned
+    and physician managed organization committed to providing experienced, state of
+    the art cancer treatments in a caring and professional manner. We practice in
+    four free standing clinics, strategically located throughout the Tampa Bay Area
+    to offer convenience to patients and state of the art planning capabilities offered
+    at other major academic cancer centers across the country, so patients can receive
+    their cancer care at home with support of family and friends.
+  highlights:
+  - Aided in various administrative jobs including faxing, mailing, filing, managing
+    phone calls, and delivering packages.
+  - Coded in VBA to organize, process, and analyze physician consult spreadsheets
+    for data mining purposes.
+  - Wrote macros to increase work efficiency surrounding repetitive computer-oriented
+    tasks such as manual database information retrieval.
+education:
+- institution: Southern Methodist University
+  website: https://www.smu.edu
+  summary: A nationally ranked private university with seven degree-granting schools,
+    SMU is a distinguished center for teaching and research located in the heart of
+    Dallas. SMU’s 11,000 students benefit from small classes, leadership opportunities,
+    international study and innovative programs. SMU is celebrating the centennial
+    of its founding in 1911 and its opening in 1915. Entering its second century of
+    achievement, SMU enjoys recognition as a prominent national university. The University
+    prepares students for leadership in their professions and in their communities.
+    Our location near the heart of Dallas – a thriving center of commerce and culture
+    – offers students challenging experiences on campus and beyond. Relationships
+    with the Dallas region provide a platform for launching careers throughout the
+    world. The University provides a strong foundation in the humanities and sciences
+    and professional and graduate programs through seven degree-granting schools.
+    The learning environment includes opportunities for research, community service,
+    study abroad, internships and mentoring. SMU was founded by what is now The United
+    Methodist Church, in partnership with civic leaders, and was shaped by the entrepreneurial
+    spirit of the region. The University is nonsectarian in its teaching and committed
+    to academic freedom and open inquiry.
+  picture:
+    src: "/images/logo/smu.svg"
+  area: Computer Science (minor in Mathematics)
+  studyType: Bachelor of Science
+  startDate: '2007-08-01'
+  endDate: '2011-06-01'
+awards:
+- title: Certified ScrumMaster®
+  date: '2015-09-01'
+  awarder: Scrum Alliance
+  summary: A Certified ScrumMaster® helps project teams properly use Scrum, increasing
+    the likelihood of the project's overall success. CSMs understand Scrum values,
+    practices, and applications and provide a level of knowledge and expertise above
+    and beyond that of typical project managers. CSMs act as "servant leaders," helping
+    the rest of the Scrum team work together and learn the Scrum framework. CSMs also
+    protect the team from both internal and external distractions.
+- title: Oracle Certified Professional - Java SE6 Programmer
+  date: '2011-10-01'
+  awarder: Oracle
+  summary: Oracle's Certified Professional Java SE Programmer exam is the fundamental
+    exam required to demonstrate solid understanding of Java and some of its SE APIs
+    and is a prerequisite to a number of the other Java certificates. It is designed
+    as a fairly detailed test of knowledge of the core features and constructs of
+    the Java programming language. It tests a wide range of Java's APIs and core features,
+    starting from basics such as looping constructs and variables, to more complex
+    topics such as Threads, Collections and Generics. It does not cover specific technology
+    domains such as GUI creation, Web or network programming, though it does cover
+    part of the APIs included in the standard library. The exam tests how well a programmer
+    has understood the language constructs and mechanisms. However it's not a goal
+    of the exam to test the programmer's ability to produce purposeful or efficient
+    programs. It does not test the programmer's ability to write efficient algorithms,
+    for example, though it does test knowledge of which collections should be selected
+    in order to implement efficient algorithms without re-inventing the wheel.
+skills:
+- name: AngularJS
+  website: https://angularjs.org/
+  picture:
+    src: "/images/skills/angular.svg"
+- name: Alpine Linux
+  website: https://alpinelinux.org/
+  picture:
+    src: "/images/skills/alpine.svg"
+- name: Ansible
+  website: https://www.ansible.com/
+  picture:
+    src: "/images/skills/ansible.svg"
+- name: AWS Elastic Beanstalk
+  website: https://aws.amazon.com/elasticbeanstalk/
+  picture:
+    src: "/images/skills/aws/beanstalk.svg"
+- name: AWS Lambda
+  website: https://aws.amazon.com/lambda/
+  picture:
+    src: "/images/skills/aws/lambda.svg"
+- name: AWS CloudFormation
+  website: https://aws.amazon.com/cloudformation/
+  picture:
+    src: "/images/skills/aws/cloudformation.svg"
+- name: Amazon Simple Storage Service (S3)
+  website: https://aws.amazon.com/s3/
+  picture:
+    src: "/images/skills/aws/s3.svg"
+- name: Amazon Simple Queue Service (SQS)
+  website: https://aws.amazon.com/sqs/
+  picture:
+    src: "/images/skills/aws/sqs.svg"
+- name: Amazon Elastic Compute Cloud
+  website: https://aws.amazon.com/ec2/
+  picture:
+    src: "/images/skills/aws/ec2.svg"
+- name: Bootstrap
+  website: https://getbootstrap.com/
+  picture:
+    src: "/images/skills/bootstrap.svg"
+- name: Cassandra
+  website: https://cassandra.apache.org/
+  picture:
+    src: "/images/skills/cassandra.svg"
+- name: CircleCI
+  website: https://circleci.com/
+  picture:
+    src: "/images/skills/circleci.svg"
+- name: Bower
+  website: http://bower.io
+  picture:
+    src: "/images/skills/bower.svg"
+- name: Broadleaf Commerce
+  website: https://www.broadleafcommerce.com/
+  picture:
+    src: "/images/skills/blc.svg"
+- name: CSS
+  website: http://www.css3.info/
+  picture:
+    src: "/images/skills/css3.svg"
+- name: CentOS
+  website: https://www.centos.org/
+  picture:
+    src: "/images/skills/centos.svg"
+- name: Chrome Developer Tools
+  website: https://developer.chrome.com/devtools
+  picture:
+    src: "/images/skills/chrome.svg"
+- name: Docker
+  website: https://www.docker.com/
+  picture:
+    src: "/images/skills/docker.svg"
+- name: Elasticsearch
+  website: https://www.elastic.co
+  picture:
+    src: "/images/skills/elasticsearch.svg"
+- name: ExtJS
+  website: https://www.sencha.com/products/extjs/
+  picture:
+    src: "/images/skills/extjs.svg"
+- name: Golang
+  website: https://golang.org/
+  picture:
+    src: "/images/skills/golang.svg"
+- name: Grunt
+  website: https://gruntjs.com
+  picture:
+    src: "/images/skills/grunt.svg"
+- name: HTML5
+  website: https://www.html5rocks.com
+  picture:
+    src: "/images/skills/html5.svg"
+- name: Hazelcast
+  website: https://hazelcast.com/
+  picture:
+    src: "/images/skills/hazelcast.png"
+- name: Hibernate
+  website: http://hibernate.org/
+  picture:
+    src: "/images/skills/hibernate.svg"
+- name: IntelliJ
+  website: https://www.jetbrains.com/idea/
+  picture:
+    src: "/images/skills/intellij.svg"
+- name: PugJS
+  website: https://pugjs.org
+  picture:
+    src: "/images/skills/pug.svg"
+- name: Python
+  website: https://www.python.org/
+  picture:
+    src: "/images/skills/python.svg"
+- name: Django
+  website: https://www.djangoproject.com/
+  picture:
+    src: "/images/skills/django.svg"
+- name: Java
+  website: https://www.oracle.com/java/
+  picture:
+    src: "/images/skills/java.svg"
+- name: JavaScript
+  website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript
+  picture:
+    src: "/images/skills/js.svg"
+- name: Jenkins
+  website: https://jenkins-ci.org/
+  picture:
+    src: "/images/skills/jenkins.svg"
+- name: Karma
+  website: https://karma-runner.github.io/
+  picture:
+    src: "/images/skills/karma.svg"
+- name: Less
+  website: http://lesscss.org/
+  picture:
+    src: "/images/skills/less.svg"
+- name: Lo-Dash
+  website: https://lodash.com/
+  picture:
+    src: "/images/skills/lodash.svg"
+- name: Mac OS X
+  website: https://www.apple.com/osx/
+  picture:
+    src: "/images/skills/osx.svg"
+- name: Markdown
+  website: https://daringfireball.net/projects/markdown/
+  picture:
+    src: "/images/skills/markdown.svg"
+- name: MongoDB
+  website: https://www.mongodb.org/
+  picture:
+    src: "/images/skills/mongo.svg"
+- name: MySQL
+  website: https://www.mysql.com/
+  picture:
+    src: "/images/skills/mysql.svg"
+- name: Node Package Manager (npm)
+  website: https://www.npmjs.org/
+  picture:
+    src: "/images/skills/npm.svg"
+- name: Photoshop
+  website: https://www.adobe.com/products/photoshop.html
+  picture:
+    src: "/images/skills/photoshop.svg"
+- name: Play Framework
+  website: https://www.playframework.com/
+  picture:
+    src: "/images/skills/play.svg"
+- name: React
+  website: https://facebook.github.io/react/
+  picture:
+    src: "/images/skills/reactjs.svg"
+- name: Vue.js
+  website: https://vuejs.org/
+  picture:
+    src: "/images/skills/vue.svg"
+- name: Redux
+  website: http://redux.js.org/
+  picture:
+    src: "/images/skills/redux.svg"
+- name: Sass
+  website: http://sass-lang.com/
+  picture:
+    src: "/images/skills/sass.svg"
+- name: Scala
+  website: http://www.scala-lang.org/
+  picture:
+    src: "/images/skills/scala.svg"
+- name: Scala Build Tool (sbt)
+  website: http://www.scala-sbt.org/
+  picture:
+    src: "/images/skills/sbt.svg"
+- name: Spring
+  website: https://spring.io/
+  picture:
+    src: "/images/skills/spring.svg"
+- name: Subversion
+  website: https://subversion.apache.org/
+  picture:
+    src: "/images/skills/svn.svg"
+- name: Thymeleaf
+  website: http://www.thymeleaf.org/
+  picture:
+    src: "/images/skills/thymeleaflogo.png"
+- name: Tomcat
+  website: https://tomcat.apache.org/
+  picture:
+    src: "/images/skills/tomcat.svg"
+- name: NGINX
+  website: https://www.nginx.com/
+  picture:
+    src: "/images/skills/nginx.svg"
+- name: Ubuntu
+  website: https://www.ubuntu.com/
+  picture:
+    src: "/images/skills/ubuntu.svg"
+- name: Vagrant
+  website: https://www.vagrantup.com/
+  picture:
+    src: "/images/skills/vagrant.svg"
+- name: Vim
+  website: http://www.vim.org/about.php
+  picture:
+    src: "/images/skills/vim.svg"
+- name: Windows
+  website: https://www.microsoft.com/en-us/windows
+  picture:
+    src: "/images/skills/windows.svg"
+- name: WordPress
+  website: https://wordpress.org/
+  picture:
+    src: "/images/skills/wordpress.svg"
+- name: bash / zsh
+  website: https://github.com/sorin-ionescu/prezto
+  picture:
+    src: "/images/skills/terminal.svg"
+- name: git
+  website: https://git-scm.com/
+  picture:
+    src: "/images/skills/git.svg"
+- name: GitHub
+  website: https://github.com/
+  picture:
+    src: "/images/skills/github.svg"
+- name: jQuery
+  website: https://jquery.com/
+  picture:
+    src: "/images/skills/jquery.svg"
+- name: jQuery Mobile
+  website: https://jquerymobile.com/
+  picture:
+    src: "/images/skills/jquerymobile.svg"
+- name: node.js
+  website: https://nodejs.org/
+  picture:
+    src: "/images/skills/node.svg"
+- name: Terraform
+  website: https://www.terraform.io/
+  picture:
+    src: "/images/skills/terraform.svg"
+- name: Kubernetes
+  website: https://kubernetes.io/
+  picture:
+    src: "/images/skills/kubernetes.svg"
+- name: Concourse CI
+  website: https://concourse.ci/
+  picture:
+    src: "/images/skills/concourse.svg"
