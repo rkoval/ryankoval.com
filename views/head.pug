@@ -1,6 +1,18 @@
-title Ryan Koval - About Me
-meta(name='description' content="Summary website written to describe the technical and work experience of Ryan Koval.")
+- title = 'Ryan Koval - Technical Experience and Background'
+- description = 'Styled and animated website written to summarize the technical experience, skills, and background of Ryan A. Koval. Written using node.js, Express, and pug.'
+- image = '//ryankoval.com/images/personal-photo.jpg'
+- url = '//ryankoval.com'
+title #{title}
+meta(name='description' content=description)
 meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
+
+meta(property='og:title' content=title)
+meta(property='og:type' content='website')
+meta(property='og:description' content=description)
+meta(property='og:image' content=image)
+meta(property='og:url' content=url)
+
+meta(name='twitter:site' content='whoaitskoval')
 
 meta(name="viewport" content="width=device-width, initial-scale=1.0")
 link(rel='stylesheet', href='/css/main.css')

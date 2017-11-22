@@ -41,7 +41,7 @@ app.use(lessMiddleware(path.join(__dirname, 'src/less'), {
 
 const setupStaticDirectory = (directory) => {
   const oneHour = 1000 * 60 * 60;
-  app.use(express.static(path.join(__dirname, directory), { maxAge: oneHour * 24}));
+  app.use(express.static(path.join(__dirname, directory), { maxAge: oneHour * 24 * 7}));
 };
 setupStaticDirectory('public');
 setupStaticDirectory('bower_components');
