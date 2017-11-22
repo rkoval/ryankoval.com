@@ -1,4 +1,345 @@
 ---
+skills:
+  - skill: &angularjs
+      name: AngularJS
+      website: https://angularjs.org/
+      picture:
+        src: "/images/skills/angular.svg"
+  - skill: &alpine_linux
+      name: Alpine Linux
+      website: https://alpinelinux.org/
+      picture:
+        src: "/images/skills/alpine.svg"
+  - skill: &ansible
+      name: Ansible
+      website: https://www.ansible.com/
+      picture:
+        src: "/images/skills/ansible.svg"
+  - skill: &aws_elastic_beanstalk
+      name: AWS Elastic Beanstalk
+      website: https://aws.amazon.com/elasticbeanstalk/
+      picture:
+        src: "/images/skills/aws/beanstalk.svg"
+  - skill: &aws_lambda
+      name: AWS Lambda
+      website: https://aws.amazon.com/lambda/
+      picture:
+        src: "/images/skills/aws/lambda.svg"
+  - skill: &aws_cloudformation
+      name: AWS CloudFormation
+      website: https://aws.amazon.com/cloudformation/
+      picture:
+        src: "/images/skills/aws/cloudformation.svg"
+  - skill: &aws_s3
+      name: Amazon Simple Storage Service (S3)
+      website: https://aws.amazon.com/s3/
+      picture:
+        src: "/images/skills/aws/s3.svg"
+  - skill: &aws_sqs
+      name: Amazon Simple Queue Service (SQS)
+      website: https://aws.amazon.com/sqs/
+      picture:
+        src: "/images/skills/aws/sqs.svg"
+  - skill: &aws_ec2
+      name: Amazon Elastic Compute Cloud
+      website: https://aws.amazon.com/ec2/
+      picture:
+        src: "/images/skills/aws/ec2.svg"
+  - skill: &bitbucket
+      name: Bitbucket
+      website: https://bitbucket.org/
+      picture:
+        src: "/images/skills/bitbucket.svg"
+  - skill: &bootstrap
+      name: Bootstrap
+      website: https://getbootstrap.com/
+      picture:
+        src: "/images/skills/bootstrap.svg"
+  - skill: &cassandra
+      name: Cassandra
+      website: https://cassandra.apache.org/
+      picture:
+        src: "/images/skills/cassandra.svg"
+  - skill: &circleci
+      name: CircleCI
+      website: https://circleci.com/
+      picture:
+        src: "/images/skills/circleci.svg"
+  - skill: &bower
+      name: Bower
+      website: http://bower.io
+      picture:
+        src: "/images/skills/bower.svg"
+  - skill: &broadleaf_commerce
+      name: Broadleaf Commerce
+      website: https://www.broadleafcommerce.com/
+      picture:
+        src: "/images/skills/blc.svg"
+  - skill: &css
+      name: CSS
+      website: http://www.css3.info/
+      picture:
+        src: "/images/skills/css3.svg"
+  - skill: &linux
+      name: Linux
+      website: https://www.linux.org/
+      picture:
+        src: "/images/skills/linux.svg"
+  - skill: &chrome_developer_tools
+      name: Chrome Developer Tools
+      website: https://developer.chrome.com/devtools
+      picture:
+        src: "/images/skills/chrome.svg"
+  - skill: &docker
+      name: Docker
+      website: https://www.docker.com/
+      picture:
+        src: "/images/skills/docker.svg"
+  - skill: &elasticsearch
+      name: Elasticsearch
+      website: https://www.elastic.co
+      picture:
+        src: "/images/skills/elasticsearch.svg"
+  - skill: &extjs
+      name: ExtJS
+      website: https://www.sencha.com/products/extjs/
+      picture:
+        src: "/images/skills/extjs.svg"
+  - skill: &golang
+      name: Golang
+      website: https://golang.org/
+      picture:
+        src: "/images/skills/golang.svg"
+  - skill: &grunt
+      name: Grunt
+      website: https://gruntjs.com
+      picture:
+        src: "/images/skills/grunt.svg"
+  - skill: &html5
+      name: HTML5
+      website: https://www.html5rocks.com
+      picture:
+        src: "/images/skills/html5.svg"
+  - skill: &hazelcast
+      name: Hazelcast
+      website: https://hazelcast.com/
+      picture:
+        src: "/images/skills/hazelcast.png"
+  - skill: &hibernate
+      name: Hibernate
+      website: http://hibernate.org/
+      picture:
+        src: "/images/skills/hibernate.svg"
+  - skill: &intellij
+      name: IntelliJ
+      website: https://www.jetbrains.com/idea/
+      picture:
+        src: "/images/skills/intellij.svg"
+  - skill: &pugjs
+      name: PugJS
+      website: https://pugjs.org
+      picture:
+        src: "/images/skills/pug.svg"
+  - skill: &python
+      name: Python
+      website: https://www.python.org/
+      picture:
+        src: "/images/skills/python.svg"
+  - skill: &django
+      name: Django
+      website: https://www.djangoproject.com/
+      picture:
+        src: "/images/skills/django.svg"
+  - skill: &java
+      name: Java
+      website: https://www.oracle.com/java/
+      picture:
+        src: "/images/skills/java.svg"
+  - skill: &javascript
+      name: JavaScript
+      website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript
+      picture:
+        src: "/images/skills/js.svg"
+  - skill: &jenkins
+      name: Jenkins
+      website: https://jenkins-ci.org/
+      picture:
+        src: "/images/skills/jenkins.svg"
+  - skill: &karma
+      name: Karma
+      website: https://karma-runner.github.io/
+      picture:
+        src: "/images/skills/karma.svg"
+  - skill: &less
+      name: Less
+      website: http://lesscss.org/
+      picture:
+        src: "/images/skills/less.svg"
+  - skill: &lo_dash
+      name: Lo-Dash
+      website: https://lodash.com/
+      picture:
+        src: "/images/skills/lodash.svg"
+  - skill: &mac_os_x
+      name: Mac OS X
+      website: https://www.apple.com/osx/
+      picture:
+        src: "/images/skills/osx.svg"
+  - skill: &markdown
+      name: Markdown
+      website: https://daringfireball.net/projects/markdown/
+      picture:
+        src: "/images/skills/markdown.svg"
+  - skill: &mongodb
+      name: MongoDB
+      website: https://www.mongodb.org/
+      picture:
+        src: "/images/skills/mongo.svg"
+  - skill: &mysql
+      name: MySQL
+      website: https://www.mysql.com/
+      picture:
+        src: "/images/skills/mysql.svg"
+  - skill: &npm
+      name: Node Package Manager (npm)
+      website: https://www.npmjs.org/
+      picture:
+        src: "/images/skills/npm.svg"
+  - skill: &photoshop
+      name: Photoshop
+      website: https://www.adobe.com/products/photoshop.html
+      picture:
+        src: "/images/skills/photoshop.svg"
+  - skill: &play_framework
+      name: Play Framework
+      website: https://www.playframework.com/
+      picture:
+        src: "/images/skills/play.svg"
+  - skill: &react
+      name: React
+      website: https://facebook.github.io/react/
+      picture:
+        src: "/images/skills/reactjs.svg"
+  - skill: &vue_js
+      name: Vue.js
+      website: https://vuejs.org/
+      picture:
+        src: "/images/skills/vue.svg"
+  - skill: &redux
+      name: Redux
+      website: http://redux.js.org/
+      picture:
+        src: "/images/skills/redux.svg"
+  - skill: &sass
+      name: Sass
+      website: http://sass-lang.com/
+      picture:
+        src: "/images/skills/sass.svg"
+  - skill: &scala
+      name: Scala
+      website: http://www.scala-lang.org/
+      picture:
+        src: "/images/skills/scala.svg"
+  - skill: &sbt
+      name: Scala Build Tool (sbt)
+      website: http://www.scala-sbt.org/
+      picture:
+        src: "/images/skills/sbt.svg"
+  - skill: &spring
+      name: Spring
+      website: https://spring.io/
+      picture:
+        src: "/images/skills/spring.svg"
+  - skill: &subversion
+      name: Subversion
+      website: https://subversion.apache.org/
+      picture:
+        src: "/images/skills/svn.svg"
+  - skill: &thymeleaf
+      name: Thymeleaf
+      website: http://www.thymeleaf.org/
+      picture:
+        src: "/images/skills/thymeleaflogo.png"
+  # - skill: &tomcat
+      # name: Tomcat
+      # website: https://tomcat.apache.org/
+      # picture:
+        # src: "/images/skills/tomcat.svg"
+  - skill: &nginx
+      name: NGINX
+      website: https://www.nginx.com/
+      picture:
+        src: "/images/skills/nginx.svg"
+  # - skill: &ubuntu
+      # name: Ubuntu
+      # website: https://www.ubuntu.com/
+      # picture:
+        # src: "/images/skills/ubuntu.svg"
+  - skill: &vagrant
+      name: Vagrant
+      website: https://www.vagrantup.com/
+      picture:
+        src: "/images/skills/vagrant.svg"
+  - skill: &vim
+      name: Vim
+      website: http://www.vim.org/about.php
+      picture:
+        src: "/images/skills/vim.svg"
+  - skill: &windows
+      name: Windows
+      website: https://www.microsoft.com/en-us/windows
+      picture:
+        src: "/images/skills/windows.svg"
+  - skill: &wordpress
+      name: WordPress
+      website: https://wordpress.org/
+      picture:
+        src: "/images/skills/wordpress.svg"
+  - skill: &bash_zsh
+      name: bash / zsh
+      website: https://github.com/sorin-ionescu/prezto
+      picture:
+        src: "/images/skills/terminal.svg"
+  - skill: &git
+      name: git
+      website: https://git-scm.com/
+      picture:
+        src: "/images/skills/git.svg"
+  - skill: &github
+      name: GitHub
+      website: https://github.com/
+      picture:
+        src: "/images/skills/github.svg"
+  - skill: &jquery
+      name: jQuery
+      website: https://jquery.com/
+      picture:
+        src: "/images/skills/jquery.svg"
+  - skill: &jquery_mobile
+      name: jQuery Mobile
+      website: https://jquerymobile.com/
+      picture:
+        src: "/images/skills/jquerymobile.svg"
+  - skill: &node_js
+      name: node.js
+      website: https://nodejs.org/
+      picture:
+        src: "/images/skills/node.svg"
+  - skill: &terraform
+      name: Terraform
+      website: https://www.terraform.io/
+      picture:
+        src: "/images/skills/terraform.svg"
+  - skill: &kubernetes
+      name: Kubernetes
+      website: https://kubernetes.io/
+      picture:
+        src: "/images/skills/kubernetes.svg"
+  - skill: &concourse_ci
+      name: Concourse CI
+      website: https://concourse.ci/
+      picture:
+        src: "/images/skills/concourse.svg"
 basics:
   name: Ryan Koval
   label: A pragmatic, full-stack senior software engineer and leader
@@ -38,8 +379,36 @@ work:
     content, ultimately empowering them to create and grow small businesses into international
     brands. Today, rewardStyle is a multi-national business. More than 150 team members
     work from rewardStyle offices in Dallas, San Francisco, Shanghai and London.'
+  skills:
+    - *python
+    - *django
+    - *docker
+    - *kubernetes
+    - *javascript
+    - *vue_js
+    - *vim
+    - *nginx
+    - *aws_lambda
+    - *mysql
+    - *aws_cloudformation
+    - *aws_elastic_beanstalk
+    - *aws_sqs
+    - *golang
+    - *angularjs
+    - *aws_ec2
+    - *terraform
+    - *aws_s3
+    - *node_js
+    - *concourse_ci
+    - *jenkins
+    - *git
+    - *linux
   highlights:
-  - Started work at rewardStyle
+  - Ryan helped build two major versions of a screen-scraping infrastructure used to gather data from all influencers for a customer-facing recommendation algorithm and general internal business intelligence
+  - He was involved in designing and implementing new core infrastructure patterns to push the organization from a two-week deploy cycle to rapid continuous delivery
+  - He revived multiple legacy node.js analytics projects plagued with stability problems and general disrepair
+  - He wrote a microservice that served as a core piece for handling international payment information
+  - He rewrote infrastructure configuration for another failing project in charge of syncing critical internal data throughout multiple systems
 - company: Bottle Rocket Studios
   position: Lead Engineer
   website: https://www.bottlerocketstudios.com
@@ -56,6 +425,13 @@ work:
     standing in line for the latest games and technology. We are a value-driven team
     of mature, self-motivated professionals that do what it takes to get the job done,
     but never stop improving ourselves and the services the we provide our clients.
+  skills:
+    - *scala
+    - *sbt
+    - *git
+    - *vim
+    - *linux
+    - *intellij
   highlights:
   - Ryan was assigned as a developer to utilize Scala experience to help speed along
     development of a complex eCommerce ordering solution
@@ -78,10 +454,28 @@ work:
     clients, partners, the media, and community organizations. Our executives are
     also frequently recognized on an individual basis for their leadership and business
     acumen.
+  skills:
+    - *scala
+    - *sbt
+    - *play_framework
+    - *javascript
+    - *angularjs
+    - *vim
+    - *git
+    - *hazelcast
+    - *elasticsearch
+    - *mongodb
+    - *linux
+    - *git
+    - *jenkins
+    - *grunt
+    - *intellij
+    - *sass
+    - *vagrant
   highlights:
   - Ryan developed components for nearly all aspects of a multi-million dollar system prison
     telecommunication investigative tool.
-  - Ryan assigned as a senior lead to drive Scala development of a huge AWS data processing
+  - He was assigned as a senior lead to drive Scala development of a huge AWS data processing
     pipeline for an agricultural business giant
 - company: Credera
   position: Consultant
@@ -102,6 +496,19 @@ work:
     clients, partners, the media, and community organizations. Our executives are
     also frequently recognized on an individual basis for their leadership and business
     acumen.
+  skills:
+    - *java
+    - *extjs
+    - *javascript
+    - *vim
+    - *jquery
+    - *jquery_mobile
+    - *git
+    - *spring
+    - *hibernate
+    - *mysql
+    - *subversion
+    - *broadleaf_commerce
   highlights:
   - Ryan interacted with and developed for nearly all aspects of a multi-million dollar
     automotive eCommerce website, which contained over 50 technology integrations
@@ -123,6 +530,10 @@ work:
     tours of certain areas of Dallas. As a company, our mission is to provide fun
     transportation for the residents of Dallas around Uptown, deter drunk driving,
     and bring a new sustainable business to the area.
+  skills:
+    - *wordpress
+    - *vim
+    - *git
   highlights:
   - Ryan overhauled unmanageable consumer-facing website for this small startup in favor
     of a custom WordPress solution.
@@ -143,9 +554,9 @@ work:
   highlights:
   - Ryan aided in various administrative jobs including faxing, mailing, filing, managing
     phone calls, and delivering packages.
-  - Ryan coded in VBA to organize, process, and analyze physician consult spreadsheets
+  - He coded in VBA to organize, process, and analyze physician consult spreadsheets
     for data mining purposes.
-  - Ryan wrote macros to increase work efficiency surrounding repetitive computer-oriented
+  - He wrote macros to increase work efficiency surrounding repetitive computer-oriented
     tasks such as manual database information retrieval.
 education:
 - institution: Southern Methodist University
@@ -200,272 +611,3 @@ awards:
     programs. It does not test the programmer's ability to write efficient algorithms,
     for example, though it does test knowledge of which collections should be selected
     in order to implement efficient algorithms without re-inventing the wheel.
-skills:
-- name: AngularJS
-  website: https://angularjs.org/
-  picture:
-    src: "/images/skills/angular.svg"
-- name: Alpine Linux
-  website: https://alpinelinux.org/
-  picture:
-    src: "/images/skills/alpine.svg"
-- name: Ansible
-  website: https://www.ansible.com/
-  picture:
-    src: "/images/skills/ansible.svg"
-- name: AWS Elastic Beanstalk
-  website: https://aws.amazon.com/elasticbeanstalk/
-  picture:
-    src: "/images/skills/aws/beanstalk.svg"
-- name: AWS Lambda
-  website: https://aws.amazon.com/lambda/
-  picture:
-    src: "/images/skills/aws/lambda.svg"
-- name: AWS CloudFormation
-  website: https://aws.amazon.com/cloudformation/
-  picture:
-    src: "/images/skills/aws/cloudformation.svg"
-- name: Amazon Simple Storage Service (S3)
-  website: https://aws.amazon.com/s3/
-  picture:
-    src: "/images/skills/aws/s3.svg"
-- name: Amazon Simple Queue Service (SQS)
-  website: https://aws.amazon.com/sqs/
-  picture:
-    src: "/images/skills/aws/sqs.svg"
-- name: Amazon Elastic Compute Cloud
-  website: https://aws.amazon.com/ec2/
-  picture:
-    src: "/images/skills/aws/ec2.svg"
-- name: Bootstrap
-  website: https://getbootstrap.com/
-  picture:
-    src: "/images/skills/bootstrap.svg"
-- name: Cassandra
-  website: https://cassandra.apache.org/
-  picture:
-    src: "/images/skills/cassandra.svg"
-- name: CircleCI
-  website: https://circleci.com/
-  picture:
-    src: "/images/skills/circleci.svg"
-- name: Bower
-  website: http://bower.io
-  picture:
-    src: "/images/skills/bower.svg"
-- name: Broadleaf Commerce
-  website: https://www.broadleafcommerce.com/
-  picture:
-    src: "/images/skills/blc.svg"
-- name: CSS
-  website: http://www.css3.info/
-  picture:
-    src: "/images/skills/css3.svg"
-- name: CentOS
-  website: https://www.centos.org/
-  picture:
-    src: "/images/skills/centos.svg"
-- name: Chrome Developer Tools
-  website: https://developer.chrome.com/devtools
-  picture:
-    src: "/images/skills/chrome.svg"
-- name: Docker
-  website: https://www.docker.com/
-  picture:
-    src: "/images/skills/docker.svg"
-- name: Elasticsearch
-  website: https://www.elastic.co
-  picture:
-    src: "/images/skills/elasticsearch.svg"
-- name: ExtJS
-  website: https://www.sencha.com/products/extjs/
-  picture:
-    src: "/images/skills/extjs.svg"
-- name: Golang
-  website: https://golang.org/
-  picture:
-    src: "/images/skills/golang.svg"
-- name: Grunt
-  website: https://gruntjs.com
-  picture:
-    src: "/images/skills/grunt.svg"
-- name: HTML5
-  website: https://www.html5rocks.com
-  picture:
-    src: "/images/skills/html5.svg"
-- name: Hazelcast
-  website: https://hazelcast.com/
-  picture:
-    src: "/images/skills/hazelcast.png"
-- name: Hibernate
-  website: http://hibernate.org/
-  picture:
-    src: "/images/skills/hibernate.svg"
-- name: IntelliJ
-  website: https://www.jetbrains.com/idea/
-  picture:
-    src: "/images/skills/intellij.svg"
-- name: PugJS
-  website: https://pugjs.org
-  picture:
-    src: "/images/skills/pug.svg"
-- name: Python
-  website: https://www.python.org/
-  picture:
-    src: "/images/skills/python.svg"
-- name: Django
-  website: https://www.djangoproject.com/
-  picture:
-    src: "/images/skills/django.svg"
-- name: Java
-  website: https://www.oracle.com/java/
-  picture:
-    src: "/images/skills/java.svg"
-- name: JavaScript
-  website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript
-  picture:
-    src: "/images/skills/js.svg"
-- name: Jenkins
-  website: https://jenkins-ci.org/
-  picture:
-    src: "/images/skills/jenkins.svg"
-- name: Karma
-  website: https://karma-runner.github.io/
-  picture:
-    src: "/images/skills/karma.svg"
-- name: Less
-  website: http://lesscss.org/
-  picture:
-    src: "/images/skills/less.svg"
-- name: Lo-Dash
-  website: https://lodash.com/
-  picture:
-    src: "/images/skills/lodash.svg"
-- name: Mac OS X
-  website: https://www.apple.com/osx/
-  picture:
-    src: "/images/skills/osx.svg"
-- name: Markdown
-  website: https://daringfireball.net/projects/markdown/
-  picture:
-    src: "/images/skills/markdown.svg"
-- name: MongoDB
-  website: https://www.mongodb.org/
-  picture:
-    src: "/images/skills/mongo.svg"
-- name: MySQL
-  website: https://www.mysql.com/
-  picture:
-    src: "/images/skills/mysql.svg"
-- name: Node Package Manager (npm)
-  website: https://www.npmjs.org/
-  picture:
-    src: "/images/skills/npm.svg"
-- name: Photoshop
-  website: https://www.adobe.com/products/photoshop.html
-  picture:
-    src: "/images/skills/photoshop.svg"
-- name: Play Framework
-  website: https://www.playframework.com/
-  picture:
-    src: "/images/skills/play.svg"
-- name: React
-  website: https://facebook.github.io/react/
-  picture:
-    src: "/images/skills/reactjs.svg"
-- name: Vue.js
-  website: https://vuejs.org/
-  picture:
-    src: "/images/skills/vue.svg"
-- name: Redux
-  website: http://redux.js.org/
-  picture:
-    src: "/images/skills/redux.svg"
-- name: Sass
-  website: http://sass-lang.com/
-  picture:
-    src: "/images/skills/sass.svg"
-- name: Scala
-  website: http://www.scala-lang.org/
-  picture:
-    src: "/images/skills/scala.svg"
-- name: Scala Build Tool (sbt)
-  website: http://www.scala-sbt.org/
-  picture:
-    src: "/images/skills/sbt.svg"
-- name: Spring
-  website: https://spring.io/
-  picture:
-    src: "/images/skills/spring.svg"
-- name: Subversion
-  website: https://subversion.apache.org/
-  picture:
-    src: "/images/skills/svn.svg"
-- name: Thymeleaf
-  website: http://www.thymeleaf.org/
-  picture:
-    src: "/images/skills/thymeleaflogo.png"
-- name: Tomcat
-  website: https://tomcat.apache.org/
-  picture:
-    src: "/images/skills/tomcat.svg"
-- name: NGINX
-  website: https://www.nginx.com/
-  picture:
-    src: "/images/skills/nginx.svg"
-- name: Ubuntu
-  website: https://www.ubuntu.com/
-  picture:
-    src: "/images/skills/ubuntu.svg"
-- name: Vagrant
-  website: https://www.vagrantup.com/
-  picture:
-    src: "/images/skills/vagrant.svg"
-- name: Vim
-  website: http://www.vim.org/about.php
-  picture:
-    src: "/images/skills/vim.svg"
-- name: Windows
-  website: https://www.microsoft.com/en-us/windows
-  picture:
-    src: "/images/skills/windows.svg"
-- name: WordPress
-  website: https://wordpress.org/
-  picture:
-    src: "/images/skills/wordpress.svg"
-- name: bash / zsh
-  website: https://github.com/sorin-ionescu/prezto
-  picture:
-    src: "/images/skills/terminal.svg"
-- name: git
-  website: https://git-scm.com/
-  picture:
-    src: "/images/skills/git.svg"
-- name: GitHub
-  website: https://github.com/
-  picture:
-    src: "/images/skills/github.svg"
-- name: jQuery
-  website: https://jquery.com/
-  picture:
-    src: "/images/skills/jquery.svg"
-- name: jQuery Mobile
-  website: https://jquerymobile.com/
-  picture:
-    src: "/images/skills/jquerymobile.svg"
-- name: node.js
-  website: https://nodejs.org/
-  picture:
-    src: "/images/skills/node.svg"
-- name: Terraform
-  website: https://www.terraform.io/
-  picture:
-    src: "/images/skills/terraform.svg"
-- name: Kubernetes
-  website: https://kubernetes.io/
-  picture:
-    src: "/images/skills/kubernetes.svg"
-- name: Concourse CI
-  website: https://concourse.ci/
-  picture:
-    src: "/images/skills/concourse.svg"

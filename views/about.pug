@@ -26,9 +26,9 @@ block content
   section
     .container.icon-grid
       each skill in skills
-        a.icon.col-lg-2.col-sm-3.col-xs-4(href=skill.website, target='blank' rel='noopener noreferrer')
-          - var style = 'background-image: url(' + skill.picture.src + ');'
-          div.img.wow.fadeInUp(style=style, title=skill.name data-wow-offset="50" data-wow-delay="0.5") &nbsp;
+        a.icon.col-lg-2.col-sm-3.col-xs-4(href=skill.skill.website, target='blank' rel='noopener noreferrer')
+          - var style = 'background-image: url(' + skill.skill.picture.src + ');'
+          div.img.wow.fadeInUp(style=style, title=skill.skill.name data-wow-offset="50" data-wow-delay="0.5") &nbsp;
 
   mixin description(description)
     .description
@@ -55,6 +55,14 @@ block content
         each highlight in highlights
           li.justify #{highlight}
 
+  mixin skills(skills, classes)
+    if skills
+      div.row
+        each skill in skills
+          a.small-icon(class=classes, href=skill.website, target='blank' rel='noopener noreferrer')
+            - var style = 'background-image: url(' + skill.picture.src + ');'
+            div.img.wow.fadeIn(style=style, title=skill.name data-wow-offset="100" data-wow-delay="0.5") &nbsp;
+
   mixin mainExpImage(exp)
     - var backgroundColor = exp.picture.backgroundColor || 'transparent';
     div(style=exp.picture.style)
@@ -68,7 +76,7 @@ block content
       h2 #{exp.company || exp.institution}
         +position(exp)
         +dates(exp.startDate, exp.endDate)
-        +skills(exp.skills, 'col-lg-1 col-md-1 col-sm-1 col-xs-2')
+      +skills(exp.skills, 'col-lg-1 col-md-1 col-sm-1 col-xs-2 main-experience-skills')
       +highlights(exp.highlights)
       +description(exp.summary)
 
