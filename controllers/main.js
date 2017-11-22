@@ -3,11 +3,10 @@
 const fs = require('fs');
 const path = require('path');
 const _ = require('lodash');
-const resume = JSON.parse(
-  fs.readFileSync(path.join(__dirname, '..', 'resume.json'))
-);
+const YAML = require('yamljs');
+const resume = YAML.load(path.join(__dirname, '..', 'resume.yml'))
 
-const sortedSkills = _.sortBy(resume.skills, (skill) => skill.name.toUpperCase());
+const sortedSkills = _.sortBy(resume.skills, (skill) => skill.skill.name.toUpperCase());
 resume.skills = sortedSkills;
 
 exports.index = (req, res) => {
