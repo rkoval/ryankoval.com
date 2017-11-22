@@ -19,7 +19,7 @@ html
         span.fa.fa-fw.fa-file-pdf-o
         span.title Formal Resume
 
-  body
+  body(data-spy='scroll' data-target='#bs-navbar' data-offset='0')
     #wrap
       header.header.navbar-static-top.bs-docs-nav.navbar-fixed-top
         .container
@@ -29,8 +29,17 @@ html
               span.icon-bar
               span.icon-bar
               span.icon-bar
-            a.navbar-brand(href='/') ryankoval.com
+            a.navbar-brand(href='#') ryankoval.com
           nav#bs-navbar.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li
+                a(href='#skills') Skills
+              li
+                a(href='#current') Current Job
+              li
+                a(href='#past') Past Work
+              li
+                a(href='#education') Education
             ul.nav.navbar-nav.navbar-right
               +socialMedia()
 
@@ -38,7 +47,7 @@ html
 
       footer.footer
         div
-          a(href='http://ryankoval.com').subtle-header ryankoval.com
+          a(href='#').subtle-header ryankoval.com
         div
           ul
             +socialMedia()
