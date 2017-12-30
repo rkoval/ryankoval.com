@@ -14,10 +14,8 @@
 
 // Core variables and mixins
 @import "variables";
-@import "mixins";
-
-@bower-dir: "../../bower_components";
-@bootstrap-dir: "@{bower-dir}/bootstrap/less";
+@bootstrap-dir: "../../node_modules/bootstrap/less";
+@import "@{bootstrap-dir}/mixins";
 
 // Reset
 @import "@{bootstrap-dir}/normalize.less";
@@ -65,7 +63,7 @@
 @import "@{bootstrap-dir}/utilities.less";
 @import "@{bootstrap-dir}/responsive-utilities.less";
 
-@import "@{bower-dir}/font-awesome/less/font-awesome.less";
+@import "../../node_modules/font-awesome/less/font-awesome.less";
 
 // custom styles
 @import "style";

@@ -9,7 +9,7 @@
 
   if (!isMobileOrTablet()) {
     // only enable WOW on non-mobile browsers, as the library has trouble animating
-    $.getScript('/WOW/dist/wow.min.js', function() {
+    $.getScript('/wowjs/dist/wow.min.js', function() {
       new WOW().init();
     });
   }

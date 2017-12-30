@@ -39,13 +39,30 @@ app.use(lessMiddleware(path.join(__dirname, 'src/less'), {
   }
 }));
 
-const setupStaticDirectory = (directory) => {
+const setupStaticDirectory = (ignoreVirtualPath) => directory => {
   const oneHour = 1000 * 60 * 60;
-  app.use(express.static(path.join(__dirname, directory), { maxAge: oneHour * 24 * 7}));
+  const staticConfig = { maxAge: oneHour * 24 * 7}
+  if (ignoreVirtualPath) {
+    app.use(express.static(path.join(__dirname, directory), staticConfig));
+  } else {
+    app.use(`/${path.basename(directory)}`, express.static(path.join(__dirname, directory), staticConfig));
+  }
 };
-setupStaticDirectory('public');
-setupStaticDirectory('bower_components');
-setupStaticDirectory('bower_components/font-awesome');
+
+const virtualStaticDirectories = [
+  'node_modules/animate.css',
+  'node_modules/jquery',
+  'node_modules/wowjs',
+  'node_modules/bootstrap',
+  'node_modules/font-awesome',
+];
+virtualStaticDirectories.forEach(setupStaticDirectory(false));
+
+const nonVirtualStaticDirectories = [
+  'public',
+  'node_modules/font-awesome',
+];
+nonVirtualStaticDirectories.forEach(setupStaticDirectory(true));
 
 // expose libraries to pug templates
 app.locals.moment = require('moment');
