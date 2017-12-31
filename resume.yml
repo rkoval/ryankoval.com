@@ -16,7 +16,7 @@ skills:
       picture:
         src: "/images/skills/ansible.svg"
   - skill: &aws_elastic_beanstalk
-      name: AWS Elastic Beanstalk
+      name: Elastic Beanstalk
       website: https://aws.amazon.com/elasticbeanstalk/
       picture:
         src: "/images/skills/aws/beanstalk.svg"
@@ -26,22 +26,22 @@ skills:
       picture:
         src: "/images/skills/aws/lambda.svg"
   - skill: &aws_cloudformation
-      name: AWS CloudFormation
+      name: CloudFormation
       website: https://aws.amazon.com/cloudformation/
       picture:
         src: "/images/skills/aws/cloudformation.svg"
   - skill: &aws_s3
-      name: Amazon Simple Storage Service (S3)
+      name: S3
       website: https://aws.amazon.com/s3/
       picture:
         src: "/images/skills/aws/s3.svg"
   - skill: &aws_sqs
-      name: Amazon Simple Queue Service (SQS)
+      name: SQS
       website: https://aws.amazon.com/sqs/
       picture:
         src: "/images/skills/aws/sqs.svg"
   - skill: &aws_ec2
-      name: Amazon Elastic Compute Cloud
+      name: EC2
       website: https://aws.amazon.com/ec2/
       picture:
         src: "/images/skills/aws/ec2.svg"
@@ -176,7 +176,7 @@ skills:
       picture:
         src: "/images/skills/less.svg"
   - skill: &lo_dash
-      name: Lo-Dash
+      name: Lodash
       website: https://lodash.com/
       picture:
         src: "/images/skills/lodash.svg"
@@ -201,7 +201,7 @@ skills:
       picture:
         src: "/images/skills/mysql.svg"
   - skill: &npm
-      name: Node Package Manager (npm)
+      name: npm
       website: https://www.npmjs.org/
       picture:
         src: "/images/skills/npm.svg"
@@ -241,7 +241,7 @@ skills:
       picture:
         src: "/images/skills/scala.svg"
   - skill: &sbt
-      name: Scala Build Tool (sbt)
+      name: sbt
       website: http://www.scala-sbt.org/
       picture:
         src: "/images/skills/sbt.svg"
@@ -296,7 +296,7 @@ skills:
       picture:
         src: "/images/skills/wordpress.svg"
   - skill: &bash_zsh
-      name: bash / zsh
+      name: bash
       website: https://github.com/sorin-ionescu/prezto
       picture:
         src: "/images/skills/terminal.svg"
