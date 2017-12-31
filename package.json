@@ -24,6 +24,7 @@
     "lodash": "^4.3.0",
     "moment": "2.20.1",
     "morgan": "1.9.0",
+    "prettier": "^1.9.2",
     "pug": "2.0.0-beta11",
     "serve-favicon": "2.4.1",
     "wowjs": "1.1.2",
