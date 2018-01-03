@@ -1,8 +1,13 @@
 {
-  "extends": "eslint:recommended",
+  "parser": "babel-eslint",
+  "extends": ["eslint:recommended", "prettier"],
+  "globals": {
+    "PRODUCTION": true,
+    "$": true,
+    "WOW": true
+  },
   "env": {
     "node": true,
-    "mocha": true,
     "es6": true
   }
 }
