@@ -1,4 +1,5 @@
-require('./less/main.less')
+require('./less/font.less')
+require('./less/style.less')
 
 require('./js/wow')
 require('./js/showmore')

@@ -2,6 +2,7 @@ require('jquery')
 require('wowjs')
 
 // bootstrap
+require('./less/bootstrap.less')
 require('../node_modules/bootstrap/js/scrollspy')
 require('../node_modules/bootstrap/js/dropdown')
 

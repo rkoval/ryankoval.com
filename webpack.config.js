@@ -16,6 +16,49 @@ const extractLess = new ExtractTextPlugin({
   disable: !isProduction,
 })
 
+const styleLoaders = (() => {
+  if (isProduction) {
+    return {
+      test: /\.(css|less)$/,
+      use: extractLess.extract({
+        use: [
+          {
+            loader: 'css-loader',
+            options: {
+              minimize: true,
+            },
+          },
+          {
+            loader: 'less-loader',
+          },
+        ],
+        fallback: 'style-loader',
+      }),
+    }
+  }
+
+  return {
+    test: /\.(css|less)$/,
+    use: [
+      {
+        loader: 'style-loader',
+      },
+      {
+        loader: 'css-loader',
+        options: {
+          sourceMap: true,
+        },
+      },
+      {
+        loader: 'less-loader',
+        options: {
+          sourceMap: true,
+        },
+      },
+    ],
+  }
+})()
+
 module.exports = {
   entry: {
     app: './src/app.js',
@@ -26,6 +69,10 @@ module.exports = {
     filename: '[name].[hash].js',
   },
   devtool: !isProduction ? '#cheap-module-eval-source-map' : false,
+  devServer: {
+    hot: true,
+    overlay: true,
+  },
   module: {
     rules: [
       {
@@ -33,24 +80,7 @@ module.exports = {
         exclude: /(node_modules)/,
         use: ['babel-loader'],
       },
-      {
-        test: /\.(css|less)$/,
-        use: extractLess.extract({
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                minimize: isProduction,
-                sourceMap: !isProduction,
-              },
-            },
-            {
-              loader: 'less-loader',
-            },
-          ],
-          fallback: 'style-loader',
-        }),
-      },
+      styleLoaders,
       {
         test: /\.pug$/,
         loader: 'pug-loader',
@@ -101,6 +131,7 @@ module.exports = {
         from: src('../static'),
       },
     ]),
+    new webpack.NamedModulesPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
