@@ -45,28 +45,22 @@ const styleLoaders = (() => {
       },
       {
         loader: 'css-loader',
-        options: {
-          sourceMap: true,
-        },
       },
       {
         loader: 'less-loader',
-        options: {
-          sourceMap: true,
-        },
       },
     ],
   }
 })()
 
-module.exports = {
+const config = {
   entry: {
     app: './src/app.js',
     vendor: './src/vendor.js',
   },
   output: {
     path: src('../dist'),
-    filename: '[name].[hash].js',
+    filename: isProduction ? '[name].[hash].js' : '[name].js',
   },
   devtool: !isProduction ? '#cheap-module-eval-source-map' : false,
   devServer: {
@@ -83,6 +77,7 @@ module.exports = {
       styleLoaders,
       {
         test: /\.pug$/,
+        include: /(src\/views)/,
         loader: 'pug-loader',
       },
       {
@@ -106,21 +101,12 @@ module.exports = {
   },
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
-    new OptimizeCssAssetsPlugin({
-      cssProcessorOptions: {
-        safe: true,
-      },
-    }),
     new webpack.DefinePlugin({
       PRODUCTION: isProduction,
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: Infinity,
-    }),
-    new UglifyJsPlugin({
-      parallel: 4,
-      sourceMap: !isProduction,
     }),
     new HtmlWebpackPlugin({
       title: 'index.html',
@@ -139,6 +125,22 @@ module.exports = {
     }),
     // uncomment to inspect generated bundle
     // new BundleAnalyzerPlugin(),
-    extractLess,
   ],
 }
+
+if (isProduction) {
+  config.plugins.push(
+    new OptimizeCssAssetsPlugin({
+      cssProcessorOptions: {
+        safe: true,
+      },
+    }),
+    new UglifyJsPlugin({
+      parallel: 4,
+      sourceMap: true,
+    }),
+    extractLess
+  )
+}
+
+module.exports = config
