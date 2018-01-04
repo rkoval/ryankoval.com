@@ -4,19 +4,22 @@ html
     include head
 
   mixin socialMedia()
-    each profile in basics.profiles
-      li
-        a(title=profile.network href=profile.url, target='_blank').social
-          span.fa.fa-fw(class=profile.icon)
-          span.title #{profile.network}
+    li
+      a(title='GitHub' href='//github.ryankoval.com', target='_blank').social
+        span !{icons.faGithub}
+        span.title GitHub
+    li
+      a(title='LinkedIn' href='//linkedin.ryankoval.com', target='_blank').social
+        span !{icons.faLinkedin}
+        span.title LinkedIn
     li
       - var mailto = '&#109;&#65;&#73;&#76;&#84;&#111;&#58;&#114;&#121;&#97;&#110;&#64;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#37;&#50;&#48;&#73;&#110;&#113;&#117;&#105;&#114;&#121;'
       a(title='Email me!' href!=mailto, target='_blank').social
-        span.fa.fa-fw.fa-envelope-o
+        span !{icons.faEnvelope}
         span.title Email
     li
       a(title='Comparatively Unstylish Formal Resume' href='//resume.ryankoval.com', target='_blank').social
-        span.fa.fa-fw.fa-file-pdf-o
+        span !{icons.faFilePdf}
         span.title Formal Resume
 
   body(data-spy='scroll' data-target='#bs-navbar' data-offset='0')

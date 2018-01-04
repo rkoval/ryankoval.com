@@ -83,7 +83,7 @@ const config = {
       {
         test: /\.(ttf|eot|woff|woff2|svg)(\?\S*)?$/,
         loader: 'url-loader',
-        include: [src('../node_modules/font-awesome/fonts'), src('fonts')],
+        include: [src('fonts')],
         options: {
           limit: 8192,
           name: 'fonts/[name].[ext]',
