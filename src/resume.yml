@@ -341,12 +341,11 @@ skills:
       picture:
         src: "/images/skills/concourse.svg"
 basics:
-  name: Ryan Koval
+  name: Ryan A. Koval
   label: A pragmatic, full-stack senior software engineer and leader
   picture: https://www.dropbox.com/s/zxularl375so1aw/personal-photo.jpg?dl=1
   email: ryan@ryankoval.com
-  website: http://ryankoval.com
-  summary: A summary of John Doe...
+  website: https://ryankoval.com
   location:
     city: Dallas
     countryCode: US
