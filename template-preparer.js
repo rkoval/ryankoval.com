@@ -6,16 +6,7 @@ import { faFilePdf, faEnvelope } from '@fortawesome/fontawesome-free-regular'
 import { faLinkedin, faGithub } from '@fortawesome/fontawesome-free-brands'
 import { faAngleDoubleRight } from '@fortawesome/fontawesome-free-solid'
 
-const resume = (() => {
-  const resume = require('./src/resume.yml')
-
-  const sortedSkills = _.sortBy(resume.skills, skill =>
-    skill.skill.name.toUpperCase()
-  )
-
-  resume.skills = sortedSkills
-  return resume
-})()
+const resume = require('./src/resume.yml')
 
 // https://github.com/jantimon/html-webpack-plugin/issues/597#issuecomment-281663833
 export default () => {

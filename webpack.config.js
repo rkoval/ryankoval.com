@@ -142,9 +142,9 @@ const config = {
 
 if (!isProduction) {
   config.plugins.push(
-    new ReloadPlugin(),
+    new ReloadPlugin()
     // uncomment to inspect generated bundle
-    new BundleAnalyzerPlugin()
+    // new BundleAnalyzerPlugin()
   )
 } else {
   config.plugins.push(
