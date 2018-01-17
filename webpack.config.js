@@ -5,6 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const ReloadPlugin = require('reload-html-webpack-plugin')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 const src = dir => path.join(__dirname, 'src', dir)
@@ -55,8 +56,9 @@ const styleLoaders = (() => {
 
 const config = {
   entry: {
-    app: './src/app.js',
     vendor: './src/vendor.js',
+    app: './src/app.js',
+    resume: './src/resume.js',
   },
   output: {
     path: src('../dist'),
@@ -97,6 +99,11 @@ const config = {
           name: 'images/[name].[ext]',
         },
       },
+      {
+        test: /\.ya?ml$/,
+        include: [src('')],
+        use: ['json-loader', 'yaml-loader'],
+      },
     ],
   },
   plugins: [
@@ -106,11 +113,18 @@ const config = {
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
+      chunks: ['app'],
       minChunks: Infinity,
     }),
     new HtmlWebpackPlugin({
-      title: 'index.html',
+      chunks: ['app', 'vendor'],
       template: src('../template-preparer.js'),
+      filename: 'index.html',
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['resume'],
+      template: src('../resume-preparer.js'),
+      filename: 'resume.html',
     }),
     new CopyWebpackPlugin([
       {
@@ -123,12 +137,16 @@ const config = {
       jQuery: 'jquery',
       WOW: 'wowjs',
     }),
-    // uncomment to inspect generated bundle
-    // new BundleAnalyzerPlugin(),
   ],
 }
 
-if (isProduction) {
+if (!isProduction) {
+  config.plugins.push(
+    new ReloadPlugin(),
+    // uncomment to inspect generated bundle
+    new BundleAnalyzerPlugin()
+  )
+} else {
   config.plugins.push(
     new OptimizeCssAssetsPlugin({
       cssProcessorOptions: {

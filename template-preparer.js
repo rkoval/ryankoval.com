@@ -7,8 +7,7 @@ import { faLinkedin, faGithub } from '@fortawesome/fontawesome-free-brands'
 import { faAngleDoubleRight } from '@fortawesome/fontawesome-free-solid'
 
 const resume = (() => {
-  const YAML = require('yamljs')
-  const resume = YAML.load('./src/resume.yml')
+  const resume = require('./src/resume.yml')
 
   const sortedSkills = _.sortBy(resume.skills, skill =>
     skill.skill.name.toUpperCase()

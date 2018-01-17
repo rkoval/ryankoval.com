@@ -1,0 +1,48 @@
+- format = 'MMM YYYY'
+html
+  head
+    title #{basics.name} - Resume
+    meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/smart-underline/4.2.1/js/smart-underline.min.js')
+  body.A4
+    .sheet.padding-15mm.container
+      .row.center
+        h1 #{basics.name}
+        p
+          a(href='mailto:' + basics.email) #{basics.email}
+          |
+          |&ndash;
+          |
+          a(href=basics.website) #{basics.website}
+          br
+          small(style='opacity: 0.5;') (generated on #{moment().format()})
+
+      .row
+        h2 Competencies
+        - list = skills.map((skill) => skill.skill.name).join(', ')
+          | #{list}
+      hr
+      .row
+        h2(data-smart-underline-link-always) Relevant Career Experience
+        each job in work
+          if job.resume
+            section
+              span.pull-right #{moment(job.startDate).format(format)} &ndash; #{job.endDate && moment(job.endDate).format(format) || 'present'}
+              h3 #{job.company}, #{job.position}
+              ul
+                each highlight in job.highlights
+                  li #{highlight}
+      hr
+      .row
+        h2 Education & Certifications
+        each school in education
+          section
+            span.pull-right #{moment(school.startDate).format(format)} &ndash; #{moment(school.endDate).format(format)}
+            h3 #{school.institution}
+            ul
+              li #{school.studyType}, #{school.area}
+        each award in awards
+          section
+            span.pull-right #{moment(award.date).format(format)}
+            h3 #{award.title} &mdash; #{award.awarder}
