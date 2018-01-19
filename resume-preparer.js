@@ -1,6 +1,6 @@
-const moment = require('moment')
-const _ = require('lodash')
-const resume = require('./src/resume.yml')
+import moment from 'moment-timezone'
+import _ from 'lodash'
+import resume from './src/resume.yml'
 
 // https://github.com/jantimon/html-webpack-plugin/issues/597#issuecomment-281663833
 export default () => {

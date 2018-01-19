@@ -7,6 +7,6 @@ services:
       context: .
     ports:
     - "8081:80"
-    volumes:
-    - ./docker_root/etc/nginx/conf.d:/etc/nginx/conf.d
-    - ./dist:/usr/share/nginx/html
+    # volumes:
+    # - ./docker_root/etc/nginx/conf.d:/etc/nginx/conf.d
+    # - ./dist:/usr/share/nginx/html

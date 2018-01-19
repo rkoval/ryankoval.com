@@ -17,7 +17,7 @@ html
           |
           a(href=basics.website) #{basics.website}
           br
-          small(style='opacity: 0.5;') (generated on #{moment().format()})
+          small(style='opacity: 0.5;') (generated on #{moment().tz('America/Chicago').format('MMMM Do, YYYY [at] h:mm:ss A z')})
 
       .row
         h2 Competencies
@@ -46,4 +46,4 @@ html
         each award in awards
           section
             span.pull-right #{moment(award.date).format(format)}
-            h3 #{award.title} &mdash; #{award.awarder}
+            h3 #{award.title} - #{award.awarder}
