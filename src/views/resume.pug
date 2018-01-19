@@ -5,10 +5,14 @@ html
     meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     script(src='https://cdnjs.cloudflare.com/ajax/libs/smart-underline/4.2.1/js/smart-underline.min.js')
+    style #{iconStyles}
     include analytics.pug
   body.A4
     .sheet.padding-15mm.container
       .row.center
+        a.pdf-disclaimer.print-hide(href='pdf' target='_blank')
+          | !{icons.faFilePdf}
+          div PDF available
         h1 #{basics.name}
         p
           a(href='mailto:' + basics.email) #{basics.email}
