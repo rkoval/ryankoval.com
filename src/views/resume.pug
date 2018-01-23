@@ -5,15 +5,17 @@ html
     meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     script(src='https://cdnjs.cloudflare.com/ajax/libs/smart-underline/4.2.1/js/smart-underline.min.js')
+    link(href='https://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet')
     style #{iconStyles}
     include analytics.pug
   body.A4
     .sheet.padding-15mm.container
-      .row.center
+      .center
         a.pdf-disclaimer.print-hide(href='pdf' target='_blank')
           | !{icons.faFilePdf}
           div PDF available
         h1 #{basics.name}
+        div Software Engineering & Architecture
         p
           - var mailto = '&#109;&#65;&#73;&#76;&#84;&#111;&#58;&#114;&#121;&#97;&#110;&#64;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#37;&#50;&#48;&#73;&#110;&#113;&#117;&#105;&#114;&#121;'
           a(href!=mailto) #{basics.email}
@@ -24,13 +26,16 @@ html
           br
           small(style='opacity: 0.5;') (generated on #{moment().tz('America/Chicago').format('MMMM Do, YYYY [at] h:mm:ss A z')})
 
-      .row
-        h2 Competencies
-        - list = skills.map((skill) => skill.skill.name).join(', ')
-          | #{list}
+      for chunk, i in chunkedGroupedSkills
+        .row(style=i === 0 ? 'margin-bottom: 10px;' : '')
+          for groupedSkills in chunk
+            .one-third.column
+              h3 #{groupedSkills[0]}
+              - list = groupedSkills[1].map((skill) => skill.name).join(', ')
+              | #{list}
+
       hr
       .row
-        h2(data-smart-underline-link-always) Relevant Career Experience
         each job in work
           if job.resume
             section
@@ -41,7 +46,6 @@ html
                   li #{highlight}
       hr
       .row
-        h2 Education & Certifications
         each school in education
           section
             span.pull-right #{moment(school.startDate).format(format)} &ndash; #{moment(school.endDate).format(format)}
