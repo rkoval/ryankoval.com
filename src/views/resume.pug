@@ -29,7 +29,7 @@ html
       for chunk, i in chunkedGroupedSkills
         .row(style=i === 0 ? 'margin-bottom: 10px;' : '')
           for groupedSkills in chunk
-            .one-third.column
+            .one-third.column.skills
               h3 #{groupedSkills[0]}
               - list = groupedSkills[1].map((skill) => skill.name).join(', ')
               | #{list}
