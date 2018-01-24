@@ -8,23 +8,25 @@ block content
     .jumbotron.masthead
       .container.narrow-container
         h1 #{basics.name}
-        p.justify #{basics.label}
-        p.justify A Southern Methodist University alumnus currently residing in Dallas, Texas, I have always been passionate about all things software. Because of this, I frequent&nbsp;
-          a(href='https://news.ycombinator.com/' target='_blank') Hacker News
-          | &nbsp;and subscribe to&nbsp;
-          a(href='http://html5weekly.com/' target='_blank') HTML5
-          | &nbsp;and&nbsp;
-          a(href='http://javascriptweekly.com/' target='_blank') JavaScript Weekly
-          |. They pretty much always contain content, trends, and technologies that interest and fascinate me. In the workplace, I always look for ways to become more efficient in anything that I am spending time on. As a result, my typical workflow on my MacBook Pro heavily utilizes Vim, Alfred, macros, terminal aliases, scripts, and hotkeys in order to make quick work of even the most daunting of tasks.
-        p.justify Below is a selective list of technologies that I have knowledge of and companies of which I have worked. Think of this page as an informal, interactive description of myself that I actually enjoyed creating from scratch and playing around with (contrasted with my comparatively unstylish&nbsp;
-          a(href='//resume.ryankoval.com' target='_blank').tracked formal resume
-          |). The top navigation also contains obligatory links to my social media profiles and the like; feel free to contact me for any reason!
+        h4.center(style="font-size: 1.5em") #{basics.label}
+
+        p.justify Starting his technical career in 2011, Ryan has been exposed to virtually all aspects of software engineering. Working exclusively at companies with fast-paced environments, he has competence that can rival that of engineers with many more years under their belts. A year of experience is not always a universal unit of measuring someone's expertise. As such, he's been exposed to to a variety of unique systems. Frontend, backend, databases, devops, automation—you name it, he's likely done it. He has also worn hats in roles for product design and UI/UX and is intimately familiar with Agile principles as well (in fact, he's been&nbsp;
+          a(href='agile-certification.pdf' target='_blank') officially certified
+          | &nbsp;as a ScrumMaster).
+        p.justify While he does strive for perfection, he also realizes that there is no silver bullet.  Software exists purely in the confines of a business world and rarely the other way around; therefore, an immaculately coded product will likely mean nothing without customers or a business behind it. Ryan is firmly aware of this concept, and his design process is built around it. As such, extended discussions stressing over minor technical details that won't raise your bottom line or solve for long-term engineering problems are often hard for him to prioritize (although they can be fun to muse about in a social setting).
+        p.justify If you are looking for technical prowess that can architect and implement solutions of unparalleled quality and business value, look no further: scroll to see his skills and experience, view his&nbsp;
+          a(href='//resume.ryankoval.com' target='_blank') formal resume
+          | , or&nbsp;
+          - var mailto = '&#109;&#65;&#73;&#76;&#84;&#111;&#58;&#114;&#121;&#97;&#110;&#64;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#114;&#121;&#97;&#110;&#107;&#111;&#118;&#97;&#108;&#46;&#99;&#111;&#109;&#37;&#50;&#48;&#73;&#110;&#113;&#117;&#105;&#114;&#121;'
+          a(title='contact him' href!=mailto) contact him
+          | !
+
         span#skills
 
   section
     .container.icon-grid
       each skill in skills
-        a.icon.col-lg-2.col-sm-3.col-xs-4(href=skill.skill.website, target='blank' rel='noopener noreferrer')
+        a.icon.col-lg-2.col-sm-3.col-xs-4(href=skill.skill.website, target='_blank' rel='noopener noreferrer')
           - var style = 'background-image: url(' + skill.skill.picture.src + ');'
           div.img.wow.fadeInUp(style=style, title=skill.skill.name data-wow-offset="50" data-wow-delay="0.5") &nbsp;
           div.overlay
