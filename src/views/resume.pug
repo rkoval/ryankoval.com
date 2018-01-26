@@ -39,7 +39,7 @@ html
         each job in work
           if job.resume
             section
-              span.pull-right #{moment(job.startDate).format(format)} &ndash; #{job.endDate && moment(job.endDate).format(format) || 'present'}
+              span.u-pull-right #{moment(job.startDate).format(format)} &ndash; #{job.endDate && moment(job.endDate).format(format) || 'present'}
               h3 #{job.company}, #{job.position}
               ul
                 each highlight in job.highlights
@@ -48,11 +48,11 @@ html
       .row
         each school in education
           section
-            span.pull-right #{moment(school.startDate).format(format)} &ndash; #{moment(school.endDate).format(format)}
+            span.u-pull-right #{moment(school.startDate).format(format)} &ndash; #{moment(school.endDate).format(format)}
             h3 #{school.institution}
             ul
               li #{school.studyType}, #{school.area}
         each award in awards
           section
-            span.pull-right #{moment(award.date).format(format)}
+            span.u-pull-right #{moment(award.date).format(format)}
             h3 #{award.title} - #{award.awarder}
