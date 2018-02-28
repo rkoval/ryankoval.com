@@ -526,10 +526,10 @@ work:
     - *git
     - *linux
   highlights:
-  - Ryan helped build two major versions of a screen-scraping infrastructure used to gather data from all influencers for a customer-facing recommendation algorithm and general internal business intelligence
+  - Ryan led front-end development for a self-service collaborations portal, where he managed an international team
+  - He helped build two major versions of a screen-scraping infrastructure used to gather data from all influencers for a customer-facing recommendation algorithm and general internal business intelligence
   - He was involved in designing and implementing new core infrastructure patterns to push the organization from a two-week deploy cycle to rapid continuous delivery
   - He revived multiple legacy node.js analytics projects plagued with stability problems and general disrepair
-  - He wrote a microservice that served as a core piece for handling international payment information
   - He rewrote infrastructure configuration for another failing project in charge of syncing critical internal data throughout multiple systems
 - company: Bottle Rocket Studios
   resume: true
