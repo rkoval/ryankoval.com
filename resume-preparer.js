@@ -6,7 +6,7 @@ import fontawesome from '@fortawesome/fontawesome'
 import { faFilePdf } from '@fortawesome/fontawesome-free-solid'
 
 const sort = [
-  'Languages',
+  'Programming Languages',
   'Infrastructure',
   'Data Stores',
   'Frameworks & Libraries',

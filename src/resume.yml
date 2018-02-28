@@ -2,35 +2,35 @@
 skills:
   - skill: &javascript
       name: JavaScript
-      tag: Languages
+      tag: Programming Languages
       website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript
       resume: true
       picture:
         src: "/images/skills/js.svg"
   - skill: &scala
       name: Scala
-      tag: Languages
+      tag: Programming Languages
       website: http://www.scala-lang.org/
       resume: true
       picture:
         src: "/images/skills/scala.svg"
   - skill: &python
       name: Python
-      tag: Languages
+      tag: Programming Languages
       website: https://www.python.org/
       resume: true
       picture:
         src: "/images/skills/python.svg"
   - skill: &java
       name: Java
-      tag: Languages
+      tag: Programming Languages
       website: https://www.oracle.com/java/
       resume: true
       picture:
         src: "/images/skills/java.svg"
   - skill: &golang
       name: Golang
-      tag: Languages
+      tag: Programming Languages
       website: https://golang.org/
       resume: true
       picture:
@@ -58,7 +58,7 @@ skills:
         src: "/images/skills/vim.svg"
   - skill: &bash_zsh
       name: bash
-      tag: Languages
+      tag: Programming Languages
       website: https://github.com/sorin-ionescu/prezto
       resume: true
       picture:
@@ -198,28 +198,28 @@ skills:
         src: "/images/skills/cassandra.svg"
   - skill: &html5
       name: HTML5
-      tag: Languages
+      tag: Programming Languages
       website: https://www.html5rocks.com
       resume: true
       picture:
         src: "/images/skills/html5.svg"
   - skill: &css
       name: CSS
-      tag: Languages
+      tag: Programming Languages
       website: http://www.css3.info/
       resume: true
       picture:
         src: "/images/skills/css3.svg"
   - skill: &less
       name: Less
-      tag: Languages
+      tag: Programming Languages
       website: http://lesscss.org/
       resume: true
       picture:
         src: "/images/skills/less.svg"
   - skill: &sass
       name: Sass
-      tag: Languages
+      tag: Programming Languages
       website: http://sass-lang.com/
       resume: true
       picture:
