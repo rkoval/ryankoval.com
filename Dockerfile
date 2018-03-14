@@ -1,6 +1,6 @@
 FROM node:9.1.0-alpine as webpack
 COPY *.json ./
-RUN npm install
+RUN npm install && npm cache clean --force
 VOLUME ['./node_modules']
 COPY static ./static
 COPY *.js ./
