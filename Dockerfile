@@ -1,4 +1,4 @@
-FROM node:9.1.0-alpine as webpack
+FROM node:10.1.0-alpine as webpack
 COPY *.json ./
 RUN npm install && npm cache clean --force
 VOLUME ['./node_modules']
@@ -20,7 +20,7 @@ RUN nohup python3 -m http.server 1234 & \
       http://localhost:1234/resume.html
 RUN chmod +r output.pdf
 
-FROM nginx:1.13.8-alpine
+FROM nginx:1.13.12-alpine
 EXPOSE 80
 COPY ./docker_root /
 COPY --from=webpack ./dist/. /usr/share/nginx/html
