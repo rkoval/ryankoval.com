@@ -8,7 +8,10 @@ import {
   faBookmark,
 } from '@fortawesome/fontawesome-free-regular'
 import { faLinkedin, faGithub } from '@fortawesome/fontawesome-free-brands'
-import { faAngleDoubleRight, faGlasses } from '@fortawesome/fontawesome-free-solid'
+import {
+  faAngleDoubleRight,
+  faGlasses,
+} from '@fortawesome/fontawesome-free-solid'
 
 const resume = require('./src/resume.yml')
 
