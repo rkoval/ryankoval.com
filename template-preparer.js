@@ -8,7 +8,7 @@ import {
   faBookmark,
 } from '@fortawesome/fontawesome-free-regular'
 import { faLinkedin, faGithub } from '@fortawesome/fontawesome-free-brands'
-import { faAngleDoubleRight } from '@fortawesome/fontawesome-free-solid'
+import { faAngleDoubleRight, faGlasses } from '@fortawesome/fontawesome-free-solid'
 
 const resume = require('./src/resume.yml')
 
@@ -28,6 +28,7 @@ export default () => {
           faBookmark: fontawesome.icon(faBookmark).html[0],
           faGithub: fontawesome.icon(faGithub).html[0],
           faLinkedin: fontawesome.icon(faLinkedin).html[0],
+          faGlasses: fontawesome.icon(faGlasses).html[0],
           faAngleDoubleRight: fontawesome.icon(faAngleDoubleRight).html[0],
         },
       },
