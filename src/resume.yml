@@ -133,6 +133,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/kubernetes.svg'
+  - skill: &mysql
+      name: MySQL
+      tag: Data Stores
+      website: https://www.mysql.com/
+      resume: true
+      picture:
+        src: '/images/skills/mysql.svg'
   - skill: &aws_cloudformation
       name: CloudFormation
       tag: Infrastructure
@@ -154,13 +161,69 @@ skills:
       resume: true
       picture:
         src: '/images/skills/aws/beanstalk.svg'
-  - skill: &mysql
-      name: MySQL
-      tag: Data Stores
-      website: https://www.mysql.com/
+  - skill: &aws_cloudfront
+      name: CloudFront
+      tag: Infrastructure
+      website: https://aws.amazon.com/cloudfront/
       resume: true
       picture:
-        src: '/images/skills/mysql.svg'
+        src: '/images/skills/aws/cloudfront.svg'
+  - skill: &aws_cloudwatch
+      name: CloudWatch
+      tag: Infrastructure
+      website: https://aws.amazon.com/cloudwatch/
+      resume: true
+      picture:
+        src: '/images/skills/aws/cloudwatch.svg'
+  - skill: &aws_elasticache
+      name: ElastiCache
+      tag: Infrastructure
+      website: https://aws.amazon.com/elasticache/
+      resume: true
+      picture:
+        src: '/images/skills/aws/elasticache.svg'
+  - skill: &aws_elb
+      name: Elastic Load Balancing
+      tag: Infrastructure
+      website: https://aws.amazon.com/elasticloadbalancing/
+      resume: true
+      picture:
+        src: '/images/skills/aws/elb.svg'
+  - skill: &aws_iam
+      name: Identity and Access Management
+      tag: Infrastructure
+      website: https://aws.amazon.com/iam/
+      resume: true
+      picture:
+        src: '/images/skills/aws/iam.svg'
+  - skill: &aws_rds
+      name: Relational Database Service
+      tag: Infrastructure
+      website: https://aws.amazon.com/rds/
+      resume: true
+      picture:
+        src: '/images/skills/aws/rds.svg'
+  - skill: &aws_route53
+      name: Route 53
+      tag: Infrastructure
+      website: https://aws.amazon.com/route53/
+      resume: true
+      picture:
+        src: '/images/skills/aws/route53.svg'
+  - skill: &aws_vpc
+      name: Virtual Private Cloud
+      tag: Infrastructure
+      website: https://aws.amazon.com/vpc/
+      resume: true
+      picture:
+        src: '/images/skills/aws/vpc.svg'
+  - skill: &aws_waf
+      name: Web Application Firewall
+      tag: Infrastructure
+      website: https://aws.amazon.com/waf/
+      resume: true
+      picture:
+        src: '/images/skills/aws/waf.svg'
   - skill: &aws_s3
       name: S3
       tag: Data Stores
@@ -514,6 +577,7 @@ work:
       - *mysql
       - *aws_cloudformation
       - *aws_elastic_beanstalk
+      - *aws_cloudwatch
       - *aws_sqs
       - *golang
       - *angularjs
@@ -521,6 +585,10 @@ work:
       - *terraform
       - *aws_s3
       - *aws_sns
+      - *aws_rds
+      - *aws_iam
+      - *aws_elb
+      - *aws_route53
       - *node_js
       - *concourse_ci
       - *jenkins
