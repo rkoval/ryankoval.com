@@ -70,10 +70,10 @@ skills:
       resume: true
       picture:
         src: '/images/skills/git.svg'
-  - skill: &mac_os_x
-      name: Mac OS X
+  - skill: &macOS
+      name: macOS
       tag: Miscellaneous
-      website: https://www.apple.com/osx/
+      website: https://www.apple.com/macos
       resume: true
       picture:
         src: '/images/skills/macos.svg'
