@@ -6,462 +6,462 @@ skills:
       website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript
       resume: true
       picture:
-        src: "/images/skills/js.svg"
+        src: '/images/skills/js.svg'
   - skill: &scala
       name: Scala
       tag: Programming Languages
       website: http://www.scala-lang.org/
       resume: true
       picture:
-        src: "/images/skills/scala.svg"
+        src: '/images/skills/scala.svg'
   - skill: &python
       name: Python
       tag: Programming Languages
       website: https://www.python.org/
       resume: true
       picture:
-        src: "/images/skills/python.svg"
+        src: '/images/skills/python.svg'
   - skill: &java
       name: Java
       tag: Programming Languages
       website: https://www.oracle.com/java/
       resume: true
       picture:
-        src: "/images/skills/java.svg"
+        src: '/images/skills/java.svg'
   - skill: &golang
       name: Golang
       tag: Programming Languages
       website: https://golang.org/
       resume: true
       picture:
-        src: "/images/skills/golang.svg"
+        src: '/images/skills/golang.svg'
   - skill: &linux
       name: Linux
       tag: Miscellaneous
       website: https://www.linux.org/
       resume: true
       picture:
-        src: "/images/skills/linux.svg"
+        src: '/images/skills/linux.svg'
   - skill: &docker
       name: Docker
       tag: Automation
       website: https://www.docker.com/
       resume: true
       picture:
-        src: "/images/skills/docker.svg"
+        src: '/images/skills/docker.svg'
   - skill: &vim
       name: Vim
       tag: Miscellaneous
       website: http://www.vim.org/about.php
       resume: true
       picture:
-        src: "/images/skills/vim.svg"
+        src: '/images/skills/vim.svg'
   - skill: &bash_zsh
       name: bash
       tag: Programming Languages
       website: https://github.com/sorin-ionescu/prezto
       resume: true
       picture:
-        src: "/images/skills/terminal.svg"
+        src: '/images/skills/terminal.svg'
   - skill: &git
       name: git
       tag: Miscellaneous
       website: https://git-scm.com/
       resume: true
       picture:
-        src: "/images/skills/git.svg"
+        src: '/images/skills/git.svg'
   - skill: &mac_os_x
       name: Mac OS X
       tag: Miscellaneous
       website: https://www.apple.com/osx/
       resume: true
       picture:
-        src: "/images/skills/osx.svg"
+        src: '/images/skills/macos.svg'
   - skill: &node_js
       name: node.js
       tag: Miscellaneous
       website: https://nodejs.org/
       resume: true
       picture:
-        src: "/images/skills/node.svg"
+        src: '/images/skills/node.svg'
   - skill: &circleci
       name: CircleCI
       tag: Automation
       website: https://circleci.com/
       resume: true
       picture:
-        src: "/images/skills/circleci.svg"
+        src: '/images/skills/circleci.svg'
   - skill: &django
       name: Django
       tag: Frameworks & Libraries
       website: https://www.djangoproject.com/
       resume: true
       picture:
-        src: "/images/skills/django.svg"
+        src: '/images/skills/django.svg'
   - skill: &react
       name: React
       tag: Frameworks & Libraries
       website: https://facebook.github.io/react/
       resume: true
       picture:
-        src: "/images/skills/reactjs.svg"
+        src: '/images/skills/reactjs.svg'
   - skill: &redux
       name: Redux
       tag: Frameworks & Libraries
       website: http://redux.js.org/
       resume: true
       picture:
-        src: "/images/skills/redux.svg"
+        src: '/images/skills/redux.svg'
   - skill: &vue_js
       name: Vue.js
       tag: Frameworks & Libraries
       website: https://vuejs.org/
       resume: true
       picture:
-        src: "/images/skills/vue.svg"
+        src: '/images/skills/vue.svg'
   - skill: &terraform
       name: Terraform
       tag: Automation
       website: https://www.terraform.io/
       resume: true
       picture:
-        src: "/images/skills/terraform.svg"
+        src: '/images/skills/terraform.svg'
   - skill: &kubernetes
       name: Kubernetes
       tag: Infrastructure
       website: https://kubernetes.io/
       resume: true
       picture:
-        src: "/images/skills/kubernetes.svg"
+        src: '/images/skills/kubernetes.svg'
   - skill: &aws_cloudformation
       name: CloudFormation
       tag: Infrastructure
       website: https://aws.amazon.com/cloudformation/
       resume: true
       picture:
-        src: "/images/skills/aws/cloudformation.svg"
+        src: '/images/skills/aws/cloudformation.svg'
   - skill: &aws_lambda
       name: AWS Lambda
       tag: Infrastructure
       website: https://aws.amazon.com/lambda/
       resume: true
       picture:
-        src: "/images/skills/aws/lambda.svg"
+        src: '/images/skills/aws/lambda.svg'
   - skill: &aws_elastic_beanstalk
       name: Elastic Beanstalk
       tag: Infrastructure
       website: https://aws.amazon.com/elasticbeanstalk/
       resume: true
       picture:
-        src: "/images/skills/aws/beanstalk.svg"
+        src: '/images/skills/aws/beanstalk.svg'
   - skill: &mysql
       name: MySQL
       tag: Data Stores
       website: https://www.mysql.com/
       resume: true
       picture:
-        src: "/images/skills/mysql.svg"
+        src: '/images/skills/mysql.svg'
   - skill: &aws_s3
       name: S3
       tag: Data Stores
       website: https://aws.amazon.com/s3/
       resume: true
       picture:
-        src: "/images/skills/aws/s3.svg"
+        src: '/images/skills/aws/s3.svg'
   - skill: &aws_sqs
       name: SQS
       tag: Infrastructure
       website: https://aws.amazon.com/sqs/
       resume: true
       picture:
-        src: "/images/skills/aws/sqs.svg"
+        src: '/images/skills/aws/sqs.svg'
   - skill: &aws_sns
       name: SNS
       tag: Infrastructure
       website: https://aws.amazon.com/sns/
       resume: true
       picture:
-        src: "/images/skills/aws/sns.svg"
+        src: '/images/skills/aws/sns.svg'
   - skill: &aws_ec2
       name: EC2
       tag: Infrastructure
       website: https://aws.amazon.com/ec2/
       resume: true
       picture:
-        src: "/images/skills/aws/ec2.svg"
+        src: '/images/skills/aws/ec2.svg'
   - skill: &cassandra
       name: Cassandra
       tag: Data Stores
       website: https://cassandra.apache.org/
       resume: true
       picture:
-        src: "/images/skills/cassandra.svg"
+        src: '/images/skills/cassandra.svg'
   - skill: &html5
       name: HTML5
       tag: Programming Languages
       website: https://www.html5rocks.com
       resume: true
       picture:
-        src: "/images/skills/html5.svg"
+        src: '/images/skills/html5.svg'
   - skill: &css
       name: CSS
       tag: Programming Languages
       website: http://www.css3.info/
       resume: true
       picture:
-        src: "/images/skills/css3.svg"
+        src: '/images/skills/css3.svg'
   - skill: &less
       name: Less
       tag: Programming Languages
       website: http://lesscss.org/
       resume: true
       picture:
-        src: "/images/skills/less.svg"
+        src: '/images/skills/less.svg'
   - skill: &sass
       name: Sass
       tag: Programming Languages
       website: http://sass-lang.com/
       resume: true
       picture:
-        src: "/images/skills/sass.svg"
+        src: '/images/skills/sass.svg'
   - skill: &chrome_developer_tools
       name: Chrome Developer Tools
       tag: Miscellaneous
       website: https://developer.chrome.com/devtools
       resume: true
       picture:
-        src: "/images/skills/chrome.svg"
+        src: '/images/skills/chrome.svg'
   - skill: &pugjs
       name: Pug
       tag: Frameworks & Libraries
       website: https://pugjs.org
       resume: true
       picture:
-        src: "/images/skills/pug.svg"
+        src: '/images/skills/pug.svg'
   - skill: &karma
       name: Karma
       tag: Automation
       website: https://karma-runner.github.io/
       resume: true
       picture:
-        src: "/images/skills/karma.svg"
+        src: '/images/skills/karma.svg'
   - skill: &lo_dash
       name: Lodash
       tag: Frameworks & Libraries
       website: https://lodash.com/
       resume: true
       picture:
-        src: "/images/skills/lodash.svg"
+        src: '/images/skills/lodash.svg'
   - skill: &intellij
       name: IntelliJ
       tag: Miscellaneous
       website: https://www.jetbrains.com/idea/
-      resume: true
+      resume: false
       picture:
-        src: "/images/skills/intellij.svg"
+        src: '/images/skills/intellij.svg'
   - skill: &markdown
       name: Markdown
       tag: Miscellaneous
       website: https://daringfireball.net/projects/markdown/
       resume: true
       picture:
-        src: "/images/skills/markdown.svg"
+        src: '/images/skills/markdown.svg'
   - skill: &bootstrap
       name: Bootstrap
       tag: Frameworks & Libraries
       website: https://getbootstrap.com/
       resume: true
       picture:
-        src: "/images/skills/bootstrap.svg"
+        src: '/images/skills/bootstrap.svg'
   - skill: &hazelcast
       name: Hazelcast
       tag: Data Stores
       website: https://hazelcast.com/
       resume: true
       picture:
-        src: "/images/skills/hazelcast.png"
+        src: '/images/skills/hazelcast.png'
   - skill: &elasticsearch
       name: Elasticsearch
       tag: Data Stores
       website: https://www.elastic.co
       resume: true
       picture:
-        src: "/images/skills/elasticsearch.svg"
+        src: '/images/skills/elasticsearch.svg'
   - skill: &mongodb
       name: MongoDB
       tag: Data Stores
       website: https://www.mongodb.org/
       resume: true
       picture:
-        src: "/images/skills/mongo.svg"
+        src: '/images/skills/mongo.svg'
   - skill: &npm
       name: npm
       tag: Automation
       website: https://www.npmjs.org/
       resume: true
       picture:
-        src: "/images/skills/npm.svg"
+        src: '/images/skills/npm.svg'
   - skill: &sbt
       name: sbt
       tag: Automation
       website: http://www.scala-sbt.org/
       resume: true
       picture:
-        src: "/images/skills/sbt.svg"
+        src: '/images/skills/sbt.svg'
   - skill: &webpack
       name: Webpack
       tag: Automation
       website: https://webpack.js.org/
       resume: true
       picture:
-        src: "/images/skills/webpack.svg"
+        src: '/images/skills/webpack.svg'
   - skill: &ansible
       name: Ansible
       tag: Automation
       website: https://www.ansible.com/
       resume: true
       picture:
-        src: "/images/skills/ansible.svg"
+        src: '/images/skills/ansible.svg'
   - skill: &nginx
       name: NGINX
       tag: Miscellaneous
       website: https://www.nginx.com/
       resume: true
       picture:
-        src: "/images/skills/nginx.svg"
+        src: '/images/skills/nginx.svg'
   - skill: &github
       name: GitHub
       tag: Miscellaneous
       website: https://github.com/
       resume: false
       picture:
-        src: "/images/skills/github.svg"
+        src: '/images/skills/github.svg'
   - skill: &alpine_linux
       name: Alpine Linux
       tag: Miscellaneous
       website: https://alpinelinux.org/
       resume: false
       picture:
-        src: "/images/skills/alpine.svg"
+        src: '/images/skills/alpine.svg'
   - skill: &angularjs
       name: AngularJS
       tag: Frameworks & Libraries
       website: https://angularjs.org/
       resume: true
       picture:
-        src: "/images/skills/angular.svg"
+        src: '/images/skills/angular.svg'
   - skill: &play_framework
       name: Play Framework
       tag: Frameworks & Libraries
       website: https://www.playframework.com/
       resume: true
       picture:
-        src: "/images/skills/play.svg"
+        src: '/images/skills/play.svg'
   - skill: &jenkins
       name: Jenkins
       tag: Automation
       website: https://jenkins-ci.org/
       resume: true
       picture:
-        src: "/images/skills/jenkins.svg"
+        src: '/images/skills/jenkins.svg'
   - skill: &grunt
       name: Grunt
       tag: Automation
       website: https://gruntjs.com
       resume: true
       picture:
-        src: "/images/skills/grunt.svg"
+        src: '/images/skills/grunt.svg'
   - skill: &bower
       name: Bower
       tag: Automation
       website: http://bower.io
       resume: true
       picture:
-        src: "/images/skills/bower.svg"
+        src: '/images/skills/bower.svg'
   - skill: &jquery
       name: jQuery
       tag: Frameworks & Libraries
       website: https://jquery.com/
       resume: true
       picture:
-        src: "/images/skills/jquery.svg"
+        src: '/images/skills/jquery.svg'
   - skill: &jquery_mobile
       name: jQuery Mobile
       tag: Frameworks & Libraries
       website: https://jquerymobile.com/
       resume: true
       picture:
-        src: "/images/skills/jquerymobile.svg"
+        src: '/images/skills/jquerymobile.svg'
   - skill: &concourse_ci
       name: Concourse CI
       tag: Automation
       website: https://concourse.ci/
       resume: true
       picture:
-        src: "/images/skills/concourse.svg"
+        src: '/images/skills/concourse.svg'
   - skill: &wordpress
       name: WordPress
       tag: Miscellaneous
       website: https://wordpress.org/
       resume: true
       picture:
-        src: "/images/skills/wordpress.svg"
+        src: '/images/skills/wordpress.svg'
   - skill: &spring
       name: Spring
       tag: Frameworks & Libraries
       website: https://spring.io/
       resume: true
       picture:
-        src: "/images/skills/spring.svg"
+        src: '/images/skills/spring.svg'
   - skill: &vagrant
       name: Vagrant
       tag: Automation
       website: https://www.vagrantup.com/
       resume: true
       picture:
-        src: "/images/skills/vagrant.svg"
+        src: '/images/skills/vagrant.svg'
   - skill: &thymeleaf
       name: Thymeleaf
       tag: Frameworks & Libraries
       website: http://www.thymeleaf.org/
       resume: true
       picture:
-        src: "/images/skills/thymeleaflogo.png"
+        src: '/images/skills/thymeleaflogo.png'
   - skill: &hibernate
       name: Hibernate
       tag: Frameworks & Libraries
       website: http://hibernate.org/
       resume: true
       picture:
-        src: "/images/skills/hibernate.svg"
+        src: '/images/skills/hibernate.svg'
   - skill: &subversion
       name: Subversion
       tag: Miscellaneous
       website: https://subversion.apache.org/
       resume: false
       picture:
-        src: "/images/skills/svn.svg"
+        src: '/images/skills/svn.svg'
   - skill: &bitbucket
       name: Bitbucket
       tag: Miscellaneous
       website: https://bitbucket.org/
       resume: false
       picture:
-        src: "/images/skills/bitbucket.svg"
+        src: '/images/skills/bitbucket.svg'
   - skill: &extjs
       name: ExtJS
       tag: Frameworks & Libraries
       website: https://www.sencha.com/products/extjs/
       resume: true
       picture:
-        src: "/images/skills/extjs.svg"
+        src: '/images/skills/extjs.svg'
   - skill: &broadleaf_commerce
       name: Broadleaf Commerce
       tag: Frameworks & Libraries
       website: https://www.broadleafcommerce.com/
       resume: false
       picture:
-        src: "/images/skills/blc.svg"
+        src: '/images/skills/blc.svg'
 basics:
   name: Ryan A. Koval
   label: Software Engineering & Architecture
@@ -473,268 +473,277 @@ basics:
     countryCode: US
     region: Texas
   profiles:
-  - network: GitHub
-    username: rkoval
-    url: "//github.ryankoval.com"
-  - network: LinkedIn
-    username: ryankoval
-    url: "//linkedin.ryankoval.com"
+    - network: GitHub
+      username: rkoval
+      url: '//github.ryankoval.com'
+    - network: LinkedIn
+      username: ryankoval
+      url: '//linkedin.ryankoval.com'
 work:
-- company: rewardStyle
-  resume: true
-  position: Senior Software Engineer
-  website: https://www.rewardstyle.com
-  picture:
-    src: "/images/logo/rewardstyle.svg"
-    style: 'background-color: #141414;'
-  startDate: '2016-02-22'
-  summary: 'In the last four years, rewardStyle has fueled the arrival of a new influence
-    on the retail industry: professional content creators. By providing the technical
-    tools and education necessary to empower a global army of 9,000 premium content
-    creators, rewardStyle is now making a tangible impact on global e-commerce sales.
-    In 2015, rewardStyle publishers are expected to drive approximately $500 million
-    in retail sales. rewardStyle has redirected the style publishing industry and
-    contributed to the professionalization and financial independence of thousands
-    of publishers worldwide, enabling them to earn meaningful revenue on their digital
-    content, ultimately empowering them to create and grow small businesses into international
-    brands. Today, rewardStyle is a multi-national business. More than 150 team members
-    work from rewardStyle offices in Dallas, San Francisco, Shanghai and London.'
-  skills:
-    - *python
-    - *django
-    - *docker
-    - *kubernetes
-    - *javascript
-    - *vue_js
-    - *webpack
-    - *vim
-    - *nginx
-    - *aws_lambda
-    - *mysql
-    - *aws_cloudformation
-    - *aws_elastic_beanstalk
-    - *aws_sqs
-    - *golang
-    - *angularjs
-    - *aws_ec2
-    - *terraform
-    - *aws_s3
-    - *aws_sns
-    - *node_js
-    - *concourse_ci
-    - *jenkins
-    - *git
-    - *linux
-  highlights:
-  - Ryan led front-end development for a self-service collaborations portal, where he managed an international team
-  - He helped build two major versions of a screen-scraping infrastructure used to gather data from all influencers for a customer-facing recommendation algorithm and general internal business intelligence
-  - He was involved in designing and implementing new core infrastructure patterns to push the organization from a two-week deploy cycle to rapid continuous delivery
-  - He revived multiple legacy node.js analytics projects plagued with stability problems and general disrepair
-  - He rewrote infrastructure configuration for another failing project in charge of syncing critical internal data throughout multiple systems
-- company: Bottle Rocket Studios
-  resume: true
-  position: Lead Engineer
-  website: https://www.bottlerocketstudios.com
-  picture:
-    src: "/images/logo/bottlerocket.svg"
-  startDate: '2015-11-02'
-  endDate: '2016-02-05'
-  summary: Since our launch, Bottle Rocket has been at the forefront of the app revolution.
-    We propelled forward-thinking brands through mobile strategy, design, and development.
-    We push the limits of design, information architecture, and the capabilities of
-    mobile platforms – and it shows by the way we connect users with information,
-    brands, and entertainment. By day, we sweat the details and build awesome mobile
-    experiences – and our passion doesn’t end there. After hours, we’re those people
-    standing in line for the latest games and technology. We are a value-driven team
-    of mature, self-motivated professionals that do what it takes to get the job done,
-    but never stop improving ourselves and the services the we provide our clients.
-  skills:
-    - *scala
-    - *sbt
-    - *git
-    - *vim
-    - *linux
-    - *intellij
-  highlights:
-  - Ryan was assigned as a developer to utilize Scala experience to help speed along
-    development of a complex eCommerce ordering solution
-- company: Slalom Consulting
-  resume: true
-  position: Consultant
-  website: https://www.slalom.com
-  picture:
-    src: "/images/logo/slalom.svg"
-  startDate: '2013-11-11'
-  endDate: '2015-10-23'
-  summary: Headquartered in Seattle, Washington, Slalom Consulting has rapidly grown
-    to more than 2,200 consultants and helps companies from the Fortune 500 to emerging
-    businesses. We deliver award-winning solutions and innovation through a national
-    network of local offices across 14 North American cities. Slalom can take on a
-    full end-to-end project or only the key portion where we will add the most value.
-    We can bring our own proven methods, work within a client’s framework, or work
-    with a client to create a new delivery method. We want results for our clients,
-    and we typically structure projects with smaller teams that deliver those results
-    faster. Slalom has earned numerous national, regional, and local awards from our
-    clients, partners, the media, and community organizations. Our executives are
-    also frequently recognized on an individual basis for their leadership and business
-    acumen.
-  skills:
-    - *scala
-    - *sbt
-    - *play_framework
-    - *javascript
-    - *angularjs
-    - *vim
-    - *git
-    - *hazelcast
-    - *elasticsearch
-    - *mongodb
-    - *linux
-    - *git
-    - *jenkins
-    - *grunt
-    - *intellij
-    - *sass
-    - *vagrant
-  highlights:
-  - Ryan developed components for nearly all aspects of a multi-million dollar system prison
-    telecommunication investigative tool.
-  - He was assigned as a senior lead to drive Scala development of a huge AWS data processing
-    pipeline for an agricultural business giant
-- company: Credera
-  resume: true
-  position: Consultant
-  website: https://www.credera.com
-  picture:
-    src: "/images/logo/credera.svg"
-  startDate: '2011-08-22'
-  endDate: '2013-10-30'
-  summary: Headquartered in Seattle, Washington, Slalom Consulting has rapidly grown
-    to more than 2,200 consultants and helps companies from the Fortune 500 to emerging
-    businesses. We deliver award-winning solutions and innovation through a national
-    network of local offices across 14 North American cities. Slalom can take on a
-    full end-to-end project or only the key portion where we will add the most value.
-    We can bring our own proven methods, work within a client’s framework, or work
-    with a client to create a new delivery method. We want results for our clients,
-    and we typically structure projects with smaller teams that deliver those results
-    faster. Slalom has earned numerous national, regional, and local awards from our
-    clients, partners, the media, and community organizations. Our executives are
-    also frequently recognized on an individual basis for their leadership and business
-    acumen.
-  skills:
-    - *java
-    - *extjs
-    - *javascript
-    - *vim
-    - *jquery
-    - *jquery_mobile
-    - *git
-    - *spring
-    - *hibernate
-    - *mysql
-    - *subversion
-    - *broadleaf_commerce
-  highlights:
-  - Ryan interacted with and developed for nearly all aspects of a multi-million dollar
-    automotive eCommerce website, which contained over 50 technology integrations
-    and spanned over both desktop & mobile platforms.
-  - He led front-end integration team of a classic Spring MVC implementation for a marketing
-    tool used by an international marketing giant.
-- company: Dallas Pedicabs
-  resume: true
-  position: Freelance Developer
-  website: http://www.dallaspedicabs.com
-  picture:
-    src: "/images/logo/pedicabs.jpg"
-  startDate: '2013-02-15'
-  endDate: '2013-07-15'
-  summary: Since our inception in early 2011 we have been trying to make sustainable
-    transportation in Dallas a reality, while providing an enjoyable experience to
-    all of our patrons. Whether it is a ride to dinner, a bar, friend’s apartment
-    or just to grab a bite to eat, a ride with Dallas Pedicabs is the right decision.
-    We also cater to groups, weddings, sporting events, parking lots and awesome historic
-    tours of certain areas of Dallas. As a company, our mission is to provide fun
-    transportation for the residents of Dallas around Uptown, deter drunk driving,
-    and bring a new sustainable business to the area.
-  skills:
-    - *wordpress
-    - *vim
-    - *git
-  highlights:
-  - Ryan overhauled unmanageable consumer-facing website for this small startup in favor
-    of a custom WordPress solution.
-- company: Tampa Bay Radiation Oncology
-  resume: false
-  position: Administrative Assistant
-  website: https://www.slalom.com
-  picture:
-    src: "/images/logo/tbro.svg"
-  startDate: '2010-05-01'
-  endDate: '2010-07-03'
-  summary: Tampa Bay Radiation Oncology (TBRO) formed in 2003, is a locally owned
-    and physician managed organization committed to providing experienced, state of
-    the art cancer treatments in a caring and professional manner. We practice in
-    four free standing clinics, strategically located throughout the Tampa Bay Area
-    to offer convenience to patients and state of the art planning capabilities offered
-    at other major academic cancer centers across the country, so patients can receive
-    their cancer care at home with support of family and friends.
-  highlights:
-  - Ryan aided in various administrative jobs including faxing, mailing, filing, managing
-    phone calls, and delivering packages.
-  - He coded in VBA to organize, process, and analyze physician consult spreadsheets
-    for data mining purposes.
-  - He wrote macros to increase work efficiency surrounding repetitive computer-oriented
-    tasks such as manual database information retrieval.
+  - company: rewardStyle
+    resume: true
+    position: Senior Software Engineer
+    website: https://www.rewardstyle.com
+    picture:
+      src: '/images/logo/rewardstyle.svg'
+      style: 'background-color: #141414;'
+    startDate: '2016-02-22'
+    summary:
+      'In the last four years, rewardStyle has fueled the arrival of a new influence
+      on the retail industry: professional content creators. By providing the technical
+      tools and education necessary to empower a global army of 9,000 premium content
+      creators, rewardStyle is now making a tangible impact on global e-commerce sales.
+      In 2015, rewardStyle publishers are expected to drive approximately $500 million
+      in retail sales. rewardStyle has redirected the style publishing industry and
+      contributed to the professionalization and financial independence of thousands
+      of publishers worldwide, enabling them to earn meaningful revenue on their digital
+      content, ultimately empowering them to create and grow small businesses into international
+      brands. Today, rewardStyle is a multi-national business. More than 150 team members
+      work from rewardStyle offices in Dallas, San Francisco, Shanghai and London.'
+    skills:
+      - *python
+      - *django
+      - *docker
+      - *kubernetes
+      - *javascript
+      - *vue_js
+      - *webpack
+      - *vim
+      - *nginx
+      - *aws_lambda
+      - *mysql
+      - *aws_cloudformation
+      - *aws_elastic_beanstalk
+      - *aws_sqs
+      - *golang
+      - *angularjs
+      - *aws_ec2
+      - *terraform
+      - *aws_s3
+      - *aws_sns
+      - *node_js
+      - *concourse_ci
+      - *jenkins
+      - *git
+      - *linux
+    highlights:
+      - Ryan led front-end development for a self-service collaborations portal, where he managed an international team
+      - He helped build two major versions of a screen-scraping infrastructure used to gather data from all influencers for a customer-facing recommendation algorithm and general internal business intelligence
+      - He was involved in designing and implementing new core infrastructure patterns to push the organization from a two-week deploy cycle to rapid continuous delivery
+      - He revived multiple legacy node.js analytics projects plagued with stability problems and general disrepair
+      - He rewrote infrastructure configuration for another failing project in charge of syncing critical internal data throughout multiple systems
+  - company: Bottle Rocket Studios
+    resume: true
+    position: Lead Engineer
+    website: https://www.bottlerocketstudios.com
+    picture:
+      src: '/images/logo/bottlerocket.svg'
+    startDate: '2015-11-02'
+    endDate: '2016-02-05'
+    summary:
+      Since our launch, Bottle Rocket has been at the forefront of the app revolution.
+      We propelled forward-thinking brands through mobile strategy, design, and development.
+      We push the limits of design, information architecture, and the capabilities of
+      mobile platforms – and it shows by the way we connect users with information,
+      brands, and entertainment. By day, we sweat the details and build awesome mobile
+      experiences – and our passion doesn’t end there. After hours, we’re those people
+      standing in line for the latest games and technology. We are a value-driven team
+      of mature, self-motivated professionals that do what it takes to get the job done,
+      but never stop improving ourselves and the services the we provide our clients.
+    skills:
+      - *scala
+      - *sbt
+      - *git
+      - *vim
+      - *linux
+      - *intellij
+    highlights:
+      - Ryan was assigned as a developer to utilize Scala experience to help speed along
+        development of a complex eCommerce ordering solution
+  - company: Slalom Consulting
+    resume: true
+    position: Consultant
+    website: https://www.slalom.com
+    picture:
+      src: '/images/logo/slalom.svg'
+    startDate: '2013-11-11'
+    endDate: '2015-10-23'
+    summary:
+      Headquartered in Seattle, Washington, Slalom Consulting has rapidly grown
+      to more than 2,200 consultants and helps companies from the Fortune 500 to emerging
+      businesses. We deliver award-winning solutions and innovation through a national
+      network of local offices across 14 North American cities. Slalom can take on a
+      full end-to-end project or only the key portion where we will add the most value.
+      We can bring our own proven methods, work within a client’s framework, or work
+      with a client to create a new delivery method. We want results for our clients,
+      and we typically structure projects with smaller teams that deliver those results
+      faster. Slalom has earned numerous national, regional, and local awards from our
+      clients, partners, the media, and community organizations. Our executives are
+      also frequently recognized on an individual basis for their leadership and business
+      acumen.
+    skills:
+      - *scala
+      - *sbt
+      - *play_framework
+      - *javascript
+      - *angularjs
+      - *vim
+      - *git
+      - *hazelcast
+      - *elasticsearch
+      - *mongodb
+      - *linux
+      - *git
+      - *jenkins
+      - *grunt
+      - *intellij
+      - *sass
+      - *vagrant
+    highlights:
+      - Ryan developed components for nearly all aspects of a multi-million dollar system prison
+        telecommunication investigative tool.
+      - He was assigned as a senior lead to drive Scala development of a huge AWS data processing
+        pipeline for an agricultural business giant
+  - company: Credera
+    resume: true
+    position: Consultant
+    website: https://www.credera.com
+    picture:
+      src: '/images/logo/credera.svg'
+    startDate: '2011-08-22'
+    endDate: '2013-10-30'
+    summary:
+      Headquartered in Seattle, Washington, Slalom Consulting has rapidly grown
+      to more than 2,200 consultants and helps companies from the Fortune 500 to emerging
+      businesses. We deliver award-winning solutions and innovation through a national
+      network of local offices across 14 North American cities. Slalom can take on a
+      full end-to-end project or only the key portion where we will add the most value.
+      We can bring our own proven methods, work within a client’s framework, or work
+      with a client to create a new delivery method. We want results for our clients,
+      and we typically structure projects with smaller teams that deliver those results
+      faster. Slalom has earned numerous national, regional, and local awards from our
+      clients, partners, the media, and community organizations. Our executives are
+      also frequently recognized on an individual basis for their leadership and business
+      acumen.
+    skills:
+      - *java
+      - *extjs
+      - *javascript
+      - *vim
+      - *jquery
+      - *jquery_mobile
+      - *git
+      - *spring
+      - *hibernate
+      - *mysql
+      - *subversion
+      - *broadleaf_commerce
+    highlights:
+      - Ryan interacted with and developed for nearly all aspects of a multi-million dollar
+        automotive eCommerce website, which contained over 50 technology integrations
+        and spanned over both desktop & mobile platforms.
+      - He led front-end integration team of a classic Spring MVC implementation for a marketing
+        tool used by an international marketing giant.
+  - company: Dallas Pedicabs
+    resume: true
+    position: Freelance Developer
+    website: http://www.dallaspedicabs.com
+    picture:
+      src: '/images/logo/pedicabs.jpg'
+    startDate: '2013-02-15'
+    endDate: '2013-07-15'
+    summary:
+      Since our inception in early 2011 we have been trying to make sustainable
+      transportation in Dallas a reality, while providing an enjoyable experience to
+      all of our patrons. Whether it is a ride to dinner, a bar, friend’s apartment
+      or just to grab a bite to eat, a ride with Dallas Pedicabs is the right decision.
+      We also cater to groups, weddings, sporting events, parking lots and awesome historic
+      tours of certain areas of Dallas. As a company, our mission is to provide fun
+      transportation for the residents of Dallas around Uptown, deter drunk driving,
+      and bring a new sustainable business to the area.
+    skills:
+      - *wordpress
+      - *vim
+      - *git
+    highlights:
+      - Ryan overhauled unmanageable consumer-facing website for this small startup in favor
+        of a custom WordPress solution.
+  - company: Tampa Bay Radiation Oncology
+    resume: false
+    position: Administrative Assistant
+    website: https://www.slalom.com
+    picture:
+      src: '/images/logo/tbro.svg'
+    startDate: '2010-05-01'
+    endDate: '2010-07-03'
+    summary:
+      Tampa Bay Radiation Oncology (TBRO) formed in 2003, is a locally owned
+      and physician managed organization committed to providing experienced, state of
+      the art cancer treatments in a caring and professional manner. We practice in
+      four free standing clinics, strategically located throughout the Tampa Bay Area
+      to offer convenience to patients and state of the art planning capabilities offered
+      at other major academic cancer centers across the country, so patients can receive
+      their cancer care at home with support of family and friends.
+    highlights:
+      - Ryan aided in various administrative jobs including faxing, mailing, filing, managing
+        phone calls, and delivering packages.
+      - He coded in VBA to organize, process, and analyze physician consult spreadsheets
+        for data mining purposes.
+      - He wrote macros to increase work efficiency surrounding repetitive computer-oriented
+        tasks such as manual database information retrieval.
 education:
-- institution: Southern Methodist University
-  website: https://www.smu.edu
-  summary: A nationally ranked private university with seven degree-granting schools,
-    SMU is a distinguished center for teaching and research located in the heart of
-    Dallas. SMU’s 11,000 students benefit from small classes, leadership opportunities,
-    international study and innovative programs. SMU is celebrating the centennial
-    of its founding in 1911 and its opening in 1915. Entering its second century of
-    achievement, SMU enjoys recognition as a prominent national university. The University
-    prepares students for leadership in their professions and in their communities.
-    Our location near the heart of Dallas – a thriving center of commerce and culture
-    – offers students challenging experiences on campus and beyond. Relationships
-    with the Dallas region provide a platform for launching careers throughout the
-    world. The University provides a strong foundation in the humanities and sciences
-    and professional and graduate programs through seven degree-granting schools.
-    The learning environment includes opportunities for research, community service,
-    study abroad, internships and mentoring. SMU was founded by what is now The United
-    Methodist Church, in partnership with civic leaders, and was shaped by the entrepreneurial
-    spirit of the region. The University is nonsectarian in its teaching and committed
-    to academic freedom and open inquiry.
-  picture:
-    src: "/images/logo/smu.svg"
-  area: Computer Science (minor in Mathematics)
-  studyType: Bachelor of Science
-  startDate: '2007-08-01'
-  endDate: '2011-06-01'
+  - institution: Southern Methodist University
+    website: https://www.smu.edu
+    summary:
+      A nationally ranked private university with seven degree-granting schools,
+      SMU is a distinguished center for teaching and research located in the heart of
+      Dallas. SMU’s 11,000 students benefit from small classes, leadership opportunities,
+      international study and innovative programs. SMU is celebrating the centennial
+      of its founding in 1911 and its opening in 1915. Entering its second century of
+      achievement, SMU enjoys recognition as a prominent national university. The University
+      prepares students for leadership in their professions and in their communities.
+      Our location near the heart of Dallas – a thriving center of commerce and culture
+      – offers students challenging experiences on campus and beyond. Relationships
+      with the Dallas region provide a platform for launching careers throughout the
+      world. The University provides a strong foundation in the humanities and sciences
+      and professional and graduate programs through seven degree-granting schools.
+      The learning environment includes opportunities for research, community service,
+      study abroad, internships and mentoring. SMU was founded by what is now The United
+      Methodist Church, in partnership with civic leaders, and was shaped by the entrepreneurial
+      spirit of the region. The University is nonsectarian in its teaching and committed
+      to academic freedom and open inquiry.
+    picture:
+      src: '/images/logo/smu.svg'
+    area: Computer Science (minor in Mathematics)
+    studyType: Bachelor of Science
+    startDate: '2007-08-01'
+    endDate: '2011-06-01'
 awards:
-- title: Certified ScrumMaster®
-  date: '2015-09-01'
-  awarder: Scrum Alliance
-  summary: A Certified ScrumMaster® helps project teams properly use Scrum, increasing
-    the likelihood of the project's overall success. CSMs understand Scrum values,
-    practices, and applications and provide a level of knowledge and expertise above
-    and beyond that of typical project managers. CSMs act as "servant leaders," helping
-    the rest of the Scrum team work together and learn the Scrum framework. CSMs also
-    protect the team from both internal and external distractions.
-- title: Oracle Certified Professional – Java SE6 Programmer
-  date: '2011-10-01'
-  awarder: Oracle
-  summary: Oracle's Certified Professional Java SE Programmer exam is the fundamental
-    exam required to demonstrate solid understanding of Java and some of its SE APIs
-    and is a prerequisite to a number of the other Java certificates. It is designed
-    as a fairly detailed test of knowledge of the core features and constructs of
-    the Java programming language. It tests a wide range of Java's APIs and core features,
-    starting from basics such as looping constructs and variables, to more complex
-    topics such as Threads, Collections and Generics. It does not cover specific technology
-    domains such as GUI creation, Web or network programming, though it does cover
-    part of the APIs included in the standard library. The exam tests how well a programmer
-    has understood the language constructs and mechanisms. However it's not a goal
-    of the exam to test the programmer's ability to produce purposeful or efficient
-    programs. It does not test the programmer's ability to write efficient algorithms,
-    for example, though it does test knowledge of which collections should be selected
-    in order to implement efficient algorithms without re-inventing the wheel.
+  - title: Certified ScrumMaster®
+    date: '2015-09-01'
+    awarder: Scrum Alliance
+    summary:
+      A Certified ScrumMaster® helps project teams properly use Scrum, increasing
+      the likelihood of the project's overall success. CSMs understand Scrum values,
+      practices, and applications and provide a level of knowledge and expertise above
+      and beyond that of typical project managers. CSMs act as "servant leaders," helping
+      the rest of the Scrum team work together and learn the Scrum framework. CSMs also
+      protect the team from both internal and external distractions.
+  - title: Oracle Certified Professional – Java SE6 Programmer
+    date: '2011-10-01'
+    awarder: Oracle
+    summary:
+      Oracle's Certified Professional Java SE Programmer exam is the fundamental
+      exam required to demonstrate solid understanding of Java and some of its SE APIs
+      and is a prerequisite to a number of the other Java certificates. It is designed
+      as a fairly detailed test of knowledge of the core features and constructs of
+      the Java programming language. It tests a wide range of Java's APIs and core features,
+      starting from basics such as looping constructs and variables, to more complex
+      topics such as Threads, Collections and Generics. It does not cover specific technology
+      domains such as GUI creation, Web or network programming, though it does cover
+      part of the APIs included in the standard library. The exam tests how well a programmer
+      has understood the language constructs and mechanisms. However it's not a goal
+      of the exam to test the programmer's ability to produce purposeful or efficient
+      programs. It does not test the programmer's ability to write efficient algorithms,
+      for example, though it does test knowledge of which collections should be selected
+      in order to implement efficient algorithms without re-inventing the wheel.
