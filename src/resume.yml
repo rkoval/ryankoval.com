@@ -404,7 +404,7 @@ skills:
       website: https://hazelcast.com/
       resume: true
       picture:
-        src: "/images/skills/hazelcast.png"
+        src: "/images/skills/hazelcast.svg"
   - skill: &elasticsearch
       name: Elasticsearch
       tag: Data Stores
@@ -543,12 +543,6 @@ skills:
       resume: true
       picture:
         src: "/images/skills/vagrant.svg"
-  - skill: &thymeleaf
-      name: Thymeleaf
-      tag: Frameworks & Libraries
-      website: http://www.thymeleaf.org/
-      picture:
-        src: "/images/skills/thymeleaflogo.png"
   - skill: &hibernate
       name: Hibernate
       tag: Frameworks & Libraries
