@@ -100,7 +100,7 @@ skills:
         src: "/images/skills/mobx.svg"
   - skill: &grafana
       name: Grafana
-      tag: Frameworks & Libraries
+      tag: Miscellaneous
       website: https://grafana.com/
       resume: true
       picture:
@@ -149,7 +149,7 @@ skills:
         src: "/images/skills/mocha.svg"
   - skill: &puppeteer
       name: Puppeteer
-      tag: Frameworks & Libraries
+      tag: Automation
       website: https://developers.google.com/web/tools/puppeteer
       resume: true
       picture:
@@ -246,21 +246,21 @@ skills:
       picture:
         src: "/images/skills/aws/elasticache.svg"
   - skill: &aws_elb
-      name: Elastic Load Balancing
+      name: ELB
       tag: Infrastructure
       website: https://aws.amazon.com/elasticloadbalancing/
       resume: true
       picture:
         src: "/images/skills/aws/elb.svg"
   - skill: &aws_iam
-      name: Identity and Access Management
+      name: IAM
       tag: Infrastructure
       website: https://aws.amazon.com/iam/
       resume: true
       picture:
         src: "/images/skills/aws/iam.svg"
   - skill: &aws_rds
-      name: Relational Database Service
+      name: RDS
       tag: Data Stores
       website: https://aws.amazon.com/rds/
       resume: true
@@ -270,18 +270,17 @@ skills:
       name: Route 53
       tag: Infrastructure
       website: https://aws.amazon.com/route53/
-      resume: true
       picture:
         src: "/images/skills/aws/route53.svg"
   - skill: &aws_vpc
-      name: Virtual Private Cloud
+      name: VPC
       tag: Infrastructure
       website: https://aws.amazon.com/vpc/
       resume: true
       picture:
         src: "/images/skills/aws/vpc.svg"
   - skill: &aws_waf
-      name: Web Application Firewall
+      name: WAF
       tag: Infrastructure
       website: https://aws.amazon.com/waf/
       resume: true
@@ -508,14 +507,12 @@ skills:
       name: jQuery
       tag: Frameworks & Libraries
       website: https://jquery.com/
-      resume: true
       picture:
         src: "/images/skills/jquery.svg"
   - skill: &jquery_mobile
       name: jQuery Mobile
       tag: Frameworks & Libraries
       website: https://jquerymobile.com/
-      resume: true
       picture:
         src: "/images/skills/jquerymobile.svg"
   - skill: &concourse_ci
@@ -550,7 +547,6 @@ skills:
       name: Thymeleaf
       tag: Frameworks & Libraries
       website: http://www.thymeleaf.org/
-      resume: true
       picture:
         src: "/images/skills/thymeleaflogo.png"
   - skill: &hibernate
@@ -578,7 +574,6 @@ skills:
       name: ExtJS
       tag: Frameworks & Libraries
       website: https://www.sencha.com/products/extjs/
-      resume: true
       picture:
         src: "/images/skills/extjs.svg"
   - skill: &broadleaf_commerce
@@ -594,6 +589,7 @@ basics:
   picture: https://www.dropbox.com/s/zxularl375so1aw/personal-photo.jpg?dl=1
   email: ryan@ryankoval.com
   website: https://ryankoval.com
+  portfolio: https://github.com/rkoval
   location:
     city: Dallas
     countryCode: US
@@ -614,7 +610,7 @@ work:
       src: "/images/logo/guilded.svg"
       style: "background-color: #F5C400;"
     startDate: "2018-11-05"
-    summary: "TODO"
+    summary: "Guilded is the ultimate chat platform for gaming communities. Founded in 2017 by Eli Brown, a former pro gamer who played an integral role on Instagram’s Growth Team and Microsoft’s Xbox team, Guilded serves the world’s top professional esports teams and over 50,000 high school, collegiate, casual and semi-pro teams. The company is backed by Y Combinator, Matrix Partners, Initialized Capital, Susa Ventures, Sterling.VC, ZhenFund, and Liquid 2 ventures."
     skills:
       - *javascript
       - *node_js
@@ -819,7 +815,6 @@ work:
       - He led front-end integration team of a classic Spring MVC implementation for a marketing
         tool used by an international marketing giant.
   - company: Dallas Pedicabs
-    resume: true
     position: Freelance Developer
     website: http://www.dallaspedicabs.com
     picture:

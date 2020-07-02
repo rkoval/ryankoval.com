@@ -22,7 +22,11 @@ html
           |
           |&ndash;
           |
-          a(href=basics.website) #{basics.website}
+          a(href=basics.website target="_blank") #{basics.website}
+          |
+          |&ndash;
+          |
+          a(href=basics.portfolio target="_blank") #{basics.portfolio}
           br
           small(style='opacity: 0.5;') (generated on #{moment().tz('America/Chicago').format('MMMM Do, YYYY [at] h:mm:ss A z')})
 
@@ -53,6 +57,7 @@ html
             ul
               li #{school.studyType}, #{school.area}
         each award in awards
-          section
-            span.u-pull-right #{moment(award.date).format(format)}
-            h3 #{award.title} - #{award.awarder}
+          if award.resume
+            section
+              span.u-pull-right #{moment(award.date).format(format)}
+              h3 #{award.title} - #{award.awarder}
