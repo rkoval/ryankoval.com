@@ -145,7 +145,7 @@ if (!isProduction) {
 } else {
   config.plugins.push(
     // uncomment to inspect generated bundle
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
     new OptimizeCssAssetsPlugin({
       cssProcessorOptions: {
         safe: true,
