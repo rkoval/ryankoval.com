@@ -3,528 +3,591 @@ skills:
   - skill: &javascript
       name: JavaScript
       tag: Programming Languages
-      website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript
+      website: https://developer.mozilla.org/en-US/docs/Web/JavaScript
       resume: true
       picture:
-        src: '/images/skills/js.svg'
+        src: "/images/skills/js.svg"
   - skill: &scala
       name: Scala
       tag: Programming Languages
       website: http://www.scala-lang.org/
       resume: true
       picture:
-        src: '/images/skills/scala.svg'
+        src: "/images/skills/scala.svg"
   - skill: &python
       name: Python
       tag: Programming Languages
       website: https://www.python.org/
       resume: true
       picture:
-        src: '/images/skills/python.svg'
+        src: "/images/skills/python.svg"
   - skill: &java
       name: Java
       tag: Programming Languages
       website: https://www.oracle.com/java/
       resume: true
       picture:
-        src: '/images/skills/java.svg'
+        src: "/images/skills/java.svg"
   - skill: &golang
       name: Golang
       tag: Programming Languages
       website: https://golang.org/
       resume: true
       picture:
-        src: '/images/skills/golang.svg'
+        src: "/images/skills/golang.svg"
   - skill: &linux
       name: Linux
       tag: Miscellaneous
       website: https://www.linux.org/
       resume: true
       picture:
-        src: '/images/skills/linux.svg'
+        src: "/images/skills/linux.svg"
   - skill: &docker
       name: Docker
       tag: Automation
       website: https://www.docker.com/
       resume: true
       picture:
-        src: '/images/skills/docker.svg'
+        src: "/images/skills/docker.svg"
   - skill: &vim
       name: Vim
       tag: Miscellaneous
       website: http://www.vim.org/about.php
       resume: true
       picture:
-        src: '/images/skills/vim.svg'
+        src: "/images/skills/vim.svg"
   - skill: &bash_zsh
       name: bash
       tag: Programming Languages
       website: https://github.com/sorin-ionescu/prezto
       resume: true
       picture:
-        src: '/images/skills/terminal.svg'
+        src: "/images/skills/terminal.svg"
   - skill: &git
       name: git
       tag: Miscellaneous
       website: https://git-scm.com/
       resume: true
       picture:
-        src: '/images/skills/git.svg'
+        src: "/images/skills/git.svg"
   - skill: &macOS
       name: macOS
       tag: Miscellaneous
       website: https://www.apple.com/macos
       resume: true
       picture:
-        src: '/images/skills/macos.svg'
+        src: "/images/skills/macos.svg"
   - skill: &node_js
       name: node.js
       tag: Miscellaneous
       website: https://nodejs.org/
       resume: true
       picture:
-        src: '/images/skills/node.svg'
-  - skill: &circleci
-      name: CircleCI
-      tag: Automation
-      website: https://circleci.com/
-      resume: true
-      picture:
-        src: '/images/skills/circleci.svg'
-  - skill: &django
-      name: Django
-      tag: Frameworks & Libraries
-      website: https://www.djangoproject.com/
-      resume: true
-      picture:
-        src: '/images/skills/django.svg'
+        src: "/images/skills/node.svg"
   - skill: &react
       name: React
       tag: Frameworks & Libraries
       website: https://facebook.github.io/react/
       resume: true
       picture:
-        src: '/images/skills/reactjs.svg'
+        src: "/images/skills/reactjs.svg"
+  - skill: &mobx
+      name: MobX
+      tag: Frameworks & Libraries
+      website: https://mobx.js.org
+      resume: true
+      picture:
+        src: "/images/skills/mobx.svg"
+  - skill: &grafana
+      name: Grafana
+      tag: Frameworks & Libraries
+      website: https://grafana.com/
+      resume: true
+      picture:
+        src: "/images/skills/grafana.svg"
+  - skill: &sublime
+      name: Sublime Text 3
+      tag: Miscellaneous
+      website: https://www.sublimetext.com/
+      resume: true
+      picture:
+        src: "/images/skills/sublime.svg"
+  - skill: &postgresql
+      name: PostgreSQL
+      tag: Data Stores
+      website: https://www.postgresql.org/
+      resume: true
+      picture:
+        src: "/images/skills/postgresql.svg"
+  - skill: &prometheus
+      name: Prometheus
+      tag: Data Stores
+      website: https://prometheus.io/
+      resume: true
+      picture:
+        src: "/images/skills/prometheus.svg"
+  - skill: &redis
+      name: Redis
+      tag: Data Stores
+      website: https://redis.io/
+      resume: true
+      picture:
+        src: "/images/skills/redis.svg"
+  - skill: &circleci
+      name: CircleCI
+      tag: Automation
+      website: https://circleci.com/
+      resume: true
+      picture:
+        src: "/images/skills/circleci.svg"
+  - skill: &mocha
+      name: MochaJS
+      tag: Frameworks & Libraries
+      website: https://mochajs.org/
+      resume: true
+      picture:
+        src: "/images/skills/mocha.svg"
+  - skill: &puppeteer
+      name: Puppeteer
+      tag: Frameworks & Libraries
+      website: https://developers.google.com/web/tools/puppeteer
+      resume: true
+      picture:
+        src: "/images/skills/puppeteer.svg"
+  - skill: &django
+      name: Django
+      tag: Frameworks & Libraries
+      website: https://www.djangoproject.com/
+      resume: true
+      picture:
+        src: "/images/skills/django.svg"
   - skill: &redux
       name: Redux
       tag: Frameworks & Libraries
       website: http://redux.js.org/
       resume: true
       picture:
-        src: '/images/skills/redux.svg'
+        src: "/images/skills/redux.svg"
   - skill: &vue_js
       name: Vue.js
       tag: Frameworks & Libraries
       website: https://vuejs.org/
       resume: true
       picture:
-        src: '/images/skills/vue.svg'
+        src: "/images/skills/vue.svg"
+  - skill: &jest
+      name: Jest
+      tag: Frameworks & Libraries
+      website: https://jestjs.io/
+      resume: true
+      picture:
+        src: "/images/skills/jest.svg"
   - skill: &terraform
       name: Terraform
       tag: Automation
       website: https://www.terraform.io/
       resume: true
       picture:
-        src: '/images/skills/terraform.svg'
+        src: "/images/skills/terraform.svg"
   - skill: &kubernetes
       name: Kubernetes
       tag: Infrastructure
       website: https://kubernetes.io/
       resume: true
       picture:
-        src: '/images/skills/kubernetes.svg'
+        src: "/images/skills/kubernetes.svg"
   - skill: &mysql
       name: MySQL
       tag: Data Stores
       website: https://www.mysql.com/
       resume: true
       picture:
-        src: '/images/skills/mysql.svg'
+        src: "/images/skills/mysql.svg"
   - skill: &aws_cloudformation
       name: CloudFormation
       tag: Infrastructure
       website: https://aws.amazon.com/cloudformation/
       resume: true
       picture:
-        src: '/images/skills/aws/cloudformation.svg'
+        src: "/images/skills/aws/cloudformation.svg"
   - skill: &aws_lambda
       name: AWS Lambda
       tag: Infrastructure
       website: https://aws.amazon.com/lambda/
       resume: true
       picture:
-        src: '/images/skills/aws/lambda.svg'
+        src: "/images/skills/aws/lambda.svg"
   - skill: &aws_elastic_beanstalk
       name: Elastic Beanstalk
       tag: Infrastructure
       website: https://aws.amazon.com/elasticbeanstalk/
       resume: true
       picture:
-        src: '/images/skills/aws/beanstalk.svg'
+        src: "/images/skills/aws/beanstalk.svg"
   - skill: &aws_cloudfront
       name: CloudFront
       tag: Infrastructure
       website: https://aws.amazon.com/cloudfront/
       resume: true
       picture:
-        src: '/images/skills/aws/cloudfront.svg'
+        src: "/images/skills/aws/cloudfront.svg"
   - skill: &aws_cloudwatch
       name: CloudWatch
       tag: Infrastructure
       website: https://aws.amazon.com/cloudwatch/
       resume: true
       picture:
-        src: '/images/skills/aws/cloudwatch.svg'
+        src: "/images/skills/aws/cloudwatch.svg"
   - skill: &aws_elasticache
       name: ElastiCache
-      tag: Infrastructure
+      tag: Data Stores
       website: https://aws.amazon.com/elasticache/
       resume: true
       picture:
-        src: '/images/skills/aws/elasticache.svg'
+        src: "/images/skills/aws/elasticache.svg"
   - skill: &aws_elb
       name: Elastic Load Balancing
       tag: Infrastructure
       website: https://aws.amazon.com/elasticloadbalancing/
       resume: true
       picture:
-        src: '/images/skills/aws/elb.svg'
+        src: "/images/skills/aws/elb.svg"
   - skill: &aws_iam
       name: Identity and Access Management
       tag: Infrastructure
       website: https://aws.amazon.com/iam/
       resume: true
       picture:
-        src: '/images/skills/aws/iam.svg'
+        src: "/images/skills/aws/iam.svg"
   - skill: &aws_rds
       name: Relational Database Service
-      tag: Infrastructure
+      tag: Data Stores
       website: https://aws.amazon.com/rds/
       resume: true
       picture:
-        src: '/images/skills/aws/rds.svg'
+        src: "/images/skills/aws/rds.svg"
   - skill: &aws_route53
       name: Route 53
       tag: Infrastructure
       website: https://aws.amazon.com/route53/
       resume: true
       picture:
-        src: '/images/skills/aws/route53.svg'
+        src: "/images/skills/aws/route53.svg"
   - skill: &aws_vpc
       name: Virtual Private Cloud
       tag: Infrastructure
       website: https://aws.amazon.com/vpc/
       resume: true
       picture:
-        src: '/images/skills/aws/vpc.svg'
+        src: "/images/skills/aws/vpc.svg"
   - skill: &aws_waf
       name: Web Application Firewall
       tag: Infrastructure
       website: https://aws.amazon.com/waf/
       resume: true
       picture:
-        src: '/images/skills/aws/waf.svg'
+        src: "/images/skills/aws/waf.svg"
   - skill: &aws_s3
       name: S3
       tag: Data Stores
       website: https://aws.amazon.com/s3/
       resume: true
       picture:
-        src: '/images/skills/aws/s3.svg'
+        src: "/images/skills/aws/s3.svg"
   - skill: &aws_sqs
       name: SQS
       tag: Infrastructure
       website: https://aws.amazon.com/sqs/
       resume: true
       picture:
-        src: '/images/skills/aws/sqs.svg'
+        src: "/images/skills/aws/sqs.svg"
   - skill: &aws_sns
       name: SNS
       tag: Infrastructure
       website: https://aws.amazon.com/sns/
       resume: true
       picture:
-        src: '/images/skills/aws/sns.svg'
+        src: "/images/skills/aws/sns.svg"
   - skill: &aws_ec2
       name: EC2
       tag: Infrastructure
       website: https://aws.amazon.com/ec2/
       resume: true
       picture:
-        src: '/images/skills/aws/ec2.svg'
+        src: "/images/skills/aws/ec2.svg"
   - skill: &cassandra
       name: Cassandra
       tag: Data Stores
       website: https://cassandra.apache.org/
       resume: true
       picture:
-        src: '/images/skills/cassandra.svg'
+        src: "/images/skills/cassandra.svg"
   - skill: &html5
       name: HTML5
       tag: Programming Languages
       website: https://www.html5rocks.com
       resume: true
       picture:
-        src: '/images/skills/html5.svg'
+        src: "/images/skills/html5.svg"
   - skill: &css
       name: CSS
       tag: Programming Languages
       website: http://www.css3.info/
       resume: true
       picture:
-        src: '/images/skills/css3.svg'
+        src: "/images/skills/css3.svg"
   - skill: &less
       name: Less
       tag: Programming Languages
       website: http://lesscss.org/
       resume: true
       picture:
-        src: '/images/skills/less.svg'
+        src: "/images/skills/less.svg"
   - skill: &sass
       name: Sass
       tag: Programming Languages
       website: http://sass-lang.com/
       resume: true
       picture:
-        src: '/images/skills/sass.svg'
+        src: "/images/skills/sass.svg"
   - skill: &chrome_developer_tools
       name: Chrome Developer Tools
       tag: Miscellaneous
       website: https://developer.chrome.com/devtools
       resume: true
       picture:
-        src: '/images/skills/chrome.svg'
+        src: "/images/skills/chrome.svg"
   - skill: &pugjs
       name: Pug
       tag: Frameworks & Libraries
       website: https://pugjs.org
       resume: true
       picture:
-        src: '/images/skills/pug.svg'
+        src: "/images/skills/pug.svg"
   - skill: &karma
       name: Karma
       tag: Automation
       website: https://karma-runner.github.io/
       resume: true
       picture:
-        src: '/images/skills/karma.svg'
+        src: "/images/skills/karma.svg"
   - skill: &lo_dash
       name: Lodash
       tag: Frameworks & Libraries
       website: https://lodash.com/
       resume: true
       picture:
-        src: '/images/skills/lodash.svg'
+        src: "/images/skills/lodash.svg"
   - skill: &intellij
       name: IntelliJ
       tag: Miscellaneous
       website: https://www.jetbrains.com/idea/
       resume: false
       picture:
-        src: '/images/skills/intellij.svg'
+        src: "/images/skills/intellij.svg"
   - skill: &markdown
       name: Markdown
       tag: Miscellaneous
       website: https://daringfireball.net/projects/markdown/
       resume: true
       picture:
-        src: '/images/skills/markdown.svg'
+        src: "/images/skills/markdown.svg"
   - skill: &bootstrap
       name: Bootstrap
       tag: Frameworks & Libraries
       website: https://getbootstrap.com/
       resume: true
       picture:
-        src: '/images/skills/bootstrap.svg'
+        src: "/images/skills/bootstrap.svg"
   - skill: &hazelcast
       name: Hazelcast
       tag: Data Stores
       website: https://hazelcast.com/
       resume: true
       picture:
-        src: '/images/skills/hazelcast.png'
+        src: "/images/skills/hazelcast.png"
   - skill: &elasticsearch
       name: Elasticsearch
       tag: Data Stores
       website: https://www.elastic.co
       resume: true
       picture:
-        src: '/images/skills/elasticsearch.svg'
+        src: "/images/skills/elasticsearch.svg"
   - skill: &mongodb
       name: MongoDB
       tag: Data Stores
       website: https://www.mongodb.org/
       resume: true
       picture:
-        src: '/images/skills/mongo.svg'
+        src: "/images/skills/mongo.svg"
   - skill: &npm
       name: npm
       tag: Automation
       website: https://www.npmjs.org/
       resume: true
       picture:
-        src: '/images/skills/npm.svg'
+        src: "/images/skills/npm.svg"
   - skill: &sbt
       name: sbt
       tag: Automation
       website: http://www.scala-sbt.org/
       resume: true
       picture:
-        src: '/images/skills/sbt.svg'
+        src: "/images/skills/sbt.svg"
   - skill: &webpack
       name: Webpack
       tag: Automation
       website: https://webpack.js.org/
       resume: true
       picture:
-        src: '/images/skills/webpack.svg'
+        src: "/images/skills/webpack.svg"
   - skill: &ansible
       name: Ansible
       tag: Automation
       website: https://www.ansible.com/
       resume: true
       picture:
-        src: '/images/skills/ansible.svg'
+        src: "/images/skills/ansible.svg"
   - skill: &nginx
       name: NGINX
       tag: Miscellaneous
       website: https://www.nginx.com/
       resume: true
       picture:
-        src: '/images/skills/nginx.svg'
+        src: "/images/skills/nginx.svg"
   - skill: &github
       name: GitHub
       tag: Miscellaneous
       website: https://github.com/
       resume: false
       picture:
-        src: '/images/skills/github.svg'
+        src: "/images/skills/github.svg"
   - skill: &alpine_linux
       name: Alpine Linux
       tag: Miscellaneous
       website: https://alpinelinux.org/
       resume: false
       picture:
-        src: '/images/skills/alpine.svg'
+        src: "/images/skills/alpine.svg"
   - skill: &angularjs
       name: AngularJS
       tag: Frameworks & Libraries
       website: https://angularjs.org/
       resume: true
       picture:
-        src: '/images/skills/angular.svg'
+        src: "/images/skills/angular.svg"
   - skill: &play_framework
       name: Play Framework
       tag: Frameworks & Libraries
       website: https://www.playframework.com/
       resume: true
       picture:
-        src: '/images/skills/play.svg'
+        src: "/images/skills/play.svg"
   - skill: &jenkins
       name: Jenkins
       tag: Automation
       website: https://jenkins-ci.org/
       resume: true
       picture:
-        src: '/images/skills/jenkins.svg'
+        src: "/images/skills/jenkins.svg"
   - skill: &grunt
       name: Grunt
       tag: Automation
       website: https://gruntjs.com
       resume: true
       picture:
-        src: '/images/skills/grunt.svg'
+        src: "/images/skills/grunt.svg"
   - skill: &bower
       name: Bower
       tag: Automation
       website: http://bower.io
       resume: true
       picture:
-        src: '/images/skills/bower.svg'
+        src: "/images/skills/bower.svg"
   - skill: &jquery
       name: jQuery
       tag: Frameworks & Libraries
       website: https://jquery.com/
       resume: true
       picture:
-        src: '/images/skills/jquery.svg'
+        src: "/images/skills/jquery.svg"
   - skill: &jquery_mobile
       name: jQuery Mobile
       tag: Frameworks & Libraries
       website: https://jquerymobile.com/
       resume: true
       picture:
-        src: '/images/skills/jquerymobile.svg'
+        src: "/images/skills/jquerymobile.svg"
   - skill: &concourse_ci
       name: Concourse CI
       tag: Automation
       website: https://concourse.ci/
       resume: true
       picture:
-        src: '/images/skills/concourse.svg'
+        src: "/images/skills/concourse.svg"
   - skill: &wordpress
       name: WordPress
       tag: Miscellaneous
       website: https://wordpress.org/
       resume: true
       picture:
-        src: '/images/skills/wordpress.svg'
+        src: "/images/skills/wordpress.svg"
   - skill: &spring
       name: Spring
       tag: Frameworks & Libraries
       website: https://spring.io/
       resume: true
       picture:
-        src: '/images/skills/spring.svg'
+        src: "/images/skills/spring.svg"
   - skill: &vagrant
       name: Vagrant
       tag: Automation
       website: https://www.vagrantup.com/
       resume: true
       picture:
-        src: '/images/skills/vagrant.svg'
+        src: "/images/skills/vagrant.svg"
   - skill: &thymeleaf
       name: Thymeleaf
       tag: Frameworks & Libraries
       website: http://www.thymeleaf.org/
       resume: true
       picture:
-        src: '/images/skills/thymeleaflogo.png'
+        src: "/images/skills/thymeleaflogo.png"
   - skill: &hibernate
       name: Hibernate
       tag: Frameworks & Libraries
       website: http://hibernate.org/
       resume: true
       picture:
-        src: '/images/skills/hibernate.svg'
+        src: "/images/skills/hibernate.svg"
   - skill: &subversion
       name: Subversion
       tag: Miscellaneous
       website: https://subversion.apache.org/
       resume: false
       picture:
-        src: '/images/skills/svn.svg'
+        src: "/images/skills/svn.svg"
   - skill: &bitbucket
       name: Bitbucket
       tag: Miscellaneous
       website: https://bitbucket.org/
       resume: false
       picture:
-        src: '/images/skills/bitbucket.svg'
+        src: "/images/skills/bitbucket.svg"
   - skill: &extjs
       name: ExtJS
       tag: Frameworks & Libraries
       website: https://www.sencha.com/products/extjs/
       resume: true
       picture:
-        src: '/images/skills/extjs.svg'
+        src: "/images/skills/extjs.svg"
   - skill: &broadleaf_commerce
       name: Broadleaf Commerce
       tag: Frameworks & Libraries
       website: https://www.broadleafcommerce.com/
       resume: false
       picture:
-        src: '/images/skills/blc.svg'
+        src: "/images/skills/blc.svg"
 basics:
   name: Ryan A. Koval
   label: Software Engineering & Architecture
@@ -538,21 +601,61 @@ basics:
   profiles:
     - network: GitHub
       username: rkoval
-      url: '//github.ryankoval.com'
+      url: "//github.ryankoval.com"
     - network: LinkedIn
       username: ryankoval
-      url: '//linkedin.ryankoval.com'
+      url: "//linkedin.ryankoval.com"
 work:
+  - company: Guilded
+    resume: true
+    position: Software Engineer
+    website: https://www.guilded.gg/
+    picture:
+      src: "/images/logo/guilded.svg"
+      style: "background-color: #F5C400;"
+    startDate: "2018-11-05"
+    summary: "TODO"
+    skills:
+      - *javascript
+      - *node_js
+      - *postgresql
+      - *redis
+      - *grafana
+      - *prometheus
+      - *webpack
+      - *react
+      - *mobx
+      - *bash_zsh
+      - *vim
+      - *sublime
+      - *nginx
+      - *puppeteer
+      - *mocha
+      - *aws_elastic_beanstalk
+      - *aws_cloudwatch
+      - *aws_ec2
+      - *aws_s3
+      - *aws_iam
+      - *aws_elb
+      - *aws_route53
+      - *aws_lambda
+      - *docker
+      - *git
+      - *linux
+    highlights:
+      - Ryan TODO
+      - TODO
   - company: rewardStyle
     resume: true
     position: Senior Software Engineer
     website: https://www.rewardstyle.com
     picture:
-      src: '/images/logo/rewardstyle.svg'
-      style: 'background-color: #141414;'
-    startDate: '2016-02-22'
+      src: "/images/logo/rewardstyle.svg"
+      style: "background-color: #141414;"
+    startDate: "2016-02-22"
+    endDate: "2018-10-26"
     summary:
-      'In the last four years, rewardStyle has fueled the arrival of a new influence
+      "In the last four years, rewardStyle has fueled the arrival of a new influence
       on the retail industry: professional content creators. By providing the technical
       tools and education necessary to empower a global army of 9,000 premium content
       creators, rewardStyle is now making a tangible impact on global e-commerce sales.
@@ -562,7 +665,7 @@ work:
       of publishers worldwide, enabling them to earn meaningful revenue on their digital
       content, ultimately empowering them to create and grow small businesses into international
       brands. Today, rewardStyle is a multi-national business. More than 150 team members
-      work from rewardStyle offices in Dallas, San Francisco, Shanghai and London.'
+      work from rewardStyle offices in Dallas, San Francisco, Shanghai and London."
     skills:
       - *python
       - *django
@@ -575,11 +678,14 @@ work:
       - *nginx
       - *aws_lambda
       - *mysql
+      - *puppeteer
+      - *bash_zsh
       - *aws_cloudformation
       - *aws_elastic_beanstalk
       - *aws_cloudwatch
       - *aws_sqs
       - *golang
+      - *jest
       - *angularjs
       - *aws_ec2
       - *terraform
@@ -605,9 +711,9 @@ work:
     position: Lead Engineer
     website: https://www.bottlerocketstudios.com
     picture:
-      src: '/images/logo/bottlerocket.svg'
-    startDate: '2015-11-02'
-    endDate: '2016-02-05'
+      src: "/images/logo/bottlerocket.svg"
+    startDate: "2015-11-02"
+    endDate: "2016-02-05"
     summary:
       Since our launch, Bottle Rocket has been at the forefront of the app revolution.
       We propelled forward-thinking brands through mobile strategy, design, and development.
@@ -633,9 +739,9 @@ work:
     position: Consultant
     website: https://www.slalom.com
     picture:
-      src: '/images/logo/slalom.svg'
-    startDate: '2013-11-11'
-    endDate: '2015-10-23'
+      src: "/images/logo/slalom.svg"
+    startDate: "2013-11-11"
+    endDate: "2015-10-23"
     summary:
       Headquartered in Seattle, Washington, Slalom Consulting has rapidly grown
       to more than 2,200 consultants and helps companies from the Fortune 500 to emerging
@@ -677,9 +783,9 @@ work:
     position: Consultant
     website: https://www.credera.com
     picture:
-      src: '/images/logo/credera.svg'
-    startDate: '2011-08-22'
-    endDate: '2013-10-30'
+      src: "/images/logo/credera.svg"
+    startDate: "2011-08-22"
+    endDate: "2013-10-30"
     summary:
       Headquartered in Seattle, Washington, Slalom Consulting has rapidly grown
       to more than 2,200 consultants and helps companies from the Fortune 500 to emerging
@@ -717,9 +823,9 @@ work:
     position: Freelance Developer
     website: http://www.dallaspedicabs.com
     picture:
-      src: '/images/logo/pedicabs.jpg'
-    startDate: '2013-02-15'
-    endDate: '2013-07-15'
+      src: "/images/logo/pedicabs.jpg"
+    startDate: "2013-02-15"
+    endDate: "2013-07-15"
     summary:
       Since our inception in early 2011 we have been trying to make sustainable
       transportation in Dallas a reality, while providing an enjoyable experience to
@@ -741,9 +847,9 @@ work:
     position: Administrative Assistant
     website: https://www.slalom.com
     picture:
-      src: '/images/logo/tbro.svg'
-    startDate: '2010-05-01'
-    endDate: '2010-07-03'
+      src: "/images/logo/tbro.svg"
+    startDate: "2010-05-01"
+    endDate: "2010-07-03"
     summary:
       Tampa Bay Radiation Oncology (TBRO) formed in 2003, is a locally owned
       and physician managed organization committed to providing experienced, state of
@@ -781,14 +887,14 @@ education:
       spirit of the region. The University is nonsectarian in its teaching and committed
       to academic freedom and open inquiry.
     picture:
-      src: '/images/logo/smu.svg'
+      src: "/images/logo/smu.svg"
     area: Computer Science (minor in Mathematics)
     studyType: Bachelor of Science
-    startDate: '2007-08-01'
-    endDate: '2011-06-01'
+    startDate: "2007-08-01"
+    endDate: "2011-06-01"
 awards:
   - title: Certified ScrumMaster®
-    date: '2015-09-01'
+    date: "2015-09-01"
     awarder: Scrum Alliance
     summary:
       A Certified ScrumMaster® helps project teams properly use Scrum, increasing
@@ -798,7 +904,7 @@ awards:
       the rest of the Scrum team work together and learn the Scrum framework. CSMs also
       protect the team from both internal and external distractions.
   - title: Oracle Certified Professional – Java SE6 Programmer
-    date: '2011-10-01'
+    date: "2011-10-01"
     awarder: Oracle
     summary:
       Oracle's Certified Professional Java SE Programmer exam is the fundamental
