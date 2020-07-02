@@ -141,13 +141,11 @@ const config = {
 }
 
 if (!isProduction) {
-  config.plugins.push(
-    new ReloadPlugin()
-    // uncomment to inspect generated bundle
-    // new BundleAnalyzerPlugin()
-  )
+  config.plugins.push(new ReloadPlugin())
 } else {
   config.plugins.push(
+    // uncomment to inspect generated bundle
+    new BundleAnalyzerPlugin(),
     new OptimizeCssAssetsPlugin({
       cssProcessorOptions: {
         safe: true,
