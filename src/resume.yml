@@ -633,7 +633,10 @@ work:
       - *git
       - *linux
     highlights:
-      - Ryan has worked at Guilded since November of 2018
+      - Ryan was a member of the original core engineering team responsible for the start-up's $7M Series A funding round
+      - He worked full-stack implementing features across web, mobile, backend, cloud infrastructure, and data stores
+      - He built the majority of the company's infrastruture for handling distributed logging and error reporting
+      - He architected and solely implemented all aspects of a large automated job system used for a bot ecosystem
   - company: rewardStyle
     resume: true
     position: Senior Software Engineer
