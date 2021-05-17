@@ -133,6 +133,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/redis.svg'
+  - skill: &stripe
+      name: Stripe
+      tag: Miscellaneous
+      website: https://stripe.com/
+      resume: true
+      picture:
+        src: '/images/skills/stripe.svg'
   - skill: &circleci
       name: CircleCI
       tag: Automation
@@ -612,6 +619,7 @@ work:
       - *redis
       - *grafana
       - *prometheus
+      - *stripe
       - *webpack
       - *react
       - *mobx
@@ -634,9 +642,8 @@ work:
       - *linux
     highlights:
       - Ryan was a member of the original core engineering team responsible for the start-up's $7M Series A funding round
-      - He worked full-stack implementing features across web, mobile, backend, cloud infrastructure, and data stores
-      - He built the majority of the company's infrastruture for handling distributed logging and error reporting
-      - He architected and solely implemented all aspects of a large automated job system used for a bot ecosystem
+      - He worked full-stack building across web, desktop, mobile, backend, devops, CI/CD, cloud infrastructure, and data stores
+      - He led multiple product and engineering initiatives from end-to-end, including gathering user requirements, working with UX design team, and shipping implementations to production
   - company: rewardStyle
     resume: true
     position: Senior Software Engineer
