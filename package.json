@@ -21,7 +21,7 @@
     "bootstrap": "3.3.7",
     "jquery": "3.2.1",
     "lodash": "^4.17.10",
-    "moment": "2.20.1",
+    "moment": "2.29.2",
     "moment-timezone": "^0.5.17",
     "paper-css": "^0.3.0",
     "skeleton-css": "^2.0.4",
