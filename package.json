@@ -25,7 +25,6 @@
     "moment-timezone": "^0.5.17",
     "paper-css": "^0.3.0",
     "skeleton-css": "^2.0.4",
-    "smart-underline": "^4.2.1",
     "wowjs": "1.1.2"
   },
   "licence": "MIT",
