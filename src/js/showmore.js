@@ -1,20 +1,20 @@
-var $el, $p, $up, totalHeight
+var $el, $p, $up, totalHeight;
 $('.show-more')
   .children('a')
-  .click(function() {
-    totalHeight = 0
+  .click(function () {
+    totalHeight = 0;
 
-    $el = $(this)
-    $p = $el.parent()
-    $up = $p.parent()
+    $el = $(this);
+    $p = $el.parent();
+    $up = $p.parent();
 
     // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
     $up
       .children()
       .not('.show-more')
-      .each(function() {
-        totalHeight += $(this).outerHeight()
-      })
+      .each(function () {
+        totalHeight += $(this).outerHeight();
+      });
 
     $up
       .css({
@@ -24,11 +24,11 @@ $('.show-more')
       })
       .animate({
         height: totalHeight + 40,
-      })
+      });
 
     // fade out read-more
-    $p.fadeOut()
+    $p.fadeOut();
 
     // prevent jump-down
-    return false
-  })
+    return false;
+  });

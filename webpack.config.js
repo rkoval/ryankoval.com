@@ -1,21 +1,21 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const ReloadPlugin = require('reload-html-webpack-plugin')
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const ReloadPlugin = require('reload-html-webpack-plugin');
+const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 
-const src = dir => path.join(__dirname, 'src', dir)
+const src = (dir) => path.join(__dirname, 'src', dir);
 
-const isProduction = process.env.NODE_ENV === 'production'
+const isProduction = process.env.NODE_ENV === 'production';
 
 const extractLess = new ExtractTextPlugin({
   filename: '[name].[contenthash].css',
   disable: !isProduction,
-})
+});
 
 const styleLoaders = (() => {
   if (isProduction) {
@@ -35,7 +35,7 @@ const styleLoaders = (() => {
         ],
         fallback: 'style-loader',
       }),
-    }
+    };
   }
 
   return {
@@ -51,8 +51,8 @@ const styleLoaders = (() => {
         loader: 'less-loader',
       },
     ],
-  }
-})()
+  };
+})();
 
 const config = {
   entry: {
@@ -138,10 +138,10 @@ const config = {
       WOW: 'wowjs',
     }),
   ],
-}
+};
 
 if (!isProduction) {
-  config.plugins.push(new ReloadPlugin())
+  config.plugins.push(new ReloadPlugin());
 } else {
   config.plugins.push(
     // uncomment to inspect generated bundle
@@ -156,7 +156,7 @@ if (!isProduction) {
       sourceMap: true,
     }),
     extractLess
-  )
+  );
 }
 
-module.exports = config
+module.exports = config;

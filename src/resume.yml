@@ -667,8 +667,7 @@ work:
       style: 'background-color: #141414;'
     startDate: '2016-02-22'
     endDate: '2018-10-26'
-    summary:
-      'In the last four years, rewardStyle has fueled the arrival of a new influence
+    summary: 'In the last four years, rewardStyle has fueled the arrival of a new influence
       on the retail industry: professional content creators. By providing the technical
       tools and education necessary to empower a global army of 9,000 premium content
       creators, rewardStyle is now making a tangible impact on global e-commerce sales.
@@ -727,8 +726,7 @@ work:
       src: '/images/logo/bottlerocket.svg'
     startDate: '2015-11-02'
     endDate: '2016-02-05'
-    summary:
-      Since our launch, Bottle Rocket has been at the forefront of the app revolution.
+    summary: Since our launch, Bottle Rocket has been at the forefront of the app revolution.
       We propelled forward-thinking brands through mobile strategy, design, and development.
       We push the limits of design, information architecture, and the capabilities of
       mobile platforms – and it shows by the way we connect users with information,
@@ -755,8 +753,7 @@ work:
       src: '/images/logo/slalom.svg'
     startDate: '2013-11-11'
     endDate: '2015-10-23'
-    summary:
-      Headquartered in Seattle, Washington, Slalom Consulting has rapidly grown
+    summary: Headquartered in Seattle, Washington, Slalom Consulting has rapidly grown
       to more than 2,200 consultants and helps companies from the Fortune 500 to emerging
       businesses. We deliver award-winning solutions and innovation through a national
       network of local offices across 14 North American cities. Slalom can take on a
@@ -799,8 +796,7 @@ work:
       src: '/images/logo/credera.svg'
     startDate: '2011-08-22'
     endDate: '2013-10-30'
-    summary:
-      Headquartered in Seattle, Washington, Slalom Consulting has rapidly grown
+    summary: Headquartered in Seattle, Washington, Slalom Consulting has rapidly grown
       to more than 2,200 consultants and helps companies from the Fortune 500 to emerging
       businesses. We deliver award-winning solutions and innovation through a national
       network of local offices across 14 North American cities. Slalom can take on a
@@ -838,8 +834,7 @@ work:
       src: '/images/logo/pedicabs.jpg'
     startDate: '2013-02-15'
     endDate: '2013-07-15'
-    summary:
-      Since our inception in early 2011 we have been trying to make sustainable
+    summary: Since our inception in early 2011 we have been trying to make sustainable
       transportation in Dallas a reality, while providing an enjoyable experience to
       all of our patrons. Whether it is a ride to dinner, a bar, friend’s apartment
       or just to grab a bite to eat, a ride with Dallas Pedicabs is the right decision.
@@ -862,8 +857,7 @@ work:
       src: '/images/logo/tbro.svg'
     startDate: '2010-05-01'
     endDate: '2010-07-03'
-    summary:
-      Tampa Bay Radiation Oncology (TBRO) formed in 2003, is a locally owned
+    summary: Tampa Bay Radiation Oncology (TBRO) formed in 2003, is a locally owned
       and physician managed organization committed to providing experienced, state of
       the art cancer treatments in a caring and professional manner. We practice in
       four free standing clinics, strategically located throughout the Tampa Bay Area
@@ -880,8 +874,7 @@ work:
 education:
   - institution: Southern Methodist University
     website: https://www.smu.edu
-    summary:
-      A nationally ranked private university with seven degree-granting schools,
+    summary: A nationally ranked private university with seven degree-granting schools,
       SMU is a distinguished center for teaching and research located in the heart of
       Dallas. SMU’s 11,000 students benefit from small classes, leadership opportunities,
       international study and innovative programs. SMU is celebrating the centennial
@@ -908,8 +901,7 @@ awards:
   - title: Certified ScrumMaster®
     date: '2015-09-01'
     awarder: Scrum Alliance
-    summary:
-      A Certified ScrumMaster® helps project teams properly use Scrum, increasing
+    summary: A Certified ScrumMaster® helps project teams properly use Scrum, increasing
       the likelihood of the project's overall success. CSMs understand Scrum values,
       practices, and applications and provide a level of knowledge and expertise above
       and beyond that of typical project managers. CSMs act as "servant leaders," helping
@@ -918,8 +910,7 @@ awards:
   - title: Oracle Certified Professional – Java SE6 Programmer
     date: '2011-10-01'
     awarder: Oracle
-    summary:
-      Oracle's Certified Professional Java SE Programmer exam is the fundamental
+    summary: Oracle's Certified Professional Java SE Programmer exam is the fundamental
       exam required to demonstrate solid understanding of Java and some of its SE APIs
       and is a prerequisite to a number of the other Java certificates. It is designed
       as a fairly detailed test of knowledge of the core features and constructs of

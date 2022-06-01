@@ -1,1 +1,1 @@
-SmartUnderline.init()
+SmartUnderline.init();
