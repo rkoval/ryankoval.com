@@ -168,6 +168,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/puppeteer.svg'
+  - skill: &lua
+      name: Lua
+      tag: Programming Languages
+      website: https://www.lua.org/
+      resume: true
+      picture:
+        src: '/images/skills/lua.svg'
   - skill: &django
       name: Django
       tag: Frameworks & Libraries
