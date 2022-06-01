@@ -49,6 +49,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/docker.svg'
+  - skill: &neovim
+      name: Neovim
+      tag: Miscellaneous
+      website: https://neovim.io/
+      resume: true
+      picture:
+        src: '/images/skills/neovim.svg'
   - skill: &vim
       name: Vim
       tag: Miscellaneous
@@ -624,7 +631,7 @@ work:
       - *react
       - *mobx
       - *bash_zsh
-      - *vim
+      - *neovim
       - *sublime
       - *nginx
       - *puppeteer
