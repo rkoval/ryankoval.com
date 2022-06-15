@@ -600,7 +600,7 @@ skills:
         src: '/images/skills/blc.svg'
 basics:
   name: Ryan A. Koval
-  label: Software Engineering & Architecture
+  label: Software Engineering, Architecture & Management
   picture: https://www.dropbox.com/s/zxularl375so1aw/personal-photo.jpg?dl=1
   email: ryan@ryankoval.com
   website: https://ryankoval.com
@@ -617,15 +617,20 @@ basics:
       username: ryankoval
       url: '//linkedin.ryankoval.com'
 work:
-  - company: Guilded
+  - company: 
+      name: Guilded
+      description: a Roblox subsidiary
     resume: true
-    position: Software Engineer
+    position: Engineering Manager / Software Engineer
     website: https://www.guilded.gg/
     picture:
       src: '/images/logo/guilded.svg'
       style: 'background-color: #F5C400;'
     startDate: '2018-11-05'
-    summary: 'Guilded is the ultimate chat platform for gaming communities. Founded in 2017 by Eli Brown, a former pro gamer who played an integral role on Instagram’s Growth Team and Microsoft’s Xbox team, Guilded serves the world’s top professional esports teams and over 50,000 high school, collegiate, casual and semi-pro teams. The company is backed by Y Combinator, Matrix Partners, Initialized Capital, Susa Ventures, Sterling.VC, ZhenFund, and Liquid 2 ventures.'
+    summary: > 
+      Guilded is a VoIP, instant messaging and digital distribution platform designed by Guilded Inc. and owned by Roblox Guilded is based in San Francisco. Users communicate with voice calls, video calls, text messaging, media and files in private chats or as part of communities called \"guilds\". Guilded was founded by Eli Brown, a former Facebook and Xbox employee. Guilded runs on Windows, Linux, macOS, Android and iOS.
+
+      Guilded is a Discord competitor that is primarily focused on video gaming communities, such as those focused on competitive gaming and esports. It provides features intended for video gaming clans, such as scheduling tools and integrated calendars. Guilded is developed by Guilded, Inc. which has been an independent product group of the Roblox Corporation since August 16, 2021."
     skills:
       - *javascript
       - *node_js
@@ -655,29 +660,22 @@ work:
       - *git
       - *linux
     highlights:
-      - Ryan was a member of the original core engineering team responsible for the start-up's $7M Series A funding round
-      - He worked full-stack building across web, desktop, mobile, backend, devops, CI/CD, cloud infrastructure, and data stores
-      - He led multiple product and engineering initiatives from end-to-end, including gathering user requirements, working with UX design team, and shipping implementations to production
-  - company: rewardStyle
+      - Ryan was a member of the original core engineering team responsible for the start-up's $7M Series A funding round and ultimately the $90M acquisition by Roblox in August 2021.
+      - He led many product and engineering initiatives from end-to-end, including gathering user requirements, collaborating with the UX design team, and shipping code to production
+      - He worked full-stack engineering across web, desktop, mobile, backend, devops, CI/CD, cloud infrastructure, moderation/abuse, data stores, developer experience, and more
+      - His effective management and coaching led to increased productivity and happiness for many engineers and direct reports across the organization
+  - company: 
+      name: LTK
+      description: formerly rewardStyle and LIKEtoKNOW.it
     resume: true
     position: Senior Software Engineer
-    website: https://www.rewardstyle.com
+    website: https://www.shopltk.com/
     picture:
-      src: '/images/logo/rewardstyle.svg'
+      src: '/images/logo/ltk.svg'
       style: 'background-color: #141414;'
     startDate: '2016-02-22'
     endDate: '2018-10-26'
-    summary: 'In the last four years, rewardStyle has fueled the arrival of a new influence
-      on the retail industry: professional content creators. By providing the technical
-      tools and education necessary to empower a global army of 9,000 premium content
-      creators, rewardStyle is now making a tangible impact on global e-commerce sales.
-      In 2015, rewardStyle publishers are expected to drive approximately $500 million
-      in retail sales. rewardStyle has redirected the style publishing industry and
-      contributed to the professionalization and financial independence of thousands
-      of publishers worldwide, enabling them to earn meaningful revenue on their digital
-      content, ultimately empowering them to create and grow small businesses into international
-      brands. Today, rewardStyle is a multi-national business. More than 150 team members
-      work from rewardStyle offices in Dallas, San Francisco, Shanghai and London.'
+    summary: 'In 2010, rewardStyle was just an idea—a dream of how to simultaneously help brands and lifestyle creators monetize the digital space. Today, celebrating our 10th anniversary, we’re a global community of more than 350 team members, 150,000+ top-tier creators, and 1 million brands across more than 100 countries. Pioneering a proprietary ecosystem of innovative technology, strategic growth consulting, global brand partnerships, and expansive shopper distribution, we’ve done more than just monetize Creator Marketing—we created the industry and are now defining the next decade.'
     skills:
       - *python
       - *django
@@ -718,7 +716,8 @@ work:
       - He was involved in designing and implementing new core infrastructure patterns to push the organization from a two-week deploy cycle to rapid continuous delivery
       - He revived multiple legacy node.js analytics projects plagued with stability problems and general disrepair
       - He rewrote infrastructure configuration for another failing project in charge of syncing critical internal data throughout multiple systems
-  - company: Bottle Rocket Studios
+  - company: 
+      name: Bottle Rocket Studios
     resume: true
     position: Lead Engineer
     website: https://www.bottlerocketstudios.com
@@ -745,7 +744,8 @@ work:
     highlights:
       - Ryan was assigned as a developer to utilize Scala experience to help speed along
         development of a complex eCommerce ordering solution
-  - company: Slalom Consulting
+  - company: 
+      name: Slalom Consulting
     resume: true
     position: Consultant
     website: https://www.slalom.com
@@ -788,7 +788,8 @@ work:
         telecommunication investigative tool.
       - He was assigned as a senior lead to drive Scala development of a huge AWS data processing
         pipeline for an agricultural business giant
-  - company: Credera
+  - company: 
+      name: Credera
     resume: true
     position: Consultant
     website: https://www.credera.com
@@ -827,7 +828,8 @@ work:
         and spanned over both desktop & mobile platforms.
       - He led front-end integration team of a classic Spring MVC implementation for a marketing
         tool used by an international marketing giant.
-  - company: Dallas Pedicabs
+  - company: 
+      name: Dallas Pedicabs
     position: Freelance Developer
     website: http://www.dallaspedicabs.com
     picture:
@@ -849,7 +851,8 @@ work:
     highlights:
       - Ryan overhauled unmanageable consumer-facing website for this small startup in favor
         of a custom WordPress solution.
-  - company: Tampa Bay Radiation Oncology
+  - company: 
+      name: Tampa Bay Radiation Oncology
     resume: false
     position: Administrative Assistant
     website: https://www.slalom.com

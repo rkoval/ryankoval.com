@@ -26,8 +26,6 @@ html
           |&ndash;
           |
           a(href=basics.portfolio target="_blank") #{basics.portfolio}
-          br
-          small(style='opacity: 0.5;') (generated on #{moment().tz('America/Chicago').format('MMMM Do, YYYY [at] h:mm:ss A z')})
 
       for chunk, i in chunkedGroupedSkills
         .row(style=i === 0 ? 'margin-bottom: 10px;' : '')
@@ -43,7 +41,13 @@ html
           if job.resume
             section
               span.u-pull-right #{moment(job.startDate).format(format)} &ndash; #{job.endDate && moment(job.endDate).format(format) || 'present'}
-              h3 #{job.company}, #{job.position}
+              h3 
+                if job.company.description
+                  span #{job.company.name} 
+                  span.company-description (#{job.company.description})
+                  span , #{job.position}
+                else
+                  span #{job.company.name}, #{job.position}
               ul
                 each highlight in job.highlights
                   li #{highlight}

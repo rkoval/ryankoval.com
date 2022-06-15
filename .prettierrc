@@ -13,6 +13,18 @@
       "options": {
         "parser": "babel"
       }
+    },
+    {
+      "files": ["*.svg"],
+      "options": {
+        "parser": "html"
+      }
+    },
+    {
+      "files": ["*.less"],
+      "options": {
+        "parser": "css"
+      }
     }
   ]
 }
