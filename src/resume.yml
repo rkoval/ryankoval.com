@@ -660,10 +660,10 @@ work:
       - *git
       - *linux
     highlights:
-      - Ryan was a member of the original core engineering team responsible for the start-up's $7M Series A funding round and ultimately the $90M acquisition by Roblox in August 2021.
+      - Ryan was a member of the original core engineering team responsible for the start-up's $7M Series A funding in April 2020 and ultimately the $90M acquisition by Roblox in August 2021.
+      - He was a leader in recruitment and management helping grow the engineering team from 7 to 21+ people with less than 15% turnover over two years.
       - He led many product and engineering initiatives from end-to-end, including gathering user requirements, collaborating with the UX design team, and shipping code to production
-      - He worked full-stack engineering across web, desktop, mobile, backend, devops, CI/CD, cloud infrastructure, moderation/abuse, data stores, developer experience, and more
-      - His effective management and coaching led to increased productivity and happiness for many engineers and direct reports across the organization
+      - He worked as a full-stack engineer across web, desktop, mobile, backend, devops, CI/CD, cloud infrastructure, moderation/abuse, data stores, developer experience, and more
   - company: 
       name: LTK
       description: formerly rewardStyle and LIKEtoKNOW.it
