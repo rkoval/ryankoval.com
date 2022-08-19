@@ -391,13 +391,6 @@ skills:
       resume: true
       picture:
         src: '/images/skills/karma.svg'
-  - skill: &lo_dash
-      name: Lodash
-      tag: Frameworks & Libraries
-      website: https://lodash.com/
-      resume: true
-      picture:
-        src: '/images/skills/lodash.svg'
   - skill: &intellij
       name: IntelliJ
       tag: Miscellaneous
@@ -664,6 +657,68 @@ work:
       - He was a leader in recruitment and management helping grow the engineering team from 7 to 21+ people with less than 15% turnover over two years.
       - He led many product and engineering initiatives from end-to-end, including gathering user requirements, collaborating with the UX design team, and shipping code to production
       - He worked as a full-stack engineer across web, desktop, mobile, backend, devops, CI/CD, cloud infrastructure, moderation/abuse, data stores, developer experience, and more
+  - company: 
+      name: End to End Productions
+    position: Founder / CEO
+    website: https://endtoend.productions
+    picture:
+      src: '/images/logo/endtoendproductions.svg'
+    startDate: '2022-04-11'
+    # summary: 'asffasdf'
+    # highlights:
+    #   - Ryan founded End to End Productions to provide 
+    skills:
+      - *javascript
+      - *scala
+      - *python
+      - *java
+      - *golang
+      - *linux
+      - *docker
+      - *neovim
+      - *bash_zsh
+      - *git
+      - *node_js
+      - *react
+      - *grafana
+      - *postgresql
+      - *prometheus
+      - *redis
+      - *stripe
+      - *circleci
+      - *lua
+      - *django
+      - *vue_js
+      - *terraform
+      - *kubernetes
+      - *mysql
+      - *aws_cloudformation
+      - *aws_lambda
+      - *aws_elastic_beanstalk
+      - *aws_cloudfront
+      - *aws_cloudwatch
+      - *aws_elasticache
+      - *aws_elb
+      - *aws_iam
+      - *aws_rds
+      - *aws_route53
+      - *aws_vpc
+      - *aws_waf
+      - *aws_s3
+      - *aws_sqs
+      - *aws_sns
+      - *aws_ec2
+      - *cassandra
+      - *html5
+      - *css
+      - *sass
+      - *elasticsearch
+      - *mongodb
+      - *npm
+      - *sbt
+      - *nginx
+      - *github
+      - *concourse_ci
   - company: 
       name: LTK
       description: formerly rewardStyle and LIKEtoKNOW.it
