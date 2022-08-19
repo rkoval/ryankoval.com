@@ -102,7 +102,7 @@ block content
       mixin thumbnail(exp)
         .col-lg-6
           .thumbnail-bottom
-            a(href=exp.website).center
+            a(href=exp.website target='_blank').center
               img(src=exp.picture.src, title=exp.website, alt=exp.company.name).img-responsive
           .caption
             h3.gutter
@@ -115,8 +115,9 @@ block content
               .gutter
                 +skills(exp.skills, 'col-lg-2 col-md-1 col-sm-2 col-xs-2')
                 +highlights(exp.highlights)
-                hr
-                +description(exp.summary)
+                if exp.summary
+                  hr
+                  +description(exp.summary)
               .show-more
                 a(href='javascript: void(0);').btn.btn-default read more
 

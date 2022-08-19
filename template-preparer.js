@@ -5,8 +5,7 @@ import fontawesome from '@fortawesome/fontawesome';
 import {faFilePdf, faEnvelope, faBookmark} from '@fortawesome/fontawesome-free-regular';
 import {faLinkedin, faGithub} from '@fortawesome/fontawesome-free-brands';
 import {faAngleDoubleRight, faGlasses} from '@fortawesome/fontawesome-free-solid';
-
-const resume = require('./src/resume.yml');
+import resume from './src/resume.yml';
 
 // https://github.com/jantimon/html-webpack-plugin/issues/597#issuecomment-281663833
 export default () => {
