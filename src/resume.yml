@@ -610,7 +610,7 @@ basics:
       username: ryankoval
       url: '//linkedin.ryankoval.com'
 work:
-  - company: 
+  - company:
       name: Guilded
       description: a Roblox subsidiary
     resume: true
@@ -620,10 +620,10 @@ work:
       src: '/images/logo/guilded.svg'
       style: 'background-color: #F5C400;'
     startDate: '2018-11-05'
-    summary: > 
-      Guilded is a VoIP, instant messaging and digital distribution platform designed by Guilded Inc. and owned by Roblox Guilded is based in San Francisco. Users communicate with voice calls, video calls, text messaging, media and files in private chats or as part of communities called \"guilds\". Guilded was founded by Eli Brown, a former Facebook and Xbox employee. Guilded runs on Windows, Linux, macOS, Android and iOS.
+    summary: >
+      Guilded is a VoIP, instant messaging and digital distribution platform designed by Guilded Inc. and owned by Roblox Corporation. Guilded is based in San Francisco. Users communicate with voice calls, video calls, text messaging, media and files in private chats or as part of communities called "guilds". Guilded was founded by Eli Brown, a former Facebook and Xbox employee. Guilded runs on Windows, Linux, macOS, Android and iOS.
 
-      Guilded is a Discord competitor that is primarily focused on video gaming communities, such as those focused on competitive gaming and esports. It provides features intended for video gaming clans, such as scheduling tools and integrated calendars. Guilded is developed by Guilded, Inc. which has been an independent product group of the Roblox Corporation since August 16, 2021."
+      Guilded is a Discord competitor that is primarily focused on video gaming communities, such as those focused on competitive gaming and esports. It provides features intended for video gaming clans, such as scheduling tools and integrated calendars. Guilded is developed by Guilded, Inc. which has been an independent product group of the Roblox Corporation since August 16, 2021.
     skills:
       - *javascript
       - *node_js
@@ -655,9 +655,10 @@ work:
     highlights:
       - Ryan was a member of the original core engineering team responsible for the start-up's $7M Series A funding in April 2020 and ultimately the $90M acquisition by Roblox in August 2021.
       - He was a leader in recruitment and management helping grow the engineering team from 7 to 21+ people with less than 15% turnover over two years.
+      - He employed growth engineering to grow the product from effectively 0 to 110k+ DAU/0.9M+ MAU over 3 years
       - He led many product and engineering initiatives from end-to-end, including gathering user requirements, collaborating with the UX design team, and shipping code to production
       - He worked as a full-stack engineer across web, desktop, mobile, backend, devops, CI/CD, cloud infrastructure, moderation/abuse, data stores, developer experience, and more
-  - company: 
+  - company:
       name: End to End Productions
     position: Founder / CEO
     website: https://endtoend.productions
@@ -666,7 +667,7 @@ work:
     startDate: '2022-04-11'
     # summary: 'asffasdf'
     # highlights:
-    #   - Ryan founded End to End Productions to provide 
+    #   - Ryan founded End to End Productions to provide
     skills:
       - *javascript
       - *scala
@@ -719,7 +720,7 @@ work:
       - *nginx
       - *github
       - *concourse_ci
-  - company: 
+  - company:
       name: LTK
       description: formerly rewardStyle and LIKEtoKNOW.it
     resume: true
@@ -771,7 +772,7 @@ work:
       - He was involved in designing and implementing new core infrastructure patterns to push the organization from a two-week deploy cycle to rapid continuous delivery
       - He revived multiple legacy node.js analytics projects plagued with stability problems and general disrepair
       - He rewrote infrastructure configuration for another failing project in charge of syncing critical internal data throughout multiple systems
-  - company: 
+  - company:
       name: Bottle Rocket Studios
     resume: true
     position: Lead Engineer
@@ -797,9 +798,8 @@ work:
       - *linux
       - *intellij
     highlights:
-      - Ryan was assigned as a developer to utilize Scala experience to help speed along
-        development of a complex eCommerce ordering solution
-  - company: 
+      - Ryan utilized his Scala experience to rapidly speed up development of a complex eCommerce ordering solution
+  - company:
       name: Slalom Consulting
     resume: true
     position: Consultant
@@ -843,7 +843,7 @@ work:
         telecommunication investigative tool.
       - He was assigned as a senior lead to drive Scala development of a huge AWS data processing
         pipeline for an agricultural business giant
-  - company: 
+  - company:
       name: Credera
     resume: true
     position: Consultant
@@ -883,7 +883,7 @@ work:
         and spanned over both desktop & mobile platforms.
       - He led front-end integration team of a classic Spring MVC implementation for a marketing
         tool used by an international marketing giant.
-  - company: 
+  - company:
       name: Dallas Pedicabs
     position: Freelance Developer
     website: http://www.dallaspedicabs.com
@@ -906,7 +906,7 @@ work:
     highlights:
       - Ryan overhauled unmanageable consumer-facing website for this small startup in favor
         of a custom WordPress solution.
-  - company: 
+  - company:
       name: Tampa Bay Radiation Oncology
     resume: false
     position: Administrative Assistant
