@@ -719,6 +719,7 @@ work:
       - *stripe
       - *circleci
       - *lua
+      - *remix
       - *django
       - *vue_js
       - *terraform
