@@ -44,7 +44,7 @@ skills:
         src: '/images/skills/golang.svg'
   - skill: &chatgpt
       name: ChatGPT
-      tag: Programming Languages
+      tag: Miscellaneous
       website: https://www.typescriptlang.org/
       resume: true
       picture:
@@ -240,7 +240,7 @@ skills:
         src: '/images/skills/mysql.svg'
   - skill: &oauth
       name: OAuth
-      tag: Infrastructure
+      tag: Miscellaneous
       website: https://www.typescriptlang.org/
       resume: true
       picture:
