@@ -655,6 +655,7 @@ work:
     skills:
       - *javascript
       - *node_js
+      - *chatgpt
       - *postgresql
       - *redis
       - *grafana
@@ -698,10 +699,12 @@ work:
     #   - Ryan founded End to End Productions to provide
     skills:
       - *javascript
+      - *typescript
       - *scala
       - *python
       - *java
       - *golang
+      - *chatgpt
       - *linux
       - *docker
       - *neovim
@@ -721,6 +724,7 @@ work:
       - *terraform
       - *kubernetes
       - *mysql
+      - *oauth
       - *aws_cloudformation
       - *aws_lambda
       - *aws_elastic_beanstalk
