@@ -16,6 +16,7 @@ RUN google-chrome \
       --no-sandbox \
       --disable-gpu \
       --print-to-pdf="resume.pdf" \
+      --run-all-compositor-stages-before-draw \
       ./resume.html
 RUN chmod +r resume.pdf
 
