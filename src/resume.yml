@@ -7,6 +7,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/js.svg'
+  - skill: &typescript
+      name: TypeScript
+      tag: Programming Languages
+      website: https://www.typescriptlang.org/
+      resume: true
+      picture:
+        src: '/images/skills/typescript.svg'
   - skill: &scala
       name: Scala
       tag: Programming Languages
@@ -35,6 +42,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/golang.svg'
+  - skill: &chatgpt
+      name: ChatGPT
+      tag: Programming Languages
+      website: https://www.typescriptlang.org/
+      resume: true
+      picture:
+        src: '/images/skills/chatgpt.svg'
   - skill: &linux
       name: Linux
       tag: Miscellaneous
@@ -224,6 +238,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/mysql.svg'
+  - skill: &oauth
+      name: OAuth
+      tag: Infrastructure
+      website: https://www.typescriptlang.org/
+      resume: true
+      picture:
+        src: '/images/skills/oauth.svg'
   - skill: &aws_cloudformation
       name: CloudFormation
       tag: Infrastructure
@@ -374,7 +395,7 @@ skills:
       name: Chrome Developer Tools
       tag: Miscellaneous
       website: https://developer.chrome.com/devtools
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/chrome.svg'
   - skill: &pugjs
@@ -412,6 +433,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/bootstrap.svg'
+  - skill: &remix
+      name: Remix
+      tag: Frameworks & Libraries
+      website: https://remix.run/
+      resume: false
+      picture:
+        src: '/images/skills/remix.svg'
   - skill: &hazelcast
       name: Hazelcast
       tag: Data Stores
