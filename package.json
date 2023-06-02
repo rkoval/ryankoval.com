@@ -19,7 +19,7 @@
     "lodash": "^4.17.10",
     "moment": "2.20.1",
     "moment-timezone": "^0.5.17",
-    "paper-css": "^0.3.0",
+    "paper-css": "^0.4.1",
     "skeleton-css": "^2.0.4",
     "wowjs": "1.1.2"
   },
