@@ -986,8 +986,6 @@ education:
       src: '/images/logo/smu.svg'
     area: Computer Science (minor in Mathematics)
     studyType: Bachelor of Science
-    startDate: '2007-08-01'
-    endDate: '2011-06-01'
 awards:
   - title: Certified ScrumMaster®
     date: '2015-09-01'

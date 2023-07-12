@@ -64,7 +64,8 @@ html
       .row
         each school in education
           section
-            span.u-pull-right #{moment(school.startDate).format(format)} &ndash; #{moment(school.endDate).format(format)}
+            if school.startDate
+              span.u-pull-right #{moment(school.startDate).format(format)} &ndash; #{moment(school.endDate).format(format)}
             h3 #{school.institution}
             ul
               li #{school.studyType}, #{school.area}

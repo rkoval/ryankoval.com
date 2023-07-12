@@ -45,11 +45,12 @@ block content
 
   mixin dates(startDate, endDate)
     - var format = 'MMMM YYYY'
-    small #{moment(startDate).format(format)} to&nbsp;
-      if !endDate
-        | present
-      else
-        | #{moment(endDate).format(format)}
+    if (startDate)
+      small #{moment(startDate).format(format)} to&nbsp;
+        if !endDate
+          | present
+        else
+          | #{moment(endDate).format(format)}
 
   mixin highlights(highlights)
     if highlights
