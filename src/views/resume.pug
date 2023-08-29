@@ -81,6 +81,12 @@ html
 
       hr
       .row
+        each award in awards
+          section
+            span.u-pull-right #{moment(award.date).format(format)}
+            h3 #{award.title} – #{award.awarder}
+      hr
+      .row
         each school in education
           section
             if school.startDate
@@ -88,8 +94,3 @@ html
             h3 #{school.institution}
             ul
               li #{school.studyType}, #{school.area}
-        each award in awards
-          if award.resume
-            section
-              span.u-pull-right #{moment(award.date).format(format)}
-              h3 #{award.title} - #{award.awarder}
