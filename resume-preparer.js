@@ -23,6 +23,10 @@ resume.chunkedGroupedSkills = _.chain(resume.skills)
   .chunk(3)
   .value();
 
+const jobsOnFirstPage = 6;
+resume.firstPageJobs = resume.work.slice(0, jobsOnFirstPage);
+resume.restJobs = resume.work.slice(jobsOnFirstPage);
+
 // https://github.com/jantimon/html-webpack-plugin/issues/597#issuecomment-281663833
 export default () => {
   const template = require('./src/views/resume.pug');

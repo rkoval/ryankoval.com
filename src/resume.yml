@@ -639,16 +639,65 @@ basics:
       url: '//linkedin.ryankoval.com'
 work:
   - company:
-      name: Guilded
-      description: a Roblox subsidiary
+      name: Roblox
     resume: true
-    position: Engineering Manager / Software Engineer
+    position: Engineering Manager
+    website: https://www.roblox.com/
+    picture:
+      src: '/images/logo/roblox.svg'
+      style: 'background-color: #000000;'
+    startDate: '2021-08-21'
+    summary: >
+
+      Roblox is an online game platform and game creation system developed by Roblox Corporation that allows users to program games and play games created by other users. Created by David Baszucki and Erik Cassel in 2004 and released in 2006, the platform hosts user-created games of multiple genres coded in the programming language Lua. For most of Roblox's history, it was relatively small, both as a platform and as a company. Roblox began to grow rapidly in the second half of the 2010s, and this growth has been accelerated by the COVID-19 pandemic.
+
+      Roblox is free to play, with in-game purchases available through a virtual currency called Robux. As of August 2020, Roblox had over 164 million monthly active users, including more than half of all American children under 16. Although Roblox has received generally positive reviews from critics.
+    skills:
+      - *javascript
+      - *node_js
+      - *chatgpt
+      - *postgresql
+      - *redis
+      - *grafana
+      - *prometheus
+      - *stripe
+      - *webpack
+      - *react
+      - *mobx
+      - *bash_zsh
+      - *neovim
+      - *sublime
+      - *nginx
+      - *puppeteer
+      - *mocha
+      - *aws_elastic_beanstalk
+      - *aws_cloudwatch
+      - *aws_ec2
+      - *aws_s3
+      - *aws_iam
+      - *aws_elb
+      - *aws_route53
+      - *aws_lambda
+      - *docker
+      - *git
+      - *linux
+    highlights:
+      - Working primarily within the Guilded team post-acquisition, Ryan directly managed 6+ engineers by facilitating the RoGRO corporate review process and by providing regular feedback to bolster the performance of his direct reports
+      - He acted as technical lead across 6+ different projects and product initiatives involving 40+ employees spanning disciplines of engineering, design, community, and more
+      - He wrote a ChatGPT integration that served as the catalyst for propelling AI use within the product
+  - company:
+      name: Guilded
+    resume: true
+    position: Software Engineer
     website: https://www.guilded.gg/
     picture:
       src: '/images/logo/guilded.svg'
       style: 'background-color: #F5C400;'
     startDate: '2018-11-05'
+    endDate: '2021-08-21'
     summary: >
+      (Guilded was acquired by Roblox on August 16, 2021)
+
       Guilded is a VoIP, instant messaging and digital distribution platform designed by Guilded Inc. and owned by Roblox Corporation. Guilded is based in San Francisco. Users communicate with voice calls, video calls, text messaging, media and files in private chats or as part of communities called "guilds". Guilded was founded by Eli Brown, a former Facebook and Xbox employee. Guilded runs on Windows, Linux, macOS, Android and iOS.
 
       Guilded is a Discord competitor that is primarily focused on video gaming communities, such as those focused on competitive gaming and esports. It provides features intended for video gaming clans, such as scheduling tools and integrated calendars. Guilded is developed by Guilded, Inc. which has been an independent product group of the Roblox Corporation since August 16, 2021.

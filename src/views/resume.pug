@@ -22,6 +22,7 @@ html
         a.pdf-disclaimer.print-hide(href='pdf' target='_blank')
           | !{icons.faFilePdf}
           div PDF available
+      .center
         h1 #{basics.name}
         div #{basics.label}
         p
@@ -46,7 +47,7 @@ html
 
       hr
       .row
-        each job in work
+        each job in firstPageJobs
           if job.resume
             section
               span.u-pull-right #{moment(job.startDate).format(format)} &ndash; #{job.endDate && moment(job.endDate).format(format) || 'present'}
@@ -60,6 +61,24 @@ html
               ul
                 each highlight in job.highlights
                   li #{highlight}
+
+    .sheet.container
+      .row
+        each job in restJobs
+          if job.resume
+            section
+              span.u-pull-right #{moment(job.startDate).format(format)} &ndash; #{job.endDate && moment(job.endDate).format(format) || 'present'}
+              h3
+                if job.company.description
+                  span #{job.company.name}
+                  span.company-description (#{job.company.description})
+                  span , #{job.position}
+                else
+                  span #{job.company.name}, #{job.position}
+              ul
+                each highlight in job.highlights
+                  li #{highlight}
+
       hr
       .row
         each school in education
