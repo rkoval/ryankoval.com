@@ -17,7 +17,7 @@ skills:
   - skill: &scala
       name: Scala
       tag: Programming Languages
-      website: http://www.scala-lang.org/
+      website: https://www.scala-lang.org/
       resume: true
       picture:
         src: '/images/skills/scala.svg'
@@ -42,10 +42,17 @@ skills:
       resume: true
       picture:
         src: '/images/skills/golang.svg'
+  - skill: &csharp
+      name: C#
+      tag: Programming Languages
+      website: https://learn.microsoft.com/en-us/dotnet/csharp/
+      resume: true
+      picture:
+        src: '/images/skills/csharp.svg'
   - skill: &chatgpt
       name: ChatGPT
       tag: Miscellaneous
-      website: https://www.typescriptlang.org/
+      website: https://chatgpt.com/
       resume: true
       picture:
         src: '/images/skills/chatgpt.svg'
@@ -73,7 +80,7 @@ skills:
   - skill: &vim
       name: Vim
       tag: Miscellaneous
-      website: http://www.vim.org/about.php
+      website: https://www.vim.org/about.php
       resume: true
       picture:
         src: '/images/skills/vim.svg'
@@ -189,6 +196,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/mocha.svg'
+  - skill: &playwright
+      name: Playwright
+      tag: Automation
+      website: https://playwright.dev
+      resume: true
+      picture:
+        src: '/images/skills/playwright.svg'
   - skill: &puppeteer
       name: Puppeteer
       tag: Automation
@@ -217,10 +231,17 @@ skills:
       resume: true
       picture:
         src: '/images/skills/tailwind.svg'
+  - skill: &trpc
+      name: TRPC
+      tag: Frameworks & Libraries
+      website: https://trpc.io
+      resume: true
+      picture:
+        src: '/images/skills/trpc.svg'
   - skill: &redux
       name: Redux
       tag: Frameworks & Libraries
-      website: http://redux.js.org/
+      website: https://redux.js.org
       resume: true
       picture:
         src: '/images/skills/redux.svg'
@@ -394,21 +415,21 @@ skills:
   - skill: &css
       name: CSS
       tag: Programming Languages
-      website: http://www.css3.info/
+      website: https://www.css3.info
       resume: true
       picture:
         src: '/images/skills/css3.svg'
   - skill: &less
       name: Less
       tag: Programming Languages
-      website: http://lesscss.org/
+      website: https://lesscss.org
       resume: true
       picture:
         src: '/images/skills/less.svg'
   - skill: &sass
       name: Sass
       tag: Programming Languages
-      website: http://sass-lang.com/
+      website: https://sass-lang.com/
       resume: true
       picture:
         src: '/images/skills/sass.svg'
@@ -499,7 +520,7 @@ skills:
   - skill: &sbt
       name: sbt
       tag: Automation
-      website: http://www.scala-sbt.org/
+      website: https://www.scala-sbt.org/
       resume: true
       picture:
         src: '/images/skills/sbt.svg'
@@ -569,7 +590,7 @@ skills:
   - skill: &bower
       name: Bower
       tag: Automation
-      website: http://bower.io
+      website: https://bower.io
       resume: false
       picture:
         src: '/images/skills/bower.svg'
@@ -616,7 +637,7 @@ skills:
   - skill: &hibernate
       name: Hibernate
       tag: Frameworks & Libraries
-      website: http://hibernate.org/
+      website: https://hibernate.org/
       resume: true
       picture:
         src: '/images/skills/hibernate.svg'
@@ -693,6 +714,7 @@ work:
       - *react
       - *mobx
       - *bash_zsh
+      - *csharp
       - *neovim
       - *sublime
       - *nginx
@@ -710,9 +732,9 @@ work:
       - *git
       - *linux
     highlights:
-      - Working primarily within the Guilded team post-acquisition, Ryan directly managed 6+ engineers by facilitating the RoGRO corporate review process and by providing regular feedback to bolster the performance of his direct reports
-      - As technical lead, he steered 6+ projects and product initiatives involving 40+ personnel across engineering, design, community, and beyond
-      - He pioneered a ChatGPT integration, fueling AI adoption within the product
+      - Working primarily within the Guilded team post-acquisition, Ryan directly managed 6+ engineers by facilitating the RoGRO corporate review process and by providing radical candor to bolster the performance of his direct reports
+      - As technical lead, he steered 7+ projects and product initiatives involving 40+ personnel across engineering, design, community, trust & safety, and beyond
+      - He pioneered a ChatGPT integration that allowed for a multiplayer chat experience with the LLM, fueling AI adoption within the product.
   - company:
       name: Guilded
     resume: true
@@ -994,6 +1016,7 @@ work:
         tool used by an international marketing giant.
   - company:
       name: Dallas Pedicabs
+      description: defunct
     position: Freelance Developer
     website: http://www.dallaspedicabs.com
     picture:
