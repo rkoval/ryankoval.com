@@ -8,5 +8,6 @@ if ! which optipng >> /dev/null || ! which jpegoptim >> /dev/null; then
   brew install jpegoptim
 fi
 cd static
-find ${1:-.} -type f -name "*.(jpeg|jpg)" -exec jpegoptim --max=90 --strip-all {} \;
+find ${1:-.} -type f -name "*.jpg" -exec jpegoptim --max=90 --strip-all {} \;
+find ${1:-.} -type f -name "*.jpeg" -exec jpegoptim --max=90 --strip-all {} \;
 find ${1:-.} -type f -name "*.png" -exec optipng -o7 --strip all {} \;
