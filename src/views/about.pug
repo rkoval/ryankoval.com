@@ -84,7 +84,8 @@ block content
         +dates(exp.startDate, exp.endDate)
       +skills(exp.skills, 'col-lg-1 col-md-1 col-sm-1 col-xs-2 main-experience-skills')
       +highlights(exp.highlights)
-      +description(exp.summary)
+      if exp.summary
+        +description(exp.csummary)
 
   span#current
 
