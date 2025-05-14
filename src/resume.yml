@@ -84,6 +84,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/vim.svg'
+  - skill: &cursor
+      name: Cursor
+      tag: Miscellaneous
+      website: https://www.cursor.com/
+      resume: true
+      picture:
+        src: '/images/skills/cursor.svg'
   - skill: &bash_zsh
       name: bash
       tag: Programming Languages
@@ -224,7 +231,7 @@ skills:
       resume: true
       picture:
         src: '/images/skills/django.svg'
-  - skill: &tailwind
+  - skill: &tailwindcss
       name: TailwindCSS
       tag: Frameworks & Libraries
       website: https://tailwindcss.com/
@@ -280,6 +287,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/mysql.svg'
+  - skill: &temporal
+      name: Temporal
+      tag: Automation
+      website: https://temporal.io/
+      resume: true
+      picture:
+        src: '/images/skills/temporal.svg'
   - skill: &oauth
       name: OAuth
       tag: Miscellaneous
@@ -329,6 +343,20 @@ skills:
       resume: true
       picture:
         src: '/images/skills/aws/elasticache.svg'
+  - skill: &aws_ecs
+      name: ECS
+      tag: Infrastructure
+      website: https://aws.amazon.com/ecs/
+      resume: true
+      picture:
+        src: '/images/skills/aws/ecs.svg'
+  - skill: &aws_ecr
+      name: ECR
+      tag: Infrastructure
+      website: https://aws.amazon.com/ecr/
+      resume: true
+      picture:
+        src: '/images/skills/aws/ecr.svg'
   - skill: &aws_elb
       name: ELB
       tag: Infrastructure
@@ -482,6 +510,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/nextjs.svg'
+  - skill: &react_router
+      name: React Router
+      tag: Frameworks & Libraries
+      website: https://reactrouter.com/
+      resume: true
+      picture:
+        src: '/images/skills/react-router.svg'
   - skill: &remix
       name: Remix
       tag: Frameworks & Libraries
@@ -688,14 +723,142 @@ basics:
       url: '//linkedin.ryankoval.com'
 work:
   - company:
+      name: End to End Productions
+    resume: true
+    position: Founder / CEO
+    website: https://endtoend.productions
+    picture:
+      src: '/images/logo/endtoendproductions.svg'
+      style: 'background-color: #012677;'
+    startDate: '2022-04-11'
+    highlights:
+      - Ryan founded the consultancy to specialize in world-class software engineering, architecture, product, and management services.
+      - Successfully delivered solutions for clients including Jam Chat and The Styled by Collective.
+    skills:
+      - *typescript
+      - *javascript
+      - *scala
+      - *python
+      - *golang
+      - *java
+      - *cursor
+      - *docker
+      - *neovim
+      - *bash_zsh
+      - *git
+      - *node_js
+      - *react
+      - *react_router
+      - *mobx
+      - *tailwindcss
+      - *grafana
+      - *temporal
+      - *trpc
+      - *postgresql
+      - *prometheus
+      - *redis
+      - *stripe
+      - *github_actions
+      - *circleci
+      - *chatgpt
+      - *lua
+      - *django
+      - *vue_js
+      - *terraform
+      - *kubernetes
+      - *mysql
+      - *oauth
+      - *aws_cloudformation
+      - *aws_lambda
+      - *aws_elastic_beanstalk
+      - *aws_cloudfront
+      - *aws_cloudwatch
+      - *aws_elasticache
+      - *aws_elb
+      - *aws_iam
+      - *aws_rds
+      - *aws_route53
+      - *aws_vpc
+      - *aws_ecs
+      - *aws_ecr
+      - *aws_waf
+      - *aws_s3
+      - *aws_sqs
+      - *aws_sns
+      - *aws_ec2
+      - *cassandra
+      - *html5
+      - *css
+      - *sass
+      - *linux
+      - *elasticsearch
+      - *mongodb
+      - *npm
+      - *sbt
+      - *nginx
+      - *github
+      - *concourse_ci
+  - company:
+      name: The Styled by Collective
+    resume: true
+    position: Co-founder / CTO
+    website: https://www.thestyledbycollective.com/
+    picture:
+      src: '/images/logo/sbc.png'
+    startDate: '2025-01-06'
+    summary: The Styled by Collective is a private client personal styling firm leveraging elite human expertise with cutting-edge technology to offer seamless and exclusive high-touch wardrobe management experiences. We are redefining how private clients, retailers and industry professionals engage with personal style—powered by our proprietary digital platform. What began as a luxury styling service business has evolved into a category-defining fashion-tech company. 
+    highlights:
+      - Ryan led all engineering and product efforts to design, architect, and implement an ERP/CRM system for blind inventory management of fashion apparel, catering to private client luxury styling services.
+      - The platform managed over $2.8M in yearly client spend and maintained a consistent 30% keep rate for high-value luxury goods, often exceeding $20k per item.
+    skills:
+      - *typescript
+      - *cursor
+      - *bun
+      - *postgresql
+      - *trpc
+      - *temporal
+      - *redis
+      - *stripe
+      - *node_js
+      - *grafana
+      - *prometheus
+      - *react
+      - *mobx
+      - *tailwindcss
+      - *docker
+      - *github_actions
+      - *react_router
+      - *aws_cloudfront
+      - *aws_cloudwatch
+      - *aws_elasticache
+      - *aws_elb
+      - *aws_ecs
+      - *aws_ecr
+      - *aws_iam
+      - *aws_rds
+      - *aws_route53
+      - *aws_vpc
+      - *aws_waf
+      - *aws_s3
+      - *aws_sqs
+      - *aws_ec2
+      - *bash_zsh
+      - *chatgpt
+      - *git
+      - *html5
+      - *nginx
+      - *github
+      - *macOS
+      - *linux
+  - company:
       name: Roblox
     resume: true
     position: Engineering Manager
     website: https://www.roblox.com/
     picture:
       src: '/images/logo/roblox.svg'
-      style: 'background-color: #000000;'
     startDate: '2021-08-21'
+    endDate: '2025-01-10'
     summary: >
 
       Roblox is an online game platform and game creation system developed by Roblox Corporation that allows users to program games and play games created by other users. Created by David Baszucki and Erik Cassel in 2004 and released in 2006, the platform hosts user-created games of multiple genres coded in the programming language Lua. For most of Roblox's history, it was relatively small, both as a platform and as a company. Roblox began to grow rapidly in the second half of the 2010s, and this growth has been accelerated by the COVID-19 pandemic.
@@ -732,9 +895,9 @@ work:
       - *git
       - *linux
     highlights:
-      - Working primarily within the Guilded team after its acquisition, Ryan directly managed 6+ engineers by facilitating the RoGRO corporate review process and by providing radical candor to bolster the performance of his direct reports
-      - As technical lead, he steered 7+ projects and product initiatives involving 40+ personnel across engineering, design, community, trust & safety, and beyond
-      - He pioneered a ChatGPT integration that allowed for a multiplayer chat experience with the LLM, fueling AI adoption within the product.
+      - Working primarily within the Guilded team after its acquisition, Ryan directly managed 6+ engineers by facilitating the RoGRO corporate review process and by providing radical candor to bolster the performance of his direct reports.
+      - Served as technical lead on 7+ cross-functional initiatives involving 40+ collaborators across engineering, design, trust & safety, and community teams.
+      - 'High-impact projects include: a full editor rewrite; the Roblox universal rich text initiative; public-facing bot REST API; scalable big data science ETLs; CI/CD optimization and developer experience enhancements; Roblox↔Guilded OAuth integration; a ChatGPT-powered multiplayer AI chat bot'
   - company:
       name: Guilded
     resume: true
@@ -786,72 +949,6 @@ work:
       - He employed growth engineering to elevate the product from effectively 0 to 110k+ DAU/0.9M+ MAU over 3 years
       - He directed many product and engineering initiatives from end-to-end, including gathering user requirements, collaborating with the UX design team, and shipping code to production
       - He served as a versatile full-stack engineer across web, desktop, mobile, backend, devops, CI/CD, cloud infrastructure, moderation/abuse, data stores, developer experience, and more
-  - company:
-      name: End to End Productions
-    position: Founder / CEO
-    website: https://endtoend.productions
-    picture:
-      src: '/images/logo/endtoendproductions.svg'
-    startDate: '2022-04-11'
-    # summary: 'asffasdf'
-    # highlights:
-    #   - Ryan founded End to End Productions to provide
-    skills:
-      - *javascript
-      - *typescript
-      - *scala
-      - *python
-      - *java
-      - *golang
-      - *chatgpt
-      - *linux
-      - *docker
-      - *neovim
-      - *bash_zsh
-      - *git
-      - *node_js
-      - *react
-      - *grafana
-      - *postgresql
-      - *prometheus
-      - *redis
-      - *stripe
-      - *circleci
-      - *lua
-      - *remix
-      - *django
-      - *vue_js
-      - *terraform
-      - *kubernetes
-      - *mysql
-      - *oauth
-      - *aws_cloudformation
-      - *aws_lambda
-      - *aws_elastic_beanstalk
-      - *aws_cloudfront
-      - *aws_cloudwatch
-      - *aws_elasticache
-      - *aws_elb
-      - *aws_iam
-      - *aws_rds
-      - *aws_route53
-      - *aws_vpc
-      - *aws_waf
-      - *aws_s3
-      - *aws_sqs
-      - *aws_sns
-      - *aws_ec2
-      - *cassandra
-      - *html5
-      - *css
-      - *sass
-      - *elasticsearch
-      - *mongodb
-      - *npm
-      - *sbt
-      - *nginx
-      - *github
-      - *concourse_ci
   - company:
       name: LTK
       description: formerly rewardStyle and LIKEtoKNOW.it

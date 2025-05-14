@@ -23,7 +23,7 @@ resume.chunkedGroupedSkills = _.chain(resume.skills)
   .chunk(3)
   .value();
 
-const jobsOnFirstPage = 5;
+const jobsOnFirstPage = 4;
 resume.firstPageJobs = resume.work.slice(0, jobsOnFirstPage);
 resume.restJobs = resume.work.slice(jobsOnFirstPage);
 
