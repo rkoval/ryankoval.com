@@ -1161,23 +1161,7 @@ work:
 education:
   - institution: Southern Methodist University
     website: https://www.smu.edu
-    summary: A nationally ranked private university with seven degree-granting schools,
-      SMU is a distinguished center for teaching and research located in the heart of
-      Dallas. SMU’s 11,000 students benefit from small classes, leadership opportunities,
-      international study and innovative programs. SMU is celebrating the centennial
-      of its founding in 1911 and its opening in 1915. Entering its second century of
-      achievement, SMU enjoys recognition as a prominent national university. The University
-      prepares students for leadership in their professions and in their communities.
-      Our location near the heart of Dallas – a thriving center of commerce and culture
-      – offers students challenging experiences on campus and beyond. Relationships
-      with the Dallas region provide a platform for launching careers throughout the
-      world. The University provides a strong foundation in the humanities and sciences
-      and professional and graduate programs through seven degree-granting schools.
-      The learning environment includes opportunities for research, community service,
-      study abroad, internships and mentoring. SMU was founded by what is now The United
-      Methodist Church, in partnership with civic leaders, and was shaped by the entrepreneurial
-      spirit of the region. The University is nonsectarian in its teaching and committed
-      to academic freedom and open inquiry.
+    summary: 'A nationally ranked private university located near the heart of Dallas, SMU is a distinguished center for global research and teaching.  SMU’s more than 12,000 diverse, high-achieving students come from all 50 states and over 80 countries to take advantage of the University’s small classes, meaningful research opportunities, leadership development, community service, international study and innovative programs.  Students gathered on the quad SMU serves approximately 7,000 undergraduates and 5,000 graduate students through eight degree-granting schools: Dedman College of Humanities and Sciences, Cox School of Business, Lyle School of Engineering, Meadows School of the Arts, Simmons School of Education and Human Development, Dedman School of Law, Perkins School of Theology and Moody School of Graduate and Advanced Studies.  SMU is data driven, and its powerful supercomputing ecosystem – paired with entrepreneurial drive – creates an unrivaled environment for the University to deliver research excellence.  Now in its second century of achievement, SMU is recognized for the ways it supports students, faculty and alumni as they become ethical, enterprising leaders in their professions and communities. SMU’s relationship with Dallas – the dynamic center of one of the nation’s fastest-growing regions – offers unique learning, research, social and career opportunities that provide a launch pad for global impact.  SMU is nonsectarian in its teaching and committed to academic freedom and open inquiry.'
     picture:
       src: '/images/logo/smu.svg'
     area: Computer Science (Minor in Mathematics)
