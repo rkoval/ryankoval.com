@@ -806,6 +806,7 @@ work:
     picture:
       src: '/images/logo/sbc.png'
     startDate: '2025-01-06'
+    endDate: '2025-06-02'
     summary: The Styled by Collective is a private client personal styling firm leveraging elite human expertise with cutting-edge technology to offer seamless and exclusive high-touch wardrobe management experiences. We are redefining how private clients, retailers and industry professionals engage with personal style—powered by our proprietary digital platform. What began as a luxury styling service business has evolved into a category-defining fashion-tech company. 
     highlights:
       - Ryan led all engineering and product efforts to design, architect, and implement an ERP/CRM system for blind inventory management of fashion apparel, catering to private client luxury styling services.
