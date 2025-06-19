@@ -742,7 +742,7 @@ work:
     startDate: '2022-04-11'
     highlights:
       - Ryan founded the consultancy to specialize in world-class software engineering, architecture, product, and management services.
-      - Successfully delivered solutions for clients including Jam Chat and The Styled by Collective.
+      - Successfully delivered solutions for clients including Slammin' Backgammon, Jam Chat, and The Styled by Collective.
     skills:
       - *typescript
       - *javascript
