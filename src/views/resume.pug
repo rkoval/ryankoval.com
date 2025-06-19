@@ -36,6 +36,10 @@ html
           |&ndash;
           |
           a(href=basics.portfolio target="_blank") #{basics.portfolio}
+          |
+          |&ndash;
+          |
+          a(href=basics.portfolio target="_blank") #{basics.bookmarks}
 
       for chunk, i in chunkedGroupedSkills
         .row(style=i === 0 ? 'margin-bottom: 10px;' : '')
@@ -84,12 +88,6 @@ html
 
       hr
       .row
-        each award in awards
-          section
-            span.u-pull-right #{moment(award.date).format(format)}
-            h3 #{award.title} – #{award.awarder}
-      hr
-      .row
         each school in education
           section
             if school.startDate
@@ -97,6 +95,25 @@ html
             h3 #{school.institution}
             ul
               li #{school.studyType}, #{school.area}
+
+      hr
+      .row
+        section
+          h3 Certifications
+          ul
+            each award in awards
+              li
+                //- span.u-pull-right #{moment(award.date).format(format)}
+                span #{award.title} – #{award.awarder}
+
+      hr
+      .row
+        section
+          h3 Interests
+          ul
+            li
+              - joinedInterests = basics.interests.join(', ')
+              | #{joinedInterests}
 
       footer
         div Page 2 of 2
