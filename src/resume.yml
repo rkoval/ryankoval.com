@@ -708,9 +708,9 @@ basics:
   label: Software Engineering, Architecture & Management
   picture: https://avatar.ryankoval.com
   email: ryan@ryankoval.com
-  website: ryankoval.com
-  portfolio: github.com/rkoval
-  bookmarks: bookmarks.ryankoval.com
+  website: https://ryankoval.com
+  portfolio: https://github.com/rkoval
+  bookmarks: https://bookmarks.ryankoval.com
   location:
     city: Dallas
     countryCode: US
