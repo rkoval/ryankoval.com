@@ -810,7 +810,7 @@ work:
   - company:
       name: The Styled by Collective
     resume: true
-    position: Co-founder / CTO
+    position: Co-Founder / CTO
     website: https://www.thestyledbycollective.com/
     picture:
       src: '/images/logo/sbc.png'
