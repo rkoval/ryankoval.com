@@ -113,7 +113,7 @@ skills:
       picture:
         src: '/images/skills/bun.svg'
   - skill: &node_js
-      name: node.js
+      name: Node.js
       tag: Miscellaneous
       website: https://nodejs.org/
       resume: true
@@ -1009,7 +1009,7 @@ work:
       - Ryan led front-end development for a self-service collaborations portal, where he managed an international team
       - He helped craft two major versions of a screen-scraping infrastructure used to gather data from all influencers for a customer-facing recommendation engine and general business intelligence
       - He helped transition the organization from a two-week deploy cycle to rapid continuous delivery by designing and implementing new core infrastructure patterns
-      - He revived multiple legacy node.js analytics projects plagued with stability problems and general disrepair
+      - He revived multiple legacy Node.js analytics projects plagued with stability problems and general disrepair
       - He overhauled infrastructure configuration for another failing project in charge of syncing critical internal data throughout multiple systems
   - company:
       name: Bottle Rocket Studios
