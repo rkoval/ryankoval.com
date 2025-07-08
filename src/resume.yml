@@ -42,11 +42,25 @@ skills:
       resume: true
       picture:
         src: '/images/skills/java.svg'
+  - skill: &aws
+      name: AWS
+      tag: Cloud / Infrastructure
+      website: https://aws.amazon.com/
+      resume: true
+      picture:
+        src: '/images/skills/aws.svg'
+  - skill: &azure
+      name: Azure
+      tag: Cloud / Infrastructure
+      website: https://azure.microsoft.com/
+      resume: true
+      picture:
+        src: '/images/skills/azure.svg'
   - skill: &chatgpt
       name: ChatGPT
       tag: Miscellaneous
       website: https://chatgpt.com/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/chatgpt.svg'
   - skill: &linux
@@ -63,6 +77,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/docker.svg'
+  - skill: &docker_compose
+      name: Docker Compose
+      tag: Cloud / Infrastructure
+      website: https://docs.docker.com/compose/
+      resume: true
+      picture:
+        src: '/images/skills/docker-compose.png'
   - skill: &neovim
       name: Neovim
       tag: Miscellaneous
@@ -95,7 +116,7 @@ skills:
       name: git
       tag: Miscellaneous
       website: https://git-scm.com/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/git.svg'
   - skill: &macOS
@@ -161,13 +182,6 @@ skills:
       resume: true
       picture:
         src: '/images/skills/postgresql.svg'
-  - skill: &prometheus
-      name: Prometheus
-      tag: Data Stores
-      website: https://prometheus.io/
-      resume: true
-      picture:
-        src: '/images/skills/prometheus.svg'
   - skill: &redis
       name: Redis
       tag: Data Stores
@@ -175,6 +189,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/redis.svg'
+  - skill: &prometheus
+      name: Prometheus
+      tag: Data Stores
+      website: https://prometheus.io/
+      resume: true
+      picture:
+        src: '/images/skills/prometheus.svg'
   - skill: &stripe
       name: Stripe
       tag: Miscellaneous
@@ -242,7 +263,7 @@ skills:
       name: Redux
       tag: Frameworks & Libraries
       website: https://redux.js.org
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/redux.svg'
   - skill: &vue_js
@@ -261,7 +282,7 @@ skills:
         src: '/images/skills/jest.svg'
   - skill: &terraform
       name: Terraform
-      tag: Automation
+      tag: Cloud / Infrastructure
       website: https://www.terraform.io/
       resume: true
       picture:
@@ -275,7 +296,7 @@ skills:
         src: '/images/skills/django.svg'
   - skill: &kubernetes
       name: Kubernetes
-      tag: Infrastructure
+      tag: Cloud / Infrastructure
       website: https://kubernetes.io/
       resume: true
       picture:
@@ -303,37 +324,44 @@ skills:
         src: '/images/skills/oauth.svg'
   - skill: &aws_cloudformation
       name: CloudFormation
-      tag: Infrastructure
+      tag: Cloud / Infrastructure
       website: https://aws.amazon.com/cloudformation/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/aws/cloudformation.svg'
+  - skill: &aws_ecs
+      name: ECS
+      tag: Cloud / Infrastructure
+      website: https://aws.amazon.com/ecs/
+      resume: true
+      picture:
+        src: '/images/skills/aws/ecs.svg'
   - skill: &aws_lambda
       name: AWS Lambda
-      tag: Infrastructure
+      tag: Cloud / Infrastructure
       website: https://aws.amazon.com/lambda/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/aws/lambda.svg'
   - skill: &aws_elastic_beanstalk
       name: Elastic Beanstalk
-      tag: Infrastructure
+      tag: Cloud / Infrastructure
       website: https://aws.amazon.com/elasticbeanstalk/
       resume: true
       picture:
         src: '/images/skills/aws/beanstalk.svg'
   - skill: &aws_cloudfront
       name: CloudFront
-      tag: Infrastructure
+      tag: Cloud / Infrastructure
       website: https://aws.amazon.com/cloudfront/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/aws/cloudfront.svg'
   - skill: &aws_cloudwatch
       name: CloudWatch
-      tag: Infrastructure
+      tag: Cloud / Infrastructure
       website: https://aws.amazon.com/cloudwatch/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/aws/cloudwatch.svg'
   - skill: &aws_elasticache
@@ -343,32 +371,25 @@ skills:
       resume: true
       picture:
         src: '/images/skills/aws/elasticache.svg'
-  - skill: &aws_ecs
-      name: ECS
-      tag: Infrastructure
-      website: https://aws.amazon.com/ecs/
-      resume: true
-      picture:
-        src: '/images/skills/aws/ecs.svg'
   - skill: &aws_ecr
       name: ECR
-      tag: Infrastructure
+      tag: Cloud / Infrastructure
       website: https://aws.amazon.com/ecr/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/aws/ecr.svg'
   - skill: &aws_elb
       name: ELB
-      tag: Infrastructure
+      tag: Cloud / Infrastructure
       website: https://aws.amazon.com/elasticloadbalancing/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/aws/elb.svg'
   - skill: &aws_iam
       name: IAM
-      tag: Infrastructure
+      tag: Cloud / Infrastructure
       website: https://aws.amazon.com/iam/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/aws/iam.svg'
   - skill: &aws_rds
@@ -380,22 +401,23 @@ skills:
         src: '/images/skills/aws/rds.svg'
   - skill: &aws_route53
       name: Route 53
-      tag: Infrastructure
+      tag: Cloud / Infrastructure
       website: https://aws.amazon.com/route53/
+      resume: false
       picture:
         src: '/images/skills/aws/route53.svg'
   - skill: &aws_vpc
       name: VPC
-      tag: Infrastructure
+      tag: Cloud / Infrastructure
       website: https://aws.amazon.com/vpc/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/aws/vpc.svg'
   - skill: &aws_waf
       name: WAF
-      tag: Infrastructure
+      tag: Cloud / Infrastructure
       website: https://aws.amazon.com/waf/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/aws/waf.svg'
   - skill: &aws_s3
@@ -407,23 +429,23 @@ skills:
         src: '/images/skills/aws/s3.svg'
   - skill: &aws_sqs
       name: SQS
-      tag: Infrastructure
+      tag: Cloud / Infrastructure
       website: https://aws.amazon.com/sqs/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/aws/sqs.svg'
   - skill: &aws_sns
       name: SNS
-      tag: Infrastructure
+      tag: Cloud / Infrastructure
       website: https://aws.amazon.com/sns/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/aws/sns.svg'
   - skill: &aws_ec2
       name: EC2
-      tag: Infrastructure
+      tag: Cloud / Infrastructure
       website: https://aws.amazon.com/ec2/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/aws/ec2.svg'
   - skill: &cassandra
@@ -517,6 +539,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/react-router.svg'
+  - skill: &vite
+      name: Vite
+      tag: Automation
+      website: https://vite.dev/
+      resume: true
+      picture:
+        src: '/images/skills/vite.svg'
   - skill: &remix
       name: Remix
       tag: Frameworks & Libraries
@@ -528,7 +557,7 @@ skills:
       name: Hazelcast
       tag: Data Stores
       website: https://hazelcast.com/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/hazelcast.svg'
   - skill: &elasticsearch
@@ -659,7 +688,7 @@ skills:
       name: Spring
       tag: Frameworks & Libraries
       website: https://spring.io/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/spring.svg'
   - skill: &vagrant
@@ -673,7 +702,7 @@ skills:
       name: Hibernate
       tag: Frameworks & Libraries
       website: https://hibernate.org/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/hibernate.svg'
   - skill: &subversion
@@ -732,6 +761,61 @@ basics:
     - AI
 work:
   - company:
+      name: The Styled by Collective
+    resume: true
+    position: Co-Founder / CTO
+    website: https://www.thestyledbycollective.com/
+    picture:
+      src: '/images/logo/sbc.png'
+    startDate: '2025-01-06'
+    endDate: '2025-06-02'
+    summary: The Styled by Collective is a private client personal styling firm leveraging elite human expertise with cutting-edge technology to offer seamless and exclusive high-touch wardrobe management experiences. We are redefining how private clients, retailers and industry professionals engage with personal style—powered by our proprietary digital platform. What began as a luxury styling service business has evolved into a category-defining fashion-tech company.
+    highlights:
+      - Ryan led all engineering and product efforts to design, architect, and implement an ERP/CRM system for blind inventory management of fashion apparel, catering to private client luxury styling services employed internally and by major retailers.
+      - The platform managed over $2.8M in yearly client spend and maintained a consistent 30% keep rate for high-value luxury goods, often exceeding $20k per item.
+    skills:
+      - *typescript
+      - *cursor
+      - *bun
+      - *postgresql
+      - *trpc
+      - *temporal
+      - *redis
+      - *stripe
+      - *node_js
+      - *grafana
+      - *prometheus
+      - *react
+      - *mobx
+      - *tailwindcss
+      - *aws
+      - *docker
+      - *docker_compose
+      - *github_actions
+      - *react_router
+      - *aws_cloudfront
+      - *aws_cloudwatch
+      - *aws_elasticache
+      - *aws_elb
+      - *aws_ecs
+      - *aws_ecr
+      - *aws_iam
+      - *aws_rds
+      - *aws_route53
+      - *aws_vpc
+      - *aws_waf
+      - *aws_s3
+      - *aws_sqs
+      - *aws_ec2
+      - *bash_zsh
+      - *chatgpt
+      - *git
+      - *html
+      - *nginx
+      - *github
+      - *macOS
+      - *linux
+  - company:
       name: End to End Productions
     resume: true
     position: Founder / CEO
@@ -750,11 +834,14 @@ work:
       - *python
       - *golang
       - *java
-      - *cursor
+      - *bun
+      - *aws
       - *docker
+      - *docker_compose
       - *neovim
       - *bash_zsh
       - *git
+      - *cursor
       - *node_js
       - *react
       - *react_router
@@ -808,59 +895,6 @@ work:
       - *github
       - *concourse_ci
   - company:
-      name: The Styled by Collective
-    resume: true
-    position: Co-Founder / CTO
-    website: https://www.thestyledbycollective.com/
-    picture:
-      src: '/images/logo/sbc.png'
-    startDate: '2025-01-06'
-    endDate: '2025-06-02'
-    summary: The Styled by Collective is a private client personal styling firm leveraging elite human expertise with cutting-edge technology to offer seamless and exclusive high-touch wardrobe management experiences. We are redefining how private clients, retailers and industry professionals engage with personal style—powered by our proprietary digital platform. What began as a luxury styling service business has evolved into a category-defining fashion-tech company.
-    highlights:
-      - Ryan led all engineering and product efforts to design, architect, and implement an ERP/CRM system for blind inventory management of fashion apparel, catering to private client luxury styling services employed internally and by major retailers.
-      - The platform managed over $2.8M in yearly client spend and maintained a consistent 30% keep rate for high-value luxury goods, often exceeding $20k per item.
-    skills:
-      - *typescript
-      - *cursor
-      - *bun
-      - *postgresql
-      - *trpc
-      - *temporal
-      - *redis
-      - *stripe
-      - *node_js
-      - *grafana
-      - *prometheus
-      - *react
-      - *mobx
-      - *tailwindcss
-      - *docker
-      - *github_actions
-      - *react_router
-      - *aws_cloudfront
-      - *aws_cloudwatch
-      - *aws_elasticache
-      - *aws_elb
-      - *aws_ecs
-      - *aws_ecr
-      - *aws_iam
-      - *aws_rds
-      - *aws_route53
-      - *aws_vpc
-      - *aws_waf
-      - *aws_s3
-      - *aws_sqs
-      - *aws_ec2
-      - *bash_zsh
-      - *chatgpt
-      - *git
-      - *html
-      - *nginx
-      - *github
-      - *macOS
-      - *linux
-  - company:
       name: Roblox
     resume: true
     position: Engineering Manager
@@ -884,6 +918,8 @@ work:
       - *prometheus
       - *stripe
       - *webpack
+      - *aws
+      - *azure
       - *react
       - *mobx
       - *bash_zsh
@@ -937,6 +973,8 @@ work:
       - *react
       - *mobx
       - *bash_zsh
+      - *aws
+      - *azure
       - *neovim
       - *sublime
       - *nginx
@@ -957,8 +995,7 @@ work:
       - Ryan was a core member of the original engineering team of the Discord competitor that secured a $7M Series A funding in April 2020 and ultimately the $90M acquisition by Roblox in August 2021.
       - He spearheaded recruitment and management helping grow the engineering team from 7 to 21+ people with less than 15% turnover over two years.
       - He employed growth engineering to elevate the product from nearly 0 to 110k+ DAU/0.9M+ MAU over 3 years
-      - He directed many product and engineering initiatives from end-to-end, including gathering user requirements, collaborating with the UX design team, and shipping code to production
-      - 'He touched effectively everything: web, desktop, mobile, backend, devops, CI/CD, cloud infrastructure, observability, moderation/abuse, data stores, developer experience, analytics, experimentation, and more'
+      - Involved with virtually everything, he directed many product and engineering initiatives from end-to-end, including gathering user requirements, collaborating with the UX design team, and shipping code to production
   - company:
       name: LTK
       description: formerly rewardStyle and LIKEtoKNOW.it

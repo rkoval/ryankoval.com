@@ -7,8 +7,8 @@ import {faFilePdf} from '@fortawesome/fontawesome-free-solid';
 
 const sort = [
   'Programming Languages',
-  'Infrastructure',
   'Data Stores',
+  'Cloud / Infrastructure',
   'Frameworks & Libraries',
   'Automation',
   'Miscellaneous',
