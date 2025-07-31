@@ -260,7 +260,7 @@ skills:
       picture:
         src: '/images/skills/tailwind.svg'
   - skill: &trpc
-      name: TRPC
+      name: tRPC
       tag: Frameworks & Libraries
       website: https://trpc.io
       resume: true
@@ -501,7 +501,7 @@ skills:
       name: Pug
       tag: Frameworks & Libraries
       website: https://pugjs.org
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/pug.svg'
   - skill: &karma
@@ -557,7 +557,7 @@ skills:
       name: Remix
       tag: Frameworks & Libraries
       website: https://remix.run/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/remix.svg'
   - skill: &hazelcast
@@ -790,11 +790,13 @@ work:
       - *redis
       - *stripe
       - *node_js
+      - *vite
       - *grafana
       - *prometheus
       - *react
       - *mobx
       - *tailwindcss
+      - *playwright
       - *aws
       - *docker
       - *docker_compose
@@ -935,6 +937,7 @@ work:
       - *csharp
       - *neovim
       - *sublime
+      - *oauth
       - *nginx
       - *puppeteer
       - *mocha
@@ -1036,6 +1039,8 @@ work:
       - *aws_elastic_beanstalk
       - *aws_cloudwatch
       - *aws_sqs
+      - *ansible
+      - *circleci
       - *golang
       - *jest
       - *angularjs
