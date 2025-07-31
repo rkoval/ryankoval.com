@@ -147,6 +147,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/reactjs.svg'
+  - skill: &react_native
+      name: React Native
+      tag: Frameworks & Libraries
+      website: https://reactnative.dev/
+      resume: true
+      picture:
+        src: '/images/skills/reactjs.svg'
   - skill: &mobx
       name: MobX
       tag: Frameworks & Libraries
@@ -844,6 +851,7 @@ work:
       - *cursor
       - *node_js
       - *react
+      - *react_native
       - *react_router
       - *mobx
       - *tailwindcss
@@ -921,6 +929,7 @@ work:
       - *aws
       - *azure
       - *react
+      - *react_native
       - *mobx
       - *bash_zsh
       - *csharp
@@ -971,6 +980,7 @@ work:
       - *stripe
       - *webpack
       - *react
+      - *react_native
       - *mobx
       - *bash_zsh
       - *aws
