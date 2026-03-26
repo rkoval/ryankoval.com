@@ -810,7 +810,7 @@ work:
 
       DGX Cloud is built on NVIDIA-accelerated infrastructure and runs across CSPs and NVIDIA Cloud Partners. This ensures that the software and operational patterns proven in DGX Cloud are directly applicable across the ecosystem.
     highlights:
-      - Promoted to Engineering Manager within 3 months to create and lead the Product Engineering team of 7+, transforming a break/fix tool into a scalable, general-purpose automation platform.
+      - Promoted to Engineering Manager within 4 months to create and lead the Product Engineering team of 7+, transforming a break/fix tool into a scalable, general-purpose automation platform.
       - Introduced product personas, a shared component library, formal UX standards, and a product-driven mindset across engineering, shifting development toward cohesive, user-centered design and observability-driven workflows.
       - Improved product quality and developer velocity by introducing Playwright-based end-to-end testing, static analysis tools, AI-assisted code reviews, and internal enablement sessions.
     skills:
