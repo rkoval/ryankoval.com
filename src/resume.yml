@@ -84,6 +84,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/docker-compose.png'
+  - skill: &claude_code
+      name: Claude Code
+      tag: Miscellaneous
+      website: https://code.claude.com/
+      resume: true
+      picture:
+        src: '/images/skills/claude-code.svg'
   - skill: &neovim
       name: Neovim
       tag: Miscellaneous
@@ -308,6 +315,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/kubernetes.svg'
+  - skill: &slurm
+      name: SLURM
+      tag: Cloud / Infrastructure
+      website: https://slurm.schedmd.com/
+      resume: true
+      picture:
+        src: '/images/skills/slurm.svg'
   - skill: &mysql
       name: MySQL
       tag: Data Stores
@@ -329,6 +343,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/oauth.svg'
+  - skill: &htmx
+      name: HTMX
+      tag: Frameworks & Libraries
+      website: https://htmx.org/
+      resume: true
+      picture:
+        src: '/images/skills/htmx.png'
   - skill: &aws_cloudformation
       name: CloudFormation
       tag: Cloud / Infrastructure
@@ -623,6 +644,13 @@ skills:
       resume: false
       picture:
         src: '/images/skills/github.svg'
+  - skill: &gitlab
+      name: GitLab
+      tag: Miscellaneous
+      website: https://gitlab.com/
+      resume: false
+      picture:
+        src: '/images/skills/gitlab.svg'
   - skill: &alpine_linux
       name: Alpine Linux
       tag: Miscellaneous
@@ -767,6 +795,46 @@ basics:
     - Food
     - AI
 work:
+  - company:
+      name: NVIDIA
+      description: within DGX Cloud
+    resume: true
+    position: Engineering Manager
+    website: https://www.nvidia.com/en-us/data-center/dgx-cloud/
+    picture:
+      src: '/images/logo/nvidia.svg'
+      style: 'background-color: #000;'
+    startDate: '2025-09-29'
+    summary: >
+      DGX™ Cloud is NVIDIA’s internal cloud environment for building and operating AI at scale to support NVIDIA’s most demanding internal AI use cases. It is used to develop open source frontier and foundational models, validate new system architectures, and run production AI workloads.
+
+      DGX Cloud is built on NVIDIA-accelerated infrastructure and runs across CSPs and NVIDIA Cloud Partners. This ensures that the software and operational patterns proven in DGX Cloud are directly applicable across the ecosystem.
+    highlights:
+      - Promoted to Engineering Manager within 3 months to create and lead the Product Engineering team, transforming a break/fix tool into a scalable, general-purpose automation platform.
+      - Introduced product personas, a shared component library, formal UX standards, and a product-driven mindset across engineering, shifting development toward cohesive, user-centered design and observability-driven workflows.
+      - Improved product quality and developer velocity by introducing Playwright-based end-to-end testing, static analysis tools, AI-assisted code reviews, and internal enablement sessions.
+    skills:
+      - *golang
+      - *typescript
+      - *temporal
+      - *claude_code
+      - *postgresql
+      - *grafana
+      - *prometheus
+      - *tailwindcss
+      - *playwright
+      - *kubernetes
+      - *slurm
+      - *docker
+      - *docker_compose
+      - *bash_zsh
+      - *vite
+      - *chatgpt
+      - *git
+      - *htmx
+      - *gitlab
+      - *macOS
+      - *linux
   - company:
       name: The Styled by Collective
     resume: true
