@@ -1026,6 +1026,7 @@ work:
       - 'High-impact project leadership includes: a full editor rewrite; the Roblox universal rich text initiative; public-facing bot REST API; scalable big data science ETLs; CI/CD optimization and developer experience enhancements; Roblox↔Guilded OAuth integration; a ChatGPT-powered multiplayer AI chat bot'
   - company:
       name: Guilded
+      description: Y Combinator '17
     resume: true
     position: Software Engineer
     website: https://www.guilded.gg/
