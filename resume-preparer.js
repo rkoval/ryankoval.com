@@ -3,7 +3,7 @@ import _ from 'lodash';
 import resume from './src/resume.yml';
 
 import fontawesome from '@fortawesome/fontawesome';
-import {faFilePdf} from '@fortawesome/fontawesome-free-solid';
+import {faPrint} from '@fortawesome/fontawesome-free-solid';
 
 const sort = [
   'Programming Languages',
@@ -37,7 +37,7 @@ export default () => {
         _,
         iconStyles: fontawesome.dom.css(),
         icons: {
-          faFilePdf: fontawesome.icon(faFilePdf).html[0],
+          faPrint: fontawesome.icon(faPrint).html[0],
         },
       },
       resume
