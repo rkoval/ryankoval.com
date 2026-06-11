@@ -19,16 +19,14 @@ export type SkillIconProps = {
   loading?: 'eager' | 'lazy';
 };
 
-function SkillSymbolUse({
+function SkillSymbol({
   symbolId,
   viewBox,
-  className,
   title,
   grayscaleTint,
 }: {
   symbolId: string;
   viewBox: string;
-  className?: string;
   title: string;
   grayscaleTint?: boolean;
 }) {
@@ -36,11 +34,7 @@ function SkillSymbolUse({
     <svg
       viewBox={viewBox}
       preserveAspectRatio="xMidYMid meet"
-      className={cn(
-        'skill-symbol skill-tile-img h-full w-full text-foreground',
-        grayscaleTint && 'exp-skill-img',
-        className
-      )}
+      className={cn('skill-icon-media', grayscaleTint && 'exp-skill-img')}
       role="img"
       aria-label={title}
     >
@@ -49,7 +43,7 @@ function SkillSymbolUse({
   );
 }
 
-function ContrastShell({
+function SkillIconShell({
   contrast,
   stroke,
   front,
@@ -59,20 +53,18 @@ function ContrastShell({
   front: ReactNode;
 }) {
   if (!contrast) {
-    return (
-      <span className="relative flex h-full w-full items-center justify-center">{front}</span>
-    );
+    return <div className="skill-icon-root">{front}</div>;
   }
 
   return (
-    <span className="relative h-full w-full">
-      {stroke}
-      <span className="skill-img-stroke-inset z-[1]">{front}</span>
-    </span>
+    <div className="skill-icon-root skill-icon-root--contrast">
+      <div className="skill-icon-stroke-back skill-img-stroke-layer skill-img-stroke-inset" aria-hidden>
+        {stroke}
+      </div>
+      <div className="skill-icon-front skill-img-stroke-inset">{front}</div>
+    </div>
   );
 }
-
-const tileImgClass = 'skill-tile-img h-full w-full object-contain opacity-85';
 
 /** Skill icon via build-time SVG sprite (symbols) or bundled raster URL. */
 export function SkillIcon({
@@ -88,72 +80,54 @@ export function SkillIcon({
   const viewBox = skillSymbolViewBoxes[spriteKey] ?? '0 0 24 24';
   const rasterUrl = skillRasterUrls[spriteKey] ?? (isRaster ? rasterSrc : undefined);
   const imgFallbackUrl = skillMarqueeImgUrls[spriteKey] ?? rasterSrc;
-  const imgClass = cn(tileImgClass, grayscaleTint && 'exp-skill-img');
+  const mediaClass = cn('skill-icon-media', grayscaleTint && 'exp-skill-img');
 
   if (rasterUrl) {
+    const img = (alt: string, withLoading = false) => (
+      <img
+        src={rasterUrl}
+        alt={alt}
+        className={mediaClass}
+        {...(withLoading ? {loading, decoding: 'async' as const} : {})}
+      />
+    );
     return (
-      <ContrastShell
+      <SkillIconShell
         contrast={contrast}
-        stroke={
-          <span className="skill-img-stroke-layer skill-img-stroke-inset pointer-events-none" aria-hidden>
-            <img src={rasterUrl} alt="" className={imgClass} />
-          </span>
-        }
+        stroke={img('', false)}
         front={
-          <span className={cn('h-full w-full', contrast && isRaster && 'skill-img-dark-contrast-raster')}>
-            <img src={rasterUrl} alt={title} className={imgClass} loading={loading} decoding="async" />
-          </span>
+          <div className={cn('skill-icon-raster-front', contrast && isRaster && 'skill-img-dark-contrast-raster')}>
+            {img(title, true)}
+          </div>
         }
       />
     );
   }
 
-  if (!symbolId) {
-    if (!imgFallbackUrl) return null;
+  if (symbolId) {
     return (
-      <ContrastShell
+      <SkillIconShell
         contrast={contrast}
         stroke={
-          <span className="skill-img-stroke-layer skill-img-stroke-inset pointer-events-none" aria-hidden>
-            <img src={imgFallbackUrl} alt="" className={imgClass} />
-          </span>
+          <SkillSymbol symbolId={symbolId} viewBox={viewBox} title="" grayscaleTint={grayscaleTint} />
         }
         front={
-          <img
-            src={imgFallbackUrl}
-            alt={title}
-            className={imgClass}
-            loading={loading}
-            decoding="async"
-          />
+          <SkillSymbol symbolId={symbolId} viewBox={viewBox} title={title} grayscaleTint={grayscaleTint} />
         }
       />
     );
   }
 
-  return (
-    <ContrastShell
-      contrast={contrast}
-      stroke={
-        <span className="skill-img-stroke-layer skill-img-stroke-inset pointer-events-none" aria-hidden>
-          <SkillSymbolUse
-            symbolId={symbolId}
-            viewBox={viewBox}
-            title=""
-            grayscaleTint={grayscaleTint}
-            className="opacity-85"
-          />
-        </span>
-      }
-      front={
-        <SkillSymbolUse
-          symbolId={symbolId}
-          viewBox={viewBox}
-          title={title}
-          grayscaleTint={grayscaleTint}
-          className="opacity-85"
-        />
-      }
+  if (!imgFallbackUrl) return null;
+
+  const img = (alt: string, withLoading = false) => (
+    <img
+      src={imgFallbackUrl}
+      alt={alt}
+      className={mediaClass}
+      {...(withLoading ? {loading, decoding: 'async' as const} : {})}
     />
   );
+
+  return <SkillIconShell contrast={contrast} stroke={img('', false)} front={img(title, true)} />;
 }

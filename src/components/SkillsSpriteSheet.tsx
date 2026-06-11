@@ -11,7 +11,7 @@ export function SkillsSpriteSheet() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden
-      className="pointer-events-none absolute h-0 w-0 overflow-hidden"
+      className="skills-sprite-sheet"
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{__html: symbolMarkup}}
     />

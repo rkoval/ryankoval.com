@@ -1,5 +1,6 @@
 import {useEffect, useRef} from 'react';
 import {SkillIcon} from '@/components/SkillIcon';
+import {SkillTile} from '@/components/SkillTile';
 import {skillsAll} from '@/lib/resume';
 
 type MarqueeSkill = {
@@ -38,42 +39,6 @@ const skills: MarqueeSkill[] = (() => {
   return [...rawSkills.slice(0, mid), ...fillers, ...rawSkills.slice(mid)];
 })();
 
-function SkillTile({skill}: {skill: MarqueeSkill}) {
-  const inner = (
-    <>
-      <SkillIcon
-        spriteKey={skill.spriteKey}
-        title={skill.title}
-        useDarkModeLightBackground={skill.useDarkModeLightBackground}
-        isRaster={skill.isRaster}
-        rasterSrc={skill.rasterSrc}
-      />
-      <span className="skill-tile-label pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-1 text-center text-[13px] font-semibold leading-tight text-foreground">
-        {skill.title}
-      </span>
-    </>
-  );
-
-  const cls =
-    'group relative z-0 flex h-[68px] w-[68px] shrink-0 items-center justify-center overflow-hidden rounded-md hover:z-10 sm:h-24 sm:w-24';
-
-  return skill.href ? (
-    <a
-      href={skill.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      title={skill.title}
-      className={cls}
-    >
-      {inner}
-    </a>
-  ) : (
-    <div title={skill.title} className={cls}>
-      {inner}
-    </div>
-  );
-}
-
 export function SkillsMarquee() {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -105,11 +70,19 @@ export function SkillsMarquee() {
   const tripled = [...skills, ...skills, ...skills];
 
   return (
-    <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] py-2">
-      <div ref={containerRef} className="overflow-x-auto scrollbar-hide">
-        <div className="grid h-[20rem] grid-flow-col grid-rows-4 gap-4 px-6 sm:grid-rows-3">
+    <div className="skills-marquee">
+      <div ref={containerRef} className="skills-marquee-scroll">
+        <div className="skills-marquee-grid">
           {tripled.map((skill, i) => (
-            <SkillTile key={i} skill={skill} />
+            <SkillTile key={i} title={skill.title} href={skill.href} variant="marquee">
+              <SkillIcon
+                spriteKey={skill.spriteKey}
+                title={skill.title}
+                useDarkModeLightBackground={skill.useDarkModeLightBackground}
+                isRaster={skill.isRaster}
+                rasterSrc={skill.rasterSrc}
+              />
+            </SkillTile>
           ))}
         </div>
       </div>

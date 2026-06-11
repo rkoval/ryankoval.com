@@ -14,6 +14,7 @@ import {SkillsSpriteSheet} from '@/components/SkillsSpriteSheet';
 import {TopNav} from '@/components/TopNav';
 import {SiteFooter} from '@/components/SiteFooter';
 import {SkillIcon} from '@/components/SkillIcon';
+import {SkillTile} from '@/components/SkillTile';
 import {cn} from '@/lib/utils';
 import {
   OG_IMAGES,
@@ -151,8 +152,8 @@ function ReadMoreDescription({text, className = ''}: {text: string; className?: 
 
 function ExperienceSkillIcon({skill}: {skill: ExperienceSkill}) {
   if (!skill.spriteKey) return null;
-  const inner = (
-    <>
+  return (
+    <SkillTile title={skill.name} href={skill.website} variant="experience">
       <SkillIcon
         spriteKey={skill.spriteKey}
         title={skill.name}
@@ -162,34 +163,14 @@ function ExperienceSkillIcon({skill}: {skill: ExperienceSkill}) {
         grayscaleTint
         loading="lazy"
       />
-      <span className="skill-tile-label pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-0.5 text-center text-[9px] font-semibold leading-tight text-foreground">
-        {skill.name}
-      </span>
-    </>
-  );
-  const cls =
-    'group relative z-0 flex aspect-square min-h-[44px] items-center justify-center overflow-hidden rounded-md hover:z-10';
-  return skill.website ? (
-    <a
-      href={skill.website}
-      target="_blank"
-      rel="noopener noreferrer"
-      title={skill.name}
-      className={cls}
-    >
-      {inner}
-    </a>
-  ) : (
-    <div title={skill.name} className={cls}>
-      {inner}
-    </div>
+    </SkillTile>
   );
 }
 
 function ExperienceSkills({skills}: {skills: ExperienceSkill[]}) {
   if (!skills.length) return null;
   return (
-    <div className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(44px,1fr))] gap-2">
+    <div className="experience-skills-grid">
       {skills.map((s) => (
         <ExperienceSkillIcon key={s.name} skill={s} />
       ))}

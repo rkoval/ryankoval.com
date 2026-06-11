@@ -619,32 +619,51 @@
   filter: grayscale(100%) sepia(50%) hue-rotate(100deg) saturate(80%);
 }
 
-/* Load fade for skill tiles (wrapper — includes stroke layer). */
-.skill-tile-fade {
-  transition: opacity 250ms ease-in-out;
+/* ── Skill tiles (marquee + experience cards) ── */
+.skill-tile {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--radius-md);
 }
 
-/* Skill tile hover: image zoom + blur + fade, label fade (250ms) */
-.skill-tile-img,
-.skill-symbol {
-  transition:
-    transform 250ms ease-in-out,
-    filter 250ms ease-in-out,
-    opacity 250ms ease-in-out;
+.skill-tile:hover {
+  z-index: 10;
 }
 
-.skill-symbol {
-  display: block;
+.skill-tile--marquee {
+  flex-shrink: 0;
+  width: 4.25rem;
+  height: 4.25rem;
 }
 
-.group:hover .skill-tile-img,
-.group:hover .skill-symbol {
-  transform: scale(1.1);
-  filter: blur(3px);
-  opacity: 0.6;
+@media (min-width: 640px) {
+  .skill-tile--marquee {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+.skill-tile--experience {
+  aspect-ratio: 1;
+  min-height: 44px;
 }
 
 .skill-tile-label {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--foreground);
   opacity: 0;
   transition: opacity 250ms ease-in-out;
   -webkit-text-stroke: 1px #000;
@@ -652,8 +671,58 @@
   paint-order: stroke fill;
 }
 
-.group:hover .skill-tile-label {
+.skill-tile-label--marquee {
+  padding-inline: 0.25rem;
+  font-size: 13px;
+}
+
+.skill-tile-label--experience {
+  padding-inline: 0.125rem;
+  font-size: 9px;
+}
+
+.skill-tile:hover .skill-tile-label {
   opacity: 1;
+}
+
+.experience-skills-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
+  gap: 0.5rem;
+}
+
+/* ── Skill icon renderer (SkillIcon) ── */
+.skill-icon-root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-icon-root--contrast {
+  display: block;
+}
+
+.skill-icon-media {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  color: var(--foreground);
+  opacity: 0.85;
+  transition:
+    transform 250ms ease-in-out,
+    filter 250ms ease-in-out,
+    opacity 250ms ease-in-out;
+}
+
+.skill-tile:hover .skill-icon-media {
+  transform: scale(1.1);
+  filter: blur(3px);
+  opacity: 0.6;
 }
 
 /* Inset drawable area so feMorphology stroke (SkillImageFilters) isn't clipped by tile overflow. */
@@ -666,21 +735,77 @@
   overflow: visible;
 }
 
-/* Stroke layer sits behind the grayscale icon (see SkillIcon). */
-.skill-img-stroke-layer {
+.skill-icon-front {
+  z-index: 1;
+}
+
+.skill-icon-stroke-back {
+  pointer-events: none;
+}
+
+.skill-icon-stroke-back.skill-img-stroke-layer {
   --skill-stroke-color: #b8b8be;
   color: var(--skill-stroke-color);
   isolation: isolate;
   filter: url(#skill-img-stroke-only);
 }
 
-.group:hover .skill-img-stroke-layer {
+.skill-tile:hover .skill-icon-stroke-back.skill-img-stroke-layer {
   --skill-stroke-color: #c6c6cc;
+}
+
+.skill-icon-raster-front {
+  width: 100%;
+  height: 100%;
 }
 
 /* Raster logos with embedded black backgrounds: lighten blends black away. */
 .skill-img-dark-contrast-raster {
   mix-blend-mode: lighten;
+}
+
+/* Inlined sprite sheet (home page only). */
+.skills-sprite-sheet {
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* ── Skills marquee layout ── */
+.skills-marquee {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-inline: -50vw;
+  padding-block: 0.5rem;
+}
+
+.skills-marquee-scroll {
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.skills-marquee-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.skills-marquee-grid {
+  display: grid;
+  height: 20rem;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .skills-marquee-grid {
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
