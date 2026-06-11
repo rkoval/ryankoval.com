@@ -1,4 +1,4 @@
-import {profile} from '@/lib/resume';
+import {profile} from '@/lib/resume-basics';
 
 export function SiteFooter() {
   return (

@@ -3,7 +3,7 @@ import {Link} from '@tanstack/react-router';
 import {FaGithub, FaLinkedin, FaEnvelope, FaBookmark, FaGlobe} from 'react-icons/fa';
 import {Pizza} from 'lucide-react';
 import type {IconType} from 'react-icons';
-import {socials} from '@/lib/resume';
+import {socials} from '@/lib/resume-basics';
 import {Button} from '@/components/ui/button';
 import {cn} from '@/lib/utils';
 
