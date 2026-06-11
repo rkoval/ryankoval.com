@@ -8,7 +8,7 @@ export function PostCard({post}: {post: Post}) {
     <Link
       to="/blog/$slug"
       params={{slug: post.slug}}
-      className="group card-bleed-xs flex h-auto flex-col overflow-hidden rounded-xl border border-border bg-card/50 transition-colors hover:border-primary/40 hover:bg-card xs:h-[230px] xs:flex-row"
+      className="group card-bleed-xs flex h-auto flex-col overflow-hidden rounded-xl border border-border bg-card/50 transition-colors hover:border-primary/40 hover:bg-card xs:h-[236px] xs:flex-row sm:h-[244px]"
     >
       {post.coverImage ? (
         <div className="h-[294px] w-full shrink-0 overflow-hidden xs:order-last xs:h-auto xs:w-1/4 xs:p-5 xs:pl-0">
