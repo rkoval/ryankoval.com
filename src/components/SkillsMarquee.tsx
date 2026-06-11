@@ -64,9 +64,9 @@ function SkillTile({skill}: {skill: Skill}) {
           useDarkModeLightBackground: skill.useDarkModeLightBackground,
           isRaster: skill.isRaster,
         }}
-        className={`transition duration-500 ease-out group-hover:scale-110 group-hover:opacity-100 group-hover:blur-[3px] ${loaded ? 'opacity-85' : 'opacity-0'}`}
+        className={`skill-tile-img ${loaded ? 'opacity-85' : 'opacity-0'}`}
       />
-      <span className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background/65 px-1 text-center text-[13px] font-semibold leading-tight text-foreground opacity-0 backdrop-blur-[1px] transition-opacity duration-300 group-hover:opacity-100">
+      <span className="skill-tile-label pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-1 text-center text-[13px] font-semibold leading-tight text-foreground">
         {skill.title}
       </span>
     </>
@@ -74,7 +74,7 @@ function SkillTile({skill}: {skill: Skill}) {
 
   // xs: 4×68 + 3×16 = 320px; sm+: 3×96 + 2×16 = 320px
   const cls =
-    'group relative flex h-[68px] w-[68px] shrink-0 items-center justify-center overflow-hidden rounded-md sm:h-24 sm:w-24';
+    'group relative z-0 flex h-[68px] w-[68px] shrink-0 items-center justify-center overflow-hidden rounded-md hover:z-10 sm:h-24 sm:w-24';
 
   return skill.href ? (
     <a
@@ -135,7 +135,7 @@ export function SkillsMarquee() {
           ))}
         </div>
       </div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-background to-transparent" />
+      <div className="skills-marquee-fade-r" aria-hidden />
     </div>
   );
 }

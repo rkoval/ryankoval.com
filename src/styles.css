@@ -850,6 +850,16 @@
   }
 }
 
+/* Perceptually even edge fade (sRGB to-transparent looks uneven). */
+.skills-marquee-fade-r {
+  pointer-events: none;
+  position: absolute;
+  inset-block: 0;
+  right: 0;
+  width: 10rem;
+  background: linear-gradient(in oklab to left, var(--background), transparent);
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;

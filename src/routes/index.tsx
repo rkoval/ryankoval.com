@@ -152,15 +152,15 @@ function SkillIcon({skill}: {skill: ExperienceSkill}) {
         loading="lazy"
         opts={contrast}
         grayscaleTint
-        className="opacity-85 transition duration-300 group-hover:scale-110 group-hover:opacity-100 group-hover:blur-[2px]"
+        className="skill-tile-img exp-skill-img opacity-85"
       />
-      <span className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background/65 px-0.5 text-center text-[9px] font-semibold leading-tight text-foreground opacity-0 backdrop-blur-[1px] transition-opacity duration-300 group-hover:opacity-100">
+      <span className="skill-tile-label pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-0.5 text-center text-[9px] font-semibold leading-tight text-foreground">
         {skill.name}
       </span>
     </>
   );
   const cls =
-    'group relative flex aspect-square min-h-[44px] items-center justify-center overflow-hidden rounded-md';
+    'group relative z-0 flex aspect-square min-h-[44px] items-center justify-center overflow-hidden rounded-md hover:z-10';
   return skill.website ? (
     <a
       href={skill.website}
