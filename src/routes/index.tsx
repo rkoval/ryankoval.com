@@ -292,12 +292,7 @@ function Index() {
           style={{background: 'var(--gradient-hero)'}}
         />
         <div className="page-container relative pt-5 max-sm:mx-0 sm:pt-36">
-          <motion.div
-            className="content-align"
-            initial={{opacity: 0, y: 24}}
-            animate={{opacity: 1, y: 0}}
-            transition={{duration: 0.6, ease: 'easeOut'}}
-          >
+          <div className="hero-enter content-align">
             <span className="inline-block rounded-full border border-border bg-secondary px-3 py-1 text-xs font-medium tracking-wide text-resume-muted">
               Available for high-impact work
             </span>
@@ -358,7 +353,7 @@ function Index() {
                 Formal Résumé
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

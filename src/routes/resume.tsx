@@ -130,7 +130,8 @@ function ResumePage() {
     <div className="resume-page" ref={pageRef}>
       <TopNav />
 
-      <div className="resume-zoom-shell">
+      <div className="resume-scroll-x">
+        <div className="resume-column">
         <div className="resume-print-actions print-hide">
           <button
             type="button"
@@ -153,7 +154,8 @@ function ResumePage() {
           </button>
         </div>
 
-        <div className="resume-body">
+        <div className="resume-zoom-shell">
+          <div className="resume-body">
           {/* Page 1 */}
           <div className="sheet resume-sheet">
             {/* Header */}
@@ -246,6 +248,8 @@ function ResumePage() {
 
             <footer className="resume-footer">Page 2 of 2</footer>
           </div>
+          </div>
+        </div>
         </div>
       </div>
 
