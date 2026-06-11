@@ -64,7 +64,7 @@ function SkillTile({skill}: {skill: Skill}) {
           useDarkModeLightBackground: skill.useDarkModeLightBackground,
           isRaster: skill.isRaster,
         }}
-        className={`skill-tile-img ${loaded ? 'opacity-85' : 'opacity-0'}`}
+        loaded={loaded}
       />
       <span className="skill-tile-label pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-1 text-center text-[13px] font-semibold leading-tight text-foreground">
         {skill.title}

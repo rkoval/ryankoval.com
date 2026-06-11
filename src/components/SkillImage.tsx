@@ -11,6 +11,8 @@ type SkillImageProps = ImgHTMLAttributes<HTMLImageElement> & {
   imgRef?: Ref<HTMLImageElement>;
   /** Green grayscale tint — experience cards only. */
   grayscaleTint?: boolean;
+  /** When set, fade opacity applies to the whole icon (stroke layer + image). */
+  loaded?: boolean;
 };
 
 /** Optional stroke (back) + optional grayscale tint (front) for skill icons. */
@@ -21,15 +23,20 @@ export function SkillImage({
   src,
   alt,
   grayscaleTint = false,
+  loaded,
   ...props
 }: SkillImageProps) {
   const contrast = opts?.useDarkModeLightBackground;
+  const fadeOnRoot = loaded !== undefined;
+  const fadeClass = fadeOnRoot ? (loaded ? 'opacity-100' : 'opacity-0') : undefined;
 
   return (
     <span
       className={cn(
         'relative flex h-full w-full items-center justify-center',
-        contrast && 'skill-img-stroke-pad'
+        contrast && 'skill-img-stroke-pad',
+        fadeOnRoot && 'skill-tile-fade',
+        fadeClass
       )}
     >
       {contrast && src ? (
@@ -50,7 +57,7 @@ export function SkillImage({
           className={cn(
             'h-full w-full object-contain',
             grayscaleTint && 'exp-skill-img',
-            className
+            fadeOnRoot ? 'skill-tile-img opacity-85' : className
           )}
           {...props}
         />
