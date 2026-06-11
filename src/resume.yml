@@ -353,7 +353,7 @@ skills:
       resume: true
       use_dark_mode_light_background: true
       picture:
-        src: '/images/skills/htmx.png'
+        src: '/images/skills/htmx.svg'
   - skill: &aws_cloudformation
       name: CloudFormation
       tag: Cloud / Infrastructure
