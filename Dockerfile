@@ -1,13 +1,13 @@
-FROM node:16.15.0-alpine AS webpack
-COPY *.json ./
-RUN npm install && npm cache clean --force
-VOLUME ["./node_modules"]
-COPY static ./static
-COPY *.js ./
-COPY src ./src
-RUN npm run build
+# Debian-based image (not alpine): esbuild postinstall needs glibc, especially under amd64 QEMU on arm64 Macs.
+FROM oven/bun:1.3.14 AS build
+WORKDIR /app
+COPY package.json bun.lock bunfig.toml ./
+# Skip lovable-tagger's nested esbuild postinstall (dev-only componentTagger); vite uses top-level esbuild.
+RUN bun install --frozen-lockfile --ignore-scripts
+COPY . .
+RUN bun run build
 
-FROM nginx:1.21.6-alpine
+FROM nginx:1.27-alpine
 EXPOSE 80
-COPY ./docker_root /
-COPY --from=webpack ./dist/. /usr/share/nginx/html
+COPY docker_root/ /
+COPY --from=build /app/dist/client/ /usr/share/nginx/html/

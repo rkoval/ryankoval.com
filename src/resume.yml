@@ -47,6 +47,7 @@ skills:
       tag: Cloud / Infrastructure
       website: https://aws.amazon.com/
       resume: true
+      use_dark_mode_light_background: true
       picture:
         src: '/images/skills/aws.svg'
   - skill: &azure
@@ -154,13 +155,6 @@ skills:
       resume: true
       picture:
         src: '/images/skills/reactjs.svg'
-  - skill: &react_native
-      name: React Native
-      tag: Frameworks & Libraries
-      website: https://reactnative.dev/
-      resume: true
-      picture:
-        src: '/images/skills/reactjs.svg'
   - skill: &mobx
       name: MobX
       tag: Frameworks & Libraries
@@ -182,6 +176,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/sublime.svg'
+  - skill: &react_native
+      name: React Native
+      tag: Frameworks & Libraries
+      website: https://reactnative.dev/
+      resume: true
+      picture:
+        src: '/images/skills/reactjs.svg'
   - skill: &github_actions
       name: GitHub Actions
       tag: Automation
@@ -320,6 +321,7 @@ skills:
       tag: Cloud / Infrastructure
       website: https://slurm.schedmd.com/
       resume: true
+      use_dark_mode_light_background: true
       picture:
         src: '/images/skills/slurm.svg'
   - skill: &mysql
@@ -334,6 +336,7 @@ skills:
       tag: Automation
       website: https://temporal.io/
       resume: true
+      use_dark_mode_light_background: true
       picture:
         src: '/images/skills/temporal.svg'
   - skill: &oauth
@@ -348,6 +351,7 @@ skills:
       tag: Frameworks & Libraries
       website: https://htmx.org/
       resume: true
+      use_dark_mode_light_background: true
       picture:
         src: '/images/skills/htmx.png'
   - skill: &aws_cloudformation
@@ -481,6 +485,7 @@ skills:
       tag: Data Stores
       website: https://cassandra.apache.org/
       resume: true
+      use_dark_mode_light_background: true
       picture:
         src: '/images/skills/cassandra.svg'
   - skill: &html
@@ -544,6 +549,7 @@ skills:
       tag: Programming Languages
       website: https://daringfireball.net/projects/markdown/
       resume: true
+      use_dark_mode_light_background: true
       picture:
         src: '/images/skills/markdown.svg'
   - skill: &bootstrap
@@ -558,6 +564,7 @@ skills:
       tag: Frameworks & Libraries
       website: https://nextjs.org/
       resume: true
+      use_dark_mode_light_background: true
       picture:
         src: '/images/skills/nextjs.svg'
   - skill: &react_router
@@ -565,6 +572,7 @@ skills:
       tag: Frameworks & Libraries
       website: https://reactrouter.com/
       resume: true
+      use_dark_mode_light_background: true
       picture:
         src: '/images/skills/react-router.svg'
   - skill: &vite
@@ -578,6 +586,7 @@ skills:
       name: Remix
       tag: Frameworks & Libraries
       website: https://remix.run/
+      use_dark_mode_light_background: true
       resume: false
       picture:
         src: '/images/skills/remix.svg'
@@ -697,6 +706,7 @@ skills:
       name: jQuery
       tag: Frameworks & Libraries
       website: https://jquery.com/
+      use_dark_mode_light_background: true
       picture:
         src: '/images/skills/jquery.svg'
   - skill: &jquery_mobile
@@ -903,7 +913,7 @@ work:
     startDate: '2022-04-11'
     highlights:
       - Ryan founded the consultancy to specialize in world-class software engineering, architecture, product, and management services.
-      - Successfully delivered solutions for clients including Slammin' Backgammon, Jam Chat, and The Styled by Collective.
+      - "Successfully clients included Slammin' Backgammon, Jam Chat, and The Styled by Collective."
     skills:
       - *typescript
       - *javascript
@@ -979,6 +989,7 @@ work:
     website: https://www.roblox.com/
     picture:
       src: '/images/logo/roblox.svg'
+      style: 'background-color: #000;'
     startDate: '2021-08-21'
     endDate: '2025-01-10'
     summary: >
@@ -1076,7 +1087,7 @@ work:
     highlights:
       - Ryan was a core member of the original engineering team of the Discord competitor that secured a $7M Series A funding in April 2020 and ultimately the $90M acquisition by Roblox in August 2021.
       - He spearheaded recruitment and management helping grow the engineering team from 7 to 21+ people with less than 15% turnover over two years.
-      - He employed growth engineering to elevate the product from nearly 0 to 110k+ DAU/0.9M+ MAU over 3 years
+      - He employed growth engineering to elevate the product from 0 to 110k+ DAU/0.9M+ MAU over 3 years
       - Involved with virtually everything, he directed many product and engineering initiatives from end-to-end, including gathering user requirements, collaborating with the UX design team, and shipping code to production
   - company:
       name: LTK
@@ -1086,7 +1097,7 @@ work:
     website: https://www.shopltk.com/
     picture:
       src: '/images/logo/ltk.svg'
-      style: 'background-color: #141414;'
+      style: 'background-color: #141414; padding: 8px;'
     startDate: '2016-02-22'
     endDate: '2018-10-26'
     summary: 'In 2010, rewardStyle was just an idea—a dream of how to simultaneously help brands and lifestyle creators monetize the digital space. Today, celebrating our 10th anniversary, we’re a global community of more than 350 team members, 150,000+ top-tier creators, and 1 million brands across more than 100 countries. Pioneering a proprietary ecosystem of innovative technology, strategic growth consulting, global brand partnerships, and expansive shopper distribution, we’ve done more than just monetize Creator Marketing—we created the industry and are now defining the next decade.'
@@ -1127,7 +1138,7 @@ work:
       - *git
       - *linux
     highlights:
-      - Ryan led front-end development for a self-service collaborations portal, where he managed an international team
+      - Ryan led front-end development for a self-service collaborations portal, where he managed a global team
       - He helped craft two major versions of a screen-scraping infrastructure used to gather data from all influencers for a customer-facing recommendation engine and general business intelligence
       - He helped transition the organization from a two-week deploy cycle to rapid continuous delivery by designing and implementing new core infrastructure patterns
       - He revived multiple legacy Node.js analytics projects plagued with stability problems and general disrepair
@@ -1165,7 +1176,7 @@ work:
     position: Consultant
     website: https://www.slalom.com
     picture:
-      src: '/images/logo/slalom.svg'
+      src: '/images/logo/slalom.jpeg'
     startDate: '2013-11-11'
     endDate: '2015-10-23'
     summary: Headquartered in Seattle, Washington, Slalom Consulting has rapidly grown
@@ -1208,7 +1219,7 @@ work:
     position: Consultant
     website: https://www.credera.com
     picture:
-      src: '/images/logo/credera.svg'
+      src: '/images/logo/credera.jpeg'
     startDate: '2011-08-22'
     endDate: '2013-10-30'
     summary: Headquartered in Seattle, Washington, Slalom Consulting has rapidly grown
@@ -1295,12 +1306,14 @@ education:
     summary: 'A nationally ranked private university located near the heart of Dallas, SMU is a distinguished center for global research and teaching.  SMU’s more than 12,000 diverse, high-achieving students come from all 50 states and over 80 countries to take advantage of the University’s small classes, meaningful research opportunities, leadership development, community service, international study and innovative programs.  Students gathered on the quad SMU serves approximately 7,000 undergraduates and 5,000 graduate students through eight degree-granting schools: Dedman College of Humanities and Sciences, Cox School of Business, Lyle School of Engineering, Meadows School of the Arts, Simmons School of Education and Human Development, Dedman School of Law, Perkins School of Theology and Moody School of Graduate and Advanced Studies.  SMU is data driven, and its powerful supercomputing ecosystem – paired with entrepreneurial drive – creates an unrivaled environment for the University to deliver research excellence.  Now in its second century of achievement, SMU is recognized for the ways it supports students, faculty and alumni as they become ethical, enterprising leaders in their professions and communities. SMU’s relationship with Dallas – the dynamic center of one of the nation’s fastest-growing regions – offers unique learning, research, social and career opportunities that provide a launch pad for global impact.  SMU is nonsectarian in its teaching and committed to academic freedom and open inquiry.'
     picture:
       src: '/images/logo/smu.svg'
+      style: 'background-color: #fff; padding: 4px;'
     area: Computer Science (Minor in Mathematics)
     studyType: Bachelor of Science
 awards:
   - title: Certified ScrumMaster®
     date: '2015-09-01'
     awarder: Scrum Alliance
+    url: /agile-certification.pdf
     summary: A Certified ScrumMaster® helps project teams properly use Scrum, increasing
       the likelihood of the project's overall success. CSMs understand Scrum values,
       practices, and applications and provide a level of knowledge and expertise above
