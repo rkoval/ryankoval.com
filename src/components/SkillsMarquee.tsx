@@ -20,13 +20,16 @@ const rawSkills: Skill[] = skillsAll
     isRaster: s.isRaster,
   }));
 
-// The marquee lays icons out in columns of 3 (grid-rows-3, grid-flow-col).
-// For the infinite wrap to be seamless, each repeated copy must span a whole
-// number of columns — i.e. the base length must be divisible by 3. If we're
-// short by 1 or 2 icons, pad by duplicating icons from the very middle of the
-// list, where the repeat is least noticeable.
-const pad = (3 - (rawSkills.length % 3)) % 3;
+// Icons flow in columns (grid-flow-col). Row count changes by breakpoint (4 on
+// xs, 3 on sm+), so pad to lcm(4, 3) = 12 — each repeated third must span a
+// whole number of columns at every row count.
+const ROW_COUNTS = [4, 3] as const;
+const gcd = (a: number, b: number): number => (b === 0 ? a : gcd(b, a % b));
+const lcm = (a: number, b: number): number => (a / gcd(a, b)) * b;
+const ROW_LCM = ROW_COUNTS.reduce((acc, n) => lcm(acc, n));
+
 const skills: Skill[] = (() => {
+  const pad = (ROW_LCM - (rawSkills.length % ROW_LCM)) % ROW_LCM;
   if (pad === 0 || rawSkills.length === 0) return rawSkills;
   const mid = Math.floor(rawSkills.length / 2);
   const fillers = Array.from({length: pad}, (_, i) => rawSkills[(mid + i) % rawSkills.length]);
@@ -69,8 +72,9 @@ function SkillTile({skill}: {skill: Skill}) {
     </>
   );
 
+  // xs: 4×68 + 3×16 = 320px; sm+: 3×96 + 2×16 = 320px
   const cls =
-    'group relative flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-md sm:h-24 sm:w-24';
+    'group relative flex h-[68px] w-[68px] shrink-0 items-center justify-center overflow-hidden rounded-md sm:h-24 sm:w-24';
 
   return skill.href ? (
     <a
@@ -90,8 +94,7 @@ function SkillTile({skill}: {skill: Skill}) {
 }
 
 export function SkillsMarquee() {
-  const ref = useRef<HTMLDivElement>(null);
-  const pausedRef = useRef(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   // Keep the scroll position within the middle third so the user can scroll
   // (and fling with inertia) in either direction without ever hitting an edge.
@@ -103,7 +106,7 @@ export function SkillsMarquee() {
   };
 
   useEffect(() => {
-    const el = ref.current;
+    const el = containerRef.current;
     if (!el) return;
 
     // Start in the middle copy so there is room to scroll left immediately.
@@ -112,24 +115,12 @@ export function SkillsMarquee() {
     const onScroll = () => wrap(el);
     el.addEventListener('scroll', onScroll, {passive: true});
 
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let raf = 0;
-    let last = performance.now();
-    const speed = 28; // px per second
-    const step = (now: number) => {
-      const dt = now - last;
-      last = now;
-      if (!pausedRef.current && !reduce) {
-        el.scrollLeft += (speed * dt) / 1000;
-        wrap(el);
-      }
-      raf = requestAnimationFrame(step);
-    };
-    raf = requestAnimationFrame(step);
+    const resize = new ResizeObserver(() => wrap(el));
+    resize.observe(el);
 
     return () => {
-      cancelAnimationFrame(raf);
       el.removeEventListener('scroll', onScroll);
+      resize.disconnect();
     };
   }, []);
 
@@ -137,13 +128,8 @@ export function SkillsMarquee() {
 
   return (
     <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] py-2">
-      <div
-        ref={ref}
-        className="overflow-x-auto scrollbar-hide"
-        onMouseEnter={() => (pausedRef.current = true)}
-        onMouseLeave={() => (pausedRef.current = false)}
-      >
-        <div className="grid grid-flow-col grid-rows-3 gap-4 px-6">
+      <div ref={containerRef} className="overflow-x-auto scrollbar-hide">
+        <div className="grid h-[20rem] grid-flow-col grid-rows-4 gap-4 px-6 sm:grid-rows-3">
           {tripled.map((skill, i) => (
             <SkillTile key={i} skill={skill} />
           ))}
