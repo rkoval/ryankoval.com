@@ -10,6 +10,7 @@ import {
   type ExperienceSkill,
 } from '@/lib/resume';
 import {SkillsMarquee} from '@/components/SkillsMarquee';
+import {SkillsSpriteSheet} from '@/components/SkillsSpriteSheet';
 import {TopNav} from '@/components/TopNav';
 import {SiteFooter} from '@/components/SiteFooter';
 import {SkillIcon} from '@/components/SkillIcon';
@@ -288,6 +289,7 @@ function Index() {
 
   return (
     <main className="min-h-screen bg-background">
+      <SkillsSpriteSheet />
       <TopNav />
       {/* Hero */}
       <section className="relative overflow-hidden">
