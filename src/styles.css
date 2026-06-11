@@ -404,28 +404,32 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--resume-green);
+  color: var(--link);
   background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   padding: 0;
+  text-decoration: none;
+  transition: color 0.15s ease;
 }
 .resume-print-btn:hover {
-  text-decoration: underline;
+  color: var(--foreground);
 }
 .resume-print-dark-link {
   background: transparent;
   border: none;
   cursor: pointer;
   color: var(--resume-muted);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   padding: 0;
+  text-decoration: none;
+  transition: color 0.15s ease;
 }
 .resume-print-dark-link:hover {
-  text-decoration: underline;
+  color: var(--foreground);
 }
 
 .resume-switcher {
