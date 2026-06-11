@@ -29,7 +29,7 @@ skills:
       picture:
         src: '/images/skills/python.svg'
   - skill: &golang
-      name: Golang
+      name: Go
       tag: Programming Languages
       website: https://golang.org/
       resume: true
@@ -586,7 +586,6 @@ skills:
       name: Remix
       tag: Frameworks & Libraries
       website: https://remix.run/
-      use_dark_mode_light_background: true
       resume: false
       picture:
         src: '/images/skills/remix.svg'
@@ -931,11 +930,11 @@ work:
       - *cursor
       - *node_js
       - *react
-      - *react_native
       - *react_router
       - *mobx
       - *tailwindcss
       - *grafana
+      - *react_native
       - *temporal
       - *trpc
       - *postgresql
@@ -1010,13 +1009,13 @@ work:
       - *aws
       - *azure
       - *react
-      - *react_native
       - *mobx
       - *bash_zsh
       - *csharp
       - *neovim
       - *sublime
       - *oauth
+      - *react_native
       - *nginx
       - *puppeteer
       - *mocha
@@ -1063,13 +1062,13 @@ work:
       - *stripe
       - *webpack
       - *react
-      - *react_native
       - *mobx
       - *bash_zsh
       - *aws
       - *azure
       - *neovim
       - *sublime
+      - *react_native
       - *nginx
       - *puppeteer
       - *mocha

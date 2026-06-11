@@ -12,6 +12,7 @@ import {useEffect, type ReactNode} from 'react';
 import appCss from '../styles.css?url';
 import {analyticsHeadScripts} from '../components/Analytics';
 import {SkillImageFilters} from '../components/SkillImageFilters';
+import {SkillsSpriteSheet} from '../components/SkillsSpriteSheet';
 import {reportLovableError} from '../lib/lovable-error-reporting';
 
 function NotFoundComponent() {
@@ -122,6 +123,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <SkillImageFilters />
+      <SkillsSpriteSheet />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>

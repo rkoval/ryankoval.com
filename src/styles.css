@@ -625,14 +625,20 @@
 }
 
 /* Skill tile hover: image zoom + blur + fade, label fade (250ms) */
-.skill-tile-img {
+.skill-tile-img,
+.skill-symbol {
   transition:
     transform 250ms ease-in-out,
     filter 250ms ease-in-out,
     opacity 250ms ease-in-out;
 }
 
-.group:hover .skill-tile-img {
+.skill-symbol {
+  display: block;
+}
+
+.group:hover .skill-tile-img,
+.group:hover .skill-symbol {
   transform: scale(1.1);
   filter: blur(3px);
   opacity: 0.6;
@@ -650,19 +656,21 @@
   opacity: 1;
 }
 
-/* Keep padding in sync with feMorphology radius in SkillImageFilters (1px). */
-.skill-img-stroke-pad {
-  --skill-stroke-width: 1px;
-  box-sizing: border-box;
-  padding: var(--skill-stroke-width);
+/* Inset drawable area so feMorphology stroke (SkillImageFilters) isn't clipped by tile overflow. */
+.skill-img-stroke-inset {
+  position: absolute;
+  inset: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
 }
 
-/* Stroke layer sits behind the grayscale icon (see SkillImage). */
+/* Stroke layer sits behind the grayscale icon (see SkillIcon). */
 .skill-img-stroke-layer {
   --skill-stroke-color: #b8b8be;
   color: var(--skill-stroke-color);
   isolation: isolate;
-  contain: layout style;
   filter: url(#skill-img-stroke-only);
 }
 

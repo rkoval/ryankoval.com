@@ -12,7 +12,7 @@ import {
 import {SkillsMarquee} from '@/components/SkillsMarquee';
 import {TopNav} from '@/components/TopNav';
 import {SiteFooter} from '@/components/SiteFooter';
-import {SkillImage} from '@/components/SkillImage';
+import {SkillIcon} from '@/components/SkillIcon';
 import {cn} from '@/lib/utils';
 import {
   OG_IMAGES,
@@ -148,20 +148,18 @@ function ReadMoreDescription({text, className = ''}: {text: string; className?: 
   );
 }
 
-function SkillIcon({skill}: {skill: ExperienceSkill}) {
-  const contrast = {
-    useDarkModeLightBackground: skill.useDarkModeLightBackground,
-    isRaster: skill.isRaster,
-  };
+function ExperienceSkillIcon({skill}: {skill: ExperienceSkill}) {
+  if (!skill.spriteKey) return null;
   const inner = (
     <>
-      <SkillImage
-        src={skill.img}
-        alt={skill.name}
-        loading="lazy"
-        opts={contrast}
+      <SkillIcon
+        spriteKey={skill.spriteKey}
+        title={skill.name}
+        useDarkModeLightBackground={skill.useDarkModeLightBackground}
+        isRaster={skill.isRaster}
+        rasterSrc={skill.img}
         grayscaleTint
-        className="skill-tile-img exp-skill-img opacity-85"
+        loading="lazy"
       />
       <span className="skill-tile-label pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-0.5 text-center text-[9px] font-semibold leading-tight text-foreground">
         {skill.name}
@@ -192,7 +190,7 @@ function ExperienceSkills({skills}: {skills: ExperienceSkill[]}) {
   return (
     <div className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(44px,1fr))] gap-2">
       {skills.map((s) => (
-        <SkillIcon key={s.name} skill={s} />
+        <ExperienceSkillIcon key={s.name} skill={s} />
       ))}
     </div>
   );

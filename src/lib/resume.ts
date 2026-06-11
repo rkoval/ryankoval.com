@@ -16,20 +16,33 @@ export interface Skill {
   tag: string;
   website?: string;
   img?: string;
+  /** Basename under assets/skills (e.g. docker, docker-compose) for SVG sprite lookup. */
+  spriteKey?: string;
   inResume: boolean;
   useDarkModeLightBackground: boolean;
   isRaster: boolean;
 }
 
-export const skillsAll: Skill[] = doc.skills.map(({skill}) => ({
-  name: skill.name,
-  tag: skill.tag,
-  website: skill.website,
-  img: resolveSkillImg(skill.picture?.src),
-  inResume: skill.resume === true,
-  useDarkModeLightBackground: skill.use_dark_mode_light_background === true,
-  isRaster: skill.picture?.src?.endsWith('.png') ?? false,
-}));
+function skillSpriteKey(src?: string) {
+  if (!src) return undefined;
+  const m = src.match(/\/images\/skills\/(.+)$/);
+  if (!m) return undefined;
+  return m[1].replace(/\.[^.]+$/, '');
+}
+
+export const skillsAll: Skill[] = doc.skills.map(({skill}) => {
+  const isRaster = /\.(png|jpe?g)$/i.test(skill.picture?.src ?? '');
+  return {
+    name: skill.name,
+    tag: skill.tag,
+    website: skill.website,
+    img: isRaster ? resolveSkillImg(skill.picture?.src) : undefined,
+    spriteKey: skillSpriteKey(skill.picture?.src),
+    inResume: skill.resume === true,
+    useDarkModeLightBackground: skill.use_dark_mode_light_background === true,
+    isRaster,
+  };
+});
 
 export interface SkillGroup {
   category: string;
@@ -74,6 +87,8 @@ export const interests: string[] = doc.basics.interests ?? [];
 
 export interface ExperienceSkill {
   name: string;
+  spriteKey?: string;
+  /** Bundled URL for raster skills only. */
   img?: string;
   website?: string;
   useDarkModeLightBackground: boolean;
@@ -115,14 +130,18 @@ export const experience: ExperienceItem[] = (() => {
         logoStyle: imgStyleFromStyle(w.picture?.style),
         current,
         skills: (w.skills ?? [])
-          .map((s: RawSkill) => ({
-            name: s.name,
-            img: resolveSkillImg(s.picture?.src),
-            website: s.website,
-            useDarkModeLightBackground: s.use_dark_mode_light_background === true,
-            isRaster: s.picture?.src?.endsWith('.png') ?? false,
-          }))
-          .filter((s) => s.img),
+          .map((s: RawSkill) => {
+            const isRaster = /\.(png|jpe?g)$/i.test(s.picture?.src ?? '');
+            return {
+              name: s.name,
+              spriteKey: skillSpriteKey(s.picture?.src),
+              img: isRaster ? resolveSkillImg(s.picture?.src) : undefined,
+              website: s.website,
+              useDarkModeLightBackground: s.use_dark_mode_light_background === true,
+              isRaster,
+            };
+          })
+          .filter((s) => s.spriteKey || s.img),
       };
     });
 })();

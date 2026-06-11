@@ -1,4 +1,5 @@
-const skillImgs = import.meta.glob('@/assets/skills/**/*.{svg,png}', {
+const skillImgs = import.meta.glob('@/assets/skills/**/*.png', {
+  // Raster skill icons only — SVGs are served via the build-time sprite sheet.
   eager: true,
   query: '?url',
   import: 'default',
