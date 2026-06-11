@@ -616,7 +616,7 @@
 }
 
 .exp-skill-img {
-  filter: grayscale(100%) sepia(50%) hue-rotate(100deg) saturate(80%);
+  filter: grayscale(100%) sepia(50%) hue-rotate(100deg) saturate(80%) blur(0px);
 }
 
 /* ── Skill tiles (marquee + experience cards) ── */
@@ -723,6 +723,10 @@
   transform: scale(1.1);
   filter: blur(3px);
   opacity: 0.6;
+}
+
+.skill-tile:hover .skill-icon-media.exp-skill-img {
+  filter: grayscale(0%) sepia(0%) hue-rotate(0deg) saturate(100%) blur(3px);
 }
 
 /* Inset drawable area so feMorphology stroke (SkillImageFilters) isn't clipped by tile overflow. */
