@@ -1,6 +1,5 @@
 import {createFileRoute, Link} from '@tanstack/react-router';
-import {useState} from 'react';
-import {motion} from 'framer-motion';
+import {useRef, useState} from 'react';
 import {
   profile,
   experience,
@@ -14,6 +13,7 @@ import {SkillsMarquee} from '@/components/SkillsMarquee';
 import {TopNav} from '@/components/TopNav';
 import {SiteFooter} from '@/components/SiteFooter';
 import {SkillImage} from '@/components/SkillImage';
+import {cn} from '@/lib/utils';
 import {
   OG_IMAGES,
   OG_IMAGE_DIMENSIONS,
@@ -106,35 +106,44 @@ function CompanyLogo({item, size = 'md'}: {item: ExperienceItem; size?: 'md' | '
 
 function ReadMoreDescription({text, className = ''}: {text: string; className?: string}) {
   const [open, setOpen] = useState(false);
+  const innerRef = useRef<HTMLDivElement>(null);
+  const collapsedMax = '4.25rem';
+  const [maxHeight, setMaxHeight] = useState(collapsedMax);
+
+  const expand = () => {
+    const el = innerRef.current;
+    if (el) setMaxHeight(`${el.scrollHeight}px`);
+    setOpen(true);
+  };
+
   return (
     <div className={`border-t border-border pt-4 ${className}`}>
-      <motion.div
-        initial={false}
-        animate={{height: open ? 'auto' : '4.25rem'}}
-        transition={{duration: 0.25, ease: 'easeInOut'}}
-        className="relative overflow-hidden"
+      <div
+        ref={innerRef}
+        className="read-more-collapse relative overflow-hidden"
+        style={{maxHeight: open ? maxHeight : collapsedMax}}
       >
         <p className="text-sm leading-relaxed text-resume-muted">{text}</p>
 
-        {/* consistent fade overlay anchored to the bottom of the collapsed box */}
-        <motion.div
-          initial={false}
-          animate={{opacity: open ? 0 : 1}}
-          transition={{duration: 0.15, ease: 'easeInOut'}}
-          className="pointer-events-none absolute inset-x-0 bottom-0 flex h-12 items-end justify-start bg-gradient-to-t from-card via-card/85 to-transparent"
+        <div
+          className={cn(
+            'read-more-fade pointer-events-none absolute inset-x-0 bottom-0 flex h-12 items-end justify-start bg-gradient-to-t from-card via-card/85 to-transparent',
+            open && 'opacity-0'
+          )}
         >
           <button
             type="button"
-            onClick={() => setOpen(true)}
+            onClick={expand}
             aria-hidden={open}
-            className={`read-more pointer-events-auto cursor-pointer text-sm font-semibold ${
-              open ? 'pointer-events-none' : ''
-            }`}
+            className={cn(
+              'read-more pointer-events-auto cursor-pointer text-sm font-semibold',
+              open && 'pointer-events-none'
+            )}
           >
             Read more
           </button>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -227,11 +236,8 @@ function ExperienceCard({item}: {item: ExperienceItem}) {
 
 function FeaturedCard({item}: {item: ExperienceItem}) {
   return (
-    <motion.article
-      initial={{opacity: 0, y: 20}}
-      animate={{opacity: 1, y: 0}}
-      transition={{duration: 0.6, ease: 'easeOut'}}
-      className="card-bleed-xs card-pad-featured relative overflow-hidden rounded-2xl border border-primary/30 bg-card"
+    <article
+      className="card-enter card-bleed-xs card-pad-featured relative overflow-hidden rounded-2xl border border-primary/30 bg-card"
       style={{boxShadow: 'var(--shadow-glow)'}}
     >
       <div
@@ -274,7 +280,7 @@ function FeaturedCard({item}: {item: ExperienceItem}) {
 
         {item.description && <ReadMoreDescription text={item.description} className="mt-6" />}
       </div>
-    </motion.article>
+    </article>
   );
 }
 

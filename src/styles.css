@@ -1,3 +1,10 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/space-grotesk/400.css';
+@import '@fontsource/space-grotesk/600.css';
+@import '@fontsource/space-grotesk/700.css';
+
 @import 'tailwindcss' source(none);
 @source "../src";
 @import 'paper-css/paper.css';
@@ -325,6 +332,14 @@
   }
   .read-more:hover {
     color: var(--link);
+  }
+
+  /* Read-more expand — matches former framer-motion: height 250ms, fade 150ms ease-in-out */
+  .read-more-collapse {
+    transition: max-height 250ms ease-in-out;
+  }
+  .read-more-fade {
+    transition: opacity 150ms ease-in-out;
   }
 }
 
@@ -835,7 +850,7 @@
 }
 .blog-prose strong {
   color: var(--resume-header);
-  font-weight: 700;
+  font-weight: 600;
 }
 .blog-prose ul,
 .blog-prose ol {
@@ -936,8 +951,24 @@
   animation: hero-enter 0.6s ease-out both;
 }
 
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1.25rem, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.card-enter {
+  animation: card-enter 0.6s ease-out both;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .hero-enter {
+  .hero-enter,
+  .card-enter {
     animation: none;
   }
 }
