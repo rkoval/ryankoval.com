@@ -1,7 +1,6 @@
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import {
   Outlet,
-  Link,
   createRootRouteWithContext,
   useRouter,
   HeadContent,
@@ -17,10 +16,9 @@ import spaceGrotesk400 from '@fontsource/space-grotesk/400.css?url';
 import spaceGrotesk600 from '@fontsource/space-grotesk/600.css?url';
 import spaceGrotesk700 from '@fontsource/space-grotesk/700.css?url';
 import {analyticsHeadScripts} from '../components/Analytics';
-import {SiteFooter} from '../components/SiteFooter';
 import {SiteErrorPage} from '../components/SiteErrorPage';
+import {SiteNotFoundPage} from '../components/SiteNotFoundPage';
 import {SkillImageFilters} from '../components/SkillImageFilters';
-import {TopNav} from '../components/TopNav';
 import {reportLovableError} from '../lib/lovable-error-reporting';
 
 const FONT_STYLESHEETS = [
@@ -33,27 +31,7 @@ const FONT_STYLESHEETS = [
 ] as const;
 
 function NotFoundComponent() {
-  return (
-    <main className="min-h-screen bg-background">
-      <TopNav />
-      <section className="page-container py-24 text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
-        </p>
-        <div className="mt-6">
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Go home
-          </Link>
-        </div>
-      </section>
-      <SiteFooter />
-    </main>
-  );
+  return <SiteNotFoundPage />;
 }
 
 function ErrorComponent({error, reset}: {error: Error; reset: () => void}) {

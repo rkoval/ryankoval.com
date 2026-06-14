@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "bun run scripts/generate-sitemap.ts && bun run scripts/generate-skills-sprite.ts && vite build",
+    "build": "bun run scripts/generate-sitemap.ts && bun run scripts/generate-skills-sprite.ts && vite build && bun run scripts/generate-spa-fallback.ts",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
