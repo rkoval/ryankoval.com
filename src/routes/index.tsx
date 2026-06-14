@@ -343,6 +343,9 @@ function Index() {
 
       {/* Experience */}
       <section className="page-container pb-16">
+        <h2 className="content-align mb-6 text-2xl font-semibold tracking-tight text-resume-header">
+          Experience
+        </h2>
         {current && (
           <div className="mb-8">
             <FeaturedCard item={current} />
@@ -357,7 +360,7 @@ function Index() {
 
       {/* Education */}
       <section className="page-container pb-5">
-        <h2 className="content-align mb-10 text-2xl font-semibold tracking-tight text-resume-header">
+        <h2 className="content-align mb-6 text-2xl font-semibold tracking-tight text-resume-header">
           Education
         </h2>
         <div className="card-bleed-xs card-pad rounded-xl border border-border bg-card transition-colors hover:border-primary/40">
