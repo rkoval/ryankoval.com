@@ -153,11 +153,17 @@ function ReadMoreDescription({text, className = ''}: {text: string; className?: 
 
 function ExperienceSkillIcon({skill}: {skill: ExperienceSkill}) {
   if (!skill.spriteKey) return null;
+  const displayName = skill.seoName ?? skill.name;
   return (
-    <SkillTile title={skill.name} ariaLabel={skill.label} href={skill.website} variant="experience">
+    <SkillTile
+      title={displayName}
+      ariaLabel={skill.label}
+      href={skill.website}
+      variant="experience"
+    >
       <SkillIcon
         spriteKey={skill.spriteKey}
-        title={skill.name}
+        title={displayName}
         useDarkModeLightBackground={skill.useDarkModeLightBackground}
         isRaster={skill.isRaster}
         rasterSrc={skill.img}

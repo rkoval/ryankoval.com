@@ -10,6 +10,8 @@ export interface RawSkill {
   name: string;
   /** Descriptive label for aria-label when name alone is ambiguous (e.g. Go → Go programming language). */
   label?: string;
+  /** Homepage display name when name is too generic for SEO (not used on formal résumé). */
+  seoName?: string;
   tag: string;
   website?: string;
   resume?: boolean;

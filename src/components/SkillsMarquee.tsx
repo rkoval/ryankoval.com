@@ -18,7 +18,7 @@ const rawSkills: MarqueeSkill[] = skillsAll
   .map((s) => ({
     spriteKey: s.spriteKey as string,
     href: s.website,
-    title: s.name,
+    title: s.seoName ?? s.name,
     ariaLabel: s.label,
     useDarkModeLightBackground: s.useDarkModeLightBackground,
     isRaster: s.isRaster,

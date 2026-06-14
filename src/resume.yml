@@ -31,8 +31,9 @@ skills:
   - skill: &golang
       name: Go
       label: Go programming language
+      seoName: Golang
       tag: Programming Languages
-      website: https://golang.org/
+      website: https://go.dev/
       resume: true
       picture:
         src: '/images/skills/golang.svg'
