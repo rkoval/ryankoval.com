@@ -7,6 +7,7 @@ type MarqueeSkill = {
   spriteKey: string;
   href?: string;
   title: string;
+  ariaLabel?: string;
   useDarkModeLightBackground: boolean;
   isRaster: boolean;
   rasterSrc?: string;
@@ -18,6 +19,7 @@ const rawSkills: MarqueeSkill[] = skillsAll
     spriteKey: s.spriteKey as string,
     href: s.website,
     title: s.name,
+    ariaLabel: s.label,
     useDarkModeLightBackground: s.useDarkModeLightBackground,
     isRaster: s.isRaster,
     rasterSrc: s.img,
@@ -74,7 +76,7 @@ export function SkillsMarquee() {
       <div ref={containerRef} className="skills-marquee-scroll">
         <div className="skills-marquee-grid">
           {tripled.map((skill, i) => (
-            <SkillTile key={i} title={skill.title} href={skill.href} variant="marquee">
+            <SkillTile key={i} title={skill.title} ariaLabel={skill.ariaLabel} href={skill.href} variant="marquee">
               <SkillIcon
                 spriteKey={skill.spriteKey}
                 title={skill.title}

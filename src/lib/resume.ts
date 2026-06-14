@@ -13,6 +13,7 @@ export {profile, socials, linkedInUrl} from '@/lib/resume-basics';
 
 export interface Skill {
   name: string;
+  label?: string;
   tag: string;
   website?: string;
   img?: string;
@@ -34,6 +35,7 @@ export const skillsAll: Skill[] = doc.skills.map(({skill}) => {
   const isRaster = /\.(png|jpe?g)$/i.test(skill.picture?.src ?? '');
   return {
     name: skill.name,
+    label: skill.label,
     tag: skill.tag,
     website: skill.website,
     img: isRaster ? resolveSkillImg(skill.picture?.src) : undefined,
@@ -93,6 +95,7 @@ export const interests: string[] = doc.basics.interests ?? [];
 
 export interface ExperienceSkill {
   name: string;
+  label?: string;
   spriteKey?: string;
   /** Bundled URL for raster skills only. */
   img?: string;
@@ -140,6 +143,7 @@ export const experience: ExperienceItem[] = (() => {
             const isRaster = /\.(png|jpe?g)$/i.test(s.picture?.src ?? '');
             return {
               name: s.name,
+              label: s.label,
               spriteKey: skillSpriteKey(s.picture?.src),
               img: isRaster ? resolveSkillImg(s.picture?.src) : undefined,
               website: s.website,

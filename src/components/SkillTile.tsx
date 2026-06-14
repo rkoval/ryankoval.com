@@ -3,12 +3,13 @@ import {cn} from '@/lib/utils';
 
 type SkillTileProps = {
   title: string;
+  ariaLabel?: string;
   href?: string;
   variant: 'marquee' | 'experience';
   children: ReactNode;
 };
 
-export function SkillTile({title, href, variant, children}: SkillTileProps) {
+export function SkillTile({title, ariaLabel, href, variant, children}: SkillTileProps) {
   const tileClass = cn('skill-tile', variant === 'marquee' ? 'skill-tile--marquee' : 'skill-tile--experience');
   const labelClass = cn(
     'skill-tile-label',
@@ -24,7 +25,14 @@ export function SkillTile({title, href, variant, children}: SkillTileProps) {
 
   if (href) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" title={title} className={tileClass}>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        title={title}
+        aria-label={ariaLabel ?? title}
+        className={tileClass}
+      >
         {inner}
       </a>
     );

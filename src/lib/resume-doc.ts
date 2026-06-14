@@ -8,6 +8,8 @@ export interface RawPicture {
 
 export interface RawSkill {
   name: string;
+  /** Descriptive label for aria-label when name alone is ambiguous (e.g. Go → Go programming language). */
+  label?: string;
   tag: string;
   website?: string;
   resume?: boolean;

@@ -154,7 +154,7 @@ function ReadMoreDescription({text, className = ''}: {text: string; className?: 
 function ExperienceSkillIcon({skill}: {skill: ExperienceSkill}) {
   if (!skill.spriteKey) return null;
   return (
-    <SkillTile title={skill.name} href={skill.website} variant="experience">
+    <SkillTile title={skill.name} ariaLabel={skill.label} href={skill.website} variant="experience">
       <SkillIcon
         spriteKey={skill.spriteKey}
         title={skill.name}
