@@ -1,5 +1,5 @@
 import {createFileRoute} from '@tanstack/react-router';
-import {FaDownload} from 'react-icons/fa';
+import {Download} from 'lucide-react';
 import {TopNav} from '@/components/TopNav';
 import {SiteFooter} from '@/components/SiteFooter';
 import {
@@ -127,7 +127,7 @@ function ResumePage() {
             download={RESUME_PDF.downloadName.light}
             className="resume-print-btn"
           >
-            <FaDownload size={15} />
+            <Download size={15} />
             <span>Download PDF – Light Mode</span>
           </a>
           <a

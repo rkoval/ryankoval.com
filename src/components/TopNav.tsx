@@ -1,8 +1,6 @@
 import {useState} from 'react';
 import {Link} from '@tanstack/react-router';
-import {FaGithub, FaLinkedin, FaBookmark, FaGlobe} from 'react-icons/fa';
-import {Pizza} from 'lucide-react';
-import type {IconType} from 'react-icons';
+import {Bookmark, Github, Globe, Linkedin, Pizza, type LucideIcon} from 'lucide-react';
 import {socials} from '@/lib/resume-basics';
 import {Button} from '@/components/ui/button';
 import {cn} from '@/lib/utils';
@@ -19,12 +17,12 @@ const navLinkClass =
 const mobileNavLinkClass =
   'block rounded-md px-3.5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary [&.active]:bg-secondary';
 
-function socialIcon(network: string): IconType {
+function socialIcon(network: string): LucideIcon {
   const n = network.toLowerCase();
-  if (n.includes('github')) return FaGithub;
-  if (n.includes('linkedin')) return FaLinkedin;
-  if (n.includes('bookmark')) return FaBookmark;
-  return FaGlobe;
+  if (n.includes('github')) return Github;
+  if (n.includes('linkedin')) return Linkedin;
+  if (n.includes('bookmark')) return Bookmark;
+  return Globe;
 }
 
 function MenuToggleIcon({open}: {open: boolean}) {
@@ -47,22 +45,22 @@ function MenuToggleIcon({open}: {open: boolean}) {
 function SocialLinks() {
   return (
     <>
-      {socials.map((s) => (
-        <a
-          key={s.network}
-          href={s.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={s.network}
-          title={s.network}
-          className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-        >
-          {(() => {
-            const Icon = socialIcon(s.network);
-            return <Icon size={18} />;
-          })()}
-        </a>
-      ))}
+      {socials.map((s) => {
+        const Icon = socialIcon(s.network);
+        return (
+          <a
+            key={s.network}
+            href={s.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={s.network}
+            title={s.network}
+            className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+          >
+            <Icon size={18} />
+          </a>
+        );
+      })}
       <a
         href="https://ryankoval.pizza"
         target="_blank"
