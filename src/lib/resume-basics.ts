@@ -23,6 +23,16 @@ export const profile = {
   resumeUrl: 'https://ryankoval.com/resume',
 };
 
+/** Static résumé PDF downloads (regenerate with `bun run generate-resume-pdf`). */
+export const RESUME_PDF = {
+  light: '/ryan-koval-resume.pdf',
+  dark: '/ryan-koval-resume-dark.pdf',
+  downloadName: {
+    light: 'ryan-koval-resume.pdf',
+    dark: 'ryan-koval-resume-dark.pdf',
+  },
+} as const;
+
 export const socials: Social[] = [
   ...(doc.basics.profiles ?? []).map((p) => ({
     network: p.network,

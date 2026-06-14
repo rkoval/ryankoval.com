@@ -1,6 +1,5 @@
-import {useRef} from 'react';
 import {createFileRoute} from '@tanstack/react-router';
-import {FaPrint} from 'react-icons/fa';
+import {FaDownload} from 'react-icons/fa';
 import {TopNav} from '@/components/TopNav';
 import {SiteFooter} from '@/components/SiteFooter';
 import {
@@ -14,6 +13,7 @@ import {
   links,
   type ExperienceItem,
 } from '@/lib/resume';
+import {RESUME_PDF} from '@/lib/resume-basics';
 import {
   OG_IMAGES,
   OG_IMAGE_DIMENSIONS,
@@ -115,43 +115,28 @@ function ExperienceSection({item}: {item: ExperienceItem}) {
 }
 
 function ResumePage() {
-  const pageRef = useRef<HTMLDivElement>(null);
-
-  const printDark = () => {
-    const page = pageRef.current;
-    page?.classList.add('print-dark');
-    document.documentElement.classList.add('print-dark');
-    window.print();
-    page?.classList.remove('print-dark');
-    document.documentElement.classList.remove('print-dark');
-  };
-
   return (
-    <div className="resume-page" ref={pageRef}>
+    <div className="resume-page">
       <TopNav />
 
       <div className="resume-scroll-x">
         <div className="resume-column">
         <div className="resume-print-actions print-hide">
-          <button
-            type="button"
-            onClick={() => window.print()}
+          <a
+            href={RESUME_PDF.light}
+            download={RESUME_PDF.downloadName.light}
             className="resume-print-btn"
-            aria-label="Print or save as PDF"
-            title="Print / Save as PDF"
           >
-            <FaPrint size={15} />
-            <span>Print / Save as PDF - Light Mode</span>
-          </button>
-          <button
-            type="button"
-            onClick={printDark}
+            <FaDownload size={15} />
+            <span>Download PDF — Light Mode</span>
+          </a>
+          <a
+            href={RESUME_PDF.dark}
+            download={RESUME_PDF.downloadName.dark}
             className="resume-print-dark-link"
-            aria-label="Print or save as PDF in dark mode"
-            title="Print / Save as PDF (dark mode)"
           >
             … or Dark Mode
-          </button>
+          </a>
         </div>
 
         <div className="resume-zoom-shell">

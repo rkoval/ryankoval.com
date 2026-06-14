@@ -910,6 +910,15 @@
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+  /* Preview/PDF engines mis-render glows as green blocks — drop them in print. */
+  .resume-page.print-dark .resume-sheet,
+  .resume-page.print-dark .resume-sheet.sheet {
+    box-shadow: none !important;
+  }
+  .resume-page.print-dark .resume-ul > li::before,
+  .resume-page.print-dark .hanging-list > li::before {
+    box-shadow: none !important;
+  }
 
   /* ---- Layout resets shared by both modes ---- */
   /* Render at true US-Letter size (undo the screen zoom) */
@@ -937,6 +946,7 @@
     margin: 0 auto !important;
     border-radius: 0 !important;
     page-break-after: always;
+    box-shadow: none !important;
   }
   .resume-page:not(.print-dark) .resume-sheet,
   .resume-page:not(.print-dark) .resume-sheet.sheet {
@@ -946,6 +956,12 @@
   }
   .resume-sheet:last-child {
     page-break-after: auto;
+  }
+
+  /* All print/PDF: solid bullet dots only (no color-mix glow — Preview draws squares). */
+  .resume-sheet .resume-ul > li::before,
+  .hanging-list > li::before {
+    box-shadow: none !important;
   }
 }
 

@@ -19,3 +19,13 @@ Why this matters:
 - `.nvmrc` pins **Node v22.22.0** (Vite requires 20.19+ or 22.12+)
 - `bun` is installed under that nvm Node (`~/.nvm/versions/node/v22.22.0/bin/bun`), not the system default
 - The shell default (e.g. v22.2.0) leaves `bun: command not found` and breaks `bun run build`
+
+## Résumé PDFs
+
+After changes to `src/resume.yml` or résumé/print CSS, regenerate static downloads (dev server must be running on port 8080):
+
+```bash
+export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use && bun run generate-resume-pdf
+```
+
+Writes `public/ryan-koval-resume.pdf` and `public/ryan-koval-resume-dark.pdf`.
