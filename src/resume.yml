@@ -818,9 +818,9 @@ work:
 
       DGX Cloud is built on NVIDIA-accelerated infrastructure and runs across CSPs and NVIDIA Cloud Partners. This ensures that the software and operational patterns proven in DGX Cloud are directly applicable across the ecosystem.
     highlights:
-      - Promoted to Engineering Manager within 4 months in an org of 105+ to create and lead the Product Engineering team of 7+, transforming a break/fix tool into a scalable, general-purpose automation platform overseeing $1B+ in hardware.
-      - Introduced product personas, a shared component library, formal UX standards, and a product-driven mindset across engineering, shifting development toward cohesive, user-centered design and observability-driven workflows.
-      - Improved product quality and developer velocity by introducing Playwright-based end-to-end testing, static analysis tools, AI-assisted code reviews, and internal enablement sessions.
+      - Managed an 8+ member Product Engineering team within a 105+ person org, transforming a break/fix tool into a scalable, general-purpose automation platform for $1B+ in hardware infrastructure.
+      - Introduced product personas, formal UX standards, and fluid user feedback channels to foster a product-driven mindset across engineering and shift development toward cohesive, user-centered design.
+      - Improved product quality and developer velocity by introducing a shared component library, Playwright-based end-to-end testing, static analysis tools, AI-assisted code reviews, and internal enablement sessions.
     skills:
       - *golang
       - *typescript
@@ -854,8 +854,8 @@ work:
     endDate: '2025-06-02'
     summary: The Styled by Collective is a private client personal styling firm leveraging elite human expertise with cutting-edge technology to offer seamless and exclusive high-touch wardrobe management experiences. We are redefining how private clients, retailers and industry professionals engage with personal style—powered by our proprietary digital platform. What began as a luxury styling service business has evolved into a category-defining fashion-tech company.
     highlights:
-      - Ryan led all engineering and product efforts to design, architect, and implement an ERP/CRM system for blind inventory management of fashion apparel, catering to private client luxury styling services employed internally and by major retailers.
-      - The platform managed over $2.8M in yearly client spend and maintained a consistent 30% keep rate for high-value luxury goods, often exceeding $20k per item.
+      - Led all engineering and product efforts to design, architect, and implement an ERP/CRM system for blind inventory management of fashion apparel, serving private client luxury styling services used internally and by major retailers.
+      - The platform managed over $2.8M in annual client spend and maintained a consistent 30% keep rate for high-value luxury goods, often exceeding $20k per item.
     skills:
       - *typescript
       - *cursor
@@ -910,8 +910,8 @@ work:
       style: 'background-color: #012677;'
     startDate: '2022-04-11'
     highlights:
-      - Ryan founded the consultancy to specialize in world-class software engineering, architecture, product, and management services.
-      - "Successfully clients included Slammin' Backgammon, Jam Chat, and The Styled by Collective."
+      - Founded the consultancy to specialize in world-class software engineering, architecture, product, and management services.
+      - "Successfully delivered solutions to clients including Slammin' Backgammon, Viva la Mahj, Jam Chat, and The Styled by Collective."
     skills:
       - *typescript
       - *javascript
@@ -1030,9 +1030,9 @@ work:
       - *git
       - *linux
     highlights:
-      - Working primarily within the Guilded team after its acquisition, Ryan directly managed 6+ engineers by facilitating the RoGRO corporate review process and by providing radical candor to bolster the performance of his direct reports.
-      - He served as technical lead on 7+ cross-functional initiatives involving 40+ collaborators across engineering, design, trust & safety, and community teams.
-      - 'High-impact project leadership includes: a full editor rewrite; the Roblox universal rich text initiative; public-facing bot REST API; scalable big data science ETLs; CI/CD optimization and developer experience enhancements; Roblox/Guilded OAuth integration; a ChatGPT-powered multiplayer AI chat bot'
+      - Directly managed 6+ engineers on the Guilded team after its acquisition, facilitating the RoGRO corporate review process and providing radical candor to bolster direct-report performance.
+      - Served as technical lead on 7+ cross-functional initiatives involving 40+ collaborators across engineering, design, trust & safety, and community teams.
+      - 'High-impact project leadership includes: a full editor rewrite; the Roblox universal rich text initiative; a public-facing bot REST API; scalable big data science ETLs; CI/CD optimization and developer experience enhancements; Roblox/Guilded OAuth integration; and a ChatGPT-powered multiplayer AI chat bot'
   - company:
       name: Guilded
       description: Y Combinator '17
@@ -1083,10 +1083,10 @@ work:
       - *git
       - *linux
     highlights:
-      - Ryan was a core member of the original engineering team of the Discord competitor that secured a $7M Series A funding in April 2020 and ultimately the $90M acquisition by Roblox in August 2021.
-      - He spearheaded recruitment and management helping grow the engineering team from 7 to 21+ people with less than 15% turnover over two years.
-      - He employed growth engineering to elevate the product from 0 to 110k+ DAU/0.9M+ MAU over 3 years
-      - Involved with virtually everything, he directed many product and engineering initiatives from end-to-end, including gathering user requirements, collaborating with the UX design team, and shipping code to production
+      - Joined the original engineering team of the Discord competitor that secured a $7M Series A round in April 2020 and ultimately a $90M acquisition by Roblox in August 2021.
+      - Spearheaded recruiting and management, helping grow the engineering team from 7 to 21+ people with less than 15% turnover over two years.
+      - Applied growth engineering to elevate the product from 0 to 110k+ DAU/0.9M+ MAU over 3 years.
+      - Directed many product and engineering initiatives end-to-end across virtually everything, including gathering user requirements, collaborating with the UX design team, and shipping code to production.
   - company:
       name: LTK
       description: formerly rewardStyle and LIKEtoKNOW.it
@@ -1136,11 +1136,11 @@ work:
       - *git
       - *linux
     highlights:
-      - Ryan led front-end development for a self-service collaborations portal, where he managed a global team
-      - He helped craft two major versions of a screen-scraping infrastructure used to gather data from all influencers for a customer-facing recommendation engine and general business intelligence
-      - He helped transition the organization from a two-week deploy cycle to rapid continuous delivery by designing and implementing new core infrastructure patterns
-      - He revived multiple legacy Node.js analytics projects plagued with stability problems and general disrepair
-      - He overhauled infrastructure configuration for another failing project in charge of syncing critical internal data throughout multiple systems
+      - Oversaw front-end development for a self-service collaborations portal, managing a global team.
+      - Built two major versions of screen-scraping infrastructure used to gather influencer data for a customer-facing recommendation engine and general business intelligence.
+      - Moved the organization from a two-week deploy cycle to rapid continuous delivery by designing and implementing new core infrastructure patterns.
+      - Revived multiple legacy Node.js analytics projects plagued by stability and maintainability problems.
+      - Overhauled infrastructure configuration for another failing project responsible for syncing critical internal data across multiple systems.
   - company:
       name: Bottle Rocket Studios
     resume: true
@@ -1168,7 +1168,7 @@ work:
       - *linux
       - *intellij
     highlights:
-      - Ryan utilized his Scala experience to rapidly accelerate development of a complex eCommerce ordering solution for multiple high profile fast food and fast casual restaurants
+      - Applied Scala expertise to rapidly accelerate development of a complex eCommerce ordering solution for multiple high-profile fast food and fast casual restaurants.
   - company:
       name: Slalom Consulting
     resume: true
@@ -1209,9 +1209,9 @@ work:
       - *sass
       - *vagrant
     highlights:
-      - Ryan constructed core components for nearly all aspects of a multi-million dollar system prison
-        telecommunication investigative tool
-      - He steered Scala-centric AWS data processing pipelines for a prominent agricultural enterprise
+      - Constructed core components for nearly all aspects of a multi-million-dollar prison
+        telecommunications investigative tool.
+      - Delivered Scala-centric AWS data processing pipelines for a prominent agricultural enterprise.
   - company:
       name: Credera
     resume: true
@@ -1247,10 +1247,10 @@ work:
       - *subversion
       - *broadleaf_commerce
     highlights:
-      - Ryan interacted with and developed for nearly all aspects of a multi-million dollar
+      - Contributed to nearly all aspects of a multi-million-dollar
         automotive eCommerce website, which contained over 50 technology integrations
         and spanned both desktop & mobile platforms.
-      - He captained front-end integration team of a classic Spring MVC implementation for a marketing
+      - Guided the front-end integration team for a classic Spring MVC implementation of a marketing
         tool used by an international marketing giant.
   - company:
       name: Dallas Pedicabs
@@ -1274,7 +1274,7 @@ work:
       - *vim
       - *git
     highlights:
-      - Ryan overhauled unmanageable consumer-facing website for this small startup in favor
+      - Overhauled an unmanageable consumer-facing website for this small startup in favor
         of a custom WordPress solution.
   - company:
       name: Tampa Bay Radiation Oncology
@@ -1293,11 +1293,11 @@ work:
       at other major academic cancer centers across the country, so patients can receive
       their cancer care at home with support of family and friends.
     highlights:
-      - Ryan aided in various administrative jobs including faxing, mailing, filing, managing
+      - Handled various administrative tasks including faxing, mailing, filing, managing
         phone calls, and delivering packages.
-      - He coded in VBA to organize, process, and analyze physician consult spreadsheets
+      - Used VBA to organize, process, and analyze physician consult spreadsheets
         for data mining purposes.
-      - He wrote macros to increase work efficiency surrounding repetitive computer-oriented
+      - Wrote macros to increase work efficiency surrounding repetitive computer-based
         tasks such as manual database information retrieval.
 education:
   - institution: Southern Methodist University

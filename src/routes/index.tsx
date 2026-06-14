@@ -295,35 +295,22 @@ function Index() {
             </p>
             <div className="mt-8 space-y-4 text-base leading-relaxed text-resume-header">
               <p>
-                A multidisciplinary software leader with a strong foundation in engineering,
-                architecture, and product strategy. Over the course of his career, he has
-                consistently delivered high-impact solutions across diverse industries, blending
-                technical depth with a keen eye for user experience and business alignment. His work
-                spans early-stage startups to large-scale platforms, where he's driven innovation,
-                built scalable systems, and guided teams through periods of rapid growth and change.
+                Ryan is a software engineering leader with 15+ years of experience across
+                architecture, product, and engineering management. His career spans consulting,
+                startups, acquisitions, and hyperscale platforms, with a consistent focus on turning
+                complex technical domains into durable products that serve real business needs.
               </p>
               <p>
-                At the core of Ryan's approach is a belief in clarity, resilience, and continuous
-                improvement—values reflected in both the products he builds and the teams he leads.
-                Whether designing complex systems, shaping product direction, or fostering
-                high-performing engineering cultures, he brings a balance of strategic vision and
-                pragmatic execution. His leadership is defined by thoughtful collaboration,
-                accountability, and a relentless focus on delivering meaningful outcomes.
+                He brings first-hand startup-to-acquisition experience from Guilded, where he helped
+                build and scale the product through its acquisition by Roblox, then expanded into
+                engineering leadership on larger cross-functional platform work. Today at NVIDIA, he
+                leads product engineering for internal automation used to operate some of the
+                world&apos;s most demanding AI infrastructure.
               </p>
               <p>
-                While he does strive for perfection, he also realizes that there is no silver
-                bullet. Software exists purely in the confines of a business world and rarely the
-                other way around; therefore, an immaculately coded product will likely mean nothing
-                without customers or a business behind it. Ryan is firmly aware of this concept, and
-                his design process is built around it. As such, extended discussions stressing over
-                minor technical details that won't raise your bottom line or solve for long-term
-                engineering problems are often hard for him to prioritize (although they can be fun
-                to muse about in a social setting).
-              </p>
-              <p>
-                If you are looking for technical prowess that can architect and implement solutions
-                of unparalleled quality and business value, look no further: scroll to see his
-                skills and experience, view his formal resume, or contact him!
+                Across roles as engineer, manager, founder, consultant, and CTO, he has stayed close
+                to both the code and the customer. He is strongest where technical execution,
+                product judgment, team development, and business context all matter at once.
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
