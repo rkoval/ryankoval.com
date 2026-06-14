@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react';
-import 'highlight.js/styles/github-dark.css';
 
 /** Lazy per-language loaders so highlight.js grammars are only fetched when used. */
 const loaders: Record<string, () => Promise<{default: unknown}>> = {
@@ -20,6 +19,10 @@ const aliases: Record<string, string> = {
 export function CodeHighlight({code, language}: {code: string; language?: string}) {
   const [html, setHtml] = useState<string | null>(null);
   const lang = language?.toLowerCase();
+
+  useEffect(() => {
+    void import('highlight.js/styles/github-dark.css');
+  }, []);
 
   useEffect(() => {
     let active = true;

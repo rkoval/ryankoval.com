@@ -2,6 +2,7 @@ import {createFileRoute, Link, notFound, useRouter} from '@tanstack/react-router
 import {TopNav} from '@/components/TopNav';
 import {Markdown} from '@/components/blog/Markdown';
 import {getPostBySlug, formatPostDate, titleSegments} from '@/content/blog/posts';
+import blogCss from '../blog.css?url';
 import {absoluteUrl, canonicalLink, jsonLdScript, socialMeta} from '@/lib/seo';
 
 export const Route = createFileRoute('/blog_/$slug')({
@@ -30,7 +31,7 @@ export const Route = createFileRoute('/blog_/$slug')({
           publishedTime: post.date,
         }),
       ],
-      links: [canonicalLink(path)],
+      links: [{rel: 'stylesheet', href: blogCss}, canonicalLink(path)],
       scripts: [
         jsonLdScript({
           '@context': 'https://schema.org',

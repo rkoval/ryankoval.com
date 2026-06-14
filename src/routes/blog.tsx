@@ -3,6 +3,7 @@ import {TopNav} from '@/components/TopNav';
 import {PostCard} from '@/components/blog/PostCard';
 import {SiteFooter} from '@/components/SiteFooter';
 import {sortedPosts} from '@/content/blog/posts';
+import blogCss from '../blog.css?url';
 import {OG_IMAGES, canonicalLink, socialMeta} from '@/lib/seo';
 
 const BLOG_TITLE = 'Blog — Ryan A. Koval';
@@ -21,7 +22,7 @@ export const Route = createFileRoute('/blog')({
         image: OG_IMAGES.home,
       }),
     ],
-    links: [canonicalLink('/blog')],
+    links: [{rel: 'stylesheet', href: blogCss}, canonicalLink('/blog')],
   }),
   component: BlogPage,
 });

@@ -1,0 +1,133 @@
+@media (max-width: 479px) {
+  /* Inside content-align, negate full card inset so cover images bleed like PostCard. */
+  .blog-cover-bleed-xs {
+    margin-inline: calc(-1 * var(--content-pad-x));
+  }
+}
+
+/* Match PostCard image padding at the xs breakpoint (480px+). */
+@media (min-width: 480px) and (max-width: 639px) {
+  .blog-cover-pad-xs {
+    padding: 1.25rem;
+    padding-left: 0;
+  }
+}
+
+/* ============================================================
+   Blog prose — long-form article styling for markdown + JSX posts
+   ============================================================ */
+.blog-prose {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--resume-body);
+}
+.blog-prose > * + * {
+  margin-top: 1.1em;
+}
+.blog-prose h2,
+.blog-prose h3,
+.blog-prose h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--resume-header);
+  line-height: 1.25;
+}
+.blog-prose h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.blog-prose h3 {
+  font-size: 1.25rem;
+  margin-top: 1.75rem;
+}
+.blog-prose h4 {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+}
+.blog-prose a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.blog-prose a:hover {
+  color: var(--foreground);
+}
+.blog-prose strong {
+  color: var(--resume-header);
+  font-weight: 600;
+}
+.blog-prose ul,
+.blog-prose ol {
+  padding-left: 1.4rem;
+  margin-top: 1em;
+}
+.blog-prose ul {
+  list-style: disc;
+}
+.blog-prose ol {
+  list-style: decimal;
+}
+.blog-prose li {
+  margin-top: 0.4em;
+}
+.blog-prose li > ul,
+.blog-prose li > ol {
+  margin-top: 0.4em;
+}
+.blog-prose :not(pre) > code {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 0.875em;
+  background: var(--secondary);
+  color: var(--foreground);
+  padding: 0.15em 0.4em;
+  border-radius: 0.3rem;
+}
+.blog-prose pre {
+  background: oklch(0.12 0.015 256);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.blog-prose pre code {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  background: transparent;
+  padding: 0;
+}
+.blog-prose img {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  max-width: 100%;
+  height: auto;
+}
+.blog-prose figure {
+  margin-top: 1.5rem;
+}
+.blog-prose figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+  text-align: center;
+}
+.blog-prose abbr {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+.blog-prose sup {
+  font-size: 0.72em;
+  line-height: 0;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.55em;
+}
+.blog-prose .blog-footnote {
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+}
+.blog-prose .blog-footnote sup {
+  font-weight: 600;
+  top: -0.35em;
+}

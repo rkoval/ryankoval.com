@@ -14,6 +14,7 @@ import {
   type ExperienceItem,
 } from '@/lib/resume';
 import {RESUME_PDF} from '@/lib/resume-basics';
+import resumeCss from '../resume.css?url';
 import {
   OG_IMAGES,
   OG_IMAGE_DIMENSIONS,
@@ -45,7 +46,7 @@ export const Route = createFileRoute('/resume')({
       {property: 'og:image:height', content: OG_IMAGE_DIMENSIONS.height},
       {property: 'og:image:type', content: OG_IMAGE_DIMENSIONS.type},
     ],
-    links: [canonicalLink('/resume')],
+    links: [{rel: 'stylesheet', href: resumeCss}, canonicalLink('/resume')],
     scripts: [
       jsonLdScript({
         '@context': 'https://schema.org',

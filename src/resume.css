@@ -1,0 +1,393 @@
+@import 'paper-css/paper.css';
+
+/* ============================================================
+   Formal résumé document (clone of resume.ryankoval.com look)
+   Light "letter / sheet" paper style, print-friendly.
+   ============================================================ */
+.resume-page {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  /* Use the exact print metrics on screen too, so screen + print are 1:1.
+     Only colors differ between the two (see @media print below). */
+  font-size: 12px;
+  line-height: 1.42;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Sheet stack — nav/footer stay full width; only .sheet-container children scale. */
+.resume-sheets {
+  --resume-sheet-column-width: min(
+    calc(100vw - 2 * var(--page-gutter)),
+    calc(var(--resume-sheet-width) * var(--resume-scale-max))
+  );
+  padding-block: 32px 64px;
+  padding-inline: var(--page-gutter);
+  /* Fallback when fit zoom is unsupported: pan wide sheets (html/body clip overflow-x). */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*
+ * Fit each letter page to viewport width (PDF-viewer initial scale).
+ * Safari ignores zoom: min(calc(...)) and reflows text at viewport width instead.
+ * Container query scale: outer box width = fit target; inner sheet scales to 100cqw.
+ */
+.sheet-container {
+  container-type: inline-size;
+  width: var(--resume-sheet-column-width);
+  aspect-ratio: 216 / 279;
+  margin-inline: auto;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.sheet-container > .sheet {
+  width: var(--resume-sheet-width);
+  height: var(--resume-sheet-height);
+  transform: scale(calc(100cqw / var(--resume-sheet-width-px)));
+  transform-origin: top left;
+}
+
+.sheet-container:last-child {
+  margin-bottom: 0;
+}
+
+.resume-print-actions {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 12px;
+  width: var(--resume-sheet-column-width);
+  margin-inline: auto;
+  margin-bottom: 12px;
+  padding: 0;
+}
+.resume-print-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--link);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.resume-print-btn:hover {
+  color: var(--foreground);
+}
+.resume-print-dark-link {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--resume-muted);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.resume-print-dark-link:hover {
+  color: var(--foreground);
+}
+
+.resume-switcher {
+  max-width: 216mm;
+  margin: 0 auto 16px;
+}
+
+.resume-switcher-link {
+  display: inline-block;
+  color: var(--resume-green);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.resume-switcher-link:hover {
+  text-decoration: underline;
+}
+
+.resume-sheet {
+  position: relative;
+  /* Fixed US-Letter footprint on screen — identical to print so layout is 1:1 */
+  width: 216mm;
+  height: var(--resume-sheet-height);
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  background: var(--card);
+  color: var(--card-foreground);
+  padding: var(--resume-sheet-pad-y) var(--resume-sheet-pad-x);
+  box-shadow: 0 0 60px -15px oklch(0.78 0.16 160 / 0.12);
+  border: 1px solid var(--border);
+}
+
+.resume-sheet.sheet {
+  width: 216mm;
+  height: var(--resume-sheet-height);
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+.resume-center {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.resume-h1 {
+  font-family: var(--font-display);
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin: 0;
+  color: var(--resume-header);
+}
+
+.resume-subtitle {
+  font-size: 14px;
+  color: var(--resume-muted);
+  margin-top: 0;
+}
+
+.resume-contact {
+  margin: 0;
+  font-size: 14px;
+  color: var(--resume-muted);
+}
+
+.resume-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.resume-skill-list {
+  font-size: 13px;
+  color: var(--resume-body);
+  margin-top: 2px;
+  padding-top: 0;
+}
+
+.resume-hr {
+  border: 0;
+  border-top: 1px solid var(--resume-hr);
+  margin: 16px 0;
+}
+
+.resume-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resume-section {
+  position: relative;
+}
+
+.resume-date {
+  float: right;
+  font-size: 13px;
+  color: var(--resume-muted);
+  margin-left: 16px;
+}
+
+.resume-h3 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  margin: 0;
+  color: var(--resume-header);
+}
+
+.resume-company-meta {
+  font-weight: 400;
+  color: var(--resume-muted);
+  font-size: 14px;
+}
+
+.resume-footer {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 13px;
+  color: var(--resume-muted);
+}
+
+.resume-sheet .resume-ul {
+  margin: 4px 0 0 !important;
+  margin-inline-start: 0 !important;
+  padding-left: 0 !important;
+  padding-inline-start: 0 !important;
+  list-style: none !important;
+}
+.resume-sheet .resume-ul > li {
+  display: block !important;
+  position: relative !important;
+  font-size: 14px;
+  color: var(--resume-body);
+  margin: 0 0 3px !important;
+  margin-inline-start: 0 !important;
+  padding-left: 0 !important;
+  padding-inline-start: 0 !important;
+}
+.resume-sheet .resume-ul > li:last-child {
+  margin-bottom: 0 !important;
+}
+.resume-sheet .resume-ul > li::before {
+  content: '';
+  position: absolute !important;
+  left: -0.95rem;
+  top: 0.5em;
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: var(--resume-green);
+  box-shadow: 0 0 8px color-mix(in oklab, var(--resume-green) 60%, transparent);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@media (max-width: 640px) {
+  .resume-sheets {
+    padding-block: 16px 32px;
+  }
+}
+
+@page {
+  size: letter;
+  margin: 0;
+}
+
+@media print {
+  /* Print is now ONLY a recolor of the on-screen layout. The sheet metrics,
+     typography and spacing already match screen 1:1 (defined above), so the
+     only job here is: reset the screen zoom to real size, swap colors to
+     ink-on-white, and handle page breaks. */
+
+  /* ---- Light-mode print (default): recolor to ink-on-white ---- */
+  /* Clear any leftover dark theme background on the document itself */
+  html:not(.print-dark),
+  body:not(.print-dark) {
+    background: #fff !important;
+    background-color: #fff !important;
+  }
+  /* Force light mode for the whole document */
+  .resume-page:not(.print-dark),
+  .resume-page:not(.print-dark) * {
+    color: #111 !important;
+    border-color: #ccc !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .resume-page:not(.print-dark) {
+    background: #fff !important;
+    min-height: 0;
+  }
+  /* Match brand green but darkened for strong contrast on white paper */
+  .resume-page:not(.print-dark) a {
+    color: #0f7a4d !important;
+  }
+  .resume-page:not(.print-dark) .resume-ul > li::before,
+  .resume-page:not(.print-dark) .hanging-list > li::before {
+    background: #0f7a4d !important;
+    box-shadow: none !important;
+  }
+  .resume-page:not(.print-dark) .resume-date {
+    color: #666 !important;
+  }
+  .resume-page:not(.print-dark) .resume-hr {
+    border-top-color: #f0f0f0 !important;
+  }
+  .resume-page:not(.print-dark) .resume-footer {
+    color: #999 !important;
+  }
+
+  /* ---- Dark-mode print: keep screen colors, force exact color rendering ---- */
+  html.print-dark,
+  body.print-dark {
+    background: var(--background) !important;
+    background-color: var(--background) !important;
+  }
+  .resume-page.print-dark {
+    background: var(--background) !important;
+    min-height: 0;
+  }
+  .resume-page.print-dark .resume-sheet,
+  .resume-page.print-dark .resume-sheet.sheet {
+    background: var(--card, var(--background)) !important;
+  }
+  .resume-page.print-dark,
+  .resume-page.print-dark * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  /* Preview/PDF engines mis-render glows as green blocks — drop them in print. */
+  .resume-page.print-dark .resume-sheet,
+  .resume-page.print-dark .resume-sheet.sheet {
+    box-shadow: none !important;
+  }
+  .resume-page.print-dark .resume-ul > li::before,
+  .resume-page.print-dark .hanging-list > li::before {
+    box-shadow: none !important;
+  }
+
+  /* ---- Layout resets shared by both modes ---- */
+  /* Render at true US-Letter size (undo the screen fit zoom) */
+  .resume-sheets {
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+  .sheet-container {
+    container-type: normal !important;
+    width: auto !important;
+    aspect-ratio: auto !important;
+    overflow: visible !important;
+    margin: 0 !important;
+  }
+  .sheet-container > .sheet {
+    transform: none !important;
+  }
+  .resume-sheet,
+  .resume-sheet.sheet {
+    margin: 0 auto !important;
+    border-radius: 0 !important;
+    page-break-after: always;
+    box-shadow: none !important;
+  }
+  .resume-page:not(.print-dark) .resume-sheet,
+  .resume-page:not(.print-dark) .resume-sheet.sheet {
+    background: #fff !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .resume-sheet:last-child {
+    page-break-after: auto;
+  }
+
+  /* Solid bullet dots on résumé sheets (homepage .hanging-list handled in styles.css). */
+  .resume-sheet .resume-ul > li::before {
+    box-shadow: none !important;
+  }
+}
+
+/* paper-css sets a light gray body background on screen; keep the app dark. */
+@media screen {
+  html,
+  body {
+    background-color: var(--background);
+  }
+}
