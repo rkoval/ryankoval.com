@@ -119,8 +119,7 @@ function ResumePage() {
     <div className="resume-page">
       <TopNav />
 
-      <div className="resume-scroll-x">
-        <div className="resume-column">
+      <div className="resume-sheets">
         <div className="resume-print-actions print-hide">
           <a
             href={RESUME_PDF.light}
@@ -139,11 +138,8 @@ function ResumePage() {
           </a>
         </div>
 
-        <div className="resume-zoom-shell">
-          <div className="resume-body">
-          {/* Page 1 */}
+        <div className="sheet-container">
           <div className="sheet resume-sheet">
-            {/* Header */}
             <header className="resume-center">
               <h1 className="resume-h1">{profile.name}</h1>
               <div className="resume-subtitle">{profile.title}</div>
@@ -159,7 +155,6 @@ function ResumePage() {
               </p>
             </header>
 
-            {/* Skills */}
             <div className="resume-skills-grid">
               {skillGroups.map((group) => (
                 <div key={group.category} className="resume-skill">
@@ -171,7 +166,6 @@ function ResumePage() {
 
             <hr className="resume-hr" />
 
-            {/* Experience — first page */}
             <div className="resume-rows">
               {firstPageJobs.map((item) => (
                 <ExperienceSection key={item.company + item.period} item={item} />
@@ -180,10 +174,10 @@ function ResumePage() {
 
             <footer className="resume-footer">Page 1 of 2</footer>
           </div>
+        </div>
 
-          {/* Page 2 */}
+        <div className="sheet-container">
           <div className="sheet resume-sheet">
-            {/* Experience — rest */}
             <div className="resume-rows">
               {restJobs.map((item) => (
                 <ExperienceSection key={item.company + item.period} item={item} />
@@ -192,7 +186,6 @@ function ResumePage() {
 
             <hr className="resume-hr" />
 
-            {/* Education */}
             <div className="resume-rows">
               <section className="resume-section">
                 <h3 className="resume-h3">{education.school}</h3>
@@ -204,7 +197,6 @@ function ResumePage() {
 
             <hr className="resume-hr" />
 
-            {/* Certifications */}
             <div className="resume-rows">
               <section className="resume-section">
                 <h3 className="resume-h3">Certifications</h3>
@@ -218,7 +210,6 @@ function ResumePage() {
 
             <hr className="resume-hr" />
 
-            {/* Interests */}
             <div className="resume-rows">
               <section className="resume-section">
                 <h3 className="resume-h3">Interests</h3>
@@ -230,8 +221,6 @@ function ResumePage() {
 
             <footer className="resume-footer">Page 2 of 2</footer>
           </div>
-          </div>
-        </div>
         </div>
       </div>
 
