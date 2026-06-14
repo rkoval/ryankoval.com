@@ -31,6 +31,8 @@ export default defineConfig({
       crawlLinks: true,
       autoStaticPathsDiscovery: true,
       pages: [{path: '/404'}, {path: '/error'}, ...BLOG_SLUGS.map((slug) => ({path: `/blog/${slug}`}))],
+      // Static PDFs in public/ are copied by Vite; skip them when crawling /resume links.
+      filter: ({path}) => !path.endsWith('.pdf'),
     },
   },
   vite: {

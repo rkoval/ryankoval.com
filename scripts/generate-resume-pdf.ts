@@ -17,6 +17,7 @@ async function saveResumePdf(
   if (dark) {
     await page.evaluate(() => {
       document.documentElement.classList.add('print-dark');
+      document.body.classList.add('print-dark');
       document.querySelector('.resume-page')?.classList.add('print-dark');
     });
   }
@@ -24,11 +25,11 @@ async function saveResumePdf(
   await page.waitForTimeout(500);
 
   const path = join(OUT_DIR, filename);
+  // preferCSSPageSize interacts badly with @page + fixed sheet heights and yields blank PDFs.
   await page.pdf({
     path,
     format: 'Letter',
     printBackground: true,
-    preferCSSPageSize: true,
     margin: {top: '0', right: '0', bottom: '0', left: '0'},
   });
 

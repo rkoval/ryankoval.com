@@ -82,5 +82,7 @@ export function imgStyleFromStyle(style?: string): Record<string, string> | unde
   const out: Record<string, string> = {};
   const pad = style.match(/(?:^|;)\s*padding:\s*([^;]+)/i);
   if (pad) out.padding = pad[1].trim();
+  const fit = style.match(/(?:^|;)\s*object-fit:\s*([^;]+)/i);
+  if (fit) out.objectFit = fit[1].trim();
   return Object.keys(out).length ? out : undefined;
 }
