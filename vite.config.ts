@@ -30,7 +30,7 @@ export default defineConfig({
       enabled: true,
       crawlLinks: true,
       autoStaticPathsDiscovery: true,
-      pages: BLOG_SLUGS.map((slug) => ({path: `/blog/${slug}`})),
+      pages: [{path: '/error'}, ...BLOG_SLUGS.map((slug) => ({path: `/blog/${slug}`}))],
     },
   },
   vite: {
