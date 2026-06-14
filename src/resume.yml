@@ -811,7 +811,7 @@ work:
     website: https://www.nvidia.com/en-us/data-center/dgx-cloud/
     picture:
       src: '/images/logo/nvidia.svg'
-      style: 'background-color: #000;'
+      style: 'background-color: #000; object-fit: contain;'
     startDate: '2025-09-29'
     summary: >
       DGX™ Cloud is NVIDIA’s internal cloud environment for building and operating AI at scale to support NVIDIA’s most demanding internal AI use cases. It is used to develop open source frontier and foundational models, validate new system architectures, and run production AI workloads.
@@ -987,7 +987,7 @@ work:
     website: https://www.roblox.com/
     picture:
       src: '/images/logo/roblox.svg'
-      style: 'background-color: #000;'
+      style: 'background-color: #000; padding: 8px;'
     startDate: '2021-08-21'
     endDate: '2025-01-10'
     summary: >
@@ -1148,6 +1148,7 @@ work:
     website: https://www.bottlerocketstudios.com
     picture:
       src: '/images/logo/bottlerocket.svg'
+      style: 'padding: 8px;'
     startDate: '2015-11-02'
     endDate: '2016-02-05'
     summary: Since our launch, Bottle Rocket has been at the forefront of the app revolution.
