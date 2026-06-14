@@ -6,10 +6,19 @@ export interface Social {
   username?: string;
 }
 
+function normalizeUrl(url: string): string {
+  return url.startsWith('//') ? `https:${url}` : url;
+}
+
+const linkedInProfile = doc.basics.profiles?.find((p) =>
+  p.network.toLowerCase().includes('linkedin')
+);
+
+export const linkedInUrl = linkedInProfile ? normalizeUrl(linkedInProfile.url) : undefined;
+
 export const profile = {
   name: doc.basics.name,
   title: doc.basics.label,
-  email: doc.basics.email,
   website: doc.basics.website,
   resumeUrl: 'https://ryankoval.com/resume',
 };
@@ -18,10 +27,7 @@ export const socials: Social[] = [
   ...(doc.basics.profiles ?? []).map((p) => ({
     network: p.network,
     username: p.username,
-    url: p.url.startsWith('//') ? `https:${p.url}` : p.url,
+    url: normalizeUrl(p.url),
   })),
-  ...(doc.basics.email
-    ? [{network: 'Email', url: `mailto:${doc.basics.email}?subject=ryankoval.com%20Inquiry`}]
-    : []),
   ...(doc.basics.bookmarks ? [{network: 'Bookmarks', url: doc.basics.bookmarks}] : []),
 ];

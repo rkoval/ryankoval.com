@@ -9,7 +9,7 @@ import {
 import {resolveSkillImg, resolveLogo} from '@/lib/resume-images';
 
 export type {Social} from '@/lib/resume-basics';
-export {profile, socials} from '@/lib/resume-basics';
+export {profile, socials, linkedInUrl} from '@/lib/resume-basics';
 
 export interface Skill {
   name: string;
@@ -79,6 +79,12 @@ export const skillGroups: SkillGroup[] = (() => {
 
 export const links = [
   doc.basics.website && {label: hostLabel(doc.basics.website), href: doc.basics.website},
+  ...(doc.basics.profiles ?? [])
+    .filter((p) => p.network.toLowerCase().includes('linkedin'))
+    .map((p) => {
+      const href = p.url.startsWith('//') ? `https:${p.url}` : p.url;
+      return {label: hostLabel(href), href};
+    }),
   doc.basics.portfolio && {label: hostLabel(doc.basics.portfolio), href: doc.basics.portfolio},
   doc.basics.bookmarks && {label: hostLabel(doc.basics.bookmarks), href: doc.basics.bookmarks},
 ].filter(Boolean) as {label: string; href: string}[];

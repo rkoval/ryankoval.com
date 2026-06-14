@@ -33,7 +33,7 @@ export interface RawResume {
   basics: {
     name: string;
     label: string;
-    email: string;
+    email?: string;
     website: string;
     portfolio?: string;
     bookmarks?: string;

@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {Link} from '@tanstack/react-router';
-import {FaGithub, FaLinkedin, FaEnvelope, FaBookmark, FaGlobe} from 'react-icons/fa';
+import {FaGithub, FaLinkedin, FaBookmark, FaGlobe} from 'react-icons/fa';
 import {Pizza} from 'lucide-react';
 import type {IconType} from 'react-icons';
 import {socials} from '@/lib/resume-basics';
@@ -23,7 +23,6 @@ function socialIcon(network: string): IconType {
   const n = network.toLowerCase();
   if (n.includes('github')) return FaGithub;
   if (n.includes('linkedin')) return FaLinkedin;
-  if (n.includes('email') || n.includes('mail')) return FaEnvelope;
   if (n.includes('bookmark')) return FaBookmark;
   return FaGlobe;
 }

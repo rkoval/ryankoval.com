@@ -2,6 +2,7 @@ import {createFileRoute, Link} from '@tanstack/react-router';
 import {useRef, useState} from 'react';
 import {
   profile,
+  linkedInUrl,
   experience,
   education,
   certifications,
@@ -326,13 +327,17 @@ function Index() {
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href={`mailto:${profile.email}?subject=ryankoval.com%20Inquiry`}
-                className="rounded-lg px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-                style={{background: 'var(--gradient-accent)'}}
-              >
-                Contact Me
-              </a>
+              {linkedInUrl ? (
+                <a
+                  href={linkedInUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-lg px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                  style={{background: 'var(--gradient-accent)'}}
+                >
+                  Contact Me
+                </a>
+              ) : null}
               <Link
                 to="/resume"
                 className="rounded-lg border border-border bg-secondary px-5 py-2.5 text-sm font-semibold text-resume-body transition-colors hover:bg-muted"

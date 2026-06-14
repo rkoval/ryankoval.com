@@ -163,12 +163,9 @@ function ResumePage() {
               <h1 className="resume-h1">{profile.name}</h1>
               <div className="resume-subtitle">{profile.title}</div>
               <p className="resume-contact">
-                <a href={`mailto:${profile.email}?subject=ryankoval.com%20Inquiry`}>
-                  {profile.email}
-                </a>
-                {links.map((l) => (
+                {links.map((l, i) => (
                   <span key={l.href}>
-                    {' – '}
+                    {i > 0 ? ' – ' : null}
                     <a href={l.href} target="_blank" rel="noreferrer">
                       {l.label}
                     </a>
