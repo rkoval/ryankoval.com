@@ -86,7 +86,7 @@ function CompanyHeading({
   link?: string;
 }) {
   return (
-    <h3 className="resume-h3">
+    <h2 className="resume-h2">
       {link ? (
         <a href={link} target="_blank" rel="noreferrer">
           {company}
@@ -97,7 +97,7 @@ function CompanyHeading({
       {meta ? <span className="resume-company-meta"> ({meta})</span> : null}
       <span className="text-white"> · </span>
       <span>{role}</span>
-    </h3>
+    </h2>
   );
 }
 
@@ -117,7 +117,7 @@ function ExperienceSection({item}: {item: ExperienceItem}) {
 
 function ResumePage() {
   return (
-    <div className="resume-page">
+    <main className="resume-page">
       <TopNav />
 
       <div className="resume-sheets">
@@ -159,7 +159,7 @@ function ResumePage() {
             <div className="resume-skills-grid">
               {skillGroups.map((group) => (
                 <div key={group.category} className="resume-skill">
-                  <h3 className="resume-h3">{group.category}</h3>
+                  <h2 className="resume-h2">{group.category}</h2>
                   <div className="resume-skill-list">{group.skills.join(', ')}</div>
                 </div>
               ))}
@@ -189,7 +189,7 @@ function ResumePage() {
 
             <div className="resume-rows">
               <section className="resume-section">
-                <h3 className="resume-h3">{education.school}</h3>
+                <h2 className="resume-h2">{education.school}</h2>
                 <ul className="resume-ul">
                   <li>{education.degree}</li>
                 </ul>
@@ -200,7 +200,7 @@ function ResumePage() {
 
             <div className="resume-rows">
               <section className="resume-section">
-                <h3 className="resume-h3">Certifications</h3>
+                <h2 className="resume-h2">Certifications</h2>
                 <ul className="resume-ul">
                   {certifications.map((c) => (
                     <li key={c.label}>{c.label}</li>
@@ -213,7 +213,7 @@ function ResumePage() {
 
             <div className="resume-rows">
               <section className="resume-section">
-                <h3 className="resume-h3">Interests</h3>
+                <h2 className="resume-h2">Interests</h2>
                 <ul className="resume-ul">
                   <li>{interests.join(', ')}</li>
                 </ul>
@@ -226,6 +226,6 @@ function ResumePage() {
       </div>
 
       <SiteFooter />
-    </div>
+    </main>
   );
 }

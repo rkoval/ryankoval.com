@@ -1,29 +1,37 @@
 /**
  * Run Lighthouse against a URL and write HTML + JSON reports.
- * Usage: bun run scripts/lighthouse-report.ts [url]
+ * Usage: bun run scripts/lighthouse-report.ts [url] [mobile|desktop]
  */
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import * as chromeLauncher from 'chrome-launcher';
 import lighthouse from 'lighthouse';
+import desktopConfig from 'lighthouse/core/config/desktop-config.js';
 
 const url = process.argv[2] ?? 'https://ryankoval.com';
+const formFactor = process.argv[3] === 'desktop' ? 'desktop' : 'mobile';
 const outDir = path.join(process.cwd(), 'lighthouse-reports');
-const host = new URL(url).hostname.replace(/\./g, '-');
+const { hostname, pathname } = new URL(url);
+const host = hostname.replace(/\./g, '-');
+const pathSlug = pathname.replace(/^\/|\/$/g, '').replace(/\//g, '-') || 'home';
 const stamp = new Date().toISOString().replace(/[:.]/g, '-');
-const baseName = `${host}-${stamp}`;
+const baseName = `${host}-${pathSlug}-${formFactor}-${stamp}`;
 
 const chrome = await chromeLauncher.launch({
   chromeFlags: ['--headless', '--no-sandbox', '--disable-gpu'],
 });
 
 try {
-  const result = await lighthouse(url, {
-    port: chrome.port,
-    output: ['html', 'json'],
-    logLevel: 'error',
-    onlyCategories: ['accessibility', 'performance', 'best-practices', 'seo'],
-  });
+  const result = await lighthouse(
+    url,
+    {
+      port: chrome.port,
+      output: ['html', 'json'],
+      logLevel: 'error',
+      onlyCategories: ['accessibility', 'performance', 'best-practices', 'seo'],
+    },
+    formFactor === 'desktop' ? desktopConfig : undefined
+  );
 
   if (!result) {
     throw new Error('Lighthouse returned no result');
@@ -49,11 +57,13 @@ try {
   await writeFile(htmlPath, htmlReport);
   await writeFile(jsonPath, jsonReport);
 
+  const toScore = (raw: number | null | undefined) => (raw == null ? null : Math.round(raw * 100));
+
   const scores = {
-    performance: Math.round((lhr.categories.performance?.score ?? 0) * 100),
-    accessibility: Math.round((lhr.categories.accessibility?.score ?? 0) * 100),
-    bestPractices: Math.round((lhr.categories['best-practices']?.score ?? 0) * 100),
-    seo: Math.round((lhr.categories.seo?.score ?? 0) * 100),
+    performance: toScore(lhr.categories.performance?.score),
+    accessibility: toScore(lhr.categories.accessibility?.score),
+    bestPractices: toScore(lhr.categories['best-practices']?.score),
+    seo: toScore(lhr.categories.seo?.score),
   };
 
   const a11yIds = new Set(lhr.categories.accessibility.auditRefs.map((r) => r.id));
@@ -66,7 +76,21 @@ try {
       displayValue: a.displayValue ?? null,
     }));
 
-  console.log(JSON.stringify({ finalUrl: lhr.finalUrl, fetchTime: lhr.fetchTime, scores, failedA11y, reports: { html: htmlPath, json: jsonPath } }, null, 2));
+  console.log(
+    JSON.stringify(
+      {
+        url,
+        formFactor,
+        finalUrl: lhr.finalUrl,
+        fetchTime: lhr.fetchTime,
+        scores,
+        failedA11y,
+        reports: { html: htmlPath, json: jsonPath },
+      },
+      null,
+      2
+    )
+  );
 } finally {
   await chrome.kill();
 }
