@@ -127,7 +127,7 @@ function ResumePage() {
             className="resume-print-btn"
           >
             <FaDownload size={15} />
-            <span>Download PDF — Light Mode</span>
+            <span>Download PDF – Light Mode</span>
           </a>
           <a
             href={RESUME_PDF.dark}

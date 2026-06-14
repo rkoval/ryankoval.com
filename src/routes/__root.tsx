@@ -10,9 +10,24 @@ import {
 import {useEffect, type ReactNode} from 'react';
 
 import appCss from '../styles.css?url';
+import inter400 from '@fontsource/inter/400.css?url';
+import inter500 from '@fontsource/inter/500.css?url';
+import inter600 from '@fontsource/inter/600.css?url';
+import spaceGrotesk400 from '@fontsource/space-grotesk/400.css?url';
+import spaceGrotesk600 from '@fontsource/space-grotesk/600.css?url';
+import spaceGrotesk700 from '@fontsource/space-grotesk/700.css?url';
 import {analyticsHeadScripts} from '../components/Analytics';
 import {SkillImageFilters} from '../components/SkillImageFilters';
 import {reportLovableError} from '../lib/lovable-error-reporting';
+
+const FONT_STYLESHEETS = [
+  inter400,
+  inter500,
+  inter600,
+  spaceGrotesk400,
+  spaceGrotesk600,
+  spaceGrotesk700,
+] as const;
 
 function NotFoundComponent() {
   return (
@@ -90,10 +105,9 @@ export const Route = createRootRouteWithContext<{queryClient: QueryClient}>()({
     scripts: analyticsHeadScripts(),
     links: [
       {rel: 'icon', href: '/favicon.ico'},
-      {
-        rel: 'stylesheet',
-        href: appCss,
-      },
+      {rel: 'preload', href: appCss, as: 'style'},
+      {rel: 'stylesheet', href: appCss},
+      ...FONT_STYLESHEETS.map((href) => ({rel: 'stylesheet' as const, href})),
     ],
   }),
   shellComponent: RootShell,
