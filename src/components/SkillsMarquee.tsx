@@ -1,4 +1,4 @@
-import {useEffect, useRef} from 'react';
+import {useLayoutEffect, useRef} from 'react';
 import {SkillIcon} from '@/components/SkillIcon';
 import {SkillTile} from '@/components/SkillTile';
 import {skillsAll} from '@/lib/resume';
@@ -47,20 +47,40 @@ const SCROLL_IDLE_MS = 160;
 
 export function SkillsMarquee() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const isNormalizingRef = useRef(false);
 
-  const normalize = (el: HTMLDivElement) => {
-    const copyWidth = el.scrollWidth / MARQUEE_COPIES;
-    if (copyWidth <= 0) return;
-
-    const offset = ((el.scrollLeft % copyWidth) + copyWidth) % copyWidth;
-    el.scrollLeft = CENTER_COPY * copyWidth + offset;
+  const getCopyWidth = (el: HTMLDivElement) => {
+    const grid = el.firstElementChild;
+    const first = grid?.children[0] as HTMLElement | undefined;
+    const next = grid?.children[skills.length] as HTMLElement | undefined;
+    const measuredWidth = first && next ? next.offsetLeft - first.offsetLeft : 0;
+    return measuredWidth > 0 ? measuredWidth : el.scrollWidth / MARQUEE_COPIES;
   };
 
-  useEffect(() => {
+  const normalize = (el: HTMLDivElement, {force = false}: {force?: boolean} = {}) => {
+    const copyWidth = getCopyWidth(el);
+    if (copyWidth <= 0) return;
+
+    const minSafeScroll = copyWidth;
+    const maxSafeScroll = (MARQUEE_COPIES - 1) * copyWidth;
+    if (!force && el.scrollLeft >= minSafeScroll && el.scrollLeft < maxSafeScroll) return;
+
+    const offset = ((el.scrollLeft % copyWidth) + copyWidth) % copyWidth;
+    const nextScrollLeft = Math.round(CENTER_COPY * copyWidth + offset);
+    if (el.scrollLeft === nextScrollLeft) return;
+
+    isNormalizingRef.current = true;
+    el.scrollLeft = nextScrollLeft;
+    window.setTimeout(() => {
+      isNormalizingRef.current = false;
+    }, 0);
+  };
+
+  useLayoutEffect(() => {
     const el = containerRef.current;
     if (!el) return;
 
-    normalize(el);
+    normalize(el, {force: true});
 
     let idleTimer: ReturnType<typeof setTimeout> | undefined;
     let resizeFrame = 0;
@@ -72,13 +92,15 @@ export function SkillsMarquee() {
 
     // Programmatic scrollLeft writes cancel iOS momentum, so normalization waits
     // until scrolling settles instead of wrapping at each repeated-content edge.
-    const onScroll = () => scheduleNormalize();
+    const onScroll = () => {
+      if (!isNormalizingRef.current) scheduleNormalize();
+    };
     el.addEventListener('scroll', onScroll, {passive: true});
     el.addEventListener('scrollend', scheduleNormalize);
 
     const resize = new ResizeObserver(() => {
       cancelAnimationFrame(resizeFrame);
-      resizeFrame = requestAnimationFrame(() => normalize(el));
+      resizeFrame = requestAnimationFrame(() => normalize(el, {force: true}));
     });
     resize.observe(el);
 
@@ -98,7 +120,13 @@ export function SkillsMarquee() {
       <div ref={containerRef} className="skills-marquee-scroll">
         <div className="skills-marquee-grid">
           {repeatedSkills.map((skill, i) => (
-            <SkillTile key={i} title={skill.title} ariaLabel={skill.ariaLabel} href={skill.href} variant="marquee">
+            <SkillTile
+              key={`${skill.spriteKey}-${skill.title}-${i}`}
+              title={skill.title}
+              ariaLabel={skill.ariaLabel}
+              href={skill.href}
+              variant="marquee"
+            >
               <SkillIcon
                 spriteKey={skill.spriteKey}
                 title={skill.title}
