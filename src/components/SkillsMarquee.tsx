@@ -41,41 +41,63 @@ const skills: MarqueeSkill[] = (() => {
   return [...rawSkills.slice(0, mid), ...fillers, ...rawSkills.slice(mid)];
 })();
 
+const MARQUEE_COPIES = 5;
+const CENTER_COPY = Math.floor(MARQUEE_COPIES / 2);
+const SCROLL_IDLE_MS = 160;
+
 export function SkillsMarquee() {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const wrap = (el: HTMLDivElement) => {
-    const third = el.scrollWidth / 3;
-    if (third <= 0) return;
-    if (el.scrollLeft >= 2 * third) el.scrollLeft -= third;
-    else if (el.scrollLeft < third) el.scrollLeft += third;
+  const normalize = (el: HTMLDivElement) => {
+    const copyWidth = el.scrollWidth / MARQUEE_COPIES;
+    if (copyWidth <= 0) return;
+
+    const offset = ((el.scrollLeft % copyWidth) + copyWidth) % copyWidth;
+    el.scrollLeft = CENTER_COPY * copyWidth + offset;
   };
 
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
 
-    el.scrollLeft = el.scrollWidth / 3;
+    normalize(el);
 
-    const onScroll = () => wrap(el);
+    let idleTimer: ReturnType<typeof setTimeout> | undefined;
+    let resizeFrame = 0;
+
+    const scheduleNormalize = () => {
+      if (idleTimer) clearTimeout(idleTimer);
+      idleTimer = setTimeout(() => normalize(el), SCROLL_IDLE_MS);
+    };
+
+    // Programmatic scrollLeft writes cancel iOS momentum, so normalization waits
+    // until scrolling settles instead of wrapping at each repeated-content edge.
+    const onScroll = () => scheduleNormalize();
     el.addEventListener('scroll', onScroll, {passive: true});
+    el.addEventListener('scrollend', scheduleNormalize);
 
-    const resize = new ResizeObserver(() => wrap(el));
+    const resize = new ResizeObserver(() => {
+      cancelAnimationFrame(resizeFrame);
+      resizeFrame = requestAnimationFrame(() => normalize(el));
+    });
     resize.observe(el);
 
     return () => {
+      if (idleTimer) clearTimeout(idleTimer);
+      cancelAnimationFrame(resizeFrame);
       el.removeEventListener('scroll', onScroll);
+      el.removeEventListener('scrollend', scheduleNormalize);
       resize.disconnect();
     };
   }, []);
 
-  const tripled = [...skills, ...skills, ...skills];
+  const repeatedSkills = Array.from({length: MARQUEE_COPIES}, () => skills).flat();
 
   return (
     <div className="skills-marquee">
       <div ref={containerRef} className="skills-marquee-scroll">
         <div className="skills-marquee-grid">
-          {tripled.map((skill, i) => (
+          {repeatedSkills.map((skill, i) => (
             <SkillTile key={i} title={skill.title} ariaLabel={skill.ariaLabel} href={skill.href} variant="marquee">
               <SkillIcon
                 spriteKey={skill.spriteKey}
