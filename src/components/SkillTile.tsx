@@ -15,6 +15,7 @@ export function SkillTile({title, ariaLabel, href, variant, children}: SkillTile
     'skill-tile-label',
     variant === 'marquee' ? 'skill-tile-label--marquee' : 'skill-tile-label--experience'
   );
+  const anchorLabel = ariaLabel && ariaLabel !== title ? ariaLabel : undefined;
 
   const inner = (
     <>
@@ -30,7 +31,7 @@ export function SkillTile({title, ariaLabel, href, variant, children}: SkillTile
         target="_blank"
         rel="noopener noreferrer"
         title={title}
-        aria-label={ariaLabel ?? title}
+        {...(anchorLabel ? {'aria-label': anchorLabel} : {})}
         className={tileClass}
       >
         {inner}
