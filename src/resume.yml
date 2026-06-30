@@ -1380,6 +1380,14 @@ projects:
       - *puppeteer
       - *react
       - *alfred
+  - name: Resy Reservation Bot
+    url: https://github.com/rkoval/resy-reservation-bot
+    source: https://github.com/rkoval/resy-reservation-bot
+    description: >
+      A restaurant reservation bot that automatically attempts to book reservations as they become available on Resy. Supports configurable restaurants, party sizes, and time slots. Its use may or may not violate Resy's terms of service.
+    technologies:
+      - *javascript
+      - *node_js
   - name: Personal Site
     url: https://ryankoval.com
     source: https://github.com/rkoval/ryankoval.com

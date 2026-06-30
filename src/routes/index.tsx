@@ -491,10 +491,10 @@ function Index() {
         </div>
       </section>
 
-      {/* Side Projects */}
+      {/* Personal Side Projects */}
       <section className="page-container pb-24 pt-11">
         <h2 className="content-align mb-6 text-2xl font-semibold tracking-tight text-resume-header">
-          Side Projects
+          Personal Side Projects
         </h2>
         <div className="space-y-5">
           {projects.map((item) => (

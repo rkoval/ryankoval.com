@@ -118,6 +118,8 @@ function ExperienceSection({item}: {item: ExperienceItem}) {
 }
 
 function ProjectSection({item}: {item: Project}) {
+  const liveLink = item.url && item.url !== item.source ? item.url : undefined;
+
   return (
     <section className="resume-section">
       <h2 className="resume-h2">
@@ -135,11 +137,11 @@ function ProjectSection({item}: {item: Project}) {
       {item.technologies.length > 0 ? (
         <div className="resume-project-metadata">Technologies: {item.technologies.join(', ')}</div>
       ) : null}
-      {item.url ? (
+      {liveLink ? (
         <div className="resume-project-metadata">
           Live:{' '}
-          <a href={item.url} target="_blank" rel="noreferrer">
-            {item.url.replace(/^https?:\/\//, '')}
+          <a href={liveLink} target="_blank" rel="noreferrer">
+            {liveLink.replace(/^https?:\/\//, '')}
           </a>
         </div>
       ) : null}
@@ -268,7 +270,7 @@ function ResumePage() {
           <div className="sheet resume-sheet">
             <div className="resume-rows">
               <section className="resume-section">
-                <h2 className="resume-h2">Side Projects</h2>
+                <h2 className="resume-h2">Personal Side Projects</h2>
               </section>
               {projects.map((item) => (
                 <ProjectSection key={item.name} item={item} />
