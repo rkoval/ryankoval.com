@@ -32,6 +32,14 @@ export interface RawWork {
   skills?: RawSkill[];
 }
 
+export interface RawProject {
+  name: string;
+  description: string;
+  url?: string;
+  source?: string;
+  technologies?: RawSkill[];
+}
+
 export interface RawResume {
   skills: {skill: RawSkill}[];
   basics: {
@@ -46,6 +54,7 @@ export interface RawResume {
     interests?: string[];
   };
   work: RawWork[];
+  projects?: RawProject[];
   education: {
     institution: string;
     website?: string;

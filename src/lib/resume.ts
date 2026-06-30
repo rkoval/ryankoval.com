@@ -164,6 +164,22 @@ const jobsOnFirstPage = 4;
 export const firstPageJobs: ExperienceItem[] = experience.slice(0, jobsOnFirstPage);
 export const restJobs: ExperienceItem[] = experience.slice(jobsOnFirstPage);
 
+export interface Project {
+  name: string;
+  description: string;
+  url?: string;
+  source?: string;
+  technologies: string[];
+}
+
+export const projects: Project[] = (doc.projects ?? []).map((p) => ({
+  name: p.name,
+  description: p.description.trim(),
+  url: p.url,
+  source: p.source,
+  technologies: (p.technologies ?? []).map((s) => s.name),
+}));
+
 const edu = doc.education[0];
 export const education = {
   school: edu.institution,

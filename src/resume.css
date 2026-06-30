@@ -259,6 +259,12 @@
   print-color-adjust: exact;
 }
 
+.resume-project-metadata {
+  color: var(--resume-body);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
 @media (max-width: 640px) {
   .resume-sheets {
     padding-block: 16px 32px;

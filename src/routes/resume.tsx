@@ -12,6 +12,8 @@ import {
   interests,
   links,
   type ExperienceItem,
+  projects,
+  type Project,
 } from '@/lib/resume';
 import {RESUME_PDF} from '@/lib/resume-basics';
 import resumeCss from '../resume.css?url';
@@ -115,6 +117,36 @@ function ExperienceSection({item}: {item: ExperienceItem}) {
   );
 }
 
+function ProjectSection({item}: {item: Project}) {
+  return (
+    <section className="resume-section">
+      <h2 className="resume-h2">
+        {item.url ? (
+          <a href={item.url} target="_blank" rel="noreferrer">
+            {item.name}
+          </a>
+        ) : (
+          <span>{item.name}</span>
+        )}
+      </h2>
+      <ul className="resume-ul">
+        <li>{item.description}</li>
+      </ul>
+      {item.technologies.length > 0 ? (
+        <div className="resume-project-metadata">Technologies: {item.technologies.join(', ')}</div>
+      ) : null}
+      {item.source ? (
+        <div className="resume-project-metadata">
+          Source:{' '}
+          <a href={item.source} target="_blank" rel="noreferrer">
+            {item.source.replace(/^https?:\/\//, '')}
+          </a>
+        </div>
+      ) : null}
+    </section>
+  );
+}
+
 function ResumePage() {
   return (
     <main className="resume-page">
@@ -173,7 +205,7 @@ function ResumePage() {
               ))}
             </div>
 
-            <footer className="resume-footer">Page 1 of 2</footer>
+            <footer className="resume-footer">Page 1 of 3</footer>
           </div>
         </div>
 
@@ -220,7 +252,22 @@ function ResumePage() {
               </section>
             </div>
 
-            <footer className="resume-footer">Page 2 of 2</footer>
+            <footer className="resume-footer">Page 2 of 3</footer>
+          </div>
+        </div>
+
+        <div className="sheet-container">
+          <div className="sheet resume-sheet">
+            <div className="resume-rows">
+              <section className="resume-section">
+                <h2 className="resume-h2">Side Projects</h2>
+              </section>
+              {projects.map((item) => (
+                <ProjectSection key={item.name} item={item} />
+              ))}
+            </div>
+
+            <footer className="resume-footer">Page 3 of 3</footer>
           </div>
         </div>
       </div>
