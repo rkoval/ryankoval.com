@@ -280,6 +280,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/tailwind.svg'
+  - skill: &alfred
+      name: Alfred
+      tag: Miscellaneous
+      website: https://www.alfredapp.com/
+      resume: true
+      picture:
+        src: '/images/skills/alfred.png'
   - skill: &trpc
       name: tRPC
       tag: Frameworks & Libraries
@@ -861,6 +868,7 @@ work:
       - *gitlab
       - *macOS
       - *linux
+      - *alfred
   - company:
       name: The Styled by Collective
     resume: true
@@ -918,6 +926,7 @@ work:
       - *github
       - *macOS
       - *linux
+      - *alfred
   - company:
       name: End to End Productions
     resume: true
@@ -998,6 +1007,7 @@ work:
       - *nginx
       - *github
       - *concourse_ci
+      - *alfred
   - company:
       name: Roblox
     resume: true
@@ -1047,6 +1057,7 @@ work:
       - *docker
       - *git
       - *linux
+      - *alfred
     highlights:
       - Directly managed 6+ engineers on the Guilded team after its acquisition, facilitating the RoGRO corporate review process and providing radical candor to bolster direct-report performance.
       - Served as technical lead on 7+ cross-functional initiatives involving 40+ collaborators across engineering, design, trust & safety, and community teams.
@@ -1100,6 +1111,7 @@ work:
       - *docker
       - *git
       - *linux
+      - *alfred
     highlights:
       - Joined the original engineering team of the Discord competitor that secured a $7M Series A round in April 2020 and ultimately a $90M acquisition by Roblox in August 2021.
       - Spearheaded recruiting and management, helping grow the engineering team from 7 to 21+ people with less than 15% turnover over two years.
@@ -1153,6 +1165,7 @@ work:
       - *jenkins
       - *git
       - *linux
+      - *alfred
     highlights:
       - Oversaw front-end development for a self-service collaborations portal, managing a global team.
       - Built two major versions of screen-scraping infrastructure used to gather influencer data for a customer-facing recommendation engine and general business intelligence.
@@ -1185,6 +1198,7 @@ work:
       - *vim
       - *linux
       - *intellij
+      - *alfred
     highlights:
       - Applied Scala expertise to rapidly accelerate development of a complex eCommerce ordering solution for multiple high-profile fast food and fast casual restaurants.
   - company:
@@ -1226,6 +1240,7 @@ work:
       - *intellij
       - *sass
       - *vagrant
+      - *alfred
     highlights:
       - Constructed core components for nearly all aspects of a multi-million-dollar prison
         telecommunications investigative tool.
@@ -1264,6 +1279,7 @@ work:
       - *mysql
       - *subversion
       - *broadleaf_commerce
+      - *alfred
     highlights:
       - Contributed to nearly all aspects of a multi-million-dollar
         automotive eCommerce website, which contained over 50 technology integrations
@@ -1322,8 +1338,9 @@ projects:
     url: https://github.com/rkoval/alfred-aws-console-services-workflow
     source: https://github.com/rkoval/alfred-aws-console-services-workflow
     description: >
-      A powerful workflow for quickly opening up AWS Console Services in your browser or searching for entities within them. 325+ stars on GitHub.
+      A powerful Alfred workflow for quickly opening up AWS Console Services in your browser or searching for entities within them. 325+ stars on GitHub.
     technologies:
+      - *alfred
       - *golang
       - *aws
       - *bash_zsh
@@ -1339,17 +1356,30 @@ projects:
       - *bash_zsh
       - *playwright
       - *docker
+      - *alfred
   - name: ryankoval.pizza
     url: https://ryankoval.pizza
     source: https://github.com/rkoval/order-me-pizza
     description: >
-      A delightful site where you can order a pizza for a friend.
+      A delightful site where you can order a pizza for your friend.
     technologies:
       - *javascript
       - *pugjs
       - *paypal
       - *bash_zsh
       - *docker
+      - *alfred
+  - name: Surely, You Jest!
+    url: https://slides.com/ryankoval/surely-you-jest
+    source: https://github.com/rkoval/surely-you-jest
+    description: >
+      A tech talk I gave for DallasJS in 2018 on JavaScript testing with Jest and Puppeteer. Source repo contains presentation slides and example code snippets.
+    technologies:
+      - *javascript
+      - *jest
+      - *puppeteer
+      - *react
+      - *alfred
   - name: Personal Site
     url: https://ryankoval.com
     source: https://github.com/rkoval/ryankoval.com
@@ -1362,16 +1392,7 @@ projects:
       - *tailwindcss
       - *bash_zsh
       - *docker
-  - name: Surely, You Jest!
-    url: https://slides.com/ryankoval/surely-you-jest
-    source: https://github.com/rkoval/surely-you-jest
-    description: >
-      A tech talk I gave for DallasJS in 2018 on JavaScript testing with Jest and Puppeteer. Source repo contains presentation slides and example code snippets.
-    technologies:
-      - *javascript
-      - *jest
-      - *puppeteer
-      - *react
+      - *alfred
 education:
   - institution: Southern Methodist University
     website: https://www.smu.edu
