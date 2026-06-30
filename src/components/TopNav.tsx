@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {Link} from '@tanstack/react-router';
-import {Bookmark, Github, Globe, Linkedin, Pizza, type LucideIcon} from 'lucide-react';
+import {Bookmark, Code2, Github, Globe, Linkedin, Pizza, type LucideIcon} from 'lucide-react';
 import {socials} from '@/lib/resume-basics';
 import {Button} from '@/components/ui/button';
 import {cn} from '@/lib/utils';
@@ -42,6 +42,23 @@ function MenuToggleIcon({open}: {open: boolean}) {
   );
 }
 
+function SourceCodeLink({url}: {url?: string}) {
+  if (!url) return null;
+
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Source code"
+      title="Source code"
+      className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+    >
+      <Code2 size={18} />
+    </a>
+  );
+}
+
 function SocialLinks() {
   return (
     <>
@@ -75,7 +92,7 @@ function SocialLinks() {
   );
 }
 
-export function TopNav() {
+export function TopNav({sourceUrl}: {sourceUrl?: string}) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -107,6 +124,7 @@ export function TopNav() {
           </div>
         </div>
         <div className="flex items-center gap-1">
+          <SourceCodeLink url={sourceUrl} />
           <SocialLinks />
         </div>
       </div>

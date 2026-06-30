@@ -32,6 +32,7 @@ const RESUME_DESCRIPTION =
   'Formal résumé for Ryan A. Koval — Software Engineering, Architecture & Management across NVIDIA, Roblox, Guilded, LTK and more.';
 const RESUME_OG_DESCRIPTION =
   'Formal résumé for Ryan A. Koval — Software Engineering, Architecture & Management.';
+const INTERACTIVE_RESUME_SOURCE_URL = 'https://github.com/rkoval/ryankoval.com';
 
 export const Route = createFileRoute('/resume')({
   head: () => ({
@@ -160,7 +161,7 @@ function ProjectSection({item}: {item: Project}) {
 function ResumePage() {
   return (
     <main className="resume-page">
-      <TopNav />
+      <TopNav sourceUrl={INTERACTIVE_RESUME_SOURCE_URL} />
 
       <div className="resume-sheets">
         <div className="resume-print-actions print-hide">
