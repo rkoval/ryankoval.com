@@ -5,6 +5,9 @@ import {
   linkedInUrl,
   experience,
   education,
+  projects,
+  type Project,
+  skillsAll,
   certifications,
   interests,
   type ExperienceItem,
@@ -185,6 +188,25 @@ function ExperienceSkills({skills}: {skills: ExperienceSkill[]}) {
   );
 }
 
+function projectTechnologySkills(technologies: string[]): ExperienceSkill[] {
+  return technologies.flatMap((technology) => {
+    const skill = skillsAll.find((s) => s.name === technology);
+    if (!skill || (!skill.spriteKey && !skill.img)) return [];
+    return [
+      {
+        name: skill.name,
+        label: skill.label,
+        seoName: skill.seoName,
+        spriteKey: skill.spriteKey,
+        img: skill.img,
+        website: skill.website,
+        useDarkModeLightBackground: skill.useDarkModeLightBackground,
+        isRaster: skill.isRaster,
+      },
+    ];
+  });
+}
+
 function ExperienceCard({item}: {item: ExperienceItem}) {
   return (
     <article className="card-bleed-xs card-pad rounded-xl border border-border bg-card transition-colors hover:border-primary/40">
@@ -267,6 +289,35 @@ function FeaturedCard({item}: {item: ExperienceItem}) {
 
         {item.description && <ReadMoreDescription text={item.description} className="mt-6" />}
       </div>
+    </article>
+  );
+}
+
+function ProjectCard({item}: {item: Project}) {
+  const skills = projectTechnologySkills(item.technologies);
+
+  return (
+    <article className="card-bleed-xs card-pad rounded-xl border border-border bg-card transition-colors hover:border-primary/40">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+        <h3 className="text-lg font-semibold text-resume-header">
+          {item.url ? (
+            <a href={item.url} target="_blank" rel="noreferrer">
+              {item.name}
+            </a>
+          ) : (
+            <span className="text-resume-green">{item.name}</span>
+          )}
+        </h3>
+        {item.source ? (
+          <a href={item.source} target="_blank" rel="noreferrer" className="text-xs">
+            Source
+          </a>
+        ) : null}
+      </div>
+
+      <p className="mt-4 text-sm leading-relaxed text-resume-body">{item.description}</p>
+
+      <ExperienceSkills skills={skills} />
     </article>
   );
 }
@@ -399,7 +450,7 @@ function Index() {
       </section>
 
       {/* Certifications & Interests */}
-      <section className="page-container grid gap-5 pb-24 sm:grid-cols-2">
+      <section className="page-container grid gap-5 pb-5 sm:grid-cols-2">
         <div className="card-bleed-xs card-pad rounded-xl border border-border bg-card">
           <h2 className="mb-4 text-xl font-semibold tracking-tight text-resume-header">
             Certifications
@@ -437,6 +488,18 @@ function Index() {
               </span>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Side Projects */}
+      <section className="page-container pb-24 pt-11">
+        <h2 className="content-align mb-6 text-2xl font-semibold tracking-tight text-resume-header">
+          Side Projects
+        </h2>
+        <div className="space-y-5">
+          {projects.map((item) => (
+            <ProjectCard key={item.name} item={item} />
+          ))}
         </div>
       </section>
 

@@ -14,13 +14,6 @@ skills:
       resume: true
       picture:
         src: '/images/skills/typescript.svg'
-  - skill: &scala
-      name: Scala
-      tag: Programming Languages
-      website: https://www.scala-lang.org/
-      resume: true
-      picture:
-        src: '/images/skills/scala.svg'
   - skill: &python
       name: Python
       tag: Programming Languages
@@ -37,6 +30,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/golang.svg'
+  - skill: &scala
+      name: Scala
+      tag: Programming Languages
+      website: https://www.scala-lang.org/
+      resume: true
+      picture:
+        src: '/images/skills/scala.svg'
   - skill: &java
       name: Java
       label: Java programming language
@@ -92,7 +92,7 @@ skills:
       name: Claude Code
       tag: Miscellaneous
       website: https://code.claude.com/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/claude-code.svg'
   - skill: &neovim
@@ -1322,7 +1322,7 @@ projects:
     url: https://github.com/rkoval/alfred-aws-console-services-workflow
     source: https://github.com/rkoval/alfred-aws-console-services-workflow
     description: >
-      A popular Alfred workflow for quickly opening AWS Console services or searching for entities within them. 325+ stars on GitHub.
+      A powerful workflow for quickly opening up AWS Console Services in your browser or searching for entities within them. 325+ stars on GitHub.
     technologies:
       - *golang
       - *aws
@@ -1330,13 +1330,14 @@ projects:
   - name: Slammin' Backgammon
     url: https://slammin-backgammon.com/
     description: >
-      Think Wordle, but for Backgammon. Every game in a given day gets same exact seeded series of dice rolls, and you compete against an AI opponent. Score determined by speed of play and how many pips opponent has remaining when you win.
+      Think Wordle, but for Backgammon. Every game in a given day gets the same exact seeded series of dice rolls, and you compete against an AI opponent. Final score is determined by speed of play and how many pips are remaining for both players at the end of the game.
     technologies:
       - *typescript
       - *react
       - *node_js
       - *postgresql
       - *bash_zsh
+      - *playwright
       - *docker
   - name: ryankoval.pizza
     url: https://ryankoval.pizza
@@ -1365,7 +1366,7 @@ projects:
     url: https://slides.com/ryankoval/surely-you-jest
     source: https://github.com/rkoval/surely-you-jest
     description: >
-      A tech talk I gave for DallasJS on JavaScript testing with Jest with an emphasis on Puppeteer. Source repo contains presentation slides and example code snippets.
+      A tech talk I gave for DallasJS in 2018 on JavaScript testing with Jest and Puppeteer. Source repo contains presentation slides and example code snippets.
     technologies:
       - *javascript
       - *jest
