@@ -1365,6 +1365,7 @@ projects:
     technologies:
       - *javascript
       - *pugjs
+      - *node_js
       - *paypal
       - *bash_zsh
       - *docker
@@ -1377,9 +1378,9 @@ projects:
     technologies:
       - *javascript
       - *jest
+      - *node_js
       - *puppeteer
       - *react
-      - *alfred
   - name: Resy Reservation Bot
     url: https://github.com/rkoval/resy-reservation-bot
     source: https://github.com/rkoval/resy-reservation-bot
@@ -1397,6 +1398,8 @@ projects:
       - *typescript
       - *react
       - *vite
+      - *bun
+      - *nginx
       - *tailwindcss
       - *bash_zsh
       - *docker
