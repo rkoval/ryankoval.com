@@ -1357,6 +1357,28 @@ projects:
       - *playwright
       - *docker
       - *alfred
+  - name: Blog
+    url: https://blog.ryankoval.com
+    source: https://github.com/rkoval/ryankoval.com
+    description: >
+      My personal weblog where I (very) occassionally write about software engineering and maybe other things soon. Who knows what I'll write about!?
+    technologies:
+      - *typescript
+      - *react
+      - *markdown
+      - *vite
+      - *bun
+  - name: Surely, You Jest!
+    url: https://slides.com/ryankoval/surely-you-jest
+    source: https://github.com/rkoval/surely-you-jest
+    description: >
+      A tech talk I gave for DallasJS in 2018 on JavaScript testing with Jest and Puppeteer. Source repo contains presentation slides and example code snippets.
+    technologies:
+      - *javascript
+      - *jest
+      - *node_js
+      - *puppeteer
+      - *react
   - name: ryankoval.pizza
     url: https://ryankoval.pizza
     source: https://github.com/rkoval/order-me-pizza
@@ -1370,17 +1392,6 @@ projects:
       - *bash_zsh
       - *docker
       - *alfred
-  - name: Surely, You Jest!
-    url: https://slides.com/ryankoval/surely-you-jest
-    source: https://github.com/rkoval/surely-you-jest
-    description: >
-      A tech talk I gave for DallasJS in 2018 on JavaScript testing with Jest and Puppeteer. Source repo contains presentation slides and example code snippets.
-    technologies:
-      - *javascript
-      - *jest
-      - *node_js
-      - *puppeteer
-      - *react
   - name: Resy Reservation Bot
     url: https://github.com/rkoval/resy-reservation-bot
     source: https://github.com/rkoval/resy-reservation-bot
