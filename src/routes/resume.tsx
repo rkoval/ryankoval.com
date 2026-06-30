@@ -135,6 +135,14 @@ function ProjectSection({item}: {item: Project}) {
       {item.technologies.length > 0 ? (
         <div className="resume-project-metadata">Technologies: {item.technologies.join(', ')}</div>
       ) : null}
+      {item.url ? (
+        <div className="resume-project-metadata">
+          Live:{' '}
+          <a href={item.url} target="_blank" rel="noreferrer">
+            {item.url.replace(/^https?:\/\//, '')}
+          </a>
+        </div>
+      ) : null}
       {item.source ? (
         <div className="resume-project-metadata">
           Source:{' '}
