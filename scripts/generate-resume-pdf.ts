@@ -1,14 +1,15 @@
 import {chromium} from 'playwright';
+import {mkdir} from 'node:fs/promises';
 import {join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 const BASE_URL = process.env.RESUME_PDF_URL ?? 'http://localhost:8080/resume';
-const OUT_DIR = join(fileURLToPath(new URL('..', import.meta.url)), 'public');
+const OUT_DIR = join(fileURLToPath(new URL('..', import.meta.url)), 'public', 'resume');
 
 async function saveResumePdf(
   browser: Awaited<ReturnType<typeof chromium.launch>>,
   filename: string,
-  dark: boolean,
+  dark: boolean
 ) {
   const page = await browser.newPage();
   await page.goto(BASE_URL, {waitUntil: 'networkidle'});
@@ -38,6 +39,8 @@ async function saveResumePdf(
 }
 
 async function main() {
+  await mkdir(OUT_DIR, {recursive: true});
+
   const browser = await chromium.launch();
   try {
     await saveResumePdf(browser, 'ryan-koval-resume.pdf', false);

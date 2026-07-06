@@ -25,8 +25,8 @@ export const profile = {
 
 /** Static résumé PDF downloads (regenerate with `bun run generate-resume-pdf`). */
 export const RESUME_PDF = {
-  light: '/ryan-koval-resume.pdf',
-  dark: '/ryan-koval-resume-dark.pdf',
+  light: '/resume/ryan-koval-resume.pdf',
+  dark: '/resume/ryan-koval-resume-dark.pdf',
   downloadName: {
     light: 'ryan-koval-resume.pdf',
     dark: 'ryan-koval-resume-dark.pdf',

@@ -28,4 +28,4 @@ After changes to `src/resume.yml` or résumé/print CSS, regenerate static downl
 export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use && bun run generate-resume-pdf
 ```
 
-Writes `public/ryan-koval-resume.pdf` and `public/ryan-koval-resume-dark.pdf`.
+Writes `public/resume/ryan-koval-resume.pdf` and `public/resume/ryan-koval-resume-dark.pdf`.
