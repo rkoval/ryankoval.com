@@ -13,7 +13,6 @@ import { Route as ResumeRouteImport } from './routes/resume'
 import { Route as ErrorRouteImport } from './routes/error'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as R404RouteImport } from './routes/404'
-import { Route as SplatRouteImport } from './routes/$'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
 
@@ -37,11 +36,6 @@ const R404Route = R404RouteImport.update({
   path: '/404',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SplatRoute = SplatRouteImport.update({
-  id: '/$',
-  path: '/$',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -55,7 +49,6 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/$': typeof SplatRoute
   '/404': typeof R404Route
   '/blog': typeof BlogRoute
   '/error': typeof ErrorRoute
@@ -64,7 +57,6 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/$': typeof SplatRoute
   '/404': typeof R404Route
   '/blog': typeof BlogRoute
   '/error': typeof ErrorRoute
@@ -74,7 +66,6 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/$': typeof SplatRoute
   '/404': typeof R404Route
   '/blog': typeof BlogRoute
   '/error': typeof ErrorRoute
@@ -83,20 +74,12 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/$'
-    | '/404'
-    | '/blog'
-    | '/error'
-    | '/resume'
-    | '/blog/$slug'
+  fullPaths: '/' | '/404' | '/blog' | '/error' | '/resume' | '/blog/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$' | '/404' | '/blog' | '/error' | '/resume' | '/blog/$slug'
+  to: '/' | '/404' | '/blog' | '/error' | '/resume' | '/blog/$slug'
   id:
     | '__root__'
     | '/'
-    | '/$'
     | '/404'
     | '/blog'
     | '/error'
@@ -106,7 +89,6 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  SplatRoute: typeof SplatRoute
   R404Route: typeof R404Route
   BlogRoute: typeof BlogRoute
   ErrorRoute: typeof ErrorRoute
@@ -144,13 +126,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof R404RouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/$': {
-      id: '/$'
-      path: '/$'
-      fullPath: '/$'
-      preLoaderRoute: typeof SplatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -170,7 +145,6 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  SplatRoute: SplatRoute,
   R404Route: R404Route,
   BlogRoute: BlogRoute,
   ErrorRoute: ErrorRoute,
