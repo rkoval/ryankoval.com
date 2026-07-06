@@ -20,15 +20,7 @@ import {SiteFooter} from '@/components/SiteFooter';
 import {SkillIcon} from '@/components/SkillIcon';
 import {SkillTile} from '@/components/SkillTile';
 import {cn} from '@/lib/utils';
-import {
-  OG_IMAGES,
-  OG_IMAGE_DIMENSIONS,
-  SITE_URL,
-  absoluteUrl,
-  canonicalLink,
-  jsonLdScript,
-  socialMeta,
-} from '@/lib/seo';
+import {OG_IMAGES, SITE_URL, absoluteUrl, canonicalLink, jsonLdScript, socialMeta} from '@/lib/seo';
 
 const HOME_TITLE = 'Ryan A. Koval — Engineering, Architecture & Leadership';
 const HOME_OG_TITLE = 'Ryan A. Koval — Software Leader';
@@ -48,9 +40,6 @@ export const Route = createFileRoute('/')({
         path: '/',
         image: OG_IMAGES.home,
       }),
-      {property: 'og:image:width', content: OG_IMAGE_DIMENSIONS.width},
-      {property: 'og:image:height', content: OG_IMAGE_DIMENSIONS.height},
-      {property: 'og:image:type', content: OG_IMAGE_DIMENSIONS.type},
     ],
     links: [canonicalLink('/')],
     scripts: [

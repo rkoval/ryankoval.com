@@ -4,7 +4,7 @@ import {PostCard} from '@/components/blog/PostCard';
 import {SiteFooter} from '@/components/SiteFooter';
 import {sortedPosts} from '@/content/blog/posts';
 import blogCss from '../blog.css?url';
-import {OG_IMAGES, canonicalLink, socialMeta} from '@/lib/seo';
+import {OG_IMAGES, SITE_URL, absoluteUrl, canonicalLink, jsonLdScript, socialMeta} from '@/lib/seo';
 
 const BLOG_TITLE = 'Blog — Ryan A. Koval';
 const BLOG_DESCRIPTION =
@@ -23,6 +23,23 @@ export const Route = createFileRoute('/blog')({
       }),
     ],
     links: [{rel: 'stylesheet', href: blogCss}, canonicalLink('/blog')],
+    scripts: [
+      jsonLdScript({
+        '@context': 'https://schema.org',
+        '@type': 'Blog',
+        name: BLOG_TITLE,
+        url: absoluteUrl('/blog'),
+        description: BLOG_DESCRIPTION,
+        publisher: {'@type': 'Person', name: 'Ryan A. Koval', url: SITE_URL},
+        blogPost: sortedPosts.map((post) => ({
+          '@type': 'BlogPosting',
+          headline: post.title.replace(/`/g, ''),
+          url: absoluteUrl(`/blog/${post.slug}`),
+          datePublished: post.date,
+          author: {'@type': 'Person', name: 'Ryan A. Koval', url: SITE_URL},
+        })),
+      }),
+    ],
   }),
   component: BlogPage,
 });

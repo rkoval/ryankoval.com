@@ -17,15 +17,7 @@ import {
 } from '@/lib/resume';
 import {RESUME_PDF} from '@/lib/resume-basics';
 import resumeCss from '../resume.css?url';
-import {
-  OG_IMAGES,
-  OG_IMAGE_DIMENSIONS,
-  SITE_URL,
-  absoluteUrl,
-  canonicalLink,
-  jsonLdScript,
-  socialMeta,
-} from '@/lib/seo';
+import {OG_IMAGES, SITE_URL, absoluteUrl, canonicalLink, jsonLdScript, socialMeta} from '@/lib/seo';
 
 const RESUME_TITLE = 'Resume — Ryan A. Koval';
 const RESUME_DESCRIPTION =
@@ -45,9 +37,6 @@ export const Route = createFileRoute('/resume')({
         path: '/resume',
         image: OG_IMAGES.resume,
       }),
-      {property: 'og:image:width', content: OG_IMAGE_DIMENSIONS.width},
-      {property: 'og:image:height', content: OG_IMAGE_DIMENSIONS.height},
-      {property: 'og:image:type', content: OG_IMAGE_DIMENSIONS.type},
     ],
     links: [{rel: 'stylesheet', href: resumeCss}, canonicalLink('/resume')],
     scripts: [
