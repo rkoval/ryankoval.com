@@ -1,66 +1,85 @@
 import {expect, test} from '@playwright/test';
 
-const redirects = [
+const useProductionHost = ['1', 'true'].includes(process.env.USE_E2E_PRODUCTION_HOST ?? '');
+
+type Redirect = {
+  localRedirectFrom: string;
+  localRedirectTo: string;
+  prodRedirectFrom: string;
+  prodRedirectTo: string;
+};
+
+const redirects: Redirect[] = [
   {
-    host: 'resume.ryankoval.local',
-    path: '/',
-    location: 'https://ryankoval.com/resume/',
+    localRedirectFrom: 'http://resume.ryankoval.local/',
+    localRedirectTo: 'https://ryankoval.com/resume/',
+    prodRedirectFrom: 'https://resume.ryankoval.com/',
+    prodRedirectTo: 'https://ryankoval.com/resume/',
   },
   {
-    host: 'resume.ryankoval.local',
-    path: '/?download=1',
-    location: 'https://ryankoval.com/resume/?download=1',
+    localRedirectFrom: 'http://resume.ryankoval.local/?download=1',
+    localRedirectTo: 'https://ryankoval.com/resume/?download=1',
+    prodRedirectFrom: 'https://resume.ryankoval.com/?download=1',
+    prodRedirectTo: 'https://ryankoval.com/resume/?download=1',
   },
   {
-    host: 'resume.ryankoval.local',
-    path: '/archive?download=1',
-    location: 'https://ryankoval.com/resume/archive?download=1',
+    localRedirectFrom: 'http://resume.ryankoval.local/archive?download=1',
+    localRedirectTo: 'https://ryankoval.com/resume/archive?download=1',
+    prodRedirectFrom: 'https://resume.ryankoval.com/archive?download=1',
+    prodRedirectTo: 'https://ryankoval.com/resume/archive?download=1',
   },
   {
-    host: 'blog.ryankoval.local',
-    path: '/',
-    location: 'https://ryankoval.com/blog/',
+    localRedirectFrom: 'http://blog.ryankoval.local/',
+    localRedirectTo: 'https://ryankoval.com/blog/',
+    prodRedirectFrom: 'https://blog.ryankoval.com/',
+    prodRedirectTo: 'https://ryankoval.com/blog/',
   },
   {
-    host: 'blog.ryankoval.local',
-    path: '/recovering-tectonic-using-an-externally-provisioned-etc-on-aws',
-    location:
+    localRedirectFrom:
+      'http://blog.ryankoval.local/recovering-tectonic-using-an-externally-provisioned-etc-on-aws',
+    localRedirectTo:
+      'https://ryankoval.com/blog/recovering-tectonic-using-an-externally-provisioned-etc-on-aws',
+    prodRedirectFrom:
+      'https://blog.ryankoval.com/recovering-tectonic-using-an-externally-provisioned-etc-on-aws',
+    prodRedirectTo:
       'https://ryankoval.com/blog/recovering-tectonic-using-an-externally-provisioned-etc-on-aws',
   },
-  {
-    host: 'resume.ryankoval.com',
-    path: '/',
-    location: 'https://ryankoval.com/resume/',
-  },
-  {
-    host: 'blog.ryankoval.com',
-    path: '/',
-    location: 'https://ryankoval.com/blog/',
-  },
-] as const;
+];
 
 test.describe('redirect behavior', () => {
   for (const redirect of redirects) {
-    test(`${redirect.host}${redirect.path} redirects to ${redirect.location}`, async ({
-      request,
-    }) => {
-      const response = await request.get(redirect.path, {
-        headers: {Host: redirect.host},
-        maxRedirects: 0,
-      });
+    const from = useProductionHost ? redirect.prodRedirectFrom : redirect.localRedirectFrom;
+    const to = useProductionHost ? redirect.prodRedirectTo : redirect.localRedirectTo;
+    const localURL = new URL(redirect.localRedirectFrom);
+
+    test(`${from} redirects to ${to}`, async ({request}) => {
+      const response = await request.get(
+        useProductionHost ? from : `${localURL.pathname}${localURL.search}`,
+        {
+          ...(useProductionHost ? {} : {headers: {Host: localURL.host}}),
+          maxRedirects: 0,
+        }
+      );
 
       expect(response.status()).toBe(301);
-      expect(response.headers().location).toBe(redirect.location);
+      expect(response.headers().location).toBe(to);
     });
   }
 
-  test('amp suffix redirects to the canonical local path', async ({request}) => {
-    const response = await request.get('/resume/amp?source=rss', {
-      headers: {Host: 'ryankoval.local'},
-      maxRedirects: 0,
-    });
+  test('amp suffix redirects to the canonical path', async ({request}) => {
+    const response = await request.get(
+      useProductionHost ? 'https://ryankoval.com/resume/amp?source=rss' : '/resume/amp?source=rss',
+      {
+        ...(useProductionHost ? {} : {headers: {Host: 'ryankoval.local'}}),
+        maxRedirects: 0,
+      }
+    );
 
     expect(response.status()).toBe(302);
-    expect(response.headers().location).toBe('http://ryankoval.local/resume?source=rss');
+    expect(response.headers().location).toBe(
+      useProductionHost
+        ? 'https://ryankoval.com/resume?source=rss'
+        : 'http://ryankoval.local/resume?source=rss'
+    );
   });
 });
