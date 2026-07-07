@@ -29,3 +29,17 @@ export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use && bun run generat
 ```
 
 Writes `public/resume/ryan-koval-resume.pdf` and `public/resume/ryan-koval-resume-dark.pdf`.
+
+## Production Docker E2E tests
+
+After major changes that affect routes, metadata, nginx/static serving, résumé layout/downloads, or the Docker build, run the Playwright production-container suite:
+
+```bash
+export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use && bun run test:e2e
+```
+
+The suite builds the production Docker image, serves it through nginx, and verifies normal pages, Open Graph metadata, 404 behavior, résumé PDF downloads, and résumé page overflow. The Playwright config manages Docker setup and teardown internally, using a unique container, image tag, and port per run by default so parallel agents do not collide. Use `E2E_PORT` only when you need a fixed port:
+
+```bash
+export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use && E2E_PORT=8090 bun run test:e2e
+```

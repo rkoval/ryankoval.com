@@ -1,14 +1,6 @@
 import {IMAGE_METADATA} from '@/generated/image-metadata';
-
-export const SITE_URL = 'https://ryankoval.com';
-export const SITE_NAME = 'Ryan A. Koval';
-
-export const OG_IMAGES = {
-  home: '/images/home-og-image.jpg',
-  resume: '/images/resume-og-image.jpg',
-} as const;
-
-export const TWITTER_SITE = '@whoaitskoval';
+export {OG_IMAGES, SITE_NAME, SITE_URL, TWITTER_SITE} from './site-metadata';
+import {SITE_NAME, SITE_URL, TWITTER_SITE} from './site-metadata';
 
 /** Resolve a site-relative or absolute path to a full URL. */
 export function absoluteUrl(path: string): string {

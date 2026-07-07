@@ -1,4 +1,5 @@
 import {doc} from '@/lib/resume-doc';
+export {RESUME_PDF} from './site-metadata';
 
 export interface Social {
   network: string;
@@ -22,16 +23,6 @@ export const profile = {
   website: doc.basics.website,
   resumeUrl: 'https://ryankoval.com/resume',
 };
-
-/** Static résumé PDF downloads (regenerate with `bun run generate-resume-pdf`). */
-export const RESUME_PDF = {
-  light: '/resume/ryan-koval-resume.pdf',
-  dark: '/resume/ryan-koval-resume-dark.pdf',
-  downloadName: {
-    light: 'ryan-koval-resume.pdf',
-    dark: 'ryan-koval-resume-dark.pdf',
-  },
-} as const;
 
 export const socials: Social[] = [
   ...(doc.basics.profiles ?? []).map((p) => ({

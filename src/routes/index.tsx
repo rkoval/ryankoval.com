@@ -21,27 +21,23 @@ import {SkillIcon} from '@/components/SkillIcon';
 import {SkillTile} from '@/components/SkillTile';
 import {cn} from '@/lib/utils';
 import {OG_IMAGES, SITE_URL, absoluteUrl, canonicalLink, jsonLdScript, socialMeta} from '@/lib/seo';
+import {PAGE_METADATA} from '@/lib/site-metadata';
 
-const HOME_TITLE = 'Ryan A. Koval — Engineering, Architecture & Leadership';
-const HOME_OG_TITLE = 'Ryan A. Koval — Software Leader';
-const HOME_DESCRIPTION =
-  'Ryan A. Koval is a multidisciplinary software leader spanning engineering, architecture, product, and management—NVIDIA, Roblox, Guilded, LTK, and more.';
-const HOME_OG_DESCRIPTION =
-  'Engineering, architecture & management across NVIDIA, Roblox, Guilded, LTK and more.';
+const HOME_METADATA = PAGE_METADATA.home;
 
 export const Route = createFileRoute('/')({
   head: () => ({
     meta: [
-      {title: HOME_TITLE},
-      {name: 'description', content: HOME_DESCRIPTION},
+      {title: HOME_METADATA.title},
+      {name: 'description', content: HOME_METADATA.description},
       ...socialMeta({
-        title: HOME_OG_TITLE,
-        description: HOME_OG_DESCRIPTION,
-        path: '/',
+        title: HOME_METADATA.ogTitle,
+        description: HOME_METADATA.ogDescription,
+        path: HOME_METADATA.path,
         image: OG_IMAGES.home,
       }),
     ],
-    links: [canonicalLink('/')],
+    links: [canonicalLink(HOME_METADATA.path)],
     scripts: [
       jsonLdScript({
         '@context': 'https://schema.org',
@@ -50,7 +46,7 @@ export const Route = createFileRoute('/')({
             '@type': 'WebSite',
             name: 'Ryan A. Koval',
             url: SITE_URL,
-            description: HOME_DESCRIPTION,
+            description: HOME_METADATA.description,
           },
           {
             '@type': 'Person',

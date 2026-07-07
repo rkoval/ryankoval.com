@@ -18,34 +18,31 @@ import {
 import {RESUME_PDF} from '@/lib/resume-basics';
 import resumeCss from '../resume.css?url';
 import {OG_IMAGES, SITE_URL, absoluteUrl, canonicalLink, jsonLdScript, socialMeta} from '@/lib/seo';
+import {PAGE_METADATA} from '@/lib/site-metadata';
 
-const RESUME_TITLE = 'Resume — Ryan A. Koval';
-const RESUME_DESCRIPTION =
-  'Formal résumé for Ryan A. Koval — Software Engineering, Architecture & Management across NVIDIA, Roblox, Guilded, LTK and more.';
-const RESUME_OG_DESCRIPTION =
-  'Formal résumé for Ryan A. Koval — Software Engineering, Architecture & Management.';
+const RESUME_METADATA = PAGE_METADATA.resume;
 const INTERACTIVE_RESUME_SOURCE_URL = 'https://github.com/rkoval/ryankoval.com';
 
 export const Route = createFileRoute('/resume')({
   head: () => ({
     meta: [
-      {title: RESUME_TITLE},
-      {name: 'description', content: RESUME_DESCRIPTION},
+      {title: RESUME_METADATA.title},
+      {name: 'description', content: RESUME_METADATA.description},
       ...socialMeta({
-        title: RESUME_TITLE,
-        description: RESUME_OG_DESCRIPTION,
-        path: '/resume',
+        title: RESUME_METADATA.ogTitle,
+        description: RESUME_METADATA.ogDescription,
+        path: RESUME_METADATA.path,
         image: OG_IMAGES.resume,
       }),
     ],
-    links: [{rel: 'stylesheet', href: resumeCss}, canonicalLink('/resume')],
+    links: [{rel: 'stylesheet', href: resumeCss}, canonicalLink(RESUME_METADATA.path)],
     scripts: [
       jsonLdScript({
         '@context': 'https://schema.org',
         '@type': 'ProfilePage',
-        name: RESUME_TITLE,
-        url: absoluteUrl('/resume'),
-        description: RESUME_DESCRIPTION,
+        name: RESUME_METADATA.title,
+        url: absoluteUrl(RESUME_METADATA.path),
+        description: RESUME_METADATA.description,
         mainEntity: {
           '@type': 'Person',
           name: 'Ryan A. Koval',

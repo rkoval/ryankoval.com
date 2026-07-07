@@ -2,6 +2,7 @@ import {createFileRoute, Link, notFound, useRouter} from '@tanstack/react-router
 import {TopNav} from '@/components/TopNav';
 import {Markdown} from '@/components/blog/Markdown';
 import {getPostBySlug, formatPostDate, titleSegments} from '@/content/blog/posts';
+import {stripMd} from '@/content/blog/metadata';
 import blogCss from '../blog.css?url';
 import {absoluteUrl, canonicalLink, jsonLdScript, socialMeta} from '@/lib/seo';
 
@@ -51,11 +52,6 @@ export const Route = createFileRoute('/blog_/$slug')({
   notFoundComponent: PostNotFound,
   errorComponent: PostError,
 });
-
-/** Removes inline-code backticks so titles read cleanly in metadata. */
-function stripMd(s: string): string {
-  return s.replace(/`/g, '');
-}
 
 function BlogPostPage() {
   const {slug} = Route.useLoaderData() as {slug: string};

@@ -5,31 +5,30 @@ import {SiteFooter} from '@/components/SiteFooter';
 import {sortedPosts} from '@/content/blog/posts';
 import blogCss from '../blog.css?url';
 import {OG_IMAGES, SITE_URL, absoluteUrl, canonicalLink, jsonLdScript, socialMeta} from '@/lib/seo';
+import {PAGE_METADATA} from '@/lib/site-metadata';
 
-const BLOG_TITLE = 'Blog — Ryan A. Koval';
-const BLOG_DESCRIPTION =
-  'Writing and notes from Ryan A. Koval on software engineering, JavaScript, Scala, and infrastructure.';
+const BLOG_METADATA = PAGE_METADATA.blog;
 
 export const Route = createFileRoute('/blog')({
   head: () => ({
     meta: [
-      {title: BLOG_TITLE},
-      {name: 'description', content: BLOG_DESCRIPTION},
+      {title: BLOG_METADATA.title},
+      {name: 'description', content: BLOG_METADATA.description},
       ...socialMeta({
-        title: BLOG_TITLE,
-        description: BLOG_DESCRIPTION,
-        path: '/blog',
+        title: BLOG_METADATA.ogTitle,
+        description: BLOG_METADATA.ogDescription,
+        path: BLOG_METADATA.path,
         image: OG_IMAGES.home,
       }),
     ],
-    links: [{rel: 'stylesheet', href: blogCss}, canonicalLink('/blog')],
+    links: [{rel: 'stylesheet', href: blogCss}, canonicalLink(BLOG_METADATA.path)],
     scripts: [
       jsonLdScript({
         '@context': 'https://schema.org',
         '@type': 'Blog',
-        name: BLOG_TITLE,
-        url: absoluteUrl('/blog'),
-        description: BLOG_DESCRIPTION,
+        name: BLOG_METADATA.title,
+        url: absoluteUrl(BLOG_METADATA.path),
+        description: BLOG_METADATA.description,
         publisher: {'@type': 'Person', name: 'Ryan A. Koval', url: SITE_URL},
         blogPost: sortedPosts.map((post) => ({
           '@type': 'BlogPosting',

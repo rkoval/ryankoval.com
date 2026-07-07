@@ -1,5 +1,6 @@
 import type {Post} from './types';
 import {BLOG_SLUGS} from './slugs';
+import {BLOG_POST_METADATA_BY_SLUG, type BlogSlug} from './metadata';
 import {DebuggingJavascript} from './DebuggingJavascript';
 import avoidingOptionMd from './avoiding-option.md?raw';
 import recoveringTectonicMd from './recovering-tectonic.md?raw';
@@ -7,37 +8,28 @@ import thinkingCover from '@/assets/blog/thinking.png';
 import kubernetesCover from '@/assets/blog/kubernetes.svg';
 import awesomeCover from '@/assets/blog/awesome.jpg';
 
+function metadataFor(slug: BlogSlug) {
+  const metadata = BLOG_POST_METADATA_BY_SLUG[slug];
+  const {cover: _, ...postMetadata} = metadata;
+  return {slug, ...postMetadata};
+}
+
 export const posts: Post[] = [
   {
     kind: 'react',
-    slug: 'debugging-javascript-in-chrome-and-firefox',
-    title: 'Debugging JavaScript in Chrome and Firefox',
-    date: '2013-02-23',
-    tags: ['javascript'],
-    excerpt:
-      'Simple tools you can use to make your life as a JavaScript developer much easier — with live, interactive demos.',
+    ...metadataFor('debugging-javascript-in-chrome-and-firefox'),
     coverImage: awesomeCover,
     Component: DebuggingJavascript,
   },
   {
     kind: 'markdown',
-    slug: 'avoiding-option-altogether',
-    title: 'Avoiding `Option` Altogether',
-    date: '2014-12-05',
-    tags: ['scala', 'functional-programming', 'monads'],
-    excerpt:
-      'Avoiding `null`-able values when you can guarantee that a value will never be `null`/`None`.',
+    ...metadataFor('avoiding-option-altogether'),
     coverImage: thinkingCover,
     content: avoidingOptionMd,
   },
   {
     kind: 'markdown',
-    slug: 'recovering-tectonic-using-an-externally-provisioned-etc-on-aws',
-    title: 'Recovering Tectonic Using an Externally Provisioned etcd on AWS',
-    date: '2017-11-18',
-    tags: ['kubernetes', 'tectonic', 'coreos'],
-    excerpt:
-      'Braindump of the recovery process I had to do to recover our Tectonic Kubernetes cluster from a manual configuration change that broke the control plane.',
+    ...metadataFor('recovering-tectonic-using-an-externally-provisioned-etc-on-aws'),
     coverImage: kubernetesCover,
     content: recoveringTectonicMd,
   },
