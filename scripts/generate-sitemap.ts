@@ -1,18 +1,58 @@
 import {writeFileSync} from 'node:fs';
 import {posts} from '../src/content/blog/posts';
-import {SITE_URL} from '../src/lib/seo';
+import {PAGE_METADATA, SITE_URL} from '../src/lib/site-metadata';
+
+type PostWithOptionalUpdate = {
+  date: string;
+  updated?: string;
+  lastUpdated?: string;
+  last_updated?: string;
+  lastCreated?: string;
+  last_created?: string;
+};
+
+function postLastmod(post: PostWithOptionalUpdate): string {
+  return (
+    post.updated ??
+    post.lastUpdated ??
+    post.last_updated ??
+    post.lastCreated ??
+    post.last_created ??
+    post.date
+  );
+}
+
+const buildLastmod = new Date().toISOString().slice(0, 10);
+const blogLastmod = posts
+  .map(postLastmod)
+  .sort((a, b) => new Date(b).getTime() - new Date(a).getTime())[0];
 
 const staticUrls = [
-  {loc: `${SITE_URL}/`, changefreq: 'monthly', priority: '1.0'},
-  {loc: `${SITE_URL}/resume`, changefreq: 'monthly', priority: '0.8'},
-  {loc: `${SITE_URL}/blog`, changefreq: 'weekly', priority: '0.8'},
+  {
+    loc: `${SITE_URL}${PAGE_METADATA.home.path}`,
+    changefreq: 'monthly',
+    priority: '1.0',
+    lastmod: buildLastmod,
+  },
+  {
+    loc: `${SITE_URL}${PAGE_METADATA.resume.path}`,
+    changefreq: 'monthly',
+    priority: '0.8',
+    lastmod: buildLastmod,
+  },
+  {
+    loc: `${SITE_URL}${PAGE_METADATA.blog.path}`,
+    changefreq: 'weekly',
+    priority: '0.8',
+    lastmod: blogLastmod,
+  },
 ];
 
 const postUrls = posts.map((p) => ({
   loc: `${SITE_URL}/blog/${p.slug}`,
   changefreq: 'yearly',
   priority: '0.6',
-  lastmod: p.date,
+  lastmod: postLastmod(p),
 }));
 
 const urlXml = [...staticUrls, ...postUrls]

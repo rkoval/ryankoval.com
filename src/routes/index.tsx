@@ -20,8 +20,18 @@ import {SiteFooter} from '@/components/SiteFooter';
 import {SkillIcon} from '@/components/SkillIcon';
 import {SkillTile} from '@/components/SkillTile';
 import {cn} from '@/lib/utils';
-import {OG_IMAGES, SITE_URL, absoluteUrl, canonicalLink, jsonLdScript, socialMeta} from '@/lib/seo';
-import {PAGE_METADATA} from '@/lib/site-metadata';
+import {
+  OG_IMAGES,
+  PERSON_KNOWS_ABOUT,
+  PROFILE_SAME_AS,
+  SITE_URL,
+  absoluteUrl,
+  canonicalLink,
+  jsonLdScript,
+  rssFeedLink,
+  socialMeta,
+} from '@/lib/seo';
+import {PAGE_METADATA, SITE_NAME} from '@/lib/site-metadata';
 
 const HOME_METADATA = PAGE_METADATA.home;
 
@@ -37,23 +47,36 @@ export const Route = createFileRoute('/')({
         image: OG_IMAGES.home,
       }),
     ],
-    links: [canonicalLink(HOME_METADATA.path)],
+    links: [canonicalLink(HOME_METADATA.path), rssFeedLink()],
     scripts: [
       jsonLdScript({
         '@context': 'https://schema.org',
         '@graph': [
           {
             '@type': 'WebSite',
-            name: 'Ryan A. Koval',
+            '@id': `${SITE_URL}/#website`,
+            name: SITE_NAME,
             url: SITE_URL,
             description: HOME_METADATA.description,
+            publisher: {'@id': `${SITE_URL}/#person`},
           },
           {
             '@type': 'Person',
-            name: 'Ryan A. Koval',
+            '@id': `${SITE_URL}/#person`,
+            name: SITE_NAME,
             url: SITE_URL,
             jobTitle: 'Software Engineering, Architecture & Management',
             image: absoluteUrl(OG_IMAGES.home),
+            sameAs: PROFILE_SAME_AS,
+            knowsAbout: PERSON_KNOWS_ABOUT,
+            alumniOf: education.school,
+            worksFor: experience
+              .filter((item) => item.current)
+              .map((item) => ({
+                '@type': 'Organization',
+                name: item.company,
+                ...(item.link ? {url: item.link} : {}),
+              })),
           },
         ],
       }),

@@ -2,6 +2,28 @@ export const SITE_URL = 'https://ryankoval.com';
 export const SITE_NAME = 'Ryan A. Koval';
 export const TWITTER_SITE = '@whoaitskoval';
 
+export const BLOG_FEED = {
+  path: '/feed.xml',
+  title: 'Ryan A. Koval - Blog RSS Feed',
+} as const;
+
+export const PROFILE_SAME_AS = [
+  'https://github.com/rkoval',
+  'https://linkedin.com/in/ryankoval',
+  'https://bookmarks.ryankoval.com',
+  'https://ryankoval.pizza',
+] as const;
+
+export const PERSON_KNOWS_ABOUT = [
+  'Software engineering',
+  'Software architecture',
+  'Engineering leadership',
+  'JavaScript',
+  'Scala',
+  'Kubernetes',
+  'Infrastructure',
+] as const;
+
 export const OG_IMAGES = {
   home: '/images/home-og-image.jpg',
   resume: '/images/resume-og-image.jpg',

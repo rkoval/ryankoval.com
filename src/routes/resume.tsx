@@ -17,8 +17,18 @@ import {
 } from '@/lib/resume';
 import {RESUME_PDF} from '@/lib/resume-basics';
 import resumeCss from '../resume.css?url';
-import {OG_IMAGES, SITE_URL, absoluteUrl, canonicalLink, jsonLdScript, socialMeta} from '@/lib/seo';
-import {PAGE_METADATA} from '@/lib/site-metadata';
+import {
+  OG_IMAGES,
+  PERSON_KNOWS_ABOUT,
+  PROFILE_SAME_AS,
+  SITE_URL,
+  absoluteUrl,
+  canonicalLink,
+  jsonLdScript,
+  rssFeedLink,
+  socialMeta,
+} from '@/lib/seo';
+import {PAGE_METADATA, SITE_NAME} from '@/lib/site-metadata';
 
 const RESUME_METADATA = PAGE_METADATA.resume;
 const INTERACTIVE_RESUME_SOURCE_URL = 'https://github.com/rkoval/ryankoval.com';
@@ -35,7 +45,7 @@ export const Route = createFileRoute('/resume')({
         image: OG_IMAGES.resume,
       }),
     ],
-    links: [{rel: 'stylesheet', href: resumeCss}, canonicalLink(RESUME_METADATA.path)],
+    links: [{rel: 'stylesheet', href: resumeCss}, canonicalLink(RESUME_METADATA.path), rssFeedLink()],
     scripts: [
       jsonLdScript({
         '@context': 'https://schema.org',
@@ -45,10 +55,24 @@ export const Route = createFileRoute('/resume')({
         description: RESUME_METADATA.description,
         mainEntity: {
           '@type': 'Person',
-          name: 'Ryan A. Koval',
+          '@id': `${SITE_URL}/#person`,
+          name: SITE_NAME,
           url: SITE_URL,
           jobTitle: 'Software Engineering, Architecture & Management',
           image: absoluteUrl(OG_IMAGES.resume),
+          sameAs: PROFILE_SAME_AS,
+          knowsAbout: PERSON_KNOWS_ABOUT,
+          alumniOf: {
+            '@type': 'CollegeOrUniversity',
+            name: education.school,
+          },
+          worksFor: firstPageJobs
+            .filter((item) => item.current)
+            .map((item) => ({
+              '@type': 'Organization',
+              name: item.company,
+              ...(item.link ? {url: item.link} : {}),
+            })),
         },
       }),
     ],

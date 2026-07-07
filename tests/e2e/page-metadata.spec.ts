@@ -1,6 +1,12 @@
 import {expect, test, type Page} from '@playwright/test';
 import {BLOG_POST_METADATA, stripMd} from '../../src/content/blog/metadata';
-import {PAGE_METADATA, SITE_NAME, SITE_URL, TWITTER_SITE} from '../../src/lib/site-metadata';
+import {
+  BLOG_FEED,
+  PAGE_METADATA,
+  SITE_NAME,
+  SITE_URL,
+  TWITTER_SITE,
+} from '../../src/lib/site-metadata';
 
 type MetaSelector = {property: string} | {name: string};
 
@@ -144,6 +150,10 @@ test.describe('normal page metadata', () => {
         'href',
         expectedPage.ogUrl
       );
+      await expect(page.locator('link[rel="alternate"][type="application/rss+xml"]')).toHaveAttribute(
+        'href',
+        `${SITE_URL}${BLOG_FEED.path}`
+      );
 
       if (expectedPage.publishedTime) {
         await expectExactMeta(
@@ -155,5 +165,49 @@ test.describe('normal page metadata', () => {
         await expect(page.locator('meta[property="article:published_time"]')).toHaveCount(0);
       }
     });
+  }
+});
+
+test('sitemap exposes canonical URLs and lastmod values', async ({request}) => {
+  const response = await request.get('/sitemap.xml');
+  expect(response.status()).toBe(200);
+
+  const xml = await response.text();
+  const lastmodFor = (path: string) => {
+    const loc = `${SITE_URL}${path}`;
+    const match = xml.match(
+      new RegExp(`<loc>${loc.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}</loc>\\s*<lastmod>([^<]+)</lastmod>`)
+    );
+    return match?.[1];
+  };
+
+  const latestPostLastmod = BLOG_POST_METADATA.map((post) => post.date).sort(
+    (a, b) => new Date(b).getTime() - new Date(a).getTime()
+  )[0];
+
+  for (const pageMetadata of [PAGE_METADATA.home, PAGE_METADATA.resume]) {
+    const lastmod = lastmodFor(pageMetadata.path);
+    expect(lastmod).toBeTruthy();
+    expect(Number.isNaN(Date.parse(lastmod!))).toBe(false);
+  }
+  expect(lastmodFor(PAGE_METADATA.blog.path)).toBe(latestPostLastmod);
+
+  for (const post of BLOG_POST_METADATA) {
+    expect(xml).toContain(`<loc>${SITE_URL}/blog/${post.slug}</loc>`);
+    expect(xml).toContain(`<lastmod>${post.date}</lastmod>`);
+  }
+});
+
+test('RSS feed exposes blog posts', async ({request}) => {
+  const response = await request.get(BLOG_FEED.path);
+  expect(response.status()).toBe(200);
+
+  const xml = await response.text();
+  expect(xml).toContain('<rss version="2.0"');
+  expect(xml).toContain(`<atom:link href="${SITE_URL}${BLOG_FEED.path}"`);
+
+  for (const post of BLOG_POST_METADATA) {
+    expect(xml).toContain(`<link>${SITE_URL}/blog/${post.slug}</link>`);
+    expect(xml).toContain(`<guid isPermaLink="true">${SITE_URL}/blog/${post.slug}</guid>`);
   }
 });

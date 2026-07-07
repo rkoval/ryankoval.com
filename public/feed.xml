@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ryan A. Koval - Blog RSS Feed</title>
+    <link>https://ryankoval.com/blog</link>
+    <description>Writing and notes from Ryan A. Koval on software engineering, JavaScript, Scala, and infrastructure.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Nov 2017 12:00:00 GMT</lastBuildDate>
+    <atom:link href="https://ryankoval.com/feed.xml" rel="self" type="application/rss+xml" />
+    <generator>Ryan A. Koval</generator>
+    <item>
+      <title>Recovering Tectonic Using an Externally Provisioned etcd on AWS</title>
+      <link>https://ryankoval.com/blog/recovering-tectonic-using-an-externally-provisioned-etc-on-aws</link>
+      <guid isPermaLink="true">https://ryankoval.com/blog/recovering-tectonic-using-an-externally-provisioned-etc-on-aws</guid>
+      <pubDate>Sat, 18 Nov 2017 12:00:00 GMT</pubDate>
+      <description>Braindump of the recovery process I had to do to recover our Tectonic Kubernetes cluster from a manual configuration change that broke the control plane.</description>
+      <category>kubernetes</category>
+      <category>tectonic</category>
+      <category>coreos</category>
+    </item>
+    <item>
+      <title>Avoiding Option Altogether</title>
+      <link>https://ryankoval.com/blog/avoiding-option-altogether</link>
+      <guid isPermaLink="true">https://ryankoval.com/blog/avoiding-option-altogether</guid>
+      <pubDate>Fri, 05 Dec 2014 12:00:00 GMT</pubDate>
+      <description>Avoiding null-able values when you can guarantee that a value will never be null/None.</description>
+      <category>scala</category>
+      <category>functional-programming</category>
+      <category>monads</category>
+    </item>
+    <item>
+      <title>Debugging JavaScript in Chrome and Firefox</title>
+      <link>https://ryankoval.com/blog/debugging-javascript-in-chrome-and-firefox</link>
+      <guid isPermaLink="true">https://ryankoval.com/blog/debugging-javascript-in-chrome-and-firefox</guid>
+      <pubDate>Sat, 23 Feb 2013 12:00:00 GMT</pubDate>
+      <description>Simple tools you can use to make your life as a JavaScript developer much easier — with live, interactive demos.</description>
+      <category>javascript</category>
+    </item>
+  </channel>
+</rss>

@@ -1,6 +1,14 @@
 import {IMAGE_METADATA} from '@/generated/image-metadata';
-export {OG_IMAGES, SITE_NAME, SITE_URL, TWITTER_SITE} from './site-metadata';
-import {SITE_NAME, SITE_URL, TWITTER_SITE} from './site-metadata';
+export {
+  BLOG_FEED,
+  OG_IMAGES,
+  PERSON_KNOWS_ABOUT,
+  PROFILE_SAME_AS,
+  SITE_NAME,
+  SITE_URL,
+  TWITTER_SITE,
+} from './site-metadata';
+import {BLOG_FEED, SITE_NAME, SITE_URL, TWITTER_SITE} from './site-metadata';
 
 /** Resolve a site-relative or absolute path to a full URL. */
 export function absoluteUrl(path: string): string {
@@ -55,6 +63,15 @@ export function socialMeta({
 
 export function canonicalLink(path: string) {
   return {rel: 'canonical' as const, href: absoluteUrl(path)};
+}
+
+export function rssFeedLink() {
+  return {
+    rel: 'alternate' as const,
+    type: 'application/rss+xml',
+    title: BLOG_FEED.title,
+    href: absoluteUrl(BLOG_FEED.path),
+  };
 }
 
 export function jsonLdScript(data: object) {

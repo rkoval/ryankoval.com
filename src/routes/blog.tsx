@@ -4,8 +4,16 @@ import {PostCard} from '@/components/blog/PostCard';
 import {SiteFooter} from '@/components/SiteFooter';
 import {sortedPosts} from '@/content/blog/posts';
 import blogCss from '../blog.css?url';
-import {OG_IMAGES, SITE_URL, absoluteUrl, canonicalLink, jsonLdScript, socialMeta} from '@/lib/seo';
-import {PAGE_METADATA} from '@/lib/site-metadata';
+import {
+  OG_IMAGES,
+  SITE_URL,
+  absoluteUrl,
+  canonicalLink,
+  jsonLdScript,
+  rssFeedLink,
+  socialMeta,
+} from '@/lib/seo';
+import {PAGE_METADATA, SITE_NAME} from '@/lib/site-metadata';
 
 const BLOG_METADATA = PAGE_METADATA.blog;
 
@@ -21,21 +29,28 @@ export const Route = createFileRoute('/blog')({
         image: OG_IMAGES.home,
       }),
     ],
-    links: [{rel: 'stylesheet', href: blogCss}, canonicalLink(BLOG_METADATA.path)],
+    links: [{rel: 'stylesheet', href: blogCss}, canonicalLink(BLOG_METADATA.path), rssFeedLink()],
     scripts: [
       jsonLdScript({
         '@context': 'https://schema.org',
         '@type': 'Blog',
+        '@id': `${absoluteUrl(BLOG_METADATA.path)}#blog`,
         name: BLOG_METADATA.title,
         url: absoluteUrl(BLOG_METADATA.path),
         description: BLOG_METADATA.description,
-        publisher: {'@type': 'Person', name: 'Ryan A. Koval', url: SITE_URL},
+        publisher: {'@type': 'Person', '@id': `${SITE_URL}/#person`, name: SITE_NAME, url: SITE_URL},
         blogPost: sortedPosts.map((post) => ({
           '@type': 'BlogPosting',
+          '@id': `${absoluteUrl(`/blog/${post.slug}`)}#article`,
           headline: post.title.replace(/`/g, ''),
           url: absoluteUrl(`/blog/${post.slug}`),
+          mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
           datePublished: post.date,
-          author: {'@type': 'Person', name: 'Ryan A. Koval', url: SITE_URL},
+          dateModified: post.date,
+          author: {'@type': 'Person', '@id': `${SITE_URL}/#person`, name: SITE_NAME, url: SITE_URL},
+          publisher: {'@type': 'Person', '@id': `${SITE_URL}/#person`, name: SITE_NAME, url: SITE_URL},
+          articleSection: post.tags[0],
+          keywords: post.tags.join(', '),
         })),
       }),
     ],

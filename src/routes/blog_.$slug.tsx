@@ -2,9 +2,10 @@ import {createFileRoute, Link, notFound, useRouter} from '@tanstack/react-router
 import {TopNav} from '@/components/TopNav';
 import {Markdown} from '@/components/blog/Markdown';
 import {getPostBySlug, formatPostDate, titleSegments} from '@/content/blog/posts';
-import {stripMd} from '@/content/blog/metadata';
+import {BLOG_POST_METADATA_BY_SLUG, stripMd, type BlogSlug} from '@/content/blog/metadata';
 import blogCss from '../blog.css?url';
-import {absoluteUrl, canonicalLink, jsonLdScript, socialMeta} from '@/lib/seo';
+import {absoluteUrl, canonicalLink, jsonLdScript, rssFeedLink, socialMeta} from '@/lib/seo';
+import {SITE_NAME, SITE_URL} from '@/lib/site-metadata';
 
 export const Route = createFileRoute('/blog_/$slug')({
   loader: ({params}): {slug: string} => {
@@ -18,6 +19,15 @@ export const Route = createFileRoute('/blog_/$slug')({
     const title = stripMd(post.title);
     const description = stripMd(post.excerpt);
     const path = `/blog/${params.slug}`;
+    const metadata = BLOG_POST_METADATA_BY_SLUG[post.slug as BlogSlug];
+    const image = post.coverImage
+      ? {
+          '@type': 'ImageObject',
+          url: absoluteUrl(post.coverImage),
+          width: metadata.cover.width,
+          height: metadata.cover.height,
+        }
+      : undefined;
 
     return {
       meta: [
@@ -32,18 +42,23 @@ export const Route = createFileRoute('/blog_/$slug')({
           publishedTime: post.date,
         }),
       ],
-      links: [{rel: 'stylesheet', href: blogCss}, canonicalLink(path)],
+      links: [{rel: 'stylesheet', href: blogCss}, canonicalLink(path), rssFeedLink()],
       scripts: [
         jsonLdScript({
           '@context': 'https://schema.org',
-          '@type': 'Article',
+          '@type': 'BlogPosting',
+          '@id': `${absoluteUrl(path)}#article`,
           headline: title,
           description,
           url: absoluteUrl(path),
+          mainEntityOfPage: absoluteUrl(path),
           datePublished: post.date,
-          author: {'@type': 'Person', name: 'Ryan A. Koval', url: absoluteUrl('/')},
+          dateModified: post.date,
+          author: {'@type': 'Person', '@id': `${SITE_URL}/#person`, name: SITE_NAME, url: SITE_URL},
+          publisher: {'@type': 'Person', '@id': `${SITE_URL}/#person`, name: SITE_NAME, url: SITE_URL},
+          articleSection: post.tags[0],
           keywords: post.tags.join(', '),
-          ...(post.coverImage ? {image: absoluteUrl(post.coverImage)} : {}),
+          ...(image ? {image} : {}),
         }),
       ],
     };
