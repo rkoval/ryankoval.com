@@ -7,7 +7,7 @@ RUN bun install --frozen-lockfile --ignore-scripts
 COPY . .
 RUN bun run build
 
-FROM nginx:1.27-alpine
+FROM nginx:1.31.2-alpine
 EXPOSE 80
 COPY docker_root/ /
 COPY --from=build /app/dist/client/ /usr/share/nginx/html/
