@@ -76,7 +76,7 @@ skills:
         src: '/images/skills/linux.svg'
   - skill: &docker
       name: Docker
-      tag: Automation
+      tag: Cloud / Infrastructure
       website: https://www.docker.com/
       resume: true
       picture:
@@ -88,13 +88,6 @@ skills:
       resume: true
       picture:
         src: '/images/skills/docker-compose.png'
-  - skill: &claude_code
-      name: Claude Code
-      tag: Miscellaneous
-      website: https://code.claude.com/
-      resume: false
-      picture:
-        src: '/images/skills/claude-code.svg'
   - skill: &neovim
       name: Neovim
       tag: Miscellaneous
@@ -102,6 +95,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/neovim.svg'
+  - skill: &claude_code
+      name: Claude Code
+      tag: Miscellaneous
+      website: https://code.claude.com/
+      resume: true
+      picture:
+        src: '/images/skills/claude-code.svg'
   - skill: &vim
       name: Vim
       tag: Miscellaneous
@@ -129,9 +129,16 @@ skills:
       name: git
       tag: Miscellaneous
       website: https://git-scm.com/
-      resume: false
+      resume: true
       picture:
         src: '/images/skills/git.svg'
+  - skill: &grafana
+      name: Grafana
+      tag: Miscellaneous
+      website: https://grafana.com/
+      resume: true
+      picture:
+        src: '/images/skills/grafana.svg'
   - skill: &macOS
       name: macOS
       tag: Miscellaneous
@@ -139,17 +146,9 @@ skills:
       resume: true
       picture:
         src: '/images/skills/macos.svg'
-  - skill: &bun
-      name: Bun
-      label: Bun JavaScript runtime
-      tag: Miscellaneous
-      website: https://bun.sh/
-      resume: true
-      picture:
-        src: '/images/skills/bun.svg'
   - skill: &node_js
       name: Node.js
-      tag: Miscellaneous
+      tag: Frameworks & Libraries
       website: https://nodejs.org/
       resume: true
       picture:
@@ -168,13 +167,6 @@ skills:
       resume: true
       picture:
         src: '/images/skills/mobx.svg'
-  - skill: &grafana
-      name: Grafana
-      tag: Miscellaneous
-      website: https://grafana.com/
-      resume: true
-      picture:
-        src: '/images/skills/grafana.svg'
   - skill: &sublime
       name: Sublime Text
       tag: Miscellaneous
@@ -182,6 +174,14 @@ skills:
       resume: true
       picture:
         src: '/images/skills/sublime.svg'
+  - skill: &bun
+      name: Bun
+      label: Bun JavaScript runtime
+      tag: Frameworks & Libraries
+      website: https://bun.sh/
+      resume: true
+      picture:
+        src: '/images/skills/bun.svg'
   - skill: &react_native
       name: React Native
       tag: Frameworks & Libraries
@@ -191,7 +191,7 @@ skills:
         src: '/images/skills/reactjs.svg'
   - skill: &github_actions
       name: GitHub Actions
-      tag: Automation
+      tag: Automation & CI/CD
       website: https://github.com/features/actions
       resume: true
       picture:
@@ -231,7 +231,7 @@ skills:
       resume: false
   - skill: &circleci
       name: CircleCI
-      tag: Automation
+      tag: Automation & CI/CD
       website: https://circleci.com/
       resume: true
       picture:
@@ -246,14 +246,14 @@ skills:
         src: '/images/skills/mocha.svg'
   - skill: &playwright
       name: Playwright
-      tag: Automation
+      tag: Automation & CI/CD
       website: https://playwright.dev
       resume: true
       picture:
         src: '/images/skills/playwright.svg'
   - skill: &puppeteer
       name: Puppeteer
-      tag: Automation
+      tag: Automation & CI/CD
       website: https://developers.google.com/web/tools/puppeteer
       resume: true
       picture:
@@ -294,6 +294,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/trpc.svg'
+  - skill: &bazel
+      name: Bazel
+      tag: Automation & CI/CD
+      website: https://bazel.build/
+      resume: true
+      picture:
+        src: '/images/skills/bazel.svg'
   - skill: &redux
       name: Redux
       tag: Frameworks & Libraries
@@ -311,25 +318,18 @@ skills:
   - skill: &jest
       name: Jest
       label: Jest JavaScript test framework
-      tag: Automation
+      tag: Automation & CI/CD
       website: https://jestjs.io/
       resume: true
       picture:
         src: '/images/skills/jest.svg'
   - skill: &terraform
       name: Terraform
-      tag: Cloud / Infrastructure
+      tag: Automation & CI/CD
       website: https://www.terraform.io/
       resume: true
       picture:
         src: '/images/skills/terraform.svg'
-  - skill: &django
-      name: Django
-      tag: Frameworks & Libraries
-      website: https://www.djangoproject.com/
-      resume: true
-      picture:
-        src: '/images/skills/django.svg'
   - skill: &kubernetes
       name: Kubernetes
       tag: Cloud / Infrastructure
@@ -341,7 +341,7 @@ skills:
       name: SLURM
       tag: Cloud / Infrastructure
       website: https://slurm.schedmd.com/
-      resume: true
+      resume: false
       use_dark_mode_light_background: true
       picture:
         src: '/images/skills/slurm.svg'
@@ -354,7 +354,7 @@ skills:
         src: '/images/skills/mysql.svg'
   - skill: &temporal
       name: Temporal
-      tag: Automation
+      tag: Cloud / Infrastructure
       website: https://temporal.io/
       resume: true
       use_dark_mode_light_background: true
@@ -367,6 +367,13 @@ skills:
       resume: true
       picture:
         src: '/images/skills/oauth.svg'
+  - skill: &linear
+      name: Linear
+      tag: Miscellaneous
+      website: https://linear.app/
+      resume: true
+      picture:
+        src: '/images/skills/linear.svg'
   - skill: &htmx
       name: HTMX
       tag: Frameworks & Libraries
@@ -556,7 +563,7 @@ skills:
   - skill: &karma
       name: Karma
       label: Karma test runner
-      tag: Automation
+      tag: Automation & CI/CD
       website: https://karma-runner.github.io/
       resume: false
       picture:
@@ -587,7 +594,7 @@ skills:
       name: Next.js
       tag: Frameworks & Libraries
       website: https://nextjs.org/
-      resume: true
+      resume: false
       use_dark_mode_light_background: true
       picture:
         src: '/images/skills/nextjs.svg'
@@ -601,11 +608,18 @@ skills:
         src: '/images/skills/react-router.svg'
   - skill: &vite
       name: Vite
-      tag: Automation
+      tag: Automation & CI/CD
       website: https://vite.dev/
       resume: true
       picture:
         src: '/images/skills/vite.svg'
+  - skill: &django
+      name: Django
+      tag: Frameworks & Libraries
+      website: https://www.djangoproject.com/
+      resume: true
+      picture:
+        src: '/images/skills/django.svg'
   - skill: &remix
       name: Remix
       label: Remix web framework
@@ -637,35 +651,35 @@ skills:
         src: '/images/skills/mongo.svg'
   - skill: &npm
       name: npm
-      tag: Automation
+      tag: Automation & CI/CD
       website: https://www.npmjs.org/
       resume: false
       picture:
         src: '/images/skills/npm.svg'
   - skill: &sbt
       name: sbt
-      tag: Automation
+      tag: Automation & CI/CD
       website: https://www.scala-sbt.org/
       resume: true
       picture:
         src: '/images/skills/sbt.svg'
   - skill: &webpack
       name: Webpack
-      tag: Automation
+      tag: Automation & CI/CD
       website: https://webpack.js.org/
       resume: true
       picture:
         src: '/images/skills/webpack.svg'
   - skill: &ansible
       name: Ansible
-      tag: Automation
+      tag: Automation & CI/CD
       website: https://www.ansible.com/
       resume: true
       picture:
         src: '/images/skills/ansible.svg'
   - skill: &nginx
       name: NGINX
-      tag: Miscellaneous
+      tag: Cloud / Infrastructure
       website: https://www.nginx.com/
       resume: true
       picture:
@@ -702,26 +716,26 @@ skills:
       name: Play Framework
       tag: Frameworks & Libraries
       website: https://www.playframework.com/
-      resume: true
+      resume: false
       picture:
         src: '/images/skills/play.svg'
   - skill: &jenkins
       name: Jenkins
-      tag: Automation
+      tag: Automation & CI/CD
       website: https://jenkins-ci.org/
       resume: true
       picture:
         src: '/images/skills/jenkins.svg'
   - skill: &grunt
       name: Grunt
-      tag: Automation
+      tag: Automation & CI/CD
       website: https://gruntjs.com
       resume: false
       picture:
         src: '/images/skills/grunt.svg'
   - skill: &bower
       name: Bower
-      tag: Automation
+      tag: Automation & CI/CD
       website: https://bower.io
       resume: false
       picture:
@@ -741,7 +755,7 @@ skills:
         src: '/images/skills/jquerymobile.svg'
   - skill: &concourse_ci
       name: Concourse CI
-      tag: Automation
+      tag: Automation & CI/CD
       website: https://concourse.ci/
       resume: true
       picture:
@@ -762,7 +776,7 @@ skills:
         src: '/images/skills/spring.svg'
   - skill: &vagrant
       name: Vagrant
-      tag: Automation
+      tag: Automation & CI/CD
       website: https://www.vagrantup.com/
       resume: false
       picture:
@@ -843,7 +857,7 @@ work:
 
       DGX Cloud is built on NVIDIA-accelerated infrastructure and runs across CSPs and NVIDIA Cloud Partners. This ensures that the software and operational patterns proven in DGX Cloud are directly applicable across the ecosystem.
     highlights:
-      - Managed an 8+ member Product Engineering team within a 105+ person org, transforming a break/fix tool into a scalable, general-purpose automation platform for $1B+ in hardware infrastructure.
+      - Managed the 9+ person Product Engineering team within a 105+ person org, transforming a break/fix tool into a scalable, general-purpose automation platform for $1B+ in hardware infrastructure.
       - Introduced product personas, formal UX standards, and fluid user feedback channels to foster a product-driven mindset across engineering and shift development toward cohesive, user-centered design.
       - Improved product quality and developer velocity by introducing a shared component library, Playwright-based end-to-end testing, static analysis tools, AI-assisted code reviews, and internal enablement sessions.
     skills:
@@ -854,6 +868,7 @@ work:
       - *postgresql
       - *grafana
       - *prometheus
+      - *bazel
       - *tailwindcss
       - *playwright
       - *kubernetes
@@ -868,7 +883,9 @@ work:
       - *gitlab
       - *macOS
       - *linux
+      - *linear
       - *alfred
+      - *chrome_developer_tools
   - company:
       name: The Styled by Collective
     resume: true
@@ -927,6 +944,7 @@ work:
       - *macOS
       - *linux
       - *alfred
+      - *chrome_developer_tools
   - company:
       name: End to End Productions
     resume: true
@@ -953,6 +971,7 @@ work:
       - *neovim
       - *bash_zsh
       - *git
+      - *claude_code
       - *cursor
       - *node_js
       - *react
@@ -968,6 +987,7 @@ work:
       - *redis
       - *stripe
       - *github_actions
+      - *bazel
       - *circleci
       - *chatgpt
       - *lua
@@ -999,15 +1019,18 @@ work:
       - *html
       - *css
       - *sass
+      - *less
       - *linux
       - *elasticsearch
       - *mongodb
       - *npm
       - *sbt
+      - *redux
       - *nginx
       - *github
       - *concourse_ci
       - *alfred
+      - *chrome_developer_tools
   - company:
       name: Roblox
     resume: true
@@ -1058,6 +1081,7 @@ work:
       - *git
       - *linux
       - *alfred
+      - *chrome_developer_tools
     highlights:
       - Directly managed 6+ engineers on the Guilded team after its acquisition, facilitating the RoGRO corporate review process and providing radical candor to bolster direct-report performance.
       - Served as technical lead on 7+ cross-functional initiatives involving 40+ collaborators across engineering, design, trust & safety, and community teams.
@@ -1112,6 +1136,7 @@ work:
       - *git
       - *linux
       - *alfred
+      - *chrome_developer_tools
     highlights:
       - Joined as the 4th overall engineer of the Discord competitor that secured a $7M Series A round in April 2020 and ultimately a $90M acquisition by Roblox in August 2021.
       - Spearheaded recruiting and management, helping grow the engineering team from 7 to 21+ people with less than 15% turnover over two years.
@@ -1166,6 +1191,8 @@ work:
       - *git
       - *linux
       - *alfred
+      - *alpine_linux
+      - *chrome_developer_tools
     highlights:
       - Oversaw front-end development for a self-service collaborations portal, managing a global team.
       - Built two major versions of screen-scraping infrastructure used to gather influencer data for a customer-facing recommendation engine and general business intelligence.
@@ -1238,9 +1265,13 @@ work:
       - *jenkins
       - *grunt
       - *intellij
+      - *less
       - *sass
+      - *karma
       - *vagrant
+      - *bootstrap
       - *alfred
+      - *chrome_developer_tools
     highlights:
       - Constructed core components for nearly all aspects of a multi-million-dollar prison
         telecommunications investigative tool.
@@ -1279,7 +1310,9 @@ work:
       - *mysql
       - *subversion
       - *broadleaf_commerce
+      - *bootstrap
       - *alfred
+      - *chrome_developer_tools
     highlights:
       - Contributed to nearly all aspects of a multi-million-dollar
         automotive eCommerce website, which contained over 50 technology integrations
@@ -1307,6 +1340,7 @@ work:
       - *wordpress
       - *vim
       - *git
+      - *chrome_developer_tools
     highlights:
       - Overhauled an unmanageable consumer-facing website for this small startup in favor
         of a custom WordPress solution.
@@ -1355,8 +1389,10 @@ projects:
       - *postgresql
       - *bash_zsh
       - *playwright
+      - *remix
       - *docker
       - *alfred
+      - *chrome_developer_tools
   - name: Blog
     url: https://blog.ryankoval.com
     source: https://github.com/rkoval/ryankoval.com
@@ -1368,6 +1404,9 @@ projects:
       - *markdown
       - *vite
       - *bun
+      - *chatgpt
+      - *claude_code
+      - *chrome_developer_tools
   - name: Surely, You Jest!
     url: https://slides.com/ryankoval/surely-you-jest
     source: https://github.com/rkoval/surely-you-jest
@@ -1392,6 +1431,9 @@ projects:
       - *bash_zsh
       - *docker
       - *alfred
+      - *bower
+      - *bootstrap
+      - *chrome_developer_tools
   - name: Resy Reservation Bot
     url: https://github.com/rkoval/resy-reservation-bot
     source: https://github.com/rkoval/resy-reservation-bot
@@ -1415,6 +1457,7 @@ projects:
       - *bash_zsh
       - *docker
       - *alfred
+      - *chrome_developer_tools
 education:
   - institution: Southern Methodist University
     website: https://www.smu.edu

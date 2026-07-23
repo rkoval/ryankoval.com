@@ -58,7 +58,7 @@ const categoryOrder = [
   'Data Stores',
   'Cloud / Infrastructure',
   'Frameworks & Libraries',
-  'Automation',
+  'Automation & CI/CD',
   'Miscellaneous',
 ];
 

@@ -16,6 +16,19 @@ const resumeDownloads = [
 ] as const;
 
 test.describe('resume', () => {
+  test('renders résumé skill categories in the intended order', async ({page}) => {
+    await page.goto('/resume', {waitUntil: 'domcontentloaded'});
+
+    await expect(page.locator('.resume-skills-grid .resume-h2')).toHaveText([
+      'Programming Languages',
+      'Data Stores',
+      'Cloud / Infrastructure',
+      'Frameworks & Libraries',
+      'Automation & CI/CD',
+      'Miscellaneous',
+    ]);
+  });
+
   for (const resumeDownload of resumeDownloads) {
     test(`downloads the ${resumeDownload.name}`, async ({page}) => {
       await page.goto('/resume', {waitUntil: 'domcontentloaded'});
