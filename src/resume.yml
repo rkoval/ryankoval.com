@@ -858,8 +858,8 @@ work:
       DGX Cloud is built on NVIDIA-accelerated infrastructure and runs across CSPs and NVIDIA Cloud Partners. This ensures that the software and operational patterns proven in DGX Cloud are directly applicable across the ecosystem.
     highlights:
       - Managed the 9+ person Product Engineering team within a 105+ person org, transforming a break/fix tool into a scalable, general-purpose automation platform for $1B+ in hardware infrastructure.
-      - Introduced product personas, formal UX standards, and fluid user feedback channels to foster a product-driven mindset across engineering and shift development toward cohesive, user-centered design.
-      - Improved product quality and developer velocity by introducing a shared component library, Playwright-based end-to-end testing, static analysis tools, AI-assisted code reviews, and internal enablement sessions.
+      - Introduced product personas, formal UX standards, and user feedback channels to foster a product-driven mindset across engineering and shift development toward cohesive, user-centered design.
+      - Improved product quality and developer velocity by introducing a shared component library, Playwright-based end-to-end testing, static analysis tools, AI-assisted code reviews, and training sessions.
     skills:
       - *golang
       - *typescript
@@ -897,7 +897,7 @@ work:
     endDate: '2025-06-02'
     summary: The Styled by Collective is a private client personal styling firm leveraging elite human expertise with cutting-edge technology to offer seamless and exclusive high-touch wardrobe management experiences. We are redefining how private clients, retailers and industry professionals engage with personal style—powered by our proprietary digital platform. What began as a luxury styling service business has evolved into a category-defining fashion-tech company.
     highlights:
-      - Led all engineering and product efforts to design, architect, and implement an ERP/CRM system for blind inventory management of fashion apparel, serving private client luxury styling services used internally and by major retailers.
+      - Led all engineering and product efforts to design, architect, and implement an ERP/CRM system for blind inventory management of fashion apparel for private client styling services.
       - The platform managed over $2.8M in annual client spend and maintained a consistent 30% keep rate for high-value luxury goods, often exceeding $20k per item.
     skills:
       - *typescript
@@ -947,7 +947,7 @@ work:
       - *chrome_developer_tools
   - company:
       name: End to End Productions
-    resume: true
+    resume: null
     position: Founder / CEO
     website: https://endtoend.productions
     picture:
@@ -1033,6 +1033,7 @@ work:
       - *chrome_developer_tools
   - company:
       name: Roblox
+      description: via Guilded acquisition
     resume: true
     position: Engineering Manager
     website: https://www.roblox.com/
@@ -1083,7 +1084,7 @@ work:
       - *alfred
       - *chrome_developer_tools
     highlights:
-      - Directly managed 6+ engineers on the Guilded team after its acquisition, facilitating the RoGRO corporate review process and providing radical candor to bolster direct-report performance.
+      - Directly managed 6+ engineers on the Guilded team, facilitating the RoGRO corporate review process and providing radical candor to bolster direct-report performance.
       - Served as technical lead on 7+ cross-functional initiatives involving 40+ collaborators across engineering, design, trust & safety, and community teams.
       - 'High-impact project leadership includes: a full editor rewrite; the Roblox universal rich text initiative; a public-facing bot REST API; scalable big data science ETLs; CI/CD optimization and developer experience enhancements; Roblox/Guilded OAuth integration; and a ChatGPT-powered multiplayer AI chat bot'
   - company:
@@ -1322,6 +1323,7 @@ work:
   - company:
       name: Dallas Pedicabs
       description: defunct
+    resume: false
     position: Freelance Developer
     website: http://www.dallaspedicabs.com
     picture:
