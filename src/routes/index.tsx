@@ -17,6 +17,7 @@ import {SkillsMarquee} from '@/components/SkillsMarquee';
 import {SkillsSpriteSheet} from '@/components/SkillsSpriteSheet';
 import {TopNav} from '@/components/TopNav';
 import {SiteFooter} from '@/components/SiteFooter';
+import {BulletListItem} from '@/components/BulletListItem';
 import {SkillIcon} from '@/components/SkillIcon';
 import {SkillTile} from '@/components/SkillTile';
 import {cn} from '@/lib/utils';
@@ -240,7 +241,7 @@ function ExperienceCard({item}: {item: ExperienceItem}) {
 
       <ul className="hanging-list mt-4 space-y-2 text-sm leading-relaxed text-resume-body">
         {item.bullets.map((b, bi) => (
-          <li key={bi}>{b}</li>
+          <BulletListItem key={bi}>{b}</BulletListItem>
         ))}
       </ul>
 
@@ -289,7 +290,7 @@ function FeaturedCard({item}: {item: ExperienceItem}) {
 
         <ul className="hanging-list mt-6 space-y-3 text-[15px] leading-relaxed text-resume-body">
           {item.bullets.map((b, bi) => (
-            <li key={bi}>{b}</li>
+            <BulletListItem key={bi}>{b}</BulletListItem>
           ))}
         </ul>
 
@@ -465,7 +466,7 @@ function Index() {
           </h2>
           <ul className="hanging-list space-y-2 text-sm leading-relaxed text-resume-body">
             {certifications.map((c) => (
-              <li key={c.label}>
+              <BulletListItem key={c.label}>
                 {c.url ? (
                   <a
                     href={c.url}
@@ -478,7 +479,7 @@ function Index() {
                 ) : (
                   c.label
                 )}
-              </li>
+              </BulletListItem>
             ))}
           </ul>
         </div>

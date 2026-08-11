@@ -1,5 +1,6 @@
 import {createFileRoute} from '@tanstack/react-router';
 import {Download} from 'lucide-react';
+import {BulletListItem} from '@/components/BulletListItem';
 import {TopNav} from '@/components/TopNav';
 import {SiteFooter} from '@/components/SiteFooter';
 import {
@@ -45,7 +46,11 @@ export const Route = createFileRoute('/resume')({
         image: OG_IMAGES.resume,
       }),
     ],
-    links: [{rel: 'stylesheet', href: resumeCss}, canonicalLink(RESUME_METADATA.path), rssFeedLink()],
+    links: [
+      {rel: 'stylesheet', href: resumeCss},
+      canonicalLink(RESUME_METADATA.path),
+      rssFeedLink(),
+    ],
     scripts: [
       jsonLdScript({
         '@context': 'https://schema.org',
@@ -117,11 +122,11 @@ function CompanyHeading({
 function ExperienceSection({item}: {item: ExperienceItem}) {
   return (
     <section className="resume-section">
-      <span className="resume-date">{item.period}</span>
       <CompanyHeading company={item.company} meta={item.meta} role={item.role} link={item.link} />
+      <span className="resume-date">{item.period}</span>
       <ul className="resume-ul">
         {item.bullets.map((b, i) => (
-          <li key={i}>{withPeriod(b)}</li>
+          <BulletListItem key={i}>{withPeriod(b)}</BulletListItem>
         ))}
       </ul>
     </section>
@@ -143,7 +148,7 @@ function ProjectSection({item}: {item: Project}) {
         )}
       </h2>
       <ul className="resume-ul">
-        <li>{item.description}</li>
+        <BulletListItem>{item.description}</BulletListItem>
       </ul>
       {item.technologies.length > 0 ? (
         <div className="resume-project-metadata">Technologies: {item.technologies.join(', ')}</div>
@@ -244,7 +249,7 @@ function ResumePage() {
               <section className="resume-section">
                 <h2 className="resume-h2">{education.school}</h2>
                 <ul className="resume-ul">
-                  <li>{education.degree}</li>
+                  <BulletListItem>{education.degree}</BulletListItem>
                 </ul>
               </section>
             </div>
@@ -256,7 +261,7 @@ function ResumePage() {
                 <h2 className="resume-h2">Certifications</h2>
                 <ul className="resume-ul">
                   {certifications.map((c) => (
-                    <li key={c.label}>{c.label}</li>
+                    <BulletListItem key={c.label}>{c.label}</BulletListItem>
                   ))}
                 </ul>
               </section>
@@ -268,7 +273,7 @@ function ResumePage() {
               <section className="resume-section">
                 <h2 className="resume-h2">Interests</h2>
                 <ul className="resume-ul">
-                  <li>{interests.join(', ')}</li>
+                  <BulletListItem>{interests.join(', ')}</BulletListItem>
                 </ul>
               </section>
             </div>

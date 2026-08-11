@@ -194,10 +194,11 @@
 }
 
 .resume-date {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
   font-size: 13px;
   color: var(--resume-muted);
-  margin-left: 16px;
 }
 
 .resume-h2 {
@@ -245,20 +246,6 @@
 .resume-sheet .resume-ul > li:last-child {
   margin-bottom: 0 !important;
 }
-.resume-sheet .resume-ul > li::before {
-  content: '';
-  position: absolute !important;
-  left: -0.95rem;
-  top: 0.5em;
-  width: 7px;
-  height: 7px;
-  border-radius: 9999px;
-  background: var(--resume-green);
-  box-shadow: 0 0 8px color-mix(in oklab, var(--resume-green) 60%, transparent);
-  -webkit-print-color-adjust: exact;
-  print-color-adjust: exact;
-}
-
 .resume-project-metadata {
   color: var(--resume-body);
   font-size: 12px;
@@ -307,10 +294,9 @@
   .resume-page:not(.print-dark) a {
     color: #0f7a4d !important;
   }
-  .resume-page:not(.print-dark) .resume-ul > li::before,
-  .resume-page:not(.print-dark) .hanging-list > li::before {
-    background: #0f7a4d !important;
-    box-shadow: none !important;
+  .resume-page:not(.print-dark) .copyable-list-bullet {
+    color: #0f7a4d !important;
+    text-shadow: none !important;
   }
   .resume-page:not(.print-dark) .resume-date {
     color: #666 !important;
@@ -346,9 +332,8 @@
   .resume-page.print-dark .resume-sheet.sheet {
     box-shadow: none !important;
   }
-  .resume-page.print-dark .resume-ul > li::before,
-  .resume-page.print-dark .hanging-list > li::before {
-    box-shadow: none !important;
+  .resume-page.print-dark .copyable-list-bullet {
+    text-shadow: none !important;
   }
 
   /* ---- Layout resets shared by both modes ---- */
@@ -385,8 +370,8 @@
   }
 
   /* Solid bullet dots on résumé sheets (homepage .hanging-list handled in styles.css). */
-  .resume-sheet .resume-ul > li::before {
-    box-shadow: none !important;
+  .resume-sheet .copyable-list-bullet {
+    text-shadow: none !important;
   }
 }
 

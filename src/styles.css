@@ -336,16 +336,16 @@
   padding-inline-start: 0 !important;
   margin-inline-start: 0 !important;
 }
-.hanging-list > li::before {
-  content: '';
-  position: absolute !important;
-  left: -0.95rem;
-  top: 0.5em;
-  width: 7px;
-  height: 7px;
-  border-radius: 9999px;
-  background: var(--resume-green);
-  box-shadow: 0 0 8px color-mix(in oklab, var(--resume-green) 60%, transparent);
+
+.copyable-list-bullet {
+  display: inline-block;
+  width: 0.95rem;
+  margin-left: -0.95rem;
+  color: var(--resume-green);
+  text-align: left;
+  text-shadow: 0 0 8px color-mix(in oklab, var(--resume-green) 60%, transparent);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 .exp-skill-img {
@@ -599,9 +599,9 @@
     display: none !important;
   }
 
-  /* Homepage experience bullets use .hanging-list — drop screen glow in print. */
-  .hanging-list > li::before {
-    box-shadow: none !important;
+  /* Drop screen glow from copyable bullet markers in print. */
+  .copyable-list-bullet {
+    text-shadow: none !important;
   }
 }
 
