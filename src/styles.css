@@ -267,6 +267,10 @@
     overflow-x: clip;
   }
 
+  ::selection {
+    background: oklch(0.78 0.16 160 / 0.38);
+  }
+
   /* Nested scroll containers */
   * {
     scrollbar-width: thin;
