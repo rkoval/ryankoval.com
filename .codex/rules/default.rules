@@ -1,0 +1,21 @@
+prefix_rule(
+    pattern = ["bun", "run", "generate-resume-pdf"],
+    decision = "allow",
+    justification = "Regenerate local resume PDFs from this trusted project.",
+    match = [
+        "bun run generate-resume-pdf",
+    ],
+)
+
+prefix_rule(
+    pattern = [
+        "/Users/ryankoval/.nvm/versions/node/v22.22.0/bin/bun",
+        "run",
+        "generate-resume-pdf",
+    ],
+    decision = "allow",
+    justification = "Regenerate local resume PDFs from this trusted project.",
+    match = [
+        "/Users/ryankoval/.nvm/versions/node/v22.22.0/bin/bun run generate-resume-pdf",
+    ],
+)
