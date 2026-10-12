@@ -857,7 +857,8 @@ work:
 
       DGX Cloud is built on NVIDIA-accelerated infrastructure and runs across CSPs and NVIDIA Cloud Partners. This ensures that the software and operational patterns proven in DGX Cloud are directly applicable across the ecosystem.
     highlights:
-      - Managed the 9+ person Product Engineering team within a 105+ person org, transforming a break/fix tool into a scalable, general-purpose automation platform for $1B+ in hardware infrastructure.
+      - Managed a 12+ person Product Engineering team within a 100+ person org, transforming a break/fix tool into as a scalable, multi-purpose automation platform within DSX OS for $7B+ in hardware infrastructure.
+      - Co-authored a cross-team operating model that clarified ownership and eliminated role redundancy across cluster operator teams, informing an organizational redesign spanning 35 employees (no layoffs!).
       - Introduced product personas, formal UX standards, and user feedback channels to foster a product-driven mindset across engineering and shift development toward cohesive, user-centered design.
       - Improved product quality and developer velocity by introducing a shared component library, Playwright-based end-to-end testing, static analysis tools, AI-assisted code reviews, and training sessions.
     skills:
@@ -1084,8 +1085,7 @@ work:
       - *alfred
       - *chrome_developer_tools
     highlights:
-      - Directly managed 6+ engineers on the Guilded team, facilitating the RoGRO corporate review process and providing radical candor to bolster direct-report performance.
-      - Served as technical lead on 7+ cross-functional initiatives involving 40+ collaborators across engineering, design, trust & safety, and community teams.
+      - Directly managed 6+ engineers on the Guilded team and served as technical lead on 7+ cross-functional initiatives involving 40+ collaborators across engineering, design, trust & safety, and community teams.
       - 'High-impact project leadership includes: a full editor rewrite; the Roblox universal rich text initiative; a public-facing bot REST API; scalable big data science ETLs; CI/CD optimization and developer experience enhancements; Roblox/Guilded OAuth integration; and a ChatGPT-powered multiplayer AI chat bot'
   - company:
       name: Guilded
@@ -1195,10 +1195,9 @@ work:
       - *alpine_linux
       - *chrome_developer_tools
     highlights:
-      - Oversaw front-end development for a self-service collaborations portal, managing a global team.
+      - Oversaw front-end development for a self-service collaborations portal handling $2.2M in marketing spend while managing a global team.
       - Built two major versions of screen-scraping infrastructure used to gather influencer data for a customer-facing recommendation engine and general business intelligence.
       - Moved the organization from a two-week deploy cycle to rapid continuous delivery by designing and implementing new core infrastructure patterns.
-      - Revived multiple legacy Node.js analytics projects plagued by stability and maintainability problems.
       - Overhauled infrastructure configuration for another failing project responsible for syncing critical internal data across multiple systems.
   - company:
       name: Bottle Rocket Studios
