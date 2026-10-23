@@ -16,8 +16,8 @@ export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use && bun run build
 
 Why this matters:
 
-- `.nvmrc` pins **Node v22.22.0** (Vite requires 20.19+ or 22.12+)
-- `bun` is installed under that nvm Node (`~/.nvm/versions/node/v22.22.0/bin/bun`), not the system default
+- `.nvmrc` pins **Node v22.23.4** (Vite requires 20.19+ or 22.12+)
+- `bun` is installed under that nvm Node (`~/.nvm/versions/node/v22.23.4/bin/bun`), not the system default
 - The shell default (e.g. v22.2.0) leaves `bun: command not found` and breaks `bun run build`
 
 ## Résumé PDFs

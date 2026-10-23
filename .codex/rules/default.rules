@@ -9,13 +9,13 @@ prefix_rule(
 
 prefix_rule(
     pattern = [
-        "/Users/ryankoval/.nvm/versions/node/v22.22.0/bin/bun",
+        "/Users/ryankoval/.nvm/versions/node/v22.23.4/bin/bun",
         "run",
         "generate-resume-pdf",
     ],
     decision = "allow",
     justification = "Regenerate local resume PDFs from this trusted project.",
     match = [
-        "/Users/ryankoval/.nvm/versions/node/v22.22.0/bin/bun run generate-resume-pdf",
+        "/Users/ryankoval/.nvm/versions/node/v22.23.4/bin/bun run generate-resume-pdf",
     ],
 )

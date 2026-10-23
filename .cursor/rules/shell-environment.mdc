@@ -11,4 +11,4 @@ Before running `bun`, `npm run build`, `vite`, `eslint`, or other Node tooling, 
 export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use
 ```
 
-`.nvmrc` pins v22.22.0. `bun` lives under that nvm Node, not the shell default — skipping `nvm use` causes `bun: command not found` and Vite version errors.
+`.nvmrc` pins v22.23.4. `bun` lives under that nvm Node, not the shell default — skipping `nvm use` causes `bun: command not found` and Vite version errors.

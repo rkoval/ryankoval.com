@@ -1,5 +1,5 @@
 # Debian-based image (not alpine): esbuild postinstall needs glibc, especially under amd64 QEMU on arm64 Macs.
-FROM oven/bun:1.3.14 AS build
+FROM oven/bun:1.4.4 AS build
 WORKDIR /app
 COPY package.json bun.lock bunfig.toml ./
 # Skip lovable-tagger's nested esbuild postinstall (dev-only componentTagger); vite uses top-level esbuild.
